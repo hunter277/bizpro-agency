@@ -418,8 +418,8 @@ function bizpro_agency_get_demo_info( $context = null ) {
 	$demos = array(
 		'digital' => array(
 			'tagline'   => __( 'Digital & SaaS', 'bizpro-agency' ),
-			'cta_text'  => __( 'Get All-Access', 'bizpro-agency' ),
-			'cta_url'   => home_url( '/pricing/' ),
+			'cta_text'  => __( 'Get All-Access Pass', 'bizpro-agency' ),
+			'cta_url'   => home_url( '/digital-store/#pricing' ),
 			'top_badge' => __( 'Instant Digital Delivery', 'bizpro-agency' ),
 		),
 		'visa' => array(
@@ -566,10 +566,10 @@ function bizpro_agency_fallback_menu() {
 	} elseif ( 'digital' === $context ) {
 		$items = array(
 			array( 'label' => __( 'Home', 'bizpro-agency' ), 'url' => home_url( '/digital-store/' ) ),
+			array( 'label' => __( 'Digital Store', 'bizpro-agency' ), 'url' => '#products' ),
 			array( 'label' => __( 'Bento Features', 'bizpro-agency' ), 'url' => '#features' ),
-			array( 'label' => __( 'Pricing Plans', 'bizpro-agency' ), 'url' => home_url( '/pricing/' ) ),
-			array( 'label' => __( 'Case Studies', 'bizpro-agency' ), 'url' => home_url( '/case-studies/' ) ),
-			array( 'label' => __( 'FAQs', 'bizpro-agency' ), 'url' => home_url( '/faq/' ) ),
+			array( 'label' => __( 'Pricing Plans', 'bizpro-agency' ), 'url' => '#pricing' ),
+			array( 'label' => __( 'Buyer FAQs', 'bizpro-agency' ), 'url' => '#store-faq' ),
 			array( 'label' => __( 'Contact Us', 'bizpro-agency' ), 'url' => home_url( '/contact/' ) ),
 		);
 	} else {
@@ -594,7 +594,7 @@ function bizpro_agency_fallback_menu() {
 
 	// Output Demos Dropdown
 	echo '<li class="menu-item-has-children bpa-demos-dropdown">';
-	echo '<a href="#">' . esc_html__( 'All Demos', 'bizpro-agency' ) . ' <span class="bpa-menu-arrow" aria-hidden="true">&#9662;</span></a>';
+	echo '<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'All Demos', 'bizpro-agency' ) . ' <span class="bpa-menu-arrow" aria-hidden="true">&#9662;</span></a>';
 	echo '<ul class="sub-menu">';
 	foreach ( $demos_list as $dm ) {
 		$is_active = ( $dm['key'] === $context );

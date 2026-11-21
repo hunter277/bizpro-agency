@@ -15,6 +15,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
+
+// Dynamic WooCommerce Checkout / Cart Integration
+$bpa_has_wc = function_exists( 'wc_get_checkout_url' );
+$bpa_buy_p1 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '1', wc_get_checkout_url() ) : home_url( '/contact/?product=saas-ui-kit' );
+$bpa_buy_p2 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '2', wc_get_checkout_url() ) : home_url( '/contact/?product=devops-pack' );
+$bpa_buy_p3 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '3', wc_get_checkout_url() ) : home_url( '/contact/?product=nextjs-boilerplate' );
+$bpa_buy_p4 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '4', wc_get_checkout_url() ) : home_url( '/contact/?product=lifetime-bundle' );
+
+$bpa_buy_starter = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'starter', wc_get_checkout_url() ) : home_url( '/contact/?plan=starter' );
+$bpa_buy_pro     = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'pro', wc_get_checkout_url() ) : home_url( '/contact/?plan=pro' );
+$bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_checkout_url() ) : home_url( '/contact/?plan=agency' );
 ?>
 
 <main id="primary" class="site-main site-main--digital">
@@ -173,7 +184,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 								</div>
 								<span style="font-size: 0.8rem; color: #10b981; font-weight: 700;">★ 4.9 (48)</span>
 							</div>
-							<a href="<?php echo esc_url( home_url( '/contact/?product=saas-ui-kit' ) ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
+							<a href="<?php echo esc_url( $bpa_buy_p1 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
 								<?php esc_html_e( 'Get Instant Access →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -200,7 +211,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 								</div>
 								<span style="font-size: 0.8rem; color: #10b981; font-weight: 700;">★ 5.0 (32)</span>
 							</div>
-							<a href="<?php echo esc_url( home_url( '/contact/?product=devops-pack' ) ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
+							<a href="<?php echo esc_url( $bpa_buy_p2 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
 								<?php esc_html_e( 'Get Instant Access →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -227,7 +238,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 								</div>
 								<span style="font-size: 0.8rem; color: #10b981; font-weight: 700;">★ 4.9 (61)</span>
 							</div>
-							<a href="<?php echo esc_url( home_url( '/contact/?product=nextjs-boilerplate' ) ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
+							<a href="<?php echo esc_url( $bpa_buy_p3 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
 								<?php esc_html_e( 'Get Instant Access →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -254,7 +265,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 								</div>
 								<span style="font-size: 0.8rem; color: #6366f1; font-weight: 700;">★ 5.0 (120)</span>
 							</div>
-							<a href="<?php echo esc_url( home_url( '/contact/?product=lifetime-bundle' ) ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none; background: #6366f1; border-color: #6366f1;">
+							<a href="<?php echo esc_url( $bpa_buy_p4 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none; background: #6366f1; border-color: #6366f1;">
 								<?php esc_html_e( 'Buy All-Access Bundle →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -315,7 +326,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 							<li style="color: #94a3b8;">❌ White-Label Agency Mode</li>
 						</ul>
 					</div>
-					<a href="<?php echo esc_url( home_url( '/contact/?plan=starter' ) ); ?>" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Buy Starter Pass', 'bizpro-agency' ); ?></a>
+					<a href="<?php echo esc_url( $bpa_buy_starter ); ?>" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Buy Starter Pass', 'bizpro-agency' ); ?></a>
 				</div>
 
 				<!-- Tier 2: Popular Pro -->
@@ -333,7 +344,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 							<li>✅ WooCommerce Flyout Cart Extension</li>
 						</ul>
 					</div>
-					<a href="<?php echo esc_url( home_url( '/contact/?plan=pro' ) ); ?>" class="btn btn--primary" style="display: block; text-align: center; background: #6366f1; border-color: #6366f1; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 20px rgba(99,102,241,0.3);"><?php esc_html_e( 'Upgrade to Pro Now', 'bizpro-agency' ); ?></a>
+					<a href="<?php echo esc_url( $bpa_buy_pro ); ?>" class="btn btn--primary" style="display: block; text-align: center; background: #6366f1; border-color: #6366f1; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 20px rgba(99,102,241,0.3);"><?php esc_html_e( 'Upgrade to Pro Now', 'bizpro-agency' ); ?></a>
 				</div>
 
 				<!-- Tier 3: Lifetime Agency -->
@@ -350,7 +361,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 							<li>✅ Setup Consultation (Premium)</li>
 						</ul>
 					</div>
-					<a href="<?php echo esc_url( home_url( '/contact/?plan=agency' ) ); ?>" class="btn" style="display: block; text-align: center; background: #0f172a; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none;"><?php esc_html_e( 'Get Lifetime Pass', 'bizpro-agency' ); ?></a>
+					<a href="<?php echo esc_url( $bpa_buy_agency ); ?>" class="btn" style="display: block; text-align: center; background: #0f172a; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none;"><?php esc_html_e( 'Get Lifetime Pass', 'bizpro-agency' ); ?></a>
 				</div>
 
 			</div>

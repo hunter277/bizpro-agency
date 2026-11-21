@@ -22,6 +22,22 @@ $form_error     = false;
 
 if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce'] ) ) {
 	if ( wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['bpa_contact_nonce'] ) ), 'bpa_contact_action' ) ) {
+		$lead_name    = isset( $_POST['bpa_name'] ) ? sanitize_text_field( wp_unslash( $_POST['bpa_name'] ) ) : '';
+		$lead_email   = isset( $_POST['bpa_email'] ) ? sanitize_email( wp_unslash( $_POST['bpa_email'] ) ) : '';
+		$lead_phone   = isset( $_POST['bpa_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['bpa_phone'] ) ) : '';
+		$lead_service = isset( $_POST['bpa_service'] ) ? sanitize_text_field( wp_unslash( $_POST['bpa_service'] ) ) : '';
+		$lead_msg     = isset( $_POST['bpa_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['bpa_message'] ) ) : '';
+
+		// Send email notification to site admin
+		$to      = get_option( 'admin_email' );
+		$subject = sprintf( '[%s] New Contact Request from %s', get_bloginfo( 'name' ), $lead_name );
+		$body    = "Name: $lead_name\nEmail: $lead_email\nPhone: $lead_phone\nService: $lead_service\n\nMessage:\n$lead_msg";
+		$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+		if ( $lead_email ) {
+			$headers[] = "Reply-To: $lead_name <$lead_email>";
+		}
+		wp_mail( $to, $subject, $body, $headers );
+
 		$form_submitted = true;
 	} else {
 		$form_error = true;
@@ -93,33 +109,50 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 					</div>
 				<?php endif; ?>
 
+				<?php
+				$bpa_post_content = get_the_content();
+				if ( ! empty( trim( $bpa_post_content ) ) && ( has_shortcode( $bpa_post_content, 'wpforms' ) || has_shortcode( $bpa_post_content, 'contact-form-7' ) ) ) :
+					the_content();
+				else :
+				?>
+
+				<div class="bpa-demo-form-notice" style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; font-size: 0.88rem; color: #166534; display: flex; align-items: center; gap: 10px;">
+					<span style="font-size: 20px;">⚡</span>
+					<div>
+						<strong><?php esc_html_e( 'Interactive Demo Form:', 'bizpro-agency' ); ?></strong>
+						<?php esc_html_e( 'Submissions deliver live AJAX confirmation and notify the admin email. Fully compatible with WPForms and Contact Form 7 shortcodes.', 'bizpro-agency' ); ?>
+					</div>
+				</div>
+
 				<form method="post" action="" class="bpa-lead-form contact-form">
 					<?php wp_nonce_field( 'bpa_contact_action', 'bpa_contact_nonce' ); ?>
 					
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
 						<div>
-							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Your Full Name *', 'bizpro-agency' ); ?></label>
-							<input type="text" name="bpa_name" required placeholder="John Doe" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+							<label for="bpa_name" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Your Full Name *', 'bizpro-agency' ); ?></label>
+							<input type="text" id="bpa_name" name="bpa_name" required placeholder="John Doe" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
 						</div>
 						<div>
-							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Email Address *', 'bizpro-agency' ); ?></label>
-							<input type="email" name="bpa_email" required placeholder="john@company.com" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+							<label for="bpa_email" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Email Address *', 'bizpro-agency' ); ?></label>
+							<input type="email" id="bpa_email" name="bpa_email" required placeholder="john@company.com" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
 						</div>
 					</div>
 
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
 						<div>
-							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Phone / WhatsApp *', 'bizpro-agency' ); ?></label>
-							<input type="tel" name="bpa_phone" required placeholder="+1 (555) 000-0000" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+							<label for="bpa_phone" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Phone / WhatsApp *', 'bizpro-agency' ); ?></label>
+							<input type="tel" id="bpa_phone" name="bpa_phone" required placeholder="+1 (555) 000-0000" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
 						</div>
 						<div>
-							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Primary Area of Interest', 'bizpro-agency' ); ?></label>
+							<label for="bpa_service" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Primary Area of Interest', 'bizpro-agency' ); ?></label>
 							<?php
 							$bpa_preset_service = isset( $_GET['service'] ) ? sanitize_text_field( wp_unslash( $_GET['service'] ) ) : '';
 							if ( isset( $_GET['tour'] ) ) { $bpa_preset_service = 'travel'; }
 							if ( isset( $_GET['pathway'] ) || isset( $_GET['country'] ) ) { $bpa_preset_service = 'visa'; }
+							if ( isset( $_GET['product'] ) || isset( $_GET['plan'] ) ) { $bpa_preset_service = 'digital'; }
 							?>
-							<select name="bpa_service" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+							<select id="bpa_service" name="bpa_service" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+								<option value="digital" <?php selected( $bpa_preset_service, 'digital' ); ?>><?php esc_html_e( 'Digital Products, Software & SaaS', 'bizpro-agency' ); ?></option>
 								<option value="visa" <?php selected( $bpa_preset_service, 'visa' ); ?>><?php esc_html_e( 'Visa & Immigration Consultancy', 'bizpro-agency' ); ?></option>
 								<option value="it" <?php selected( $bpa_preset_service, 'it' ); ?>><?php esc_html_e( 'IT Solutions, Cloud & Software', 'bizpro-agency' ); ?></option>
 								<option value="travel" <?php selected( $bpa_preset_service, 'travel' ); ?>><?php esc_html_e( 'Travel Planning & Holiday Tours', 'bizpro-agency' ); ?></option>
@@ -130,12 +163,13 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 					</div>
 
 					<div style="margin-bottom: 24px;">
-						<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Project Scope / Message *', 'bizpro-agency' ); ?></label>
-						<textarea name="bpa_message" rows="5" required placeholder="<?php esc_attr_e( 'Please provide a brief summary of your inquiry, goals, or requirements...', 'bizpro-agency' ); ?>" style="width: 100%; padding: 14px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);"></textarea>
+						<label for="bpa_message" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Project Scope / Message *', 'bizpro-agency' ); ?></label>
+						<textarea id="bpa_message" name="bpa_message" rows="5" required placeholder="<?php esc_attr_e( 'Please provide a brief summary of your inquiry, goals, or requirements...', 'bizpro-agency' ); ?>" style="width: 100%; padding: 14px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);"></textarea>
 					</div>
 
 					<button type="submit" class="btn btn--primary btn--lg" style="width: 100%; padding: 16px; font-size: 1.05rem; justify-content: center;"><?php esc_html_e( 'Send Consultation Request', 'bizpro-agency' ); ?></button>
 				</form>
+				<?php endif; ?>
 			</div>
 
 			<!-- Right: Office Highlights & Security -->

@@ -31,6 +31,16 @@ function bizpro_agency_register_required_plugins() {
 			'slug'     => 'elementor',
 			'required' => false,
 		),
+		array(
+			'name'     => 'Contact Form by WPForms',
+			'slug'     => 'wpforms-lite',
+			'required' => false,
+		),
+		array(
+			'name'     => 'Contact Form 7',
+			'slug'     => 'contact-form-7',
+			'required' => false,
+		),
 	);
 
 	// If companion plugin zip is present in /plugins/, allow 1-click local install
