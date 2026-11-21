@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '1.9.8' );
+define( 'BIZPRO_AGENCY_VERSION', '2.0.0' );
 
 /**
  * Default values for every Customizer option.
@@ -1220,6 +1220,48 @@ function bizpro_agency_create_essential_pages() {
 			'title'    => __( 'Corporate Enterprise', 'bizpro-agency' ),
 			'slug'     => 'corporate',
 			'template' => 'template-homepage-corporate.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Pricing & Plans', 'bizpro-agency' ),
+			'slug'     => 'pricing',
+			'template' => 'template-pricing.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Frequently Asked Questions', 'bizpro-agency' ),
+			'slug'     => 'faq',
+			'template' => 'template-faq.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Case Studies & Portfolio', 'bizpro-agency' ),
+			'slug'     => 'case-studies',
+			'template' => 'template-case-studies.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Our Leadership Team', 'bizpro-agency' ),
+			'slug'     => 'team',
+			'template' => 'template-team.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Coming Soon', 'bizpro-agency' ),
+			'slug'     => 'coming-soon',
+			'template' => 'template-coming-soon.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Visa Pathways Finder', 'bizpro-agency' ),
+			'slug'     => 'visa-search',
+			'template' => 'template-visa-search.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Tour Packages & Vacations', 'bizpro-agency' ),
+			'slug'     => 'tour-packages',
+			'template' => 'template-tour-packages.php',
 			'content'  => '',
 		),
 	);

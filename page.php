@@ -79,6 +79,48 @@ if ( $post ) {
 		}
 	}
 
+		// --- Pricing ---
+	if ( false !== strpos( $bpa_slug, 'pricing' ) || false !== strpos( $bpa_slug, 'plan' ) ) {
+		$tpl = get_template_directory() . '/template-pricing.php';
+		if ( file_exists( $tpl ) ) { include $tpl; return; }
+	}
+
+	// --- FAQ ---
+	if ( false !== strpos( $bpa_slug, 'faq' ) || false !== strpos( $bpa_slug, 'help' ) ) {
+		$tpl = get_template_directory() . '/template-faq.php';
+		if ( file_exists( $tpl ) ) { include $tpl; return; }
+	}
+
+	// --- Case Studies & Portfolio ---
+	if ( false !== strpos( $bpa_slug, 'case' ) || false !== strpos( $bpa_slug, 'portfolio' ) || false !== strpos( $bpa_slug, 'project' ) ) {
+		$tpl = get_template_directory() . '/template-case-studies.php';
+		if ( file_exists( $tpl ) ) { include $tpl; return; }
+	}
+
+	// --- Team & Leadership ---
+	if ( false !== strpos( $bpa_slug, 'team' ) || false !== strpos( $bpa_slug, 'leader' ) ) {
+		$tpl = get_template_directory() . '/template-team.php';
+		if ( file_exists( $tpl ) ) { include $tpl; return; }
+	}
+
+	// --- Coming Soon ---
+	if ( false !== strpos( $bpa_slug, 'coming' ) || false !== strpos( $bpa_slug, 'maintenance' ) ) {
+		$tpl = get_template_directory() . '/template-coming-soon.php';
+		if ( file_exists( $tpl ) ) { include $tpl; return; }
+	}
+
+	// --- Visa Search & Directory ---
+	if ( false !== strpos( $bpa_slug, 'visa-search' ) || false !== strpos( $bpa_slug, 'country' ) ) {
+		$tpl = get_template_directory() . '/template-visa-search.php';
+		if ( file_exists( $tpl ) ) { include $tpl; return; }
+	}
+
+	// --- Tour Packages ---
+	if ( false !== strpos( $bpa_slug, 'tour-packages' ) || false !== strpos( $bpa_slug, 'package' ) ) {
+		$tpl = get_template_directory() . '/template-tour-packages.php';
+		if ( file_exists( $tpl ) ) { include $tpl; return; }
+	}
+
 	// --- Contact Us ---
 	if ( false !== strpos( $bpa_slug, 'contact' ) ) {
 		$tpl = get_template_directory() . '/template-contact.php';
