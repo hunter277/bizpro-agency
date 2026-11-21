@@ -546,4 +546,119 @@ $bpa_faq_title   = bizpro_agency_get( 'faq_title' );
 </main><!-- #primary -->
 
 <?php
+
+<!-- =========================================================================
+     7 READY-MADE STARTER SITES SHOWCASE SECTION
+     ========================================================================= -->
+<section class="section section--demos-showcase" id="demos" style="padding: 100px 0; background: var(--bpa-bg-alt, #f8fafc); border-top: 1px solid var(--bpa-border, #e2e8f0); border-bottom: 1px solid var(--bpa-border, #e2e8f0);">
+	<div class="container">
+		<div style="text-align: center; max-width: 750px; margin: 0 auto 60px;">
+			<div style="display: inline-flex; align-items: center; gap: 8px; background: #e0e7ff; color: #4338ca; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">
+				<span>⚡ 1-Click Import Ready</span>
+			</div>
+			<h2 style="font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 800; color: var(--bpa-text, #0f172a); margin: 0 0 16px; letter-spacing: -0.02em;">
+				<?php esc_html_e( '7 Niche Demos Built for High-Growth Businesses', 'bizpro-agency' ); ?>
+			</h2>
+			<p style="color: var(--bpa-text-muted, #64748b); font-size: 1.15rem; line-height: 1.6; margin: 0;">
+				<?php esc_html_e( 'Choose your industry below. Each starter site includes tailored typography, custom page layouts, responsive contact forms, and AdSense optimized areas.', 'bizpro-agency' ); ?>
+			</p>
+		</div>
+
+		<?php
+		$demos_catalog = array(
+			array(
+				'title'    => __( 'Digital Products & SaaS Store', 'bizpro-agency' ),
+				'niche'    => 'eCommerce / Software',
+				'badge'    => 'eCom',
+				'desc'     => __( 'Sell software, plugins, templates, and digital assets with instant downloads and Bento grid.', 'bizpro-agency' ),
+				'url'      => home_url( '/digital-store/' ),
+				'img'      => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-digital.png',
+			),
+			array(
+				'title'    => __( 'Visa & Immigration Consultancy', 'bizpro-agency' ),
+				'niche'    => 'Immigration & Law',
+				'badge'    => 'Hot',
+				'desc'     => __( '2-minute eligibility checker, country pathway cards, and 4-step client onboarding framework.', 'bizpro-agency' ),
+				'url'      => home_url( '/visa-immigration/' ),
+				'img'      => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-visa.png',
+			),
+			array(
+				'title'    => __( 'Travel & Tour Operator', 'bizpro-agency' ),
+				'niche'    => 'Tourism & Travel',
+				'badge'    => 'New',
+				'desc'     => __( 'Floating search bar, curated destination packages, seasonal deals, and verified guest reviews.', 'bizpro-agency' ),
+				'url'      => home_url( '/travel-agency/' ),
+				'img'      => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-travel.png',
+			),
+			array(
+				'title'    => __( 'IT Solutions & Cloud Services', 'bizpro-agency' ),
+				'niche'    => 'Tech & DevOps',
+				'badge'    => 'Tech',
+				'desc'     => __( 'Enterprise tech stack matrix, DevOps architecture, SLA guarantees, and recurring retainers.', 'bizpro-agency' ),
+				'url'      => home_url( '/it-solutions/' ),
+				'img'      => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-it.png',
+			),
+			array(
+				'title'    => __( 'Business & Management Consulting', 'bizpro-agency' ),
+				'niche'    => 'Corporate Advisory',
+				'badge'    => 'Pro',
+				'desc'     => __( 'Executive strategic practices, post-merger integration framework, and client value metric cards.', 'bizpro-agency' ),
+				'url'      => home_url( '/business-consulting/' ),
+				'img'      => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-consulting.png',
+			),
+			array(
+				'title'    => __( 'Corporate Enterprise & Finance', 'bizpro-agency' ),
+				'niche'    => 'Enterprise & ESG',
+				'badge'    => 'Elite',
+				'desc'     => __( 'Institutional boardroom governance, global footprint map, and Fortune 500 compliance.', 'bizpro-agency' ),
+				'url'      => home_url( '/corporate/' ),
+				'img'      => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-corporate.png',
+			),
+			array(
+				'title'    => __( 'Main Agency (Flagship Multi-Purpose)', 'bizpro-agency' ),
+				'niche'    => 'All-in-One Agency',
+				'badge'    => 'Popular',
+				'desc'     => __( 'Our versatile flagship layout with animated statistics, service pillars, portfolio case studies, and reviews.', 'bizpro-agency' ),
+				'url'      => home_url( '/' ),
+				'img'      => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-main.png',
+			),
+		);
+		?>
+
+		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px;">
+			<?php foreach ( $demos_catalog as $dm ) : ?>
+				<article class="bpa-demo-card" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.28s ease, box-shadow 0.28s ease;">
+					<div>
+						<div style="position: relative; overflow: hidden; background: #0f172a;">
+							<img src="<?php echo esc_url( $dm['img'] ); ?>" alt="<?php echo esc_attr( $dm['title'] ); ?>" loading="lazy" style="width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.4s ease;">
+							<span style="position: absolute; top: 14px; left: 14px; background: rgba(15,23,42,0.85); backdrop-filter: blur(6px); color: #ffffff; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">
+								<?php echo esc_html( $dm['niche'] ); ?>
+							</span>
+							<?php if ( ! empty( $dm['badge'] ) ) : ?>
+								<span style="position: absolute; top: 14px; right: 14px; background: #2563eb; color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">
+									<?php echo esc_html( $dm['badge'] ); ?>
+								</span>
+							<?php endif; ?>
+						</div>
+						<div style="padding: 24px 24px 16px;">
+							<h3 style="font-size: 1.25rem; font-weight: 800; color: var(--bpa-text, #0f172a); margin: 0 0 8px; line-height: 1.3;">
+								<?php echo esc_html( $dm['title'] ); ?>
+							</h3>
+							<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.5; margin: 0;">
+								<?php echo esc_html( $dm['desc'] ); ?>
+							</p>
+						</div>
+					</div>
+					<div style="padding: 0 24px 24px;">
+						<a href="<?php echo esc_url( $dm['url'] ); ?>" class="btn btn--primary" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; font-weight: 700; border-radius: 10px; text-decoration: none;">
+							<span><?php esc_html_e( 'Live Preview Demo', 'bizpro-agency' ); ?></span>
+							<span aria-hidden="true">→</span>
+						</a>
+					</div>
+				</article>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+
 get_footer();

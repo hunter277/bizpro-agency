@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '1.9.0' );
+define( 'BIZPRO_AGENCY_VERSION', '1.9.5' );
 
 /**
  * Default values for every Customizer option.
@@ -494,6 +494,12 @@ function bizpro_agency_fallback_menu() {
 			'url'   => home_url( '/corporate/' ),
 			'badge' => '',
 			'key'   => 'corporate',
+		),
+		array(
+			'label' => __( 'Digital Store & SaaS', 'bizpro-agency' ),
+			'url'   => home_url( '/digital-store/' ),
+			'badge' => __( 'eCom', 'bizpro-agency' ),
+			'key'   => 'digital',
 		),
 	);
 
@@ -1212,3 +1218,114 @@ add_action( 'admin_init', function() {
 		exit;
 	}
 } );
+
+/**
+ * Ensure the 7 Demos Dropdown is always accessible in Primary Navigation.
+ */
+function bizpro_agency_append_demos_to_nav( $items, $args ) {
+	if ( ( empty( $args->theme_location ) || 'primary' === $args->theme_location ) && false === strpos( $items, 'All Demos' ) ) {
+		$demos = array(
+			array( 'label' => 'Main Agency (Multi-Purpose)', 'url' => home_url( '/' ), 'badge' => 'Popular' ),
+			array( 'label' => 'Visa & Immigration', 'url' => home_url( '/visa-immigration/' ), 'badge' => 'Hot' ),
+			array( 'label' => 'Travel & Tour Agency', 'url' => home_url( '/travel-agency/' ), 'badge' => 'New' ),
+			array( 'label' => 'IT Solutions & Cloud', 'url' => home_url( '/it-solutions/' ), 'badge' => 'Tech' ),
+			array( 'label' => 'Business Consulting', 'url' => home_url( '/business-consulting/' ), 'badge' => '' ),
+			array( 'label' => 'Corporate Enterprise', 'url' => home_url( '/corporate/' ), 'badge' => '' ),
+			array( 'label' => 'Digital Products & SaaS', 'url' => home_url( '/digital-store/' ), 'badge' => 'eCom' ),
+		);
+		$dropdown = '<li class="menu-item-has-children bpa-demos-dropdown">';
+		$dropdown .= '<a href="#">' . esc_html__( 'All Demos', 'bizpro-agency' ) . ' <span class="bpa-menu-arrow" aria-hidden="true">&#9662;</span></a>';
+		$dropdown .= '<ul class="sub-menu">';
+		foreach ( $demos as $d ) {
+			$dropdown .= '<li><a href="' . esc_url( $d['url'] ) . '">' . esc_html( $d['label'] );
+			if ( ! empty( $d['badge'] ) ) {
+				$dropdown .= ' <span class="bpa-menu-badge bpa-menu-badge--' . esc_attr( strtolower( $d['badge'] ) ) . '">' . esc_html( $d['badge'] ) . '</span>';
+			}
+			$dropdown .= '</a></li>';
+		}
+		$dropdown .= '</ul></li>';
+		$items .= $dropdown;
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'bizpro_agency_append_demos_to_nav', 10, 2 );
+
+/**
+ * Render Interactive Floating 7-Demo Quick Switcher on Frontend.
+ */
+function bizpro_agency_floating_demo_switcher() {
+	if ( is_admin() ) {
+		return;
+	}
+	$img_uri = trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/';
+	$demos = array(
+		array( 'title' => 'Main Agency', 'desc' => 'Multi-Purpose Flagship', 'badge' => 'Popular', 'url' => home_url( '/' ), 'img' => $img_uri . 'demo-main.png' ),
+		array( 'title' => 'Visa & Immigration', 'desc' => 'Legal Consultancy & Pathways', 'badge' => 'Hot', 'url' => home_url( '/visa-immigration/' ), 'img' => $img_uri . 'demo-visa.png' ),
+		array( 'title' => 'Travel & Tour Agency', 'desc' => 'Holiday Packages & Booking', 'badge' => 'New', 'url' => home_url( '/travel-agency/' ), 'img' => $img_uri . 'demo-travel.png' ),
+		array( 'title' => 'IT Solutions & Cloud', 'desc' => 'DevOps, Cloud & Engineering', 'badge' => 'Tech', 'url' => home_url( '/it-solutions/' ), 'img' => $img_uri . 'demo-it.png' ),
+		array( 'title' => 'Business Consulting', 'desc' => 'Strategic Advisory & Retainers', 'badge' => 'Pro', 'url' => home_url( '/business-consulting/' ), 'img' => $img_uri . 'demo-consulting.png' ),
+		array( 'title' => 'Corporate Enterprise', 'desc' => 'Governance & Global Solutions', 'badge' => 'Elite', 'url' => home_url( '/corporate/' ), 'img' => $img_uri . 'demo-corporate.png' ),
+		array( 'title' => 'Digital Store & SaaS', 'desc' => 'eCommerce & Software Selling', 'badge' => 'eCom', 'url' => home_url( '/digital-store/' ), 'img' => $img_uri . 'demo-digital.png' ),
+	);
+	?>
+	<!-- Floating 7 Demos Quick Switcher -->
+	<div class="bpa-floating-demo-bar" id="bpaFloatingDemoBar">
+		<button type="button" class="bpa-demo-pill" id="bpaDemoPill" aria-expanded="false" title="<?php esc_attr_e( 'View All 7 Ready Demos', 'bizpro-agency' ); ?>">
+			<span class="bpa-pulse-dot"></span>
+			<span class="bpa-pill-icon">⚡</span>
+			<span class="bpa-pill-text"><?php esc_html_e( '7 Ready Demos', 'bizpro-agency' ); ?></span>
+			<span class="bpa-pill-arrow">&#9652;</span>
+		</button>
+		<div class="bpa-demo-drawer" id="bpaDemoDrawer">
+			<div class="bpa-drawer-header">
+				<div>
+					<h4 style="margin: 0; font-size: 1.1rem; color: #0f172a; font-weight: 800;"><?php esc_html_e( '7 Pre-Built Starter Demos', 'bizpro-agency' ); ?></h4>
+					<p style="margin: 4px 0 0; font-size: 0.82rem; color: #64748b;"><?php esc_html_e( '1-Click import ready with complete pages & layouts', 'bizpro-agency' ); ?></p>
+				</div>
+				<button type="button" class="bpa-drawer-close" id="bpaDrawerClose">&times;</button>
+			</div>
+			<div class="bpa-drawer-grid">
+				<?php foreach ( $demos as $d ) : ?>
+					<a href="<?php echo esc_url( $d['url'] ); ?>" class="bpa-demo-item">
+						<div class="bpa-demo-item-thumb">
+							<img src="<?php echo esc_url( $d['img'] ); ?>" alt="<?php echo esc_attr( $d['title'] ); ?>" loading="lazy" style="width: 100%; height: 110px; object-fit: cover; border-radius: 8px;">
+							<span class="bpa-item-badge bpa-item-badge--<?php echo esc_attr( strtolower( $d['badge'] ) ); ?>"><?php echo esc_html( $d['badge'] ); ?></span>
+						</div>
+						<div class="bpa-demo-item-info">
+							<strong><?php echo esc_html( $d['title'] ); ?></strong>
+							<span><?php echo esc_html( $d['desc'] ); ?></span>
+						</div>
+					</a>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</div>
+	<script>
+	(function(){
+		var pill = document.getElementById('bpaDemoPill');
+		var drawer = document.getElementById('bpaDemoDrawer');
+		var close = document.getElementById('bpaDrawerClose');
+		if(pill && drawer){
+			pill.addEventListener('click', function(e){
+				e.stopPropagation();
+				var open = drawer.classList.toggle('is-open');
+				pill.setAttribute('aria-expanded', open ? 'true' : 'false');
+			});
+			if(close){
+				close.addEventListener('click', function(){
+					drawer.classList.remove('is-open');
+					pill.setAttribute('aria-expanded', 'false');
+				});
+			}
+			document.addEventListener('click', function(e){
+				if(!drawer.contains(e.target) && !pill.contains(e.target)){
+					drawer.classList.remove('is-open');
+					pill.setAttribute('aria-expanded', 'false');
+				}
+			});
+		}
+	})();
+	</script>
+	<?php
+}
+add_action( 'wp_footer', 'bizpro_agency_floating_demo_switcher' );
