@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '2.0.0' );
+define( 'BIZPRO_AGENCY_VERSION', '2.1.0' );
 
 /**
  * Default values for every Customizer option.
@@ -550,6 +550,15 @@ function bizpro_agency_fallback_menu() {
 			array( 'label' => __( 'Leadership', 'bizpro-agency' ), 'url' => '#corporate-leadership' ),
 			array( 'label' => __( 'Governance', 'bizpro-agency' ), 'url' => '#corporate-governance' ),
 			array( 'label' => __( 'Contact', 'bizpro-agency' ), 'url' => '#contact' ),
+		);
+	} elseif ( 'digital' === $context ) {
+		$items = array(
+			array( 'label' => __( 'Home', 'bizpro-agency' ), 'url' => home_url( '/digital-store/' ) ),
+			array( 'label' => __( 'Bento Features', 'bizpro-agency' ), 'url' => '#features' ),
+			array( 'label' => __( 'Pricing Plans', 'bizpro-agency' ), 'url' => home_url( '/pricing/' ) ),
+			array( 'label' => __( 'Case Studies', 'bizpro-agency' ), 'url' => home_url( '/case-studies/' ) ),
+			array( 'label' => __( 'FAQs', 'bizpro-agency' ), 'url' => home_url( '/faq/' ) ),
+			array( 'label' => __( 'Contact Us', 'bizpro-agency' ), 'url' => home_url( '/contact/' ) ),
 		);
 	} else {
 		$items = array(

@@ -104,6 +104,36 @@ add_filter( 'ocdi/import_files',    'bizpro_agency_ocdi_import_files' );
  *
  * @param array $selected_import Selected import data.
  */
+/**
+ * Helper function to create or populate a dedicated navigation menu for a niche demo.
+ */
+function bizpro_agency_setup_demo_nav_menu( $menu_name, $items ) {
+	$menu_exists = wp_get_nav_menu_object( $menu_name );
+	if ( $menu_exists ) {
+		wp_delete_nav_menu( $menu_exists->term_id );
+	}
+	$menu_id = wp_create_nav_menu( $menu_name );
+	if ( ! is_wp_error( $menu_id ) ) {
+		foreach ( $items as $it ) {
+			wp_update_nav_menu_item( $menu_id, 0, array(
+				'menu-item-title'   => $it['title'],
+				'menu-item-url'     => $it['url'],
+				'menu-item-status'  => 'publish',
+				'menu-item-type'    => 'custom',
+			) );
+		}
+		// Assign to primary location
+		$locations = get_theme_mod( 'nav_menu_locations', array() );
+		$locations['primary'] = $menu_id;
+		set_theme_mod( 'nav_menu_locations', $locations );
+	}
+}
+
+/**
+ * After import: dynamically assign homepage, menu, and tagline according to the chosen niche demo.
+ *
+ * @param array $selected_import Selected import data.
+ */
 function bizpro_agency_ocdi_after_import( $selected_import ) {
 	if ( function_exists( 'bizpro_agency_create_essential_pages' ) ) {
 		bizpro_agency_create_essential_pages();
@@ -113,88 +143,131 @@ function bizpro_agency_ocdi_after_import( $selected_import ) {
 	update_option( 'show_on_front', 'page' );
 
 	if ( false !== strpos( $demo_name, 'Visa' ) ) {
-		// 1. Visa Demo
+		// 1. Visa & Immigration Demo
 		$target = get_page_by_path( 'visa-immigration' );
 		if ( ! $target ) { $target = get_page_by_title( 'Visa & Immigration' ); }
-		if ( $target ) {
-			update_option( 'page_on_front', $target->ID );
-		}
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
 		update_option( 'blogdescription', __( 'Premier Legal Visa & Immigration Consultancy', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'Free Assessment', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/contact/' ) );
 
-		$visa_menu = get_term_by( 'name', 'Visa Navigation', 'nav_menu' );
-		if ( ! $visa_menu ) { $visa_menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' ); }
-		if ( $visa_menu ) {
-			set_theme_mod( 'nav_menu_locations', array( 'primary' => $visa_menu->term_id, 'menu_visa' => $visa_menu->term_id ) );
-		}
+		bizpro_agency_setup_demo_nav_menu( 'Visa Navigation', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'Visa Pathways', 'url' => home_url( '/visa-search/' ) ),
+			array( 'title' => 'Eligibility Check', 'url' => home_url( '/contact/' ) ),
+			array( 'title' => 'Case Studies', 'url' => home_url( '/case-studies/' ) ),
+			array( 'title' => 'FAQs', 'url' => home_url( '/faq/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
+
 	} elseif ( false !== strpos( $demo_name, 'Travel' ) ) {
-		// 2. Travel Demo
+		// 2. Travel & Tour Demo
 		$target = get_page_by_path( 'travel-agency' );
 		if ( ! $target ) { $target = get_page_by_title( 'Travel Agency' ); }
-		if ( $target ) {
-			update_option( 'page_on_front', $target->ID );
-		}
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
 		update_option( 'blogdescription', __( 'Verified Global Tours & Holiday Itineraries', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'Book a Tour', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/tour-packages/' ) );
 
-		$travel_menu = get_term_by( 'name', 'Travel Navigation', 'nav_menu' );
-		if ( ! $travel_menu ) { $travel_menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' ); }
-		if ( $travel_menu ) {
-			set_theme_mod( 'nav_menu_locations', array( 'primary' => $travel_menu->term_id, 'menu_travel' => $travel_menu->term_id ) );
-		}
+		bizpro_agency_setup_demo_nav_menu( 'Travel Navigation', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'Tour Packages', 'url' => home_url( '/tour-packages/' ) ),
+			array( 'title' => 'Case Studies', 'url' => home_url( '/case-studies/' ) ),
+			array( 'title' => 'Pricing & Plans', 'url' => home_url( '/pricing/' ) ),
+			array( 'title' => 'FAQs', 'url' => home_url( '/faq/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
+
 	} elseif ( false !== strpos( $demo_name, 'IT Solutions' ) ) {
 		// 3. IT Solutions Demo
 		$target = get_page_by_path( 'it-solutions' );
 		if ( ! $target ) { $target = get_page_by_title( 'IT Solutions' ); }
-		if ( $target ) {
-			update_option( 'page_on_front', $target->ID );
-		}
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
 		update_option( 'blogdescription', __( 'Enterprise Cloud Architecture, DevOps & Custom Software', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'Architecture Review', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/contact/' ) );
 
-		$it_menu = get_term_by( 'name', 'IT Navigation', 'nav_menu' );
-		if ( ! $it_menu ) { $it_menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' ); }
-		if ( $it_menu ) {
-			set_theme_mod( 'nav_menu_locations', array( 'primary' => $it_menu->term_id, 'menu_it' => $it_menu->term_id ) );
-		}
+		bizpro_agency_setup_demo_nav_menu( 'IT Solutions Navigation', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'Services', 'url' => home_url( '/services/' ) ),
+			array( 'title' => 'Case Studies', 'url' => home_url( '/case-studies/' ) ),
+			array( 'title' => 'Pricing & SLA', 'url' => home_url( '/pricing/' ) ),
+			array( 'title' => 'Leadership', 'url' => home_url( '/team/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
+
+	} elseif ( false !== strpos( $demo_name, 'Digital' ) || false !== strpos( $demo_name, 'SaaS' ) ) {
+		// 4. Digital Store & SaaS Demo
+		$target = get_page_by_path( 'digital-store' );
+		if ( ! $target ) { $target = get_page_by_title( 'Digital Products & SaaS Store' ); }
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
+		update_option( 'blogdescription', __( 'Digital Software, UI Kits & SaaS Products', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'All-Access Pass', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/pricing/' ) );
+
+		bizpro_agency_setup_demo_nav_menu( 'Digital Store Navigation', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'Bento Features', 'url' => home_url( '/#features' ) ),
+			array( 'title' => 'Pricing Plans', 'url' => home_url( '/pricing/' ) ),
+			array( 'title' => 'Case Studies', 'url' => home_url( '/case-studies/' ) ),
+			array( 'title' => 'FAQs', 'url' => home_url( '/faq/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
+
 	} elseif ( false !== strpos( $demo_name, 'Consulting' ) ) {
-		// 4. Consulting Demo
+		// 5. Consulting Demo
 		$target = get_page_by_path( 'business-consulting' );
 		if ( ! $target ) { $target = get_page_by_title( 'Business Consulting' ); }
-		if ( $target ) {
-			update_option( 'page_on_front', $target->ID );
-		}
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
 		update_option( 'blogdescription', __( 'Strategic Management & Corporate Advisory', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'Executive Briefing', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/contact/' ) );
 
-		$cons_menu = get_term_by( 'name', 'Consulting Navigation', 'nav_menu' );
-		if ( ! $cons_menu ) { $cons_menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' ); }
-		if ( $cons_menu ) {
-			set_theme_mod( 'nav_menu_locations', array( 'primary' => $cons_menu->term_id, 'menu_consulting' => $cons_menu->term_id ) );
-		}
+		bizpro_agency_setup_demo_nav_menu( 'Consulting Navigation', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'Advisory Services', 'url' => home_url( '/services/' ) ),
+			array( 'title' => 'Client Impact', 'url' => home_url( '/case-studies/' ) ),
+			array( 'title' => 'Pricing Tiers', 'url' => home_url( '/pricing/' ) ),
+			array( 'title' => 'Our Team', 'url' => home_url( '/team/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
+
 	} elseif ( false !== strpos( $demo_name, 'Corporate' ) ) {
-		// 5. Corporate Demo
+		// 6. Corporate Enterprise Demo
 		$target = get_page_by_path( 'corporate' );
-		if ( ! $target ) { $target = get_page_by_title( 'Corporate' ); }
-		if ( $target ) {
-			update_option( 'page_on_front', $target->ID );
-		}
+		if ( ! $target ) { $target = get_page_by_title( 'Corporate Enterprise' ); }
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
 		update_option( 'blogdescription', __( 'Institutional Corporate Solutions & Governance', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'Corporate Inquiries', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/contact/' ) );
 
-		$corp_menu = get_term_by( 'name', 'Corporate Navigation', 'nav_menu' );
-		if ( ! $corp_menu ) { $corp_menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' ); }
-		if ( $corp_menu ) {
-			set_theme_mod( 'nav_menu_locations', array( 'primary' => $corp_menu->term_id, 'menu_corporate' => $corp_menu->term_id ) );
-		}
+		bizpro_agency_setup_demo_nav_menu( 'Corporate Navigation', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'Enterprise Solutions', 'url' => home_url( '/services/' ) ),
+			array( 'title' => 'Portfolio', 'url' => home_url( '/case-studies/' ) ),
+			array( 'title' => 'Leadership', 'url' => home_url( '/team/' ) ),
+			array( 'title' => 'FAQs', 'url' => home_url( '/faq/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
+
 	} else {
-		// 6. Default Flagship Agency
+		// 7. Flagship Multi-Purpose Agency
 		$target = get_page_by_path( 'home' );
 		if ( ! $target ) { $target = get_page_by_title( 'Home' ); }
-		if ( $target ) {
-			update_option( 'page_on_front', $target->ID );
-		}
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
 		update_option( 'blogdescription', __( 'Premier Business, Visa & Tech Consulting', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'Book a Free Consultation', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/contact/' ) );
 
-		$main_menu = get_term_by( 'name', 'Primary Menu', 'nav_menu' );
-		if ( $main_menu ) {
-			set_theme_mod( 'nav_menu_locations', array( 'primary' => $main_menu->term_id ) );
-		}
+		bizpro_agency_setup_demo_nav_menu( 'Primary Menu', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'About Us', 'url' => home_url( '/about-us/' ) ),
+			array( 'title' => 'Services', 'url' => home_url( '/services/' ) ),
+			array( 'title' => 'Case Studies', 'url' => home_url( '/case-studies/' ) ),
+			array( 'title' => 'Pricing', 'url' => home_url( '/pricing/' ) ),
+			array( 'title' => 'FAQs', 'url' => home_url( '/faq/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
 	}
 
 	$blog_page = get_page_by_path( 'blog' );
@@ -211,6 +284,7 @@ function bizpro_agency_ocdi_after_import( $selected_import ) {
 		}
 	}
 }
+
 add_action( 'pt-ocdi/after_import', 'bizpro_agency_ocdi_after_import' );
 add_action( 'ocdi/after_import',    'bizpro_agency_ocdi_after_import' );
 
