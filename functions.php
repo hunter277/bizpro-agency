@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '2.2.0' );
+define( 'BIZPRO_AGENCY_VERSION', '2.3.0' );
 
 /**
  * Default values for every Customizer option.
@@ -247,6 +247,7 @@ function bizpro_agency_setup() {
 	register_nav_menus(
 		array(
 			'primary'         => esc_html__( 'Primary Menu (Main Agency)', 'bizpro-agency' ),
+			'menu_digital'     => esc_html__( 'Digital Store & SaaS Menu', 'bizpro-agency' ),
 			'menu_visa'       => esc_html__( 'Visa & Immigration Menu', 'bizpro-agency' ),
 			'menu_travel'     => esc_html__( 'Travel Agency Menu', 'bizpro-agency' ),
 			'menu_it'         => esc_html__( 'IT Solutions Menu', 'bizpro-agency' ),
@@ -355,6 +356,9 @@ add_action( 'widgets_init', 'bizpro_agency_widgets_init' );
  * @return string
  */
 function bizpro_agency_get_demo_context() {
+	if ( is_page_template( 'template-homepage-digital.php' ) || is_page( array( 'digital-store', 'home-digital', 'digital' ) ) ) {
+		return 'digital';
+	}
 	if ( is_page_template( 'template-homepage-visa.php' ) || is_page( array( 'visa-immigration', 'home-visa', 'visa' ) ) ) {
 		return 'visa';
 	}
@@ -384,6 +388,8 @@ function bizpro_agency_get_demo_menu_location( $context = null ) {
 		$context = bizpro_agency_get_demo_context();
 	}
 	switch ( $context ) {
+		case 'digital':
+			return 'menu_digital';
 		case 'visa':
 			return 'menu_visa';
 		case 'travel':
@@ -410,6 +416,12 @@ function bizpro_agency_get_demo_info( $context = null ) {
 		$context = bizpro_agency_get_demo_context();
 	}
 	$demos = array(
+		'digital' => array(
+			'tagline'   => __( 'Digital & SaaS', 'bizpro-agency' ),
+			'cta_text'  => __( 'Get All-Access', 'bizpro-agency' ),
+			'cta_url'   => home_url( '/pricing/' ),
+			'top_badge' => __( 'Instant Digital Delivery', 'bizpro-agency' ),
+		),
 		'visa' => array(
 			'tagline'   => __( 'Immigration', 'bizpro-agency' ),
 			'cta_text'  => __( 'Free Assessment', 'bizpro-agency' ),
@@ -1420,6 +1432,8 @@ add_action( 'wp_footer', 'bizpro_agency_floating_demo_switcher' );
 // Include Astra Pro Parity Modules
 require_once get_template_directory() . '/inc/shortcodes.php';
 require_once get_template_directory() . '/inc/white-label.php';
+require_once get_template_directory() . '/inc/cpt-visa.php';
+require_once get_template_directory() . '/inc/tgmpa/tgmpa-config.php';
 
 /**
  * Calculate post reading time (e.g. 📖 4 min read).

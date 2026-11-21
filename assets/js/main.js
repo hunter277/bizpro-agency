@@ -365,6 +365,34 @@
 		} );
 	}
 
+	function initVisaFinder() {
+		var form = document.getElementById( 'bpa-visa-finder' );
+		if ( ! form ) { return; }
+		var country = document.getElementById( 'bpa-visa-country' );
+		var type = document.getElementById( 'bpa-visa-type' );
+		var cards = document.querySelectorAll( '.visa-country-card' );
+		var status = document.getElementById( 'bpa-visa-results' );
+		if ( ! country || ! type || ! cards.length ) { return; }
+
+		form.addEventListener( 'submit', function ( event ) {
+			event.preventDefault();
+			var selectedCountry = country.value;
+			var selectedType = type.value;
+			var visible = 0;
+			cards.forEach( function ( card ) {
+				var countryMatch = selectedCountry === 'all' || card.getAttribute( 'data-country' ) === selectedCountry;
+				var types = ( card.getAttribute( 'data-types' ) || '' ).split( ',' );
+				var typeMatch = selectedType === 'all' || types.indexOf( selectedType ) !== -1;
+				var show = countryMatch && typeMatch;
+				card.hidden = ! show;
+				if ( show ) { visible++; }
+			} );
+			if ( status ) {
+				status.textContent = visible ? visible + ( visible === 1 ? ' pathway found.' : ' pathways found.' ) : 'No matching pathways. Try another country or visa type.';
+			}
+		} );
+	}
+
 	function init() {
 		initBackToTop();
 		initCookieBanner();
@@ -378,6 +406,7 @@
 		initActiveNav();
 		initTypewriter();
 		initTabs();
+		initVisaFinder();
 	}
 
 	if ( document.readyState === 'loading' ) {

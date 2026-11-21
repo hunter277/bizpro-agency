@@ -75,17 +75,6 @@ function bizpro_agency_ocdi_import_files() {
 		),
 		array(
 			'import_file_name'           => esc_html__( 'Corporate Enterprise', 'bizpro-agency' ),
-		array(
-			'import_file_name'           => esc_html__( 'Digital Products & SaaS Store', 'bizpro-agency' ),
-			'categories'                 => array( 'eCommerce', 'Digital Products', 'SaaS' ),
-			'local_import_file'          => $demo_dir . 'content.xml',
-			'import_preview_image_url'   => $img_dir . 'demo-digital.png',
-			'import_notice'              => esc_html__(
-				'Sets up the high-converting eCommerce store for selling software, templates, UI kits, eBooks, and digital licenses with Bento grid.',
-				'bizpro-agency'
-			),
-		),
-
 			'categories'                 => array( 'Corporate', 'Enterprise' ),
 			'local_import_file'          => $demo_dir . 'content.xml',
 			'import_preview_image_url'   => $img_dir . 'demo-corporate.png',
@@ -94,10 +83,120 @@ function bizpro_agency_ocdi_import_files() {
 				'bizpro-agency'
 			),
 		),
+		array(
+			'import_file_name'           => esc_html__( 'Digital Products & SaaS Store', 'bizpro-agency' ),
+			'categories'                 => array( 'eCommerce', 'Digital Products', 'SaaS' ),
+			'local_import_file'          => file_exists( $demo_dir . 'content-ecommerce.xml' ) ? $demo_dir . 'content-ecommerce.xml' : $demo_dir . 'content.xml',
+			'import_preview_image_url'   => $img_dir . 'demo-digital.png',
+			'import_notice'              => class_exists( 'WooCommerce' )
+				? esc_html__( '✅ [WooCommerce Active] Ready to import digital products, cart, checkout flows, and Bento grid.', 'bizpro-agency' )
+				: esc_html__( '⚠️ [REQUIRED PLUGIN] This demo requires WooCommerce to sell digital downloads and handle checkout. Please install and activate WooCommerce before importing.', 'bizpro-agency' ),
+		),
 	);
 }
 add_filter( 'pt-ocdi/import_files', 'bizpro_agency_ocdi_import_files' );
 add_filter( 'ocdi/import_files',    'bizpro_agency_ocdi_import_files' );
+
+/**
+ * Enforce plugin dependencies before content import starts.
+ *
+ * Prevents importing eCommerce / Digital store demos if WooCommerce is not installed and active.
+ *
+ * @param array $selected_import Selected demo configuration.
+ */
+function bizpro_agency_ocdi_check_required_plugins( $selected_import ) {
+	$demo_name  = isset( $selected_import['import_file_name'] ) ? $selected_import['import_file_name'] : '';
+	$categories = isset( $selected_import['categories'] ) ? (array) $selected_import['categories'] : array();
+
+	$is_ecommerce = in_array( 'eCommerce', $categories, true )
+		|| false !== stripos( $demo_name, 'eCommerce' )
+		|| false !== stripos( $demo_name, 'Digital Products' )
+		|| false !== stripos( $demo_name, 'SaaS Store' );
+
+	if ( $is_ecommerce && ! class_exists( 'WooCommerce' ) ) {
+		$install_url = admin_url( 'plugin-install.php?s=woocommerce&tab=search&type=term' );
+		$back_url    = admin_url( 'themes.php?page=one-click-demo-import' );
+
+		wp_die(
+			sprintf(
+				'<div style="max-width:560px;margin:50px auto;padding:36px;background:#ffffff;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,0.08);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;text-align:center;">' .
+				'<div style="font-size:54px;line-height:1;margin-bottom:16px;">🛒</div>' .
+				'<h2 style="color:#ef4444;font-size:24px;font-weight:800;margin:0 0 12px;">%s</h2>' .
+				'<p style="color:#475569;font-size:15px;line-height:1.6;margin:0 0 24px;">%s</p>' .
+				'<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">' .
+				'<a href="%s" class="button button-primary button-hero" style="font-weight:700;padding:12px 26px;height:auto;line-height:1.4;border-radius:8px;">%s</a>' .
+				'<a href="%s" class="button button-hero" style="padding:12px 24px;height:auto;line-height:1.4;border-radius:8px;">%s</a>' .
+				'</div>' .
+				'</div>',
+				esc_html__( 'WooCommerce Plugin Required!', 'bizpro-agency' ),
+				sprintf(
+					/* translators: %s: demo name */
+					esc_html__( 'The "%s" demo strictly requires the WooCommerce plugin to generate digital products, configure cart & checkout flows, and manage orders. Please install and activate WooCommerce before importing this demo.', 'bizpro-agency' ),
+					esc_html( $demo_name )
+				),
+				esc_url( $install_url ),
+				esc_html__( '⚡ Install WooCommerce Now', 'bizpro-agency' ),
+				esc_url( $back_url ),
+				esc_html__( '← Back to Demos', 'bizpro-agency' )
+			),
+			esc_html__( 'Required Plugin Missing', 'bizpro-agency' ),
+			array( 'response' => 200, 'back_link' => true )
+		);
+	}
+}
+add_action( 'pt-ocdi/before_content_import', 'bizpro_agency_ocdi_check_required_plugins' );
+add_action( 'ocdi/before_content_import',    'bizpro_agency_ocdi_check_required_plugins' );
+
+/**
+ * Replace the placeholder demo domain in imported page content and menu links.
+ *
+ * The WXR importer does not reliably rewrite internal links in post content.
+ */
+function bizpro_agency_rewrite_demo_urls() {
+	$replacements = array(
+		'https://example.com' => untrailingslashit( home_url() ),
+		'http://example.com'  => untrailingslashit( home_url() ),
+	);
+
+	$items = get_posts(
+		array(
+			'post_type'      => 'any',
+			'post_status'    => 'any',
+			'posts_per_page' => -1,
+			'fields'         => 'all',
+		)
+	);
+
+	foreach ( $items as $item ) {
+		$updated = str_replace( array_keys( $replacements ), array_values( $replacements ), $item->post_content );
+		if ( $updated !== $item->post_content ) {
+			wp_update_post(
+				array(
+					'ID'           => $item->ID,
+					'post_content' => $updated,
+				)
+			);
+		}
+	}
+
+	$menu_items = get_posts(
+		array(
+			'post_type'      => 'nav_menu_item',
+			'post_status'    => 'any',
+			'posts_per_page' => -1,
+		)
+	);
+
+	foreach ( $menu_items as $menu_item ) {
+		$url = get_post_meta( $menu_item->ID, '_menu_item_url', true );
+		if ( is_string( $url ) && '' !== $url ) {
+			$updated_url = str_replace( array_keys( $replacements ), array_values( $replacements ), $url );
+			if ( $updated_url !== $url ) {
+				update_post_meta( $menu_item->ID, '_menu_item_url', esc_url_raw( $updated_url ) );
+			}
+		}
+	}
+}
 
 /**
  * After import: dynamically assign homepage, menu, and tagline according to the chosen niche demo.
@@ -135,6 +234,7 @@ function bizpro_agency_setup_demo_nav_menu( $menu_name, $items ) {
  * @param array $selected_import Selected import data.
  */
 function bizpro_agency_ocdi_after_import( $selected_import ) {
+	bizpro_agency_rewrite_demo_urls();
 	if ( function_exists( 'bizpro_agency_create_essential_pages' ) ) {
 		bizpro_agency_create_essential_pages();
 	}
@@ -246,6 +346,25 @@ function bizpro_agency_ocdi_after_import( $selected_import ) {
 			array( 'title' => 'Enterprise Solutions', 'url' => home_url( '/services/' ) ),
 			array( 'title' => 'Portfolio', 'url' => home_url( '/case-studies/' ) ),
 			array( 'title' => 'Leadership', 'url' => home_url( '/team/' ) ),
+			array( 'title' => 'FAQs', 'url' => home_url( '/faq/' ) ),
+			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
+		) );
+
+	} elseif ( false !== strpos( $demo_name, 'Digital' ) || false !== strpos( $demo_name, 'SaaS' ) ) {
+		// 7. Digital Products & SaaS Store Demo
+		$target = get_page_by_path( 'digital-store' );
+		if ( ! $target ) { $target = get_page_by_title( 'Digital Store & SaaS' ); }
+		if ( $target ) { update_option( 'page_on_front', $target->ID ); }
+		update_option( 'blogdescription', __( 'High-Velocity Digital Products, Software & SaaS Store', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_text', __( 'Get All-Access Pass', 'bizpro-agency' ) );
+		set_theme_mod( 'header_cta_link', home_url( '/pricing/' ) );
+		set_theme_mod( 'color_primary', '#6366f1' );
+
+		bizpro_agency_setup_demo_nav_menu( 'Digital Store Navigation', array(
+			array( 'title' => 'Home', 'url' => home_url( '/' ) ),
+			array( 'title' => 'Bento Features', 'url' => '#features' ),
+			array( 'title' => 'Pricing Plans', 'url' => home_url( '/pricing/' ) ),
+			array( 'title' => 'Case Studies', 'url' => home_url( '/case-studies/' ) ),
 			array( 'title' => 'FAQs', 'url' => home_url( '/faq/' ) ),
 			array( 'title' => 'Contact Us', 'url' => home_url( '/contact/' ) ),
 		) );

@@ -91,7 +91,7 @@ get_header();
 				)
 			);
 
-			
+			?>
 				<!-- Blog Pro: Author Info Box & Bio -->
 				<div class="entry-author-box" style="margin-top: 50px; background: var(--bpa-bg-alt, #f8fafc); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 28px; display: flex; gap: 20px; align-items: center;">
 					<div style="flex-shrink: 0;">
@@ -110,15 +110,6 @@ get_header();
 					</div>
 				</div>
 
-				<!-- Blog Pro: Next & Previous Post Navigation -->
-				<div class="entry-post-nav" style="margin-top: 36px; border-top: 1px solid var(--bpa-border, #e2e8f0); padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
-					<div class="nav-previous">
-						<?php previous_post_link( '<div style="font-size: 0.8rem; color: #64748b; font-weight: 600;">← Previous Post</div><div style="font-weight: 700; color: #2563eb;">%link</div>' ); ?>
-					</div>
-					<div class="nav-next" style="text-align: right;">
-						<?php next_post_link( '<div style="font-size: 0.8rem; color: #64748b; font-weight: 600;">Next Post →</div><div style="font-weight: 700; color: #2563eb;">%link</div>' ); ?>
-					</div>
-				</div>
 
 				<?php
 				if ( comments_open() || get_comments_number() ) {

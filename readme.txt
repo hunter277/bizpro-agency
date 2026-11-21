@@ -3,7 +3,7 @@ Contributors: kamrulhasan
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.5.1
+Stable tag: 2.2.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: business, custom-colors, custom-logo, custom-menu, featured-images, one-column, two-columns, threaded-comments, translation-ready, theme-options, blog, e-commerce, rtl-language-support, block-patterns
@@ -12,7 +12,7 @@ A clean, ultra-fast and fully responsive WordPress theme for service, IT, visa a
 
 == Description ==
 
-BizPro Agency is a lightweight classic theme built with pure PHP, HTML5, modern CSS (Grid and Flexbox) and vanilla JavaScript. It needs no page builder, no jQuery and no external fonts, so it loads fast and respects visitor privacy out of the box (95+ Google PageSpeed score).
+BizPro Agency is a lightweight classic theme built with pure PHP, HTML5, modern CSS (Grid and Flexbox) and vanilla JavaScript. It needs no page builder, no jQuery and no external fonts, so it uses a lightweight front end with no required page builder or jQuery dependency.
 
 Activate it and you immediately get a finished landing page with:
 
@@ -29,7 +29,7 @@ Activate it and you immediately get a finished landing page with:
 * Team showcase cards
 * Contact / call-to-action banner
 * 3-column widget footer with dynamic copyright bar and GDPR Cookie Notice
-* 4 Niche Homepage templates (IT, Visa & Immigration, Business Consulting, Corporate)
+* Multiple niche homepage templates (Visa & Immigration, Travel, IT, Consulting, Corporate, Digital/SaaS and Default)
 * Elementor Page Builder full-width template
 * Blog, archive, search, page and single post templates
 
@@ -91,7 +91,7 @@ Yes. All page templates are compatible with Elementor (including a dedicated Pag
 
 == FAQ Answers Appearing Empty ==
 
-The FAQ questions and answers are included by default. If an answer appears blank, update to version 1.5.1: this release fixes the accordion JavaScript so it removes the HTML hidden state when an answer is opened. The demo importer also restores missing default FAQ text if those Customizer fields are empty.
+The FAQ questions and answers are included by default. If an answer appears blank, use the current theme release and check that the FAQ section is enabled in the Customizer. The accordion script synchronizes the HTML hidden state and accessibility attributes when an answer opens or closes.
 
 To edit the six questions and answers, go to Appearance > Customize > BizPro Agency Options > FAQ Section. Make sure "Show FAQ Section" is enabled, edit each Question and Answer field, and click Publish.
 
@@ -100,12 +100,12 @@ To edit the six questions and answers, go to Appearance > Customize > BizPro Age
 1. Activate BizPro Agency.
 2. Install and activate the free One Click Demo Import plugin (Appearance > Install Plugins if the theme recommends it, or Plugins > Add New and search for "One Click Demo Import").
 3. Open Appearance > Import Demo Data.
-4. Choose "BizPro Agency - Complete Multi-Niche Demo" and click Import.
-5. Wait for the importer to finish. It imports the sample pages and menus and sets the Home page as the front page.
+4. Choose the starter site you want (Main Agency, Visa & Immigration, Travel, IT Solutions, Business Consulting, Corporate Enterprise, or Digital Products & SaaS) and click Import.
+5. Wait for the importer to finish. It imports sample pages and menus, assigns the selected homepage layout, and rewrites internal demo links to your own site.
 6. Go to Settings > Reading and confirm that Home is selected as the static homepage if it was not selected automatically.
 7. Visit Appearance > Customize > BizPro Agency Options > FAQ Section to edit the FAQ content.
 
-The importer adds sample page content and menu structure; it does not import a WordPress database backup or automatically download every externally hosted stock image. Back up your site before importing demo data.
+The importer adds sample page content and menu structure; it does not import a WordPress database backup or guarantee that every third-party image is locally downloaded. Back up your site before importing demo data. The theme provides its own OCDI integration; the optional companion ZIP is not required for the theme importer.
 
 == Changelog ==
 
@@ -181,3 +181,12 @@ This theme does not bundle third-party fonts, libraries or images.
 == 1.5.4 ==
 * Premium art direction for Visa, Travel, IT, Consulting, Corporate and Default homepage templates.
 * Distinct hero photography, backgrounds, card styling, section treatments and responsive adjustments.
+
+
+== 2.2.1 ==
+* Fixed PHP syntax errors in the front-page and single-post templates.
+* Fixed duplicate header rendering when a niche homepage template is delegated from the front page.
+* Corrected the Digital Products and Corporate demo importer registration.
+* Prevented the companion plugin from registering duplicate demo-import callbacks when the theme importer is available.
+* Rewrote example.com internal links after demo import so links point to the buyer's own site.
+* Added a working country and visa-type filter to the Visa Pathways Finder and removed fixed processing-time claims.

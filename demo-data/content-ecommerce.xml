@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- generator="WordPress/6.7" created="2026-11-21 13:00" -->
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+	<title>BizPro Agency Digital Store</title>
+	<link>https://example.com</link>
+	<description>High-Velocity Digital Products &amp; Software Store</description>
+	<pubDate>Sat, 21 Nov 2026 13:00:00 +0000</pubDate>
+	<language>en-US</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:base_site_url>https://example.com</wp:base_site_url>
+	<wp:base_blog_url>https://example.com</wp:base_blog_url>
+
+	<wp:term>
+		<wp:term_id>101</wp:term_id>
+		<wp:term_taxonomy>product_cat</wp:term_taxonomy>
+		<wp:term_slug>software-saas</wp:term_slug>
+		<wp:term_name><![CDATA[Software & SaaS]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>102</wp:term_id>
+		<wp:term_taxonomy>product_cat</wp:term_taxonomy>
+		<wp:term_slug>ui-kits-templates</wp:term_slug>
+		<wp:term_name><![CDATA[UI Kits & Templates]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id>103</wp:term_id>
+		<wp:term_taxonomy>product_cat</wp:term_taxonomy>
+		<wp:term_slug>developer-tools</wp:term_slug>
+		<wp:term_name><![CDATA[Developer Tools]]></wp:term_name>
+	</wp:term>
+
+	<!-- Digital Store Page -->
+	<item>
+		<title>Digital Store &amp; SaaS</title>
+		<link>https://example.com/digital-store/</link>
+		<pubDate>Sat, 21 Nov 2026 13:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://example.com/?page_id=8001</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>8001</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-21 13:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-21 13:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[digital-store]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[template-homepage-digital.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Product 1 -->
+	<item>
+		<title>SaaS Dashboard UI Kit &amp; Design System</title>
+		<link>https://example.com/product/saas-dashboard-ui-kit/</link>
+		<pubDate>Sat, 21 Nov 2026 13:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://example.com/?post_type=product&#038;p=8101</guid>
+		<description></description>
+		<content:encoded><![CDATA[The ultimate enterprise UI design system featuring 120+ dark/light Figma components, high-converting charts, auth screens, and responsive navigation layouts. Includes lifetime updates and single-commercial license.]]></content:encoded>
+		<excerpt:encoded><![CDATA[120+ enterprise components, customizable dark/light modes, and responsive charting widgets for Figma and React.]]></excerpt:encoded>
+		<wp:post_id>8101</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-21 13:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-21 13:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[saas-dashboard-ui-kit]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[product]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="product_cat" nicename="ui-kits-templates"><![CDATA[UI Kits & Templates]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[49]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[49]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
+			<wp:meta_value><![CDATA[yes]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[yes]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Product 2 -->
+	<item>
+		<title>Enterprise Cloud DevOps Automation Pack</title>
+		<link>https://example.com/product/cloud-devops-automation-pack/</link>
+		<pubDate>Sat, 21 Nov 2026 13:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://example.com/?post_type=product&#038;p=8102</guid>
+		<description></description>
+		<content:encoded><![CDATA[Battle-tested Terraform, Docker Compose, and Kubernetes Helm charts for deploying multi-region scalable web applications with zero downtime. Automated CI/CD workflows for GitHub Actions included.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Turnkey Terraform &amp; Kubernetes infrastructure templates for multi-region AWS and DigitalOcean deployments.]]></excerpt:encoded>
+		<wp:post_id>8102</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-21 13:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-21 13:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[cloud-devops-automation-pack]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[product]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="product_cat" nicename="developer-tools"><![CDATA[Developer Tools]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[89]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[89]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
+			<wp:meta_value><![CDATA[yes]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[yes]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+	<!-- Product 3 -->
+	<item>
+		<title>All-Access Lifetime Developer Bundle</title>
+		<link>https://example.com/product/all-access-developer-bundle/</link>
+		<pubDate>Sat, 21 Nov 2026 13:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://example.com/?post_type=product&#038;p=8103</guid>
+		<description></description>
+		<content:encoded><![CDATA[Unlock complete instant access to every present and future digital product released by BizPro Agency. Includes unlimited commercial client licenses, priority GitHub repo access, and dedicated technical support.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Unlimited access to all UI kits, software templates, cloud scripts, and commercial licenses forever.]]></excerpt:encoded>
+		<wp:post_id>8103</wp:post_id>
+		<wp:post_date><![CDATA[2026-11-21 13:00:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-11-21 13:00:00]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[all-access-developer-bundle]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[product]]></wp:post_type>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="product_cat" nicename="software-saas"><![CDATA[Software & SaaS]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[199]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[199]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
+			<wp:meta_value><![CDATA[yes]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[yes]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+
+</channel>
+</rss>

@@ -11,10 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-get_header();
-
 // If the page is being edited with Elementor OR was built with Elementor:
 if ( have_posts() && bizpro_agency_is_elementor() ) {
+	get_header();
 	while ( have_posts() ) {
 		the_post();
 		?>
@@ -40,6 +39,7 @@ if ( $bpa_front_id ) {
 	}
 	$bpa_front_slug = get_post_field( 'post_name', $bpa_front_id );
 	$bpa_niche_map  = array(
+		'digital'    => 'template-homepage-digital.php',
 		'visa'       => 'template-homepage-visa.php',
 		'travel'     => 'template-homepage-travel.php',
 		'it'         => 'template-homepage-it.php',
@@ -57,6 +57,9 @@ if ( $bpa_front_id ) {
 	}
 }
 
+// The niche templates render their own header and footer, so load the
+// standard header only after the delegation checks above.
+get_header();
 
 // Hero
 $bpa_hero_title    = bizpro_agency_get( 'hero_title' );
@@ -545,7 +548,7 @@ $bpa_faq_title   = bizpro_agency_get( 'faq_title' );
 
 </main><!-- #primary -->
 
-<?php
+?>
 
 <!-- =========================================================================
      7 READY-MADE STARTER SITES SHOWCASE SECTION
@@ -661,4 +664,4 @@ $bpa_faq_title   = bizpro_agency_get( 'faq_title' );
 	</div>
 </section>
 
-get_footer();
+<?php get_footer();
