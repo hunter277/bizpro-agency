@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '1.8.5' );
+define( 'BIZPRO_AGENCY_VERSION', '1.9.0' );
 
 /**
  * Default values for every Customizer option.

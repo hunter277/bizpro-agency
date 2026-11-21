@@ -142,6 +142,15 @@ if ( $post ) {
 		}
 	}
 
+		// --- Digital Products & SaaS Store ---
+	if ( $is_placeholder && ( false !== strpos( $bpa_slug, 'digital' ) || false !== strpos( $bpa_slug, 'saas' ) || false !== strpos( $bpa_slug, 'store' ) ) ) {
+		$tpl = get_template_directory() . '/template-homepage-digital.php';
+		if ( file_exists( $tpl ) ) {
+			include $tpl;
+			return;
+		}
+	}
+
 	// --- Corporate ---
 	if ( $is_placeholder && false !== strpos( $bpa_slug, 'corporate' ) ) {
 		$tpl = get_template_directory() . '/template-homepage-corporate.php';

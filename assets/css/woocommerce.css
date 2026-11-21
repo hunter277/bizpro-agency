@@ -99,3 +99,28 @@
 	background: #10b981;
 	border-radius: 6px;
 }
+
+/* ============================================================
+   DISTRACTION-FREE CHECKOUT & DIGITAL DOWNLOAD POLISH
+   ============================================================ */
+.woocommerce-checkout .site-header,
+.woocommerce-checkout .top-bar {
+  box-shadow: none !important;
+}
+
+.woocommerce-checkout .site-header .main-navigation,
+.woocommerce-checkout .site-header .header-cta {
+  display: none !important; /* Distraction-free: removes navigation during payment */
+}
+
+/* Instant Download Product Badge */
+.bpa-digital-badge {
+  display: inline-block;
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}

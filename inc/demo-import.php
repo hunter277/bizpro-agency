@@ -75,6 +75,17 @@ function bizpro_agency_ocdi_import_files() {
 		),
 		array(
 			'import_file_name'           => esc_html__( 'Corporate Enterprise', 'bizpro-agency' ),
+		array(
+			'import_file_name'           => esc_html__( 'Digital Products & SaaS Store', 'bizpro-agency' ),
+			'categories'                 => array( 'eCommerce', 'Digital Products', 'SaaS' ),
+			'local_import_file'          => $demo_dir . 'content.xml',
+			'import_preview_image_url'   => $img_dir . 'demo-digital.png',
+			'import_notice'              => esc_html__(
+				'Sets up the high-converting eCommerce store for selling software, templates, UI kits, eBooks, and digital licenses with Bento grid.',
+				'bizpro-agency'
+			),
+		),
+
 			'categories'                 => array( 'Corporate', 'Enterprise' ),
 			'local_import_file'          => $demo_dir . 'content.xml',
 			'import_preview_image_url'   => $img_dir . 'demo-corporate.png',
