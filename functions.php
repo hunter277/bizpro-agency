@@ -776,7 +776,7 @@ function bizpro_agency_og_tags() {
 
 	global $post;
 
-	if ( is_singular() && $post ) {
+	if ( is_singular() && $post && ! is_front_page() ) {
 		$title = get_the_title( $post->ID );
 		$desc  = has_excerpt( $post->ID )
 			? wp_strip_all_tags( get_the_excerpt() )
@@ -792,7 +792,7 @@ function bizpro_agency_og_tags() {
 
 	$img = $img ? $img : '';
 	?>
-	<meta property="og:type"        content="<?php echo is_singular() ? 'article' : 'website'; ?>" />
+	<meta property="og:type"        content="<?php echo ( is_front_page() || is_home() ) ? 'website' : ( is_singular() ? 'article' : 'website' ); ?>" />
 	<meta property="og:title"       content="<?php echo esc_attr( $title ); ?>" />
 	<meta property="og:description" content="<?php echo esc_attr( $desc ); ?>" />
 	<meta property="og:url"         content="<?php echo esc_url( $url ); ?>" />
@@ -1434,6 +1434,7 @@ require_once get_template_directory() . '/inc/shortcodes.php';
 require_once get_template_directory() . '/inc/white-label.php';
 require_once get_template_directory() . '/inc/cpt-visa.php';
 require_once get_template_directory() . '/inc/tgmpa/tgmpa-config.php';
+require_once get_template_directory() . '/inc/lead-handler.php';
 
 /**
  * Calculate post reading time (e.g. 📖 4 min read).

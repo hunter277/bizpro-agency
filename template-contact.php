@@ -93,7 +93,7 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 					</div>
 				<?php endif; ?>
 
-				<form method="post" action="">
+				<form method="post" action="" class="bpa-lead-form contact-form">
 					<?php wp_nonce_field( 'bpa_contact_action', 'bpa_contact_nonce' ); ?>
 					
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
@@ -114,12 +114,17 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 						</div>
 						<div>
 							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Primary Area of Interest', 'bizpro-agency' ); ?></label>
+							<?php
+							$bpa_preset_service = isset( $_GET['service'] ) ? sanitize_text_field( wp_unslash( $_GET['service'] ) ) : '';
+							if ( isset( $_GET['tour'] ) ) { $bpa_preset_service = 'travel'; }
+							if ( isset( $_GET['pathway'] ) || isset( $_GET['country'] ) ) { $bpa_preset_service = 'visa'; }
+							?>
 							<select name="bpa_service" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
-								<option value="visa"><?php esc_html_e( 'Visa & Immigration Consultancy', 'bizpro-agency' ); ?></option>
-								<option value="it"><?php esc_html_e( 'IT Solutions, Cloud & Software', 'bizpro-agency' ); ?></option>
-								<option value="travel"><?php esc_html_e( 'Travel Planning & Holiday Tours', 'bizpro-agency' ); ?></option>
-								<option value="consulting"><?php esc_html_e( 'Strategic Business Consulting', 'bizpro-agency' ); ?></option>
-								<option value="corporate"><?php esc_html_e( 'Corporate Enterprise Solutions', 'bizpro-agency' ); ?></option>
+								<option value="visa" <?php selected( $bpa_preset_service, 'visa' ); ?>><?php esc_html_e( 'Visa & Immigration Consultancy', 'bizpro-agency' ); ?></option>
+								<option value="it" <?php selected( $bpa_preset_service, 'it' ); ?>><?php esc_html_e( 'IT Solutions, Cloud & Software', 'bizpro-agency' ); ?></option>
+								<option value="travel" <?php selected( $bpa_preset_service, 'travel' ); ?>><?php esc_html_e( 'Travel Planning & Holiday Tours', 'bizpro-agency' ); ?></option>
+								<option value="consulting" <?php selected( $bpa_preset_service, 'consulting' ); ?>><?php esc_html_e( 'Strategic Business Consulting', 'bizpro-agency' ); ?></option>
+								<option value="corporate" <?php selected( $bpa_preset_service, 'corporate' ); ?>><?php esc_html_e( 'Corporate Enterprise Solutions', 'bizpro-agency' ); ?></option>
 							</select>
 						</div>
 					</div>

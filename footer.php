@@ -27,7 +27,7 @@ $bpa_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'foote
 					<?php else : ?>
 						<section class="widget">
 							<h3 class="widget-title"><?php esc_html_e( 'About BizPro', 'bizpro-agency' ); ?></h3>
-							<p><?php esc_html_e( 'BizPro Agency is a world-class digital agency and global consultancy delivering tailored IT solutions, international visa assistance, luxury travel experiences and corporate advisory.', 'bizpro-agency' ); ?></p>
+							<p><?php esc_html_e( 'BizPro Agency is a versatile multi-purpose WordPress theme with 7 niche demo layouts for Agency, Visa, Travel, IT Solutions, Consulting, Corporate, and Digital Products businesses.', 'bizpro-agency' ); ?></p>
 						</section>
 					<?php endif; ?>
 				</div>
@@ -45,6 +45,7 @@ $bpa_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'foote
 								<li><a href="<?php echo esc_url( home_url( '/it-solutions/' ) ); ?>"><?php esc_html_e( 'IT Solutions', 'bizpro-agency' ); ?></a></li>
 								<li><a href="<?php echo esc_url( home_url( '/business-consulting/' ) ); ?>"><?php esc_html_e( 'Business Consulting', 'bizpro-agency' ); ?></a></li>
 								<li><a href="<?php echo esc_url( home_url( '/corporate/' ) ); ?>"><?php esc_html_e( 'Corporate Enterprise', 'bizpro-agency' ); ?></a></li>
+								<li><a href="<?php echo esc_url( home_url( '/digital-store/' ) ); ?>"><?php esc_html_e( 'Digital &amp; SaaS Store', 'bizpro-agency' ); ?></a></li>
 							</ul>
 						</section>
 					<?php endif; ?>

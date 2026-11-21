@@ -1,9 +1,11 @@
 <?php
 /**
- * Freemius SDK Integration for BizPro Agency.
+ * Freemius SDK Integration Stub for BizPro Agency.
  *
- * Handles license key validation, auto-updates, affiliate program,
- * and secure checkout for the Premium version.
+ * The free/lite version does not include the Freemius SDK.
+ * To enable premium licensing, obtain your Product ID and Public Key
+ * from https://freemius.com and replace the placeholders below,
+ * then add the Freemius SDK to inc/freemius/start.php.
  *
  * @package BizPro_Agency
  */
@@ -13,45 +15,49 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! function_exists( 'bpa_fs' ) ) {
+
 	/**
-	 * Create a helper function for easy SDK access.
+	 * Returns the Freemius instance (Premium builds only).
+	 * In the free version this function always returns null.
 	 *
-	 * @return Freemius
+	 * @return Freemius|null
 	 */
 	function bpa_fs() {
 		global $bpa_fs;
 
 		if ( ! isset( $bpa_fs ) ) {
-			// Include Freemius SDK if available.
-			$sdk_path = dirname( __FILE__ ) . '/freemius/start.php';
+			// Freemius SDK — only load if bundled (premium build).
+			$sdk_path = get_template_directory() . '/inc/freemius/start.php';
 			if ( file_exists( $sdk_path ) ) {
 				require_once $sdk_path;
 
 				$bpa_fs = fs_dynamic_init(
 					array(
-						'id'                  => '12345', // Replace with your Freemius Product ID.
-						'slug'                => 'bizpro-agency',
-						'type'                => 'theme',
-						'public_key'          => 'pk_replace_with_your_freemius_public_key',
-						'is_premium'          => false, // Set to true in premium package.
-						'has_addons'          => false,
-						'has_paid_plans'      => true,
-						'menu'                => array(
-							'slug'       => 'bizpro-agency-welcome',
-							'account'    => true,
-							'support'    => true,
+						'id'             => 'YOUR_FREEMIUS_PRODUCT_ID', // Replace with your Freemius Product ID.
+						'slug'           => 'bizpro-agency',
+						'type'           => 'theme',
+						'public_key'     => 'YOUR_FREEMIUS_PUBLIC_KEY', // Replace with your public key.
+						'is_premium'     => true,
+						'has_addons'     => false,
+						'has_paid_plans' => true,
+						'menu'           => array(
+							'slug'    => 'bizpro-agency-welcome',
+							'account' => true,
+							'support' => true,
 						),
-						'navigation'          => 'tabs',
+						'navigation'     => 'tabs',
 					)
 				);
+			} else {
+				$bpa_fs = null; // SDK not bundled (free/lite version).
 			}
 		}
 
 		return $bpa_fs;
 	}
 
-	// Init Freemius only if SDK file exists.
-	if ( file_exists( dirname( __FILE__ ) . '/freemius/start.php' ) ) {
+	// Init only if SDK is present.
+	if ( file_exists( get_template_directory() . '/inc/freemius/start.php' ) ) {
 		bpa_fs();
 		do_action( 'bpa_fs_loaded' );
 	}

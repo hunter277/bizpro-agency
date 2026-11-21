@@ -1,0 +1,88 @@
+{
+  "version": "0.4",
+  "title": "BizPro - Visa Pathways Search",
+  "type": "page",
+  "content": [
+    {
+      "id": "bpa_visa_search_hero",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "background_background": "classic",
+        "background_color": "#1e3a8a",
+        "padding": {
+          "unit": "px",
+          "top": "70",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "bpa_visa_search_hero_col",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "bpa_visa_search_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Explore Global Visa Pathways",
+                "align": "center",
+                "title_color": "#ffffff",
+                "header_size": "h1"
+              }
+            },
+            {
+              "id": "bpa_visa_search_sub",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #bfdbfe;'>Filter by destination country, visa category, and check eligibility criteria instantly.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bpa_visa_search_grid_sec",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "padding": {
+          "unit": "px",
+          "top": "50",
+          "right": "20",
+          "bottom": "80",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "bpa_visa_search_grid_col",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "bpa_visa_search_shortcode",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": {
+                "shortcode": "[bpa_search placeholder='Search visa pathways by country or keyword...']"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -26,7 +26,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 		<div class="container" style="position: relative; z-index: 2; text-align: center;">
 			<div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 30px; padding: 6px 18px; margin-bottom: 24px; font-size: 0.88rem;">
 				<span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981;"></span>
-				<span style="color: #cbd5e1; font-weight: 600;"><?php esc_html_e( 'v2.4 Released — Instant Digital Delivery Included', 'bizpro-agency' ); ?></span>
+				<span style="color: #cbd5e1; font-weight: 600;"><?php esc_html_e( 'BizPro Agency — Digital Products &amp; SaaS Demo', 'bizpro-agency' ); ?></span>
 			</div>
 
 			<h1 style="font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; max-width: 900px; margin: 0 auto 20px; color: #ffffff;">
@@ -51,18 +51,18 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 				<div style="background: #1e293b; border-radius: 12px; padding: 30px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; text-align: left;">
 					<div style="background: #0f172a; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px;">
 						<div style="font-size: 0.85rem; color: #818cf8; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">🚀 Lightning Checkout</div>
-						<div style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">0.8s Total Latency</div>
+						<div style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">Ultra-Fast Delivery</div>
 						<p style="color: #64748b; font-size: 0.9rem; margin: 0;">Optimized for Stripe, PayPal, and Apple Pay with 1-click digital fulfillment.</p>
 					</div>
 					<div style="background: #0f172a; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px;">
 						<div style="font-size: 0.85rem; color: #34d399; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">🛡️ License Generation</div>
-						<div style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">Automated API Keys</div>
-						<p style="color: #64748b; font-size: 0.9rem; margin: 0;">Instant cryptographically signed license keys sent directly to buyers inbox.</p>
+						<div style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">Digital License Keys</div>
+						<p style="color: #64748b; font-size: 0.9rem; margin: 0;">Digital download links and license keys can be managed with Easy Digital Downloads or WooCommerce.</p>
 					</div>
 					<div style="background: #0f172a; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px;">
 						<div style="font-size: 0.85rem; color: #fbbf24; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">📦 Smart CDN Delivery</div>
-						<div style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">Secure Signed URLs</div>
-						<p style="color: #64748b; font-size: 0.9rem; margin: 0;">Time-limited download links ensure zero piracy and prevent unauthorized hotlinking.</p>
+						<div style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">Secure Download Links</div>
+						<p style="color: #64748b; font-size: 0.9rem; margin: 0;">Secure download link management is available via WooCommerce or Easy Digital Downloads plugin.</p>
 					</div>
 				</div>
 			</div>
@@ -72,13 +72,13 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 	<!-- Continuous Infinite Logo Marquee -->
 	<section class="section section--marquee" style="background: #0b0f19; padding: 36px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); overflow: hidden;">
 		<div class="bpa-marquee-track" style="display: flex; gap: 60px; align-items: center; white-space: nowrap; animation: bpaMarquee 25s linear infinite;">
-			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">STRIPE VERIFIED</span>
+			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">PAYMENT READY</span>
 			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">WOOCOMMERCE OPTIMIZED</span>
-			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">GITHUB INTEGRATED</span>
-			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">AWS CLOUDFRONT CDN</span>
+			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">VERSION CONTROL</span>
+			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">FAST CDN DELIVERY</span>
 			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">PAYPAL COMMERCE</span>
-			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">FREEMIUS PARTNER</span>
-			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">STRIPE VERIFIED</span>
+			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">SECURE LICENSING</span>
+			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">PAYMENT READY</span>
 			<span style="font-size: 1.2rem; font-weight: 800; color: #475569; letter-spacing: 2px;">WOOCOMMERCE OPTIMIZED</span>
 		</div>
 	</section>
@@ -98,20 +98,20 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 				<!-- Large Bento Box: 8 Cols -->
 				<div style="grid-column: span 8; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #e2e8f0; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
 					<span style="background: #e0e7ff; color: #4338ca; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">eCommerce Core</span>
-					<h3 style="font-size: 1.8rem; font-weight: 800; margin: 16px 0 10px; color: #0f172a;"><?php esc_html_e( 'Frictionless Flyout Cart & 1-Step Checkout', 'bizpro-agency' ); ?></h3>
-					<p style="color: #64748b; font-size: 1.05rem; line-height: 1.6; max-width: 580px;"><?php esc_html_e( 'Customers never leave their browsing position. Add items to cart with smooth slide drawers, automatic coupon calculation, and zero page reloads.', 'bizpro-agency' ); ?></p>
+					<h3 style="font-size: 1.8rem; font-weight: 800; margin: 16px 0 10px; color: #0f172a;"><?php esc_html_e( 'Modern Cart & Checkout Layout', 'bizpro-agency' ); ?></h3>
+					<p style="color: #64748b; font-size: 1.05rem; line-height: 1.6; max-width: 580px;"><?php esc_html_e( 'This demo showcases a modern WooCommerce checkout layout. Flyout cart functionality can be added via plugins.', 'bizpro-agency' ); ?></p>
 					<div style="margin-top: 24px; display: flex; gap: 12px;">
-						<span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">⚡ 0% Cart Abandonment</span>
-						<span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">🔒 PCI-DSS Compliant</span>
+						<span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">⚡ Optimized Checkout Flow</span>
+						<span style="background: #ffffff; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">🔒 Secure Payment Ready</span>
 					</div>
 				</div>
 
 				<!-- Medium Bento Box: 4 Cols -->
 				<div style="grid-column: span 4; background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); color: #ffffff; border-radius: 20px; padding: 40px; box-shadow: 0 14px 35px rgba(15,23,42,0.15);">
 					<span style="background: rgba(99,102,241,0.3); color: #a5b4fc; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Speed Standard</span>
-					<h3 style="font-size: 1.8rem; font-weight: 800; margin: 16px 0 10px; color: #ffffff;"><?php esc_html_e( '99+ PageSpeed Score', 'bizpro-agency' ); ?></h3>
+					<h3 style="font-size: 1.8rem; font-weight: 800; margin: 16px 0 10px; color: #ffffff;"><?php esc_html_e( 'High-Performance Core', 'bizpro-agency' ); ?></h3>
 					<p style="color: #94a3b8; font-size: 1rem; line-height: 1.6;"><?php esc_html_e( 'Vanilla JavaScript and pure CSS styling means zero jQuery and ultra-fast mobile rendering.', 'bizpro-agency' ); ?></p>
-					<div style="font-size: 3.2rem; font-weight: 900; color: #34d399; margin-top: 20px;">99/100</div>
+					<div style="font-size: 3.2rem; font-weight: 900; color: #34d399; margin-top: 20px;">Optimized</div>
 				</div>
 
 				<!-- Box: 4 Cols -->
@@ -145,7 +145,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 			<div style="text-align: center; max-width: 650px; margin: 0 auto 60px;">
 				<span style="font-size: 0.85rem; font-weight: 700; color: #6366f1; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Simple, Predictable Pricing', 'bizpro-agency' ); ?></span>
 				<h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--bpa-text, #0f172a); margin: 12px 0;"><?php esc_html_e( 'Choose the Plan That Fits Your Vision', 'bizpro-agency' ); ?></h2>
-				<p style="color: var(--bpa-text-muted, #64748b); font-size: 1.05rem;"><?php esc_html_e( 'All plans include instant downloads, verified updates, and guaranteed 30-day money-back guarantee.', 'bizpro-agency' ); ?></p>
+				<p style="color: var(--bpa-text-muted, #64748b); font-size: 1.05rem;"><?php esc_html_e( 'All plans are for demo/sample purposes only. Replace with your actual pricing and policies.', 'bizpro-agency' ); ?></p>
 			</div>
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: stretch; max-width: 1100px; margin: 0 auto;">
@@ -164,7 +164,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 							<li style="color: #94a3b8;">❌ White-Label Agency Mode</li>
 						</ul>
 					</div>
-					<a href="#buy-starter" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Buy Starter Pass', 'bizpro-agency' ); ?></a>
+					<a href="#pricing" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Buy Starter Pass', 'bizpro-agency' ); ?></a>
 				</div>
 
 				<!-- Tier 2: Popular Pro -->
@@ -182,7 +182,7 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 							<li>✅ WooCommerce Flyout Cart Extension</li>
 						</ul>
 					</div>
-					<a href="#buy-pro" class="btn btn--primary" style="display: block; text-align: center; background: #6366f1; border-color: #6366f1; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 20px rgba(99,102,241,0.3);"><?php esc_html_e( 'Upgrade to Pro Now', 'bizpro-agency' ); ?></a>
+					<a href="#pricing" class="btn btn--primary" style="display: block; text-align: center; background: #6366f1; border-color: #6366f1; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 20px rgba(99,102,241,0.3);"><?php esc_html_e( 'Upgrade to Pro Now', 'bizpro-agency' ); ?></a>
 				</div>
 
 				<!-- Tier 3: Lifetime Agency -->
@@ -195,11 +195,11 @@ $bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 							<li>✅ Unlimited Domain Licenses</li>
 							<li>✅ Lifetime Updates Guarantee</li>
 							<li>✅ Full White-Label Rebranding</li>
-							<li>✅ VIP Direct Slack Support Channel</li>
-							<li>✅ 1-on-1 Theme Setup Consultation</li>
+							<li>✅ Priority Support Channel</li>
+							<li>✅ Setup Consultation (Premium)</li>
 						</ul>
 					</div>
-					<a href="#buy-lifetime" class="btn" style="display: block; text-align: center; background: #0f172a; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none;"><?php esc_html_e( 'Get Lifetime Pass', 'bizpro-agency' ); ?></a>
+					<a href="#pricing" class="btn" style="display: block; text-align: center; background: #0f172a; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none;"><?php esc_html_e( 'Get Lifetime Pass', 'bizpro-agency' ); ?></a>
 				</div>
 
 			</div>

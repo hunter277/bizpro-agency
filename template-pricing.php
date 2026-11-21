@@ -16,11 +16,11 @@ get_header();
 
 <main id="primary" class="site-main site-main--pricing">
 
-	<header class="page-header" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff; padding: 80px 0 70px; text-align: center;">
+	<header class="page-header bpa-page-hero">
 		<div class="container">
-			<span style="display: inline-block; font-size: 0.85rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;"><?php esc_html_e( 'Transparent Investment', 'bizpro-agency' ); ?></span>
-			<h1 class="page-title" style="font-size: clamp(2.2rem, 5vw, 3.6rem); color: #ffffff; margin-bottom: 16px;"><?php esc_html_e( 'Simple, Flexible Pricing Built for Growth', 'bizpro-agency' ); ?></h1>
-			<p style="max-width: 650px; margin: 0 auto; color: #94a3b8; font-size: 1.15rem; line-height: 1.6;"><?php esc_html_e( 'No hidden fees. No setup charges. Switch plans or cancel anytime with our 30-day money-back guarantee.', 'bizpro-agency' ); ?></p>
+			<span class="bpa-page-hero__eyebrow"><?php esc_html_e( 'Transparent Investment', 'bizpro-agency' ); ?></span>
+			<h1 class="page-title bpa-page-hero__title"><?php esc_html_e( 'Simple, Flexible Pricing Built for Growth', 'bizpro-agency' ); ?></h1>
+			<p class="bpa-page-hero__desc"><?php esc_html_e( 'No hidden fees. No setup charges. Switch plans or cancel anytime with our 30-day money-back guarantee.', 'bizpro-agency' ); ?></p>
 		</div>
 	</header>
 

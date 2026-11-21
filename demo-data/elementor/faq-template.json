@@ -1,0 +1,105 @@
+{
+  "version": "0.4",
+  "title": "BizPro - FAQ & Support",
+  "type": "page",
+  "content": [
+    {
+      "id": "bpa_faq_sec_hero",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "background_background": "classic",
+        "background_color": "#0f172a",
+        "padding": {
+          "unit": "px",
+          "top": "70",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "bpa_faq_col_hero",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "bpa_faq_hero_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Frequently Asked Questions",
+                "align": "center",
+                "title_color": "#ffffff",
+                "header_size": "h1"
+              }
+            },
+            {
+              "id": "bpa_faq_hero_sub",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #94a3b8;'>Find answers to common questions about our services, support, and processes.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bpa_faq_sec_accordion",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "80",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "bpa_faq_col_accordion",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "bpa_faq_accordion_widget",
+              "elType": "widget",
+              "widgetType": "accordion",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "How does the onboarding and discovery process work?",
+                    "tab_content": "We kick off every engagement with a comprehensive Discovery Session to map out your requirements, deliverables, milestones, and success criteria."
+                  },
+                  {
+                    "tab_title": "What kind of support is provided after launch?",
+                    "tab_content": "All clients receive dedicated post-launch support covering routine maintenance, performance audits, bug resolution, and security patching."
+                  },
+                  {
+                    "tab_title": "Can I upgrade or customize my service package later?",
+                    "tab_content": "Yes, our retainers and service modules are completely modular. You can scale scope, add advisory hours, or adjust requirements at any monthly billing interval."
+                  },
+                  {
+                    "tab_title": "What are your payment terms and refund policy?",
+                    "tab_content": "We offer milestone-based invoices and transparent terms. Customized refund guarantees and service SLAs are detailed in your service agreement."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

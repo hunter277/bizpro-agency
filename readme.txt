@@ -3,7 +3,7 @@ Contributors: kamrulhasan
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.2.1
+Stable tag: 2.4.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: business, custom-colors, custom-logo, custom-menu, featured-images, one-column, two-columns, threaded-comments, translation-ready, theme-options, blog, e-commerce, rtl-language-support, block-patterns

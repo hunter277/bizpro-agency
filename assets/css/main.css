@@ -5108,3 +5108,234 @@ body.page-template-template-homepage-corporate-php  .header-cta { background: #3
   border-color: #6366f1 !important;
   color: #4f46e5 !important;
 }
+
+
+/* ============================================================
+   SVG Country Flags (Windows emoji fallback)
+   ============================================================ */
+.bpa-flag {
+	display: inline-flex;
+	align-items: center;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+.bpa-flag svg {
+	display: block;
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+
+
+/* ============================================================
+   BPA Template Dedicated Styles (Clean Separated CSS)
+   ============================================================ */
+
+/* Page Headers */
+.bpa-page-hero {
+	background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+	color: #ffffff;
+	padding: 80px 0 70px;
+	text-align: center;
+}
+.bpa-page-hero__eyebrow {
+	display: inline-block;
+	font-size: 0.85rem;
+	font-weight: 700;
+	color: #38bdf8;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 12px;
+}
+.bpa-page-hero__title {
+	font-size: clamp(2.2rem, 5vw, 3.6rem);
+	color: #ffffff;
+	margin-bottom: 16px;
+	line-height: 1.15;
+}
+.bpa-page-hero__desc {
+	max-width: 650px;
+	margin: 0 auto;
+	color: #94a3b8;
+	font-size: 1.15rem;
+	line-height: 1.6;
+}
+
+/* FAQ Component */
+.bpa-faq-wrapper {
+	padding: 80px 0;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.bpa-faq-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.bpa-faq-card {
+	background: var(--bpa-bg, #ffffff);
+	border: 1px solid var(--bpa-border, #e2e8f0);
+	border-radius: 14px;
+	padding: 24px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.bpa-faq-card:hover {
+	border-color: #cbd5e1;
+	box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+}
+.bpa-faq-btn {
+	width: 100%;
+	text-align: left;
+	background: none;
+	border: none;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--bpa-text, #0f172a);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	padding: 0;
+}
+.bpa-faq-icon {
+	font-size: 20px;
+	color: #2563eb;
+	transition: transform 0.2s ease;
+}
+.bpa-faq-card.is-open .bpa-faq-icon {
+	transform: rotate(45deg);
+}
+.bpa-faq-body {
+	margin-top: 14px;
+	color: var(--bpa-text-muted, #64748b);
+	line-height: 1.7;
+	font-size: 1rem;
+}
+.bpa-faq-cta-box {
+	margin-top: 50px;
+	background: #eff6ff;
+	border: 1px solid #bfdbfe;
+	border-radius: 16px;
+	padding: 32px;
+	text-align: center;
+}
+.bpa-faq-cta-box h3 {
+	margin: 0 0 8px;
+	color: #1e3a8a;
+	font-size: 1.3rem;
+	font-weight: 800;
+}
+.bpa-faq-cta-box p {
+	color: #3b82f6;
+	margin-bottom: 20px;
+}
+
+/* Digital Bento Box Grid */
+.bpa-bento-hero {
+	background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f172a 70%, #090d16 100%);
+	color: #ffffff;
+	padding: 100px 0 80px;
+	position: relative;
+	overflow: hidden;
+}
+.bpa-bento-hero-glow {
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 700px;
+	height: 350px;
+	background: rgba(99, 102, 241, 0.25);
+	filter: blur(120px);
+	border-radius: 50%;
+	pointer-events: none;
+}
+.bpa-bento-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: rgba(255,255,255,0.08);
+	border: 1px solid rgba(255,255,255,0.15);
+	border-radius: 30px;
+	padding: 6px 18px;
+	margin-bottom: 24px;
+	font-size: 0.88rem;
+}
+.bpa-bento-card-wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+	background: #0f172a;
+	border: 1px solid rgba(255,255,255,0.15);
+	border-radius: 20px;
+	padding: 16px;
+	box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+.bpa-bento-card-inner {
+	background: #1e293b;
+	border-radius: 12px;
+	padding: 30px 24px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 20px;
+	text-align: left;
+}
+.bpa-bento-mini-card {
+	background: #0f172a;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 12px;
+	padding: 20px;
+}
+.bpa-bento-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 24px;
+}
+.bpa-bento-col-8 {
+	grid-column: span 8;
+	background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+	border: 1px solid #e2e8f0;
+	border-radius: 20px;
+	padding: 40px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+.bpa-bento-col-4 {
+	grid-column: span 4;
+	background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+	color: #ffffff;
+	border-radius: 20px;
+	padding: 40px;
+	box-shadow: 0 14px 35px rgba(15,23,42,0.15);
+}
+.bpa-bento-card-white {
+	grid-column: span 4;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 20px;
+	padding: 32px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+/* Mobile & Tablet Responsive Rules */
+@media (max-width: 991px) {
+	.bpa-bento-grid {
+		grid-template-columns: 1fr;
+	}
+	.bpa-bento-col-8,
+	.bpa-bento-col-4,
+	.bpa-bento-card-white {
+		grid-column: span 1;
+		padding: 28px 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.bpa-page-hero {
+		padding: 60px 0 50px;
+	}
+	.bpa-bento-hero {
+		padding: 70px 0 50px;
+	}
+	.bpa-faq-wrapper {
+		padding: 50px 0;
+	}
+}

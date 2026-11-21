@@ -1,0 +1,100 @@
+{
+  "version": "0.4",
+  "title": "BizPro - Pricing & Plans",
+  "type": "page",
+  "content": [
+    {
+      "id": "bpa_pricing_sec_1",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "background_background": "gradient",
+        "background_color": "#0f172a",
+        "background_color_b": "#1e293b",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "20",
+          "bottom": "70",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "bpa_pricing_col_1",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "bpa_pricing_heading_sub",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Transparent Investment",
+                "align": "center",
+                "title_color": "#38bdf8",
+                "header_size": "h6"
+              }
+            },
+            {
+              "id": "bpa_pricing_heading_main",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Simple, Flexible Pricing Built for Growth",
+                "align": "center",
+                "title_color": "#ffffff",
+                "header_size": "h1"
+              }
+            },
+            {
+              "id": "bpa_pricing_desc",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style='text-align: center; color: #94a3b8; font-size: 18px;'>No hidden fees. Switch plans or cancel anytime with our verified standard terms.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bpa_pricing_sec_2",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "20",
+          "bottom": "80",
+          "left": "20",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "bpa_pricing_col_table",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "bpa_pricing_shortcode_widget",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": {
+                "shortcode": "[bpa_pricing_table]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

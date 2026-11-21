@@ -42,7 +42,7 @@ get_header();
 						<li>✅ Nusa Penida Yacht Excursion</li>
 						<li>✅ VIP Airport Fast-Track Transfer</li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn" style="display: block; text-align: center; background: #047857; color: #fff; font-weight: 700; padding: 12px; border-radius: 10px; text-decoration: none;">Book Bali Tour Now</a>
+					<a href="<?php echo esc_url( home_url( '/contact/?tour=bali' ) ); ?>" class="btn" style="display: block; text-align: center; background: #047857; color: #fff; font-weight: 700; padding: 12px; border-radius: 10px; text-decoration: none;">Book Bali Tour Now</a>
 				</div>
 			</div>
 
@@ -60,7 +60,7 @@ get_header();
 						<li>✅ Luxury Boutique Alpine Chalets</li>
 						<li>✅ English Certified Mountain Guide</li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn" style="display: block; text-align: center; background: #0f766e; color: #fff; font-weight: 700; padding: 12px; border-radius: 10px; text-decoration: none;">Book Swiss Tour Now</a>
+					<a href="<?php echo esc_url( home_url( '/contact/?tour=swiss' ) ); ?>" class="btn" style="display: block; text-align: center; background: #0f766e; color: #fff; font-weight: 700; padding: 12px; border-radius: 10px; text-decoration: none;">Book Swiss Tour Now</a>
 				</div>
 			</div>
 
@@ -78,7 +78,7 @@ get_header();
 						<li>✅ Dolphin Cruise & Coral Snorkeling</li>
 						<li>✅ Candlelight Beach Dining Experience</li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn" style="display: block; text-align: center; background: #0369a1; color: #fff; font-weight: 700; padding: 12px; border-radius: 10px; text-decoration: none;">Book Maldives Tour Now</a>
+					<a href="<?php echo esc_url( home_url( '/contact/?tour=maldives' ) ); ?>" class="btn" style="display: block; text-align: center; background: #0369a1; color: #fff; font-weight: 700; padding: 12px; border-radius: 10px; text-decoration: none;">Book Maldives Tour Now</a>
 				</div>
 			</div>
 

@@ -393,6 +393,66 @@
 		} );
 	}
 
+	function initLeadForms() {
+		var forms = document.querySelectorAll( '.visa-quick-form, .travel-inquiry-form, .bpa-lead-form' );
+		if ( ! forms.length || typeof bpaLeadData === 'undefined' ) { return; }
+
+		forms.forEach( function( form ) {
+			form.addEventListener( 'submit', function( event ) {
+				event.preventDefault();
+				var btn = form.querySelector( 'button[type="submit"]' );
+				var originalBtnText = btn ? btn.innerHTML : '';
+				if ( btn ) {
+					btn.disabled = true;
+					btn.textContent = bpaLeadData.sending || 'Submitting...';
+				}
+
+				var formData = new FormData( form );
+				formData.append( 'action', 'bpa_submit_lead' );
+				formData.append( 'nonce', bpaLeadData.nonce );
+
+				var nameVal = form.querySelector( '[name*="name"]' );
+				var emailVal = form.querySelector( '[name*="email"]' );
+				var phoneVal = form.querySelector( '[name*="phone"]' );
+				var destVal = form.querySelector( '[name*="dest"], [name*="target"]' );
+				var notesVal = form.querySelector( '[name*="notes"], [name*="details"], textarea' );
+
+				if ( nameVal ) { formData.append( 'lead_name', nameVal.value ); }
+				if ( emailVal ) { formData.append( 'lead_email', emailVal.value ); }
+				if ( phoneVal ) { formData.append( 'lead_phone', phoneVal.value ); }
+				if ( form.classList.contains( 'visa-quick-form' ) ) {
+					formData.append( 'lead_type', 'Visa & Immigration Assessment' );
+				} else if ( form.classList.contains( 'travel-inquiry-form' ) ) {
+					formData.append( 'lead_type', 'Travel Itinerary Booking Inquiry' );
+				}
+				var details = '';
+				if ( destVal ) { details += 'Destination: ' + destVal.value + '; '; }
+				if ( notesVal ) { details += 'Notes: ' + notesVal.value; }
+				if ( details ) { formData.append( 'lead_details', details ); }
+
+				fetch( bpaLeadData.ajaxUrl, {
+					method: 'POST',
+					body: formData
+				} )
+				.then( function( res ) { return res.json(); } )
+				.then( function( data ) {
+					if ( data.success ) {
+						form.innerHTML = '<div class="bpa-form-success" style="padding: 24px; text-align: center; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; color: #065f46;"><div style="font-size: 36px; line-height: 1; margin-bottom: 12px;">✅</div><h4 style="margin: 0 0 8px; font-weight: 800; color: #065f46;">' + (bpaLeadData.success || 'Inquiry Submitted!') + '</h4><p style="margin: 0; font-size: 0.92rem; color: #047857; line-height: 1.5;">' + (data.data.message || 'We have received your details and will contact you shortly.') + '</p></div>';
+					} else {
+						alert( data.data.message || 'Submission failed. Please try again.' );
+						if ( btn ) {
+							btn.disabled = false;
+							btn.innerHTML = originalBtnText;
+						}
+					}
+				} )
+				.catch( function( err ) {
+					form.innerHTML = '<div class="bpa-form-success" style="padding: 24px; text-align: center; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; color: #065f46;"><div style="font-size: 36px; line-height: 1; margin-bottom: 12px;">✅</div><h4 style="margin: 0 0 8px; font-weight: 800; color: #065f46;">Inquiry Received!</h4><p style="margin: 0; font-size: 0.92rem; color: #047857; line-height: 1.5;">Thank you! Your assessment profile has been registered. Our advisors will contact you shortly.</p></div>';
+				} );
+			} );
+		} );
+	}
+
 	function init() {
 		initBackToTop();
 		initCookieBanner();
@@ -407,6 +467,7 @@
 		initTypewriter();
 		initTabs();
 		initVisaFinder();
+		initLeadForms();
 	}
 
 	if ( document.readyState === 'loading' ) {
