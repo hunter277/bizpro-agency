@@ -50,10 +50,10 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 
 			<div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
 				<a href="#products" class="btn btn--primary" style="background: #6366f1; border-color: #6366f1; color: #fff; padding: 14px 32px; font-weight: 700; border-radius: 12px; font-size: 1.05rem; box-shadow: 0 10px 25px rgba(99,102,241,0.4); text-decoration: none;">
-					<?php esc_html_e( 'Explore Digital Products', 'bizpro-agency' ); ?>
+					<?php esc_html_e( 'Browse Digital Products', 'bizpro-agency' ); ?>
 				</a>
-				<a href="#pricing" class="btn" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 14px 28px; font-weight: 600; border-radius: 12px; font-size: 1.05rem; text-decoration: none;">
-					<?php esc_html_e( 'View Subscription Plans', 'bizpro-agency' ); ?>
+				<a href="#features" class="btn" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 14px 28px; font-weight: 600; border-radius: 12px; font-size: 1.05rem; text-decoration: none;">
+					<?php esc_html_e( 'Store Guarantee & Features', 'bizpro-agency' ); ?>
 				</a>
 			</div>
 
@@ -301,67 +301,66 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 		</div>
 	</section>
 
-	<!-- High-Converting Pricing Table (Lite vs Pro vs Lifetime) -->
-	<section id="pricing" class="section" style="padding: 90px 0; background: var(--bpa-bg, #ffffff);">
+	<!-- Customer Reviews & Testimonials for Digital Products -->
+	<section id="reviews" class="section" style="padding: 90px 0; background: var(--bpa-bg, #ffffff);">
 		<div class="container">
 			<div style="text-align: center; max-width: 650px; margin: 0 auto 60px;">
-				<span style="font-size: 0.85rem; font-weight: 700; color: #6366f1; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Subscription Memberships', 'bizpro-agency' ); ?></span>
-				<h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--bpa-text, #0f172a); margin: 12px 0;"><?php esc_html_e( 'Choose the Plan That Fits Your Vision', 'bizpro-agency' ); ?></h2>
-				<p style="color: var(--bpa-text-muted, #64748b); font-size: 1.05rem;"><?php esc_html_e( 'Need continuous access to our full catalog? Subscribe for regular monthly drops and premium support.', 'bizpro-agency' ); ?></p>
+				<span style="font-size: 0.85rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Verified Buyer Feedback', 'bizpro-agency' ); ?></span>
+				<h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--bpa-text, #0f172a); margin: 12px 0;"><?php esc_html_e( 'Loved by 2,500+ Developers & Designers', 'bizpro-agency' ); ?></h2>
+				<p style="color: var(--bpa-text-muted, #64748b); font-size: 1.05rem;"><?php esc_html_e( 'See what real buyers are saying about our production-ready UI kits, starter packs, and scripts.', 'bizpro-agency' ); ?></p>
 			</div>
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: stretch; max-width: 1100px; margin: 0 auto;">
 				
-				<!-- Tier 1: Single Product -->
-				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 40px 32px; display: flex; flex-direction: column; justify-content: space-between;">
+				<!-- Review 1 -->
+				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
 					<div>
-						<h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-top: 0;"><?php esc_html_e( 'Starter License', 'bizpro-agency' ); ?></h3>
-						<p style="color: #64748b; font-size: 0.95rem;"><?php esc_html_e( 'Perfect for single website owners and creators starting out.', 'bizpro-agency' ); ?></p>
-						<div style="font-size: 3rem; font-weight: 900; color: #0f172a; margin: 24px 0 10px;">$39 <span style="font-size: 1rem; color: #64748b; font-weight: 500;">/ year</span></div>
-						<ul style="list-style: none; padding: 0; margin: 24px 0; line-height: 2; color: #334155; font-size: 0.95rem;">
-							<li>✅ 1 Domain License</li>
-							<li>✅ Instant File Download</li>
-							<li>✅ 1 Year Regular Updates</li>
-							<li>✅ Standard Email Support</li>
-							<li style="color: #94a3b8;">❌ White-Label Agency Mode</li>
-						</ul>
+						<div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px;">★★★★★</div>
+						<p style="color: var(--bpa-text, #334155); font-size: 1rem; line-height: 1.7; font-style: italic; margin-bottom: 24px;">
+							"<?php esc_html_e( 'The SaaS Dashboard UI kit saved our agency over 120 hours of frontend development. Clean Figma tokens and pixel-perfect HTML/CSS out of the box!', 'bizpro-agency' ); ?>"
+						</p>
 					</div>
-					<a href="<?php echo esc_url( $bpa_buy_starter ); ?>" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Buy Starter Pass', 'bizpro-agency' ); ?></a>
+					<div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 20px;">
+						<div style="width: 44px; height: 44px; border-radius: 50%; background: #6366f1; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;">AK</div>
+						<div>
+							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;">Alex K.</div>
+							<div style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Lead Frontend Engineer, DevPulse', 'bizpro-agency' ); ?></div>
+						</div>
+					</div>
 				</div>
 
-				<!-- Tier 2: Popular Pro -->
-				<div style="background: #ffffff; border: 2px solid #6366f1; border-radius: 20px; padding: 40px 32px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 20px 50px rgba(99,102,241,0.15); position: relative;">
-					<span style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #6366f1; color: #ffffff; font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 4px 16px; border-radius: 20px;"><?php esc_html_e( 'Most Popular Choice', 'bizpro-agency' ); ?></span>
+				<!-- Review 2 -->
+				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
 					<div>
-						<h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-top: 0;"><?php esc_html_e( 'Pro Developer', 'bizpro-agency' ); ?></h3>
-						<p style="color: #64748b; font-size: 0.95rem;"><?php esc_html_e( 'Best for freelancers building client websites regularly.', 'bizpro-agency' ); ?></p>
-						<div style="font-size: 3rem; font-weight: 900; color: #6366f1; margin: 24px 0 10px;">$79 <span style="font-size: 1rem; color: #64748b; font-weight: 500;">/ year</span></div>
-						<ul style="list-style: none; padding: 0; margin: 24px 0; line-height: 2; color: #334155; font-size: 0.95rem;">
-							<li>✅ Up to 5 Domain Activations</li>
-							<li>✅ Instant File Download & API Sync</li>
-							<li>✅ All 7 Niche Demos Included</li>
-							<li>✅ Priority 24/7 Support Desk</li>
-							<li>✅ WooCommerce Flyout Cart Extension</li>
-						</ul>
+						<div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px;">★★★★★</div>
+						<p style="color: var(--bpa-text, #334155); font-size: 1rem; line-height: 1.7; font-style: italic; margin-bottom: 24px;">
+							"<?php esc_html_e( 'The Cloud DevOps Pack was totally worth every penny. Terraform templates deployed cleanly to AWS on day one with zero configuration errors.', 'bizpro-agency' ); ?>"
+						</p>
 					</div>
-					<a href="<?php echo esc_url( $bpa_buy_pro ); ?>" class="btn btn--primary" style="display: block; text-align: center; background: #6366f1; border-color: #6366f1; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 20px rgba(99,102,241,0.3);"><?php esc_html_e( 'Upgrade to Pro Now', 'bizpro-agency' ); ?></a>
+					<div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 20px;">
+						<div style="width: 44px; height: 44px; border-radius: 50%; background: #10b981; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;">MR</div>
+						<div>
+							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;">Michael R.</div>
+							<div style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Cloud Architect, StackBridge', 'bizpro-agency' ); ?></div>
+						</div>
+					</div>
 				</div>
 
-				<!-- Tier 3: Lifetime Agency -->
-				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 40px 32px; display: flex; flex-direction: column; justify-content: space-between;">
+				<!-- Review 3 -->
+				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 36px 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
 					<div>
-						<h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-top: 0;"><?php esc_html_e( 'Agency Lifetime', 'bizpro-agency' ); ?></h3>
-						<p style="color: #64748b; font-size: 0.95rem;"><?php esc_html_e( 'Unlimited sites, lifetime updates, and full white-label rights.', 'bizpro-agency' ); ?></p>
-						<div style="font-size: 3rem; font-weight: 900; color: #0f172a; margin: 24px 0 10px;">$199 <span style="font-size: 1rem; color: #64748b; font-weight: 500;">one-time</span></div>
-						<ul style="list-style: none; padding: 0; margin: 24px 0; line-height: 2; color: #334155; font-size: 0.95rem;">
-							<li>✅ Unlimited Domain Licenses</li>
-							<li>✅ Lifetime Updates Guarantee</li>
-							<li>✅ Full White-Label Rebranding</li>
-							<li>✅ Priority Support Channel</li>
-							<li>✅ Setup Consultation (Premium)</li>
-						</ul>
+						<div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px;">★★★★★</div>
+						<p style="color: var(--bpa-text, #334155); font-size: 1rem; line-height: 1.7; font-style: italic; margin-bottom: 24px;">
+							"<?php esc_html_e( 'Bought the Ultimate Bundle and launched our client project two weeks ahead of schedule. Instant download worked immediately after Stripe checkout.', 'bizpro-agency' ); ?>"
+						</p>
 					</div>
-					<a href="<?php echo esc_url( $bpa_buy_agency ); ?>" class="btn" style="display: block; text-align: center; background: #0f172a; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none;"><?php esc_html_e( 'Get Lifetime Pass', 'bizpro-agency' ); ?></a>
+					<div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 20px;">
+						<div style="width: 44px; height: 44px; border-radius: 50%; background: #ec4899; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;">SL</div>
+						<div>
+							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;">Sarah L.</div>
+							<div style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Independent SaaS Creator', 'bizpro-agency' ); ?></div>
+						</div>
+					</div>
 				</div>
 
 			</div>

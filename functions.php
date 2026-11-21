@@ -418,8 +418,8 @@ function bizpro_agency_get_demo_info( $context = null ) {
 	$demos = array(
 		'digital' => array(
 			'tagline'   => __( 'Digital & SaaS', 'bizpro-agency' ),
-			'cta_text'  => __( 'Get All-Access Pass', 'bizpro-agency' ),
-			'cta_url'   => home_url( '/digital-store/#pricing' ),
+			'cta_text'  => __( 'Browse Products', 'bizpro-agency' ),
+			'cta_url'   => home_url( '/digital-store/#products' ),
 			'top_badge' => __( 'Instant Digital Delivery', 'bizpro-agency' ),
 		),
 		'visa' => array(
@@ -567,8 +567,8 @@ function bizpro_agency_fallback_menu() {
 		$items = array(
 			array( 'label' => __( 'Home', 'bizpro-agency' ), 'url' => home_url( '/digital-store/' ) ),
 			array( 'label' => __( 'Digital Store', 'bizpro-agency' ), 'url' => '#products' ),
-			array( 'label' => __( 'Bento Features', 'bizpro-agency' ), 'url' => '#features' ),
-			array( 'label' => __( 'Pricing Plans', 'bizpro-agency' ), 'url' => '#pricing' ),
+			array( 'label' => __( 'Store Features', 'bizpro-agency' ), 'url' => '#features' ),
+			array( 'label' => __( 'Buyer Reviews', 'bizpro-agency' ), 'url' => '#reviews' ),
 			array( 'label' => __( 'Buyer FAQs', 'bizpro-agency' ), 'url' => '#store-faq' ),
 			array( 'label' => __( 'Contact Us', 'bizpro-agency' ), 'url' => home_url( '/contact/' ) ),
 		);
