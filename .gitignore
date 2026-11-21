@@ -1,0 +1,16 @@
+# System / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary
+*.log
+*.tmp
+*.bak
+node_modules/

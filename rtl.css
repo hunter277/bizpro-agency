@@ -1,0 +1,73 @@
+/*
+Theme Name: BizPro Agency
+Description: RTL (Right to Left) Stylesheet for BizPro Agency.
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/* Header & Top Bar */
+.topbar__inner {
+	direction: rtl;
+}
+
+.topbar__contact {
+	gap: 20px;
+}
+
+.topbar__contact span {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.site-header__actions {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+/* Nav */
+.main-navigation ul {
+	padding-right: 0;
+}
+
+/* Hero */
+.hero__actions {
+	justify-content: flex-start;
+}
+
+/* About Section */
+.about__badge {
+	right: auto;
+	left: -16px;
+}
+
+.about__list li {
+	padding-left: 0;
+	padding-right: 32px;
+}
+
+.about__list li::before {
+	left: auto;
+	right: 0;
+}
+
+/* Testimonials */
+.testimonial__author {
+	text-align: right;
+}
+
+/* Footer & Widgets */
+.footer-widgets {
+	text-align: right;
+}
+
+.footer-bottom__inner {
+	direction: rtl;
+}
+
+/* Buttons */
+.btn {
+	direction: rtl;
+}

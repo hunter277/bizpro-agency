@@ -1,0 +1,170 @@
+<?php
+/**
+ * Template Name: Contact Us
+ *
+ * Dedicated, conversion-optimized contact and inquiry page template.
+ *
+ * @package BizPro_Agency
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+get_header();
+
+$bpa_phone   = bizpro_agency_get( 'topbar_phone', '+1 (555) 123-4567' );
+$bpa_email   = bizpro_agency_get( 'topbar_email', 'info@bizproagency.com' );
+$bpa_address = bizpro_agency_get( 'topbar_address', '123 Business Avenue, Suite 500, New York, NY 10001' );
+
+$form_submitted = false;
+$form_error     = false;
+
+if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce'] ) ) {
+	if ( wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['bpa_contact_nonce'] ) ), 'bpa_contact_action' ) ) {
+		$form_submitted = true;
+	} else {
+		$form_error = true;
+	}
+}
+?>
+
+<main id="primary" class="site-main site-main--contact">
+
+	<!-- Contact Hero -->
+	<header class="page-header" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff; padding: 70px 0 60px; text-align: center;">
+		<div class="container">
+			<span style="display: inline-block; font-size: 0.85rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;"><?php esc_html_e( 'Direct Consultation & Inquiries', 'bizpro-agency' ); ?></span>
+			<h1 class="page-title" style="font-size: clamp(2.2rem, 5vw, 3.4rem); color: #ffffff; margin-bottom: 16px;"><?php esc_html_e( 'Get in Touch with Our Global Advisors', 'bizpro-agency' ); ?></h1>
+			<p style="max-width: 650px; margin: 0 auto; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;"><?php esc_html_e( 'Have a question or ready to launch your next project? Reach out to our senior team for a swift, confidential response within 24 hours.', 'bizpro-agency' ); ?></p>
+		</div>
+	</header>
+
+	<div class="container section" style="padding: 70px 0;">
+
+		<!-- 3-Column Info Cards -->
+		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px;">
+			<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 32px 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+				<div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(37,99,235,0.1); color: #2563eb; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px;">📍</div>
+				<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Global Headquarters', 'bizpro-agency' ); ?></h3>
+				<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin: 0;"><?php echo esc_html( $bpa_address ); ?></p>
+			</div>
+
+			<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 32px 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+				<div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(16,185,129,0.1); color: #10b981; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px;">📞</div>
+				<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Direct Phone Lines', 'bizpro-agency' ); ?></h3>
+				<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+					<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bpa_phone ) ); ?>" style="color: #2563eb; font-weight: 600; text-decoration: none;"><?php echo esc_html( $bpa_phone ); ?></a><br>
+					<span style="font-size: 0.82rem; color: #94a3b8;"><?php esc_html_e( 'Mon – Fri: 9:00 AM – 6:00 PM EST', 'bizpro-agency' ); ?></span>
+				</p>
+			</div>
+
+			<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 32px 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+				<div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(99,102,241,0.1); color: #6366f1; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px;">✉️</div>
+				<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Email & Advisory Desk', 'bizpro-agency' ); ?></h3>
+				<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+					<a href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>" style="color: #2563eb; font-weight: 600; text-decoration: none;"><?php echo esc_html( $bpa_email ); ?></a><br>
+					<span style="font-size: 0.82rem; color: #94a3b8;"><?php esc_html_e( 'Guaranteed 24-Hour Response SLA', 'bizpro-agency' ); ?></span>
+				</p>
+			</div>
+		</div>
+
+		<!-- Contact Form & Office Grid -->
+		<div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start;">
+			
+			<!-- Left: Contact Form -->
+			<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 40px; box-shadow: 0 14px 35px rgba(0,0,0,0.05);">
+				<h2 style="font-size: 1.7rem; font-weight: 800; margin-bottom: 8px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Send Us an Official Message', 'bizpro-agency' ); ?></h2>
+				<p style="color: var(--bpa-text-muted, #64748b); margin-bottom: 28px; font-size: 0.95rem;"><?php esc_html_e( 'Fill out the form below and an assigned specialist will get back to you promptly.', 'bizpro-agency' ); ?></p>
+
+				<?php if ( $form_submitted ) : ?>
+					<div style="background: #ecfdf5; border: 1px solid #10b981; color: #065f46; border-radius: 12px; padding: 20px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+						<span style="font-size: 24px;">✅</span>
+						<div>
+							<strong style="display: block; font-size: 1.05rem;"><?php esc_html_e( 'Thank You! Message Received.', 'bizpro-agency' ); ?></strong>
+							<span style="font-size: 0.9rem;"><?php esc_html_e( 'Our client advisory team has received your inquiry and will follow up within 24 hours.', 'bizpro-agency' ); ?></span>
+						</div>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( $form_error ) : ?>
+					<div style="background: #fef2f2; border: 1px solid #ef4444; color: #991b1b; border-radius: 12px; padding: 16px; margin-bottom: 24px;">
+						<?php esc_html_e( 'Verification failed. Please refresh and try submitting again.', 'bizpro-agency' ); ?>
+					</div>
+				<?php endif; ?>
+
+				<form method="post" action="">
+					<?php wp_nonce_field( 'bpa_contact_action', 'bpa_contact_nonce' ); ?>
+					
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+						<div>
+							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Your Full Name *', 'bizpro-agency' ); ?></label>
+							<input type="text" name="bpa_name" required placeholder="John Doe" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+						</div>
+						<div>
+							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Email Address *', 'bizpro-agency' ); ?></label>
+							<input type="email" name="bpa_email" required placeholder="john@company.com" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+						</div>
+					</div>
+
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+						<div>
+							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Phone / WhatsApp *', 'bizpro-agency' ); ?></label>
+							<input type="tel" name="bpa_phone" required placeholder="+1 (555) 000-0000" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+						</div>
+						<div>
+							<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Primary Area of Interest', 'bizpro-agency' ); ?></label>
+							<select name="bpa_service" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+								<option value="visa"><?php esc_html_e( 'Visa & Immigration Consultancy', 'bizpro-agency' ); ?></option>
+								<option value="it"><?php esc_html_e( 'IT Solutions, Cloud & Software', 'bizpro-agency' ); ?></option>
+								<option value="travel"><?php esc_html_e( 'Travel Planning & Holiday Tours', 'bizpro-agency' ); ?></option>
+								<option value="consulting"><?php esc_html_e( 'Strategic Business Consulting', 'bizpro-agency' ); ?></option>
+								<option value="corporate"><?php esc_html_e( 'Corporate Enterprise Solutions', 'bizpro-agency' ); ?></option>
+							</select>
+						</div>
+					</div>
+
+					<div style="margin-bottom: 24px;">
+						<label style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Project Scope / Message *', 'bizpro-agency' ); ?></label>
+						<textarea name="bpa_message" rows="5" required placeholder="<?php esc_attr_e( 'Please provide a brief summary of your inquiry, goals, or requirements...', 'bizpro-agency' ); ?>" style="width: 100%; padding: 14px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);"></textarea>
+					</div>
+
+					<button type="submit" class="btn btn--primary btn--lg" style="width: 100%; padding: 16px; font-size: 1.05rem; justify-content: center;"><?php esc_html_e( 'Send Consultation Request', 'bizpro-agency' ); ?></button>
+				</form>
+			</div>
+
+			<!-- Right: Office Highlights & Security -->
+			<div style="display: flex; flex-direction: column; gap: 24px;">
+				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
+					<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Why Work With BizPro Agency?', 'bizpro-agency' ); ?></h3>
+					<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
+						<li style="display: flex; gap: 12px; font-size: 0.95rem; color: var(--bpa-text-muted, #475569);">
+							<span style="color: #10b981; font-weight: 700;">✓</span>
+							<span><strong>Strict NDA & IP Confidentiality:</strong> Your trade secrets and personal data are protected by bilateral legal agreements.</span>
+						</li>
+						<li style="display: flex; gap: 12px; font-size: 0.95rem; color: var(--bpa-text-muted, #475569);">
+							<span style="color: #10b981; font-weight: 700;">✓</span>
+							<span><strong>Direct Senior Partner Access:</strong> No junior intermediaries—work directly with seasoned practice leads.</span>
+						</li>
+						<li style="display: flex; gap: 12px; font-size: 0.95rem; color: var(--bpa-text-muted, #475569);">
+							<span style="color: #10b981; font-weight: 700;">✓</span>
+							<span><strong>Zero Hidden Costs:</strong> Transparent retainers and milestone-based commercial arrangements.</span>
+						</li>
+					</ul>
+				</div>
+
+				<div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #ffffff; border-radius: 20px; padding: 32px; box-shadow: 0 12px 30px rgba(0,0,0,0.12);">
+					<h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 12px;"><?php esc_html_e( 'Emergency Escalations?', 'bizpro-agency' ); ?></h3>
+					<p style="color: #94a3b8; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;"><?php esc_html_e( 'For critical enterprise IT incidents or urgent visa submission deadlines, reach our 24/7 dedicated escalation desk.', 'bizpro-agency' ); ?></p>
+					<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bpa_phone ) ); ?>" class="btn btn--light" style="width: 100%; justify-content: center;"><?php esc_html_e( 'Call Emergency Desk', 'bizpro-agency' ); ?></a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</main>
+
+<?php
+get_footer();
