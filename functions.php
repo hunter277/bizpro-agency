@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '1.9.5' );
+define( 'BIZPRO_AGENCY_VERSION', '1.9.8' );
 
 /**
  * Default values for every Customizer option.
@@ -1184,6 +1184,42 @@ function bizpro_agency_create_essential_pages() {
 			'title'    => __( 'Disclaimer', 'bizpro-agency' ),
 			'slug'     => 'disclaimer',
 			'template' => 'template-disclaimer.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Digital Products & SaaS Store', 'bizpro-agency' ),
+			'slug'     => 'digital-store',
+			'template' => 'template-homepage-digital.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Visa & Immigration', 'bizpro-agency' ),
+			'slug'     => 'visa-immigration',
+			'template' => 'template-homepage-visa.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Travel & Tour Agency', 'bizpro-agency' ),
+			'slug'     => 'travel-agency',
+			'template' => 'template-homepage-travel.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'IT Solutions & Cloud', 'bizpro-agency' ),
+			'slug'     => 'it-solutions',
+			'template' => 'template-homepage-it.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Business Consulting', 'bizpro-agency' ),
+			'slug'     => 'business-consulting',
+			'template' => 'template-homepage-consulting.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Corporate Enterprise', 'bizpro-agency' ),
+			'slug'     => 'corporate',
+			'template' => 'template-homepage-corporate.php',
 			'content'  => '',
 		),
 	);
