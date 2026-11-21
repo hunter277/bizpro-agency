@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '2.1.0' );
+define( 'BIZPRO_AGENCY_VERSION', '2.2.0' );
 
 /**
  * Default values for every Customizer option.
@@ -1416,3 +1416,20 @@ function bizpro_agency_floating_demo_switcher() {
 	<?php
 }
 add_action( 'wp_footer', 'bizpro_agency_floating_demo_switcher' );
+
+// Include Astra Pro Parity Modules
+require_once get_template_directory() . '/inc/shortcodes.php';
+require_once get_template_directory() . '/inc/white-label.php';
+
+/**
+ * Calculate post reading time (e.g. 📖 4 min read).
+ */
+function bizpro_agency_reading_time( $post_id = null ) {
+	if ( ! $post_id ) {
+		$post_id = get_the_ID();
+	}
+	$content = get_post_field( 'post_content', $post_id );
+	$word_count = str_word_count( wp_strip_all_tags( $content ) );
+	$minutes = ceil( $word_count / 200 );
+	return max( 1, $minutes );
+}

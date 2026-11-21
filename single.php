@@ -91,7 +91,37 @@ get_header();
 				)
 			);
 
-			if ( comments_open() || get_comments_number() ) {
+			
+				<!-- Blog Pro: Author Info Box & Bio -->
+				<div class="entry-author-box" style="margin-top: 50px; background: var(--bpa-bg-alt, #f8fafc); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 28px; display: flex; gap: 20px; align-items: center;">
+					<div style="flex-shrink: 0;">
+						<?php echo get_avatar( get_the_author_meta( 'ID' ), 80, '', '', array( 'class' => 'author-avatar', 'style' => 'border-radius: 50%; display: block;' ) ); ?>
+					</div>
+					<div>
+						<span style="font-size: 0.8rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Written By', 'bizpro-agency' ); ?></span>
+						<h3 style="margin: 4px 0 8px; font-size: 1.25rem; font-weight: 800; color: var(--bpa-text, #0f172a);">
+							<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" style="color: inherit; text-decoration: none;">
+								<?php echo esc_html( get_the_author() ); ?>
+							</a>
+						</h3>
+						<p style="margin: 0; color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.5;">
+							<?php echo esc_html( get_the_author_meta( 'description' ) ? get_the_author_meta( 'description' ) : __( 'Senior industry advisor and lead contributor at BizPro Agency.', 'bizpro-agency' ) ); ?>
+						</p>
+					</div>
+				</div>
+
+				<!-- Blog Pro: Next & Previous Post Navigation -->
+				<div class="entry-post-nav" style="margin-top: 36px; border-top: 1px solid var(--bpa-border, #e2e8f0); padding-top: 24px; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+					<div class="nav-previous">
+						<?php previous_post_link( '<div style="font-size: 0.8rem; color: #64748b; font-weight: 600;">← Previous Post</div><div style="font-weight: 700; color: #2563eb;">%link</div>' ); ?>
+					</div>
+					<div class="nav-next" style="text-align: right;">
+						<?php next_post_link( '<div style="font-size: 0.8rem; color: #64748b; font-weight: 600;">Next Post →</div><div style="font-weight: 700; color: #2563eb;">%link</div>' ); ?>
+					</div>
+				</div>
+
+				<?php
+				if ( comments_open() || get_comments_number() ) {
 				comments_template();
 			}
 			?>
