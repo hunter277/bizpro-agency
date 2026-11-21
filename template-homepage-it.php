@@ -156,11 +156,11 @@ $it_cases = array(
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
 				<?php foreach ( $tech_stack as $category => $items ) : ?>
-					<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
-						<h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--bpa-text, #0f172a); border-bottom: 2px solid #6366f1; padding-bottom: 8px; display: inline-block;"><?php echo esc_html( $category ); ?></h3>
+					<div class="bpa-tech-card" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;">
+						<h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; color: var(--bpa-text, #0f172a); border-bottom: 2px solid #6366f1; padding-bottom: 8px; display: inline-block;"><?php echo esc_html( $category ); ?></h3>
 						<div style="display: flex; flex-wrap: wrap; gap: 8px;">
 							<?php foreach ( $items as $tech ) : ?>
-								<span style="background: var(--bpa-bg-alt, #f1f5f9); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 8px; padding: 6px 12px; font-size: 0.85rem; font-weight: 600; color: var(--bpa-text, #334155);"><?php echo esc_html( $tech ); ?></span>
+								<span style="background: var(--bpa-bg-alt, #f1f5f9); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 8px; padding: 7px 13px; font-size: 0.88rem; font-weight: 600; color: var(--bpa-text, #334155); transition: all 0.2s ease;"><?php echo esc_html( $tech ); ?></span>
 							<?php endforeach; ?>
 						</div>
 					</div>
@@ -284,7 +284,7 @@ $it_cases = array(
 	</section>
 
 	<!-- CTA Banner / Contact Form -->
-	<section id="contact" class="cta-banner" style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);">
+	<section id="contact" class="cta-banner" style="background: radial-gradient(circle at 85% 30%, #312e81 0%, #1e1b4b 55%, #0f172a 100%); border-top: 1px solid rgba(99,102,241,0.25); position: relative; overflow: hidden;">
 		<div class="container cta-banner__inner">
 			<div class="cta-banner__text">
 				<h2 class="cta-banner__title"><?php esc_html_e( 'Ready to Modernize Your Technology Architecture?', 'bizpro-agency' ); ?></h2>
