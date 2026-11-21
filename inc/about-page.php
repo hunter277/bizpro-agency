@@ -49,6 +49,18 @@ function bizpro_agency_about_page_render() {
 				</a>
 			</div>
 
+			
+			<!-- 1-Click AdSense Essential Pages Banner -->
+			<div style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 12px; padding: 24px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between;">
+				<div>
+					<h3 style="margin: 0 0 6px; color: #1e1b4b; font-size: 18px;"><?php esc_html_e( '⚡ 1-Click AdSense Essential Pages Generator', 'bizpro-agency' ); ?></h3>
+					<p style="margin: 0; color: #4338ca; font-size: 14px;"><?php esc_html_e( 'Automatically generate Privacy Policy, Terms & Conditions, Disclaimer, Contact Us, About Us and Services pages.', 'bizpro-agency' ); ?></p>
+				</div>
+				<a href="<?php echo esc_url( admin_url( 'admin.php?page=bizpro-agency-welcome&bpa_generate_pages=1' ) ); ?>" class="button button-primary" style="background: #4f46e5; border-color: #4f46e5; height: 38px; line-height: 36px; padding: 0 20px;">
+					<?php esc_html_e( 'Generate All Pages Now', 'bizpro-agency' ); ?>
+				</a>
+			</div>
+
 			<!-- Grid 3 columns -->
 			<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
 				<div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px;">

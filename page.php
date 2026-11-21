@@ -32,77 +32,47 @@ if ( bizpro_agency_is_elementor() ) {
 
 /*
  * ----------------------------------------------------------------
- * STEP 2 — Slug-based demo routing.
+ * STEP 2 — Universal Template & Demo Routing
  *
- * We read $post->post_content DIRECTLY (not via get_the_content()
- * which requires the loop to be running) so the check is reliable.
- * If a page has an empty post_content we show the matching demo template.
+ * 1. Honors explicit Page Template selected in WP Admin.
+ * 2. If viewing a standard slug (Contact, About, Services, Privacy,
+ *    Terms, Disclaimer, or any Niche Demo), loads the rich commercial template.
  * ----------------------------------------------------------------
  */
-global $post;
+$bpa_current_tpl = get_page_template_slug();
+if ( $bpa_current_tpl && 'default' !== $bpa_current_tpl && file_exists( get_template_directory() . '/' . $bpa_current_tpl ) ) {
+	include get_template_directory() . '/' . $bpa_current_tpl;
+	return;
+}
 
+global $post;
 if ( $post ) {
 	$bpa_slug    = $post->post_name;
 	$bpa_content = trim( wp_strip_all_tags( $post->post_content ) );
+	// If content is empty or contains standard XML placeholder demo markup
+	$is_placeholder = empty( $bpa_content ) || false !== strpos( $post->post_content, 'bpa-demo-page' ) || strlen( $bpa_content ) < 180;
 
-	// --- Homepage / Agency Default ---
-	if (
-		empty( $bpa_content ) &&
-		(
-			'home'           === $bpa_slug ||
-			'agency-default' === $bpa_slug ||
-			( strlen( $bpa_slug ) > 5 && substr( $bpa_slug, 0, 5 ) === 'home-' )
-		)
-	) {
-		$tpl = get_template_directory() . '/template-homepage-default.php';
+	// --- Privacy Policy (AdSense Critical) ---
+	if ( false !== strpos( $bpa_slug, 'privacy' ) ) {
+		$tpl = get_template_directory() . '/template-privacy-policy.php';
 		if ( file_exists( $tpl ) ) {
 			include $tpl;
 			return;
 		}
 	}
 
-	// --- Visa & Immigration ---
-	if ( empty( $bpa_content ) && false !== strpos( $bpa_slug, 'visa' ) ) {
-		$tpl = get_template_directory() . '/template-homepage-visa.php';
+	// --- Terms & Conditions ---
+	if ( false !== strpos( $bpa_slug, 'terms' ) || false !== strpos( $bpa_slug, 'condition' ) ) {
+		$tpl = get_template_directory() . '/template-terms-conditions.php';
 		if ( file_exists( $tpl ) ) {
 			include $tpl;
 			return;
 		}
 	}
 
-	// --- Travel Agency ---
-	if ( empty( $bpa_content ) && false !== strpos( $bpa_slug, 'travel' ) ) {
-		$tpl = get_template_directory() . '/template-homepage-travel.php';
-		if ( file_exists( $tpl ) ) {
-			include $tpl;
-			return;
-		}
-	}
-
-	// --- IT Solutions ---
-	if (
-		empty( $bpa_content ) &&
-		( false !== strpos( $bpa_slug, 'it-' ) || 'it' === $bpa_slug )
-	) {
-		$tpl = get_template_directory() . '/template-homepage-it.php';
-		if ( file_exists( $tpl ) ) {
-			include $tpl;
-			return;
-		}
-	}
-
-	// --- Business Consulting ---
-	if ( empty( $bpa_content ) && false !== strpos( $bpa_slug, 'consulting' ) ) {
-		$tpl = get_template_directory() . '/template-homepage-consulting.php';
-		if ( file_exists( $tpl ) ) {
-			include $tpl;
-			return;
-		}
-	}
-
-	// --- Corporate ---
-	if ( empty( $bpa_content ) && false !== strpos( $bpa_slug, 'corporate' ) ) {
-		$tpl = get_template_directory() . '/template-homepage-corporate.php';
+	// --- Disclaimer ---
+	if ( false !== strpos( $bpa_slug, 'disclaimer' ) ) {
+		$tpl = get_template_directory() . '/template-disclaimer.php';
 		if ( file_exists( $tpl ) ) {
 			include $tpl;
 			return;
@@ -110,7 +80,7 @@ if ( $post ) {
 	}
 
 	// --- Contact Us ---
-	if ( empty( $bpa_content ) && false !== strpos( $bpa_slug, 'contact' ) ) {
+	if ( false !== strpos( $bpa_slug, 'contact' ) ) {
 		$tpl = get_template_directory() . '/template-contact.php';
 		if ( file_exists( $tpl ) ) {
 			include $tpl;
@@ -119,7 +89,7 @@ if ( $post ) {
 	}
 
 	// --- About Us ---
-	if ( empty( $bpa_content ) && ( false !== strpos( $bpa_slug, 'about' ) || 'about-us' === $bpa_slug ) ) {
+	if ( $is_placeholder && ( false !== strpos( $bpa_slug, 'about' ) || 'about-us' === $bpa_slug ) ) {
 		$tpl = get_template_directory() . '/template-about.php';
 		if ( file_exists( $tpl ) ) {
 			include $tpl;
@@ -128,8 +98,53 @@ if ( $post ) {
 	}
 
 	// --- Services ---
-	if ( empty( $bpa_content ) && ( false !== strpos( $bpa_slug, 'service' ) || 'what-we-do' === $bpa_slug ) ) {
+	if ( $is_placeholder && ( false !== strpos( $bpa_slug, 'service' ) || 'what-we-do' === $bpa_slug ) ) {
 		$tpl = get_template_directory() . '/template-services.php';
+		if ( file_exists( $tpl ) ) {
+			include $tpl;
+			return;
+		}
+	}
+
+	// --- Visa & Immigration ---
+	if ( $is_placeholder && false !== strpos( $bpa_slug, 'visa' ) ) {
+		$tpl = get_template_directory() . '/template-homepage-visa.php';
+		if ( file_exists( $tpl ) ) {
+			include $tpl;
+			return;
+		}
+	}
+
+	// --- Travel Agency ---
+	if ( $is_placeholder && false !== strpos( $bpa_slug, 'travel' ) ) {
+		$tpl = get_template_directory() . '/template-homepage-travel.php';
+		if ( file_exists( $tpl ) ) {
+			include $tpl;
+			return;
+		}
+	}
+
+	// --- IT Solutions ---
+	if ( $is_placeholder && ( false !== strpos( $bpa_slug, 'it-' ) || 'it' === $bpa_slug || 'it-solutions' === $bpa_slug ) ) {
+		$tpl = get_template_directory() . '/template-homepage-it.php';
+		if ( file_exists( $tpl ) ) {
+			include $tpl;
+			return;
+		}
+	}
+
+	// --- Business Consulting ---
+	if ( $is_placeholder && false !== strpos( $bpa_slug, 'consulting' ) ) {
+		$tpl = get_template_directory() . '/template-homepage-consulting.php';
+		if ( file_exists( $tpl ) ) {
+			include $tpl;
+			return;
+		}
+	}
+
+	// --- Corporate ---
+	if ( $is_placeholder && false !== strpos( $bpa_slug, 'corporate' ) ) {
+		$tpl = get_template_directory() . '/template-homepage-corporate.php';
 		if ( file_exists( $tpl ) ) {
 			include $tpl;
 			return;

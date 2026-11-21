@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '1.8.0' );
+define( 'BIZPRO_AGENCY_VERSION', '1.8.5' );
 
 /**
  * Default values for every Customizer option.
@@ -1137,3 +1137,78 @@ function bizpro_agency_advanced_seo_head() {
 add_action( 'wp_head', 'bizpro_agency_advanced_seo_head', 2 );
 
 
+
+/**
+ * Automatically create essential AdSense pages on theme activation if they don't exist.
+ * Includes: Contact Us, About Us, Services, Privacy Policy, Terms & Conditions, Disclaimer.
+ */
+function bizpro_agency_create_essential_pages() {
+	$pages = array(
+		array(
+			'title'    => __( 'Contact Us', 'bizpro-agency' ),
+			'slug'     => 'contact',
+			'template' => 'template-contact.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'About Us', 'bizpro-agency' ),
+			'slug'     => 'about-us',
+			'template' => 'template-about.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Services', 'bizpro-agency' ),
+			'slug'     => 'services',
+			'template' => 'template-services.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Privacy Policy', 'bizpro-agency' ),
+			'slug'     => 'privacy-policy',
+			'template' => 'template-privacy-policy.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Terms & Conditions', 'bizpro-agency' ),
+			'slug'     => 'terms-conditions',
+			'template' => 'template-terms-conditions.php',
+			'content'  => '',
+		),
+		array(
+			'title'    => __( 'Disclaimer', 'bizpro-agency' ),
+			'slug'     => 'disclaimer',
+			'template' => 'template-disclaimer.php',
+			'content'  => '',
+		),
+	);
+
+	foreach ( $pages as $p ) {
+		$existing = get_page_by_path( $p['slug'] );
+		if ( ! $existing ) {
+			$page_id = wp_insert_post( array(
+				'post_title'   => $p['title'],
+				'post_name'    => $p['slug'],
+				'post_status'  => 'publish',
+				'post_type'    => 'page',
+				'post_content' => $p['content'],
+			) );
+			if ( $page_id && ! is_wp_error( $page_id ) && ! empty( $p['template'] ) ) {
+				update_post_meta( $page_id, '_wp_page_template', $p['template'] );
+			}
+		} elseif ( ! empty( $p['template'] ) ) {
+			// Ensure template is set if not already
+			$current_tpl = get_post_meta( $existing->ID, '_wp_page_template', true );
+			if ( empty( $current_tpl ) || 'default' === $current_tpl ) {
+				update_post_meta( $existing->ID, '_wp_page_template', $p['template'] );
+			}
+		}
+	}
+}
+add_action( 'after_switch_theme', 'bizpro_agency_create_essential_pages' );
+add_action( 'admin_init', function() {
+	if ( isset( $_GET['bpa_generate_pages'] ) && current_user_can( 'manage_options' ) ) {
+		bizpro_agency_create_essential_pages();
+		wp_safe_redirect( admin_url( 'edit.php?post_type=page&bpa_created=1' ) );
+		exit;
+	}
+} );

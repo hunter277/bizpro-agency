@@ -27,6 +27,37 @@ if ( have_posts() && bizpro_agency_is_elementor() ) {
 	}
 }
 
+// -------------------------------------------------------------------------
+// NICHE DEMO DELEGATION: If a specific niche demo is set as front page,
+// or page template is chosen, delegate directly to that rich template.
+// -------------------------------------------------------------------------
+$bpa_front_id = get_option( 'page_on_front' );
+if ( $bpa_front_id ) {
+	$bpa_assigned_tpl = get_page_template_slug( $bpa_front_id );
+	if ( $bpa_assigned_tpl && 'default' !== $bpa_assigned_tpl && file_exists( get_template_directory() . '/' . $bpa_assigned_tpl ) ) {
+		include get_template_directory() . '/' . $bpa_assigned_tpl;
+		return;
+	}
+	$bpa_front_slug = get_post_field( 'post_name', $bpa_front_id );
+	$bpa_niche_map  = array(
+		'visa'       => 'template-homepage-visa.php',
+		'travel'     => 'template-homepage-travel.php',
+		'it'         => 'template-homepage-it.php',
+		'consulting' => 'template-homepage-consulting.php',
+		'corporate'  => 'template-homepage-corporate.php',
+	);
+	foreach ( $bpa_niche_map as $key => $tpl_file ) {
+		if ( false !== strpos( $bpa_front_slug, $key ) ) {
+			$tpl_full = get_template_directory() . '/' . $tpl_file;
+			if ( file_exists( $tpl_full ) ) {
+				include $tpl_full;
+				return;
+			}
+		}
+	}
+}
+
+
 // Hero
 $bpa_hero_title    = bizpro_agency_get( 'hero_title' );
 $bpa_hero_subtitle = bizpro_agency_get( 'hero_subtitle' );

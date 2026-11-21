@@ -94,6 +94,9 @@ add_filter( 'ocdi/import_files',    'bizpro_agency_ocdi_import_files' );
  * @param array $selected_import Selected import data.
  */
 function bizpro_agency_ocdi_after_import( $selected_import ) {
+	if ( function_exists( 'bizpro_agency_create_essential_pages' ) ) {
+		bizpro_agency_create_essential_pages();
+	}
 	$demo_name = isset( $selected_import['import_file_name'] ) ? $selected_import['import_file_name'] : '';
 
 	update_option( 'show_on_front', 'page' );
