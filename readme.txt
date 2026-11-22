@@ -1,12 +1,12 @@
 === BizPro Agency ===
-Contributors: kamrulhasan
+Contributors: globalwebdeveloper, kamrulhasan
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.6.0
+Stable tag: 2.7.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: business, custom-colors, custom-logo, custom-menu, featured-images, one-column, two-columns, threaded-comments, translation-ready, theme-options, blog, e-commerce, rtl-language-support, block-patterns
+Tags: blog, e-commerce, portfolio, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, grid-layout, one-column, rtl-language-support, theme-options, threaded-comments, translation-ready, two-columns, block-patterns
 
 A clean, ultra-fast and fully responsive WordPress theme for service, IT, visa and travel, and business consultancy agencies.
 
@@ -114,6 +114,15 @@ The optional "BizPro Agency Companion" plugin adds the Visa Pathways custom post
 The "All Demos" menu, floating demo bar and demo showcase section are for showcase sites only. They are hidden by default; enable them in Appearance > Customize > Top Bar > Show demo switcher.
 
 == Changelog ==
+
+= 2.7.0 =
+* Dynamic niche pricing: contextual pricing matrix for Digital/SaaS, Travel, Visa, IT, Consulting, and Corporate agencies.
+* Dynamic contact inquiry forms: contextual Primary Area of Interest dropdowns and agency advisory sidebars.
+* Contextual footer branding: demo-specific about summaries across all 7 industry templates.
+* Homepage demos showcase: dedicated Customizer showcase control and responsive gallery.
+* Theme dashboard updated: high-resolution preview banner and JPEG preview assets.
+* Theme license and registration integration in admin dashboard.
+* Fully tested and compatible with WordPress 6.7.
 
 = 2.6.0 =
 * Lead forms rewritten: honeypot, minimum-time and per-IP rate limit (no expiring nonce on cached pages), real error messages on network failure, no innerHTML injection.

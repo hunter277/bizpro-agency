@@ -33,19 +33,20 @@ if ( ! function_exists( 'bizpro_agency_fs' ) ) {
 
 				$bizpro_fs = fs_dynamic_init(
 					array(
-						'id'             => 'YOUR_FREEMIUS_PRODUCT_ID', // Replace with your Freemius Product ID.
-						'slug'           => 'bizpro-agency',
-						'type'           => 'theme',
-						'public_key'     => 'YOUR_FREEMIUS_PUBLIC_KEY', // Replace with your public key.
-						'is_premium'     => true,
-						'has_addons'     => false,
-						'has_paid_plans' => true,
-						'menu'           => array(
+						'id'               => '46015',
+						'slug'             => 'bizpro-agency',
+						'type'             => 'theme',
+						'public_key'       => 'pk_7d6075f22a35eade776f0613d5ad6',
+						'is_premium'       => false,
+						'has_addons'       => false,
+						'has_paid_plans'   => true,
+						'is_org_compliant' => true,
+						'menu'             => array(
 							'slug'    => 'bizpro-agency-welcome',
 							'account' => true,
-							'support' => true,
+							'support' => false,
 						),
-						'navigation'     => 'tabs',
+						'navigation'       => 'tabs',
 					)
 				);
 			} else {
