@@ -28,12 +28,7 @@ get_header();
 		</p>
 
 		<div style="max-width: 480px; margin: 0 auto 40px;">
-			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" style="display: flex; gap: 8px;">
-				<input type="search" class="search-field" placeholder="<?php esc_attr_e( 'Search our entire site...', 'bizpro-agency' ); ?>" value="<?php echo get_search_query(); ?>" name="s" style="flex: 1; padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color: #fff; font-size: 1rem;" required>
-				<button type="submit" class="search-submit btn btn--primary" style="padding: 14px 24px; border-radius: 12px; background: #4f46e5; border-color: #4f46e5; color: #fff; font-weight: 700;">
-					<?php esc_html_e( 'Search', 'bizpro-agency' ); ?>
-				</button>
-			</form>
+			<?php get_search_form(); ?>
 		</div>
 
 		<div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">

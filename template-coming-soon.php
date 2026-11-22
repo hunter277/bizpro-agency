@@ -16,8 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php esc_html_e( 'Something Amazing Is Coming Soon', 'bizpro-agency' ); ?></title>
-	<?php wp_head(); ?>
+		<?php wp_head(); ?>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #0f172a 70%, #060911 100%); color: #ffffff; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
 

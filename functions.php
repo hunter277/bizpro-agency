@@ -1860,7 +1860,6 @@ function bizpro_agency_floating_demo_switcher() {
 add_action( 'wp_footer', 'bizpro_agency_floating_demo_switcher' );
 
 // Include Astra Pro Parity Modules
-require_once get_template_directory() . '/inc/shortcodes.php';
 require_once get_template_directory() . '/inc/white-label.php';
 // Note: Custom Post Types (Visa Pathways) are managed exclusively by the BizPro Agency Companion plugin per WordPress.org guidelines.
 require_once get_template_directory() . '/inc/tgmpa/tgmpa-config.php';
