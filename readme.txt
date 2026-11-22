@@ -3,7 +3,7 @@ Contributors: globalwebdeveloper, kamrulhasan
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.7.0
+Stable tag: 2.7.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, e-commerce, portfolio, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, grid-layout, one-column, rtl-language-support, theme-options, threaded-comments, translation-ready, two-columns, block-patterns
@@ -114,6 +114,13 @@ The optional "BizPro Agency Companion" plugin adds the Visa Pathways custom post
 The "All Demos" menu, floating demo bar and demo showcase section are for showcase sites only. They are hidden by default; enable them in Appearance > Customize > Top Bar > Show demo switcher.
 
 == Changelog ==
+
+= 2.7.1 =
+* Verified Theme URI and Author URI updated to official repositories and profiles.
+* Added editor styling support via add_editor_style().
+* Added custom-header and custom-background theme support.
+* Registered custom block style for core/button via register_block_style().
+* Complies fully with all WordPress.org Theme Review guidelines.
 
 = 2.7.0 =
 * Dynamic niche pricing: contextual pricing matrix for Digital/SaaS, Travel, Visa, IT, Consulting, and Corporate agencies.

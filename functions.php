@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '2.7.0' );
+define( 'BIZPRO_AGENCY_VERSION', '2.7.1' );
 
 /**
  * Default values for every Customizer option.
@@ -241,6 +241,37 @@ function bizpro_agency_setup() {
 
 	// Elementor Theme Support
 	add_theme_support( 'elementor' );
+
+	// Editor styling support
+	add_editor_style( 'assets/css/main.css' );
+
+	// Custom Header support
+	add_theme_support(
+		'custom-header',
+		apply_filters(
+			'bizpro_agency_custom_header_args',
+			array(
+				'default-image'      => '',
+				'default-text-color' => 'ffffff',
+				'width'              => 1200,
+				'height'             => 280,
+				'flex-width'         => true,
+				'flex-height'        => true,
+			)
+		)
+	);
+
+	// Custom Background support
+	add_theme_support(
+		'custom-background',
+		apply_filters(
+			'bizpro_agency_custom_background_args',
+			array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			)
+		)
+	);
 
 	set_post_thumbnail_size( 1200, 675, true );
 	add_image_size( 'bizpro-agency-card', 600, 400, true );
@@ -1877,3 +1908,19 @@ function bizpro_agency_reading_time( $post_id = null ) {
 	$minutes    = ceil( $word_count / 200 );
 	return max( 1, $minutes );
 }
+
+/**
+ * Register custom block styles.
+ */
+function bizpro_agency_register_block_styles() {
+	if ( function_exists( 'register_block_style' ) ) {
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'bizpro-gradient',
+				'label' => esc_html__( 'BizPro Gradient', 'bizpro-agency' ),
+			)
+		);
+	}
+}
+add_action( 'init', 'bizpro_agency_register_block_styles' );
