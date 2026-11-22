@@ -55,6 +55,12 @@ function bizpro_agency_about_page_render() {
 				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/preview-main.jpg' ); ?>" alt="BizPro Agency" style="width: 100%; height: auto; display: block;">
 			</div>
 
+			<?php
+			if ( function_exists( 'bizpro_agency_render_license_box' ) ) {
+				bizpro_agency_render_license_box();
+			}
+			?>
+
 			<!-- Demo importer banner -->
 			<div style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 12px; padding: 24px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between;">
 				<div>

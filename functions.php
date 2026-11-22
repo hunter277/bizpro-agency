@@ -1347,6 +1347,11 @@ require_once get_template_directory() . '/inc/woocommerce.php';
 require_once get_template_directory() . '/inc/about-page.php';
 
 /**
+ * Load Theme Registration & License Verification.
+ */
+require_once get_template_directory() . '/inc/license.php';
+
+/**
  * Load One Click Demo Import support.
  */
 require_once get_template_directory() . '/inc/demo-import.php';
