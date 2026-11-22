@@ -70,7 +70,7 @@ $bizpro_services = array(
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 70px 0;">
+	<div class="container section" style="padding-block: 70px;">
 
 		<!-- Services Grid -->
 		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 70px;">
@@ -88,8 +88,8 @@ $bizpro_services = array(
 					</div>
 					<div>
 						<a href="<?php echo esc_url( $bizpro_s['link'] ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-							<span>Explore Dedicated Demo</span>
-							<span aria-hidden="true">&rarr;</span>
+							<span><?php esc_html_e( 'Explore Dedicated Demo', 'bizpro-agency' ); ?></span>
+							<span aria-hidden="true"><?php esc_html_e( '→', 'bizpro-agency' ); ?></span>
 						</a>
 					</div>
 				</div>

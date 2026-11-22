@@ -23,7 +23,7 @@ function bizpro_agency_get_demos() {
 		'default'    => array(
 			'name'   => __( 'Main Agency (Multi-Purpose)', 'bizpro-agency' ),
 			'cats'   => array( 'Agency', 'Multi-Purpose' ),
-			'image'  => 'demo-main.png',
+			'image'  => 'demo-main.jpg',
 			'notice' => __( 'Flagship multi-purpose agency: services, case studies, team, pricing, FAQ and contact pages.', 'bizpro-agency' ),
 			'desc'   => __( 'Premier Business, Visa & Tech Consulting', 'bizpro-agency' ),
 			'cta'    => __( 'Book a Free Consultation', 'bizpro-agency' ),
@@ -32,7 +32,7 @@ function bizpro_agency_get_demos() {
 		'visa'       => array(
 			'name'   => __( 'Visa & Immigration Consultancy', 'bizpro-agency' ),
 			'cats'   => array( 'Visa & Immigration', 'Consultancy' ),
-			'image'  => 'demo-visa.png',
+			'image'  => 'demo-visa.jpg',
 			'notice' => __( 'Visa and immigration consultancy: eligibility checker, country pathways, case studies and FAQ.', 'bizpro-agency' ),
 			'desc'   => __( 'Premier Legal Visa & Immigration Consultancy', 'bizpro-agency' ),
 			'cta'    => __( 'Free Assessment', 'bizpro-agency' ),
@@ -41,7 +41,7 @@ function bizpro_agency_get_demos() {
 		'travel'     => array(
 			'name'   => __( 'Travel & Tour Agency', 'bizpro-agency' ),
 			'cats'   => array( 'Travel & Tours' ),
-			'image'  => 'demo-travel.png',
+			'image'  => 'demo-travel.jpg',
 			'notice' => __( 'Travel and tour operator: destinations, tour packages, reviews and booking enquiries.', 'bizpro-agency' ),
 			'desc'   => __( 'Verified Global Tours & Holiday Itineraries', 'bizpro-agency' ),
 			'cta'    => __( 'Book a Tour', 'bizpro-agency' ),
@@ -50,7 +50,7 @@ function bizpro_agency_get_demos() {
 		'it'         => array(
 			'name'   => __( 'IT Solutions & Cloud Services', 'bizpro-agency' ),
 			'cats'   => array( 'IT Solutions', 'Technology' ),
-			'image'  => 'demo-it.png',
+			'image'  => 'demo-it.jpg',
 			'notice' => __( 'IT and cloud services agency: tech stack, production case studies, SLA and retainers.', 'bizpro-agency' ),
 			'desc'   => __( 'Enterprise Cloud Architecture, DevOps & Custom Software', 'bizpro-agency' ),
 			'cta'    => __( 'Architecture Review', 'bizpro-agency' ),
@@ -59,7 +59,7 @@ function bizpro_agency_get_demos() {
 		'consulting' => array(
 			'name'   => __( 'Business & Management Consulting', 'bizpro-agency' ),
 			'cats'   => array( 'Business Consulting', 'Corporate' ),
-			'image'  => 'demo-consulting.png',
+			'image'  => 'demo-consulting.jpg',
 			'notice' => __( 'Management consulting: advisory practices, methodology, client impact and retainers.', 'bizpro-agency' ),
 			'desc'   => __( 'Strategic Management & Corporate Advisory', 'bizpro-agency' ),
 			'cta'    => __( 'Executive Briefing', 'bizpro-agency' ),
@@ -68,7 +68,7 @@ function bizpro_agency_get_demos() {
 		'corporate'  => array(
 			'name'   => __( 'Corporate Enterprise', 'bizpro-agency' ),
 			'cats'   => array( 'Corporate', 'Enterprise' ),
-			'image'  => 'demo-corporate.png',
+			'image'  => 'demo-corporate.jpg',
 			'notice' => __( 'Institutional corporate agency: capabilities, global footprint, governance and leadership.', 'bizpro-agency' ),
 			'desc'   => __( 'Institutional Corporate Solutions & Governance', 'bizpro-agency' ),
 			'cta'    => __( 'Corporate Inquiries', 'bizpro-agency' ),
@@ -77,13 +77,13 @@ function bizpro_agency_get_demos() {
 		'digital'    => array(
 			'name'     => __( 'Digital Products & SaaS Store', 'bizpro-agency' ),
 			'cats'     => array( 'eCommerce', 'Digital Products', 'SaaS' ),
-			'image'    => 'demo-digital.png',
+			'image'    => 'demo-digital.jpg',
 			'notice'   => __( 'Digital products and SaaS store. Requires the WooCommerce plugin for products, cart and checkout.', 'bizpro-agency' ),
 			'desc'     => __( 'Digital Software, UI Kits & SaaS Products', 'bizpro-agency' ),
 			'cta'      => __( 'All-Access Pass', 'bizpro-agency' ),
 			'cta_to'   => 'pricing',
 			'requires' => 'woocommerce',
-			'accent'   => '#6366f1',
+			'accent'   => '#4f46e5',
 		),
 	);
 }

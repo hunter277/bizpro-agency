@@ -148,6 +148,16 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 					</div>
 				<?php endif; ?>
 			</div>
+			<?php if ( ! $bizpro_hero_image ) : ?>
+				<div class="hero__visual" aria-hidden="true">
+					<?php for ( $bizpro_hv = 1; $bizpro_hv <= 3; $bizpro_hv++ ) : ?>
+						<div class="hero__stat hero__stat--<?php echo esc_attr( $bizpro_hv ); ?>">
+							<strong><?php echo esc_html( bizpro_agency_get( "stat_{$bizpro_hv}_number" ) . bizpro_agency_get( "stat_{$bizpro_hv}_suffix" ) ); ?></strong>
+							<span><?php echo esc_html( bizpro_agency_get( "stat_{$bizpro_hv}_label" ) ); ?></span>
+						</div>
+					<?php endfor; ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</section>
 
@@ -579,7 +589,7 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 				'badge' => 'eCom',
 				'desc'  => __( 'Sell software, plugins, templates, and digital assets with instant downloads and Bento grid.', 'bizpro-agency' ),
 				'url'   => bizpro_agency_page_url( 'home', 'digital' ),
-				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-digital.png',
+				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-digital.jpg',
 			),
 			array(
 				'title' => __( 'Visa & Immigration Consultancy', 'bizpro-agency' ),
@@ -587,7 +597,7 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 				'badge' => 'Hot',
 				'desc'  => __( '2-minute eligibility checker, country pathway cards, and 4-step client onboarding framework.', 'bizpro-agency' ),
 				'url'   => bizpro_agency_page_url( 'home', 'visa' ),
-				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-visa.png',
+				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-visa.jpg',
 			),
 			array(
 				'title' => __( 'Travel & Tour Operator', 'bizpro-agency' ),
@@ -595,7 +605,7 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 				'badge' => 'New',
 				'desc'  => __( 'Floating search bar, curated destination packages, seasonal deals, and verified guest reviews.', 'bizpro-agency' ),
 				'url'   => bizpro_agency_page_url( 'home', 'travel' ),
-				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-travel.png',
+				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-travel.jpg',
 			),
 			array(
 				'title' => __( 'IT Solutions & Cloud Services', 'bizpro-agency' ),
@@ -603,7 +613,7 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 				'badge' => 'Tech',
 				'desc'  => __( 'Enterprise tech stack matrix, DevOps architecture, SLA guarantees, and recurring retainers.', 'bizpro-agency' ),
 				'url'   => bizpro_agency_page_url( 'home', 'it' ),
-				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-it.png',
+				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-it.jpg',
 			),
 			array(
 				'title' => __( 'Business & Management Consulting', 'bizpro-agency' ),
@@ -611,7 +621,7 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 				'badge' => 'Pro',
 				'desc'  => __( 'Executive strategic practices, post-merger integration framework, and client value metric cards.', 'bizpro-agency' ),
 				'url'   => bizpro_agency_page_url( 'home', 'consulting' ),
-				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-consulting.png',
+				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-consulting.jpg',
 			),
 			array(
 				'title' => __( 'Corporate Enterprise & Finance', 'bizpro-agency' ),
@@ -619,7 +629,7 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 				'badge' => 'Elite',
 				'desc'  => __( 'Institutional boardroom governance, global footprint map, and Fortune 500 compliance.', 'bizpro-agency' ),
 				'url'   => bizpro_agency_page_url( 'home', 'corporate' ),
-				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-corporate.png',
+				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-corporate.jpg',
 			),
 			array(
 				'title' => __( 'Main Agency (Flagship Multi-Purpose)', 'bizpro-agency' ),
@@ -627,7 +637,7 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 				'badge' => 'Popular',
 				'desc'  => __( 'Our versatile flagship layout with animated statistics, service pillars, portfolio case studies, and reviews.', 'bizpro-agency' ),
 				'url'   => home_url( '/' ),
-				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-main.png',
+				'img'   => trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/demo-main.jpg',
 			),
 		);
 		?>

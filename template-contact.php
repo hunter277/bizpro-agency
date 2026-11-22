@@ -52,11 +52,11 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 		<div class="container">
 			<span style="display: inline-block; font-size: 0.85rem; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;"><?php esc_html_e( 'Direct Consultation & Inquiries', 'bizpro-agency' ); ?></span>
 			<h1 class="page-title" style="font-size: clamp(2.2rem, 5vw, 3.4rem); color: #ffffff; margin-bottom: 16px;"><?php esc_html_e( 'Get in Touch with Our Global Advisors', 'bizpro-agency' ); ?></h1>
-			<p style="max-width: 650px; margin: 0 auto; color: #94a3b8; font-size: 1.1rem; line-height: 1.6;"><?php esc_html_e( 'Have a question or ready to launch your next project? Reach out to our senior team for a swift, confidential response within 24 hours.', 'bizpro-agency' ); ?></p>
+			<p style="max-width: 650px; margin: 0 auto; color: #64748b; font-size: 1.1rem; line-height: 1.6;"><?php esc_html_e( 'Have a question or ready to launch your next project? Reach out to our senior team for a swift, confidential response within 24 hours.', 'bizpro-agency' ); ?></p>
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 70px 0;">
+	<div class="container section" style="padding-block: 70px;">
 
 		<!-- 3-Column Info Cards -->
 		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px;">
@@ -71,16 +71,16 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 				<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Direct Phone Lines', 'bizpro-agency' ); ?></h3>
 				<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin: 0;">
 					<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>" style="color: #2563eb; font-weight: 600; text-decoration: none;"><?php echo esc_html( $bizpro_phone ); ?></a><br>
-					<span style="font-size: 0.82rem; color: #94a3b8;"><?php esc_html_e( 'Mon – Fri: 9:00 AM – 6:00 PM EST', 'bizpro-agency' ); ?></span>
+					<span style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Mon – Fri: 9:00 AM – 6:00 PM EST', 'bizpro-agency' ); ?></span>
 				</p>
 			</div>
 
 			<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 32px 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
-				<div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(99,102,241,0.1); color: #6366f1; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px;">✉️</div>
+				<div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(99,102,241,0.1); color: #4f46e5; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 18px;">✉️</div>
 				<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Email & Advisory Desk', 'bizpro-agency' ); ?></h3>
 				<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin: 0;">
 					<a href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>" style="color: #2563eb; font-weight: 600; text-decoration: none;"><?php echo esc_html( $bizpro_email ); ?></a><br>
-					<span style="font-size: 0.82rem; color: #94a3b8;"><?php esc_html_e( 'Guaranteed 24-Hour Response SLA', 'bizpro-agency' ); ?></span>
+					<span style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Guaranteed 24-Hour Response SLA', 'bizpro-agency' ); ?></span>
 				</p>
 			</div>
 		</div>
@@ -130,11 +130,11 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
 						<div>
 							<label for="bpa_name" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Your Full Name *', 'bizpro-agency' ); ?></label>
-							<input type="text" id="bpa_name" name="bpa_name" required placeholder="John Doe" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+							<input type="text" id="bpa_name" name="bpa_name" required placeholder="<?php esc_attr_e( 'John Doe', 'bizpro-agency' ); ?>" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
 						</div>
 						<div>
 							<label for="bpa_email" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Email Address *', 'bizpro-agency' ); ?></label>
-							<input type="email" id="bpa_email" name="bpa_email" required placeholder="john@company.com" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
+							<input type="email" id="bpa_email" name="bpa_email" required placeholder="<?php esc_attr_e( 'john@company.com', 'bizpro-agency' ); ?>" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
 						</div>
 					</div>
 
@@ -182,22 +182,22 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 					<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
 						<li style="display: flex; gap: 12px; font-size: 0.95rem; color: var(--bpa-text-muted, #475569);">
 							<span style="color: #10b981; font-weight: 700;">✓</span>
-							<span><strong>Strict NDA & IP Confidentiality:</strong> Your trade secrets and personal data are protected by bilateral legal agreements.</span>
+							<span><strong><?php esc_html_e( 'Strict NDA & IP Confidentiality:', 'bizpro-agency' ); ?></strong> <?php esc_html_e( 'Your trade secrets and personal data are protected by bilateral legal agreements.', 'bizpro-agency' ); ?></span>
 						</li>
 						<li style="display: flex; gap: 12px; font-size: 0.95rem; color: var(--bpa-text-muted, #475569);">
 							<span style="color: #10b981; font-weight: 700;">✓</span>
-							<span><strong>Direct Senior Partner Access:</strong> No junior intermediaries—work directly with seasoned practice leads.</span>
+							<span><strong><?php esc_html_e( 'Direct Senior Partner Access:', 'bizpro-agency' ); ?></strong> <?php esc_html_e( 'No junior intermediaries—work directly with seasoned practice leads.', 'bizpro-agency' ); ?></span>
 						</li>
 						<li style="display: flex; gap: 12px; font-size: 0.95rem; color: var(--bpa-text-muted, #475569);">
 							<span style="color: #10b981; font-weight: 700;">✓</span>
-							<span><strong>Zero Hidden Costs:</strong> Transparent retainers and milestone-based commercial arrangements.</span>
+							<span><strong><?php esc_html_e( 'Zero Hidden Costs:', 'bizpro-agency' ); ?></strong> <?php esc_html_e( 'Transparent retainers and milestone-based commercial arrangements.', 'bizpro-agency' ); ?></span>
 						</li>
 					</ul>
 				</div>
 
 				<div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #ffffff; border-radius: 20px; padding: 32px; box-shadow: 0 12px 30px rgba(0,0,0,0.12);">
 					<h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 12px;"><?php esc_html_e( 'Emergency Escalations?', 'bizpro-agency' ); ?></h3>
-					<p style="color: #94a3b8; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;"><?php esc_html_e( 'For critical enterprise IT incidents or urgent visa submission deadlines, reach our 24/7 dedicated escalation desk.', 'bizpro-agency' ); ?></p>
+					<p style="color: #64748b; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;"><?php esc_html_e( 'For critical enterprise IT incidents or urgent visa submission deadlines, reach our 24/7 dedicated escalation desk.', 'bizpro-agency' ); ?></p>
 					<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>" class="btn btn--light" style="width: 100%; justify-content: center;"><?php esc_html_e( 'Call Emergency Desk', 'bizpro-agency' ); ?></a>
 				</div>
 			</div>

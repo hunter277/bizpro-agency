@@ -125,7 +125,7 @@ $bizpro_it_cases = array(
 	<section id="it-services" class="section section--services">
 		<div class="container">
 			<header class="section__header">
-				<p class="section__eyebrow" style="color: #6366f1;"><?php esc_html_e( 'Core Capabilities', 'bizpro-agency' ); ?></p>
+				<p class="section__eyebrow" style="color: #4f46e5;"><?php esc_html_e( 'Core Capabilities', 'bizpro-agency' ); ?></p>
 				<h2 class="section__title"><?php esc_html_e( 'High-Impact Technology Engineering', 'bizpro-agency' ); ?></h2>
 				<p class="section__subtitle"><?php esc_html_e( 'Engineered for velocity, military-grade security, and measurable ROI.', 'bizpro-agency' ); ?></p>
 			</header>
@@ -133,8 +133,8 @@ $bizpro_it_cases = array(
 			<div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
 				<?php foreach ( $bizpro_it_services as $bizpro_s ) : ?>
 					<article class="service-card" style="position: relative; border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-						<span style="position: absolute; top: 16px; right: 16px; font-size: 11px; font-weight: 700; color: #6366f1; background: rgba(99,102,241,0.1); padding: 3px 8px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $bizpro_s['tag'] ); ?></span>
-						<div class="service-card__icon" style="background: rgba(99,102,241,0.1); color: #6366f1;">
+						<span style="position: absolute; top: 16px; right: 16px; font-size: 11px; font-weight: 700; color: #4f46e5; background: rgba(99,102,241,0.1); padding: 3px 8px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $bizpro_s['tag'] ); ?></span>
+						<div class="service-card__icon" style="background: rgba(99,102,241,0.1); color: #4f46e5;">
 							<?php echo bizpro_agency_get_icon( $bizpro_s['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</div>
 						<h3 class="service-card__title"><?php echo esc_html( $bizpro_s['title'] ); ?></h3>
@@ -157,7 +157,7 @@ $bizpro_it_cases = array(
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
 				<?php foreach ( $bizpro_tech_stack as $bizpro_category => $bizpro_items ) : ?>
 					<div class="bpa-tech-card" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;">
-						<h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; color: var(--bpa-text, #0f172a); border-bottom: 2px solid #6366f1; padding-bottom: 8px; display: inline-block;"><?php echo esc_html( $bizpro_category ); ?></h3>
+						<h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; color: var(--bpa-text, #0f172a); border-bottom: 2px solid #4f46e5; padding-bottom: 8px; display: inline-block;"><?php echo esc_html( $bizpro_category ); ?></h3>
 						<div style="display: flex; flex-wrap: wrap; gap: 8px;">
 							<?php foreach ( $bizpro_items as $bizpro_tech ) : ?>
 								<span style="background: var(--bpa-bg-alt, #f1f5f9); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 8px; padding: 7px 13px; font-size: 0.88rem; font-weight: 600; color: var(--bpa-text, #334155); transition: all 0.2s ease;"><?php echo esc_html( $bizpro_tech ); ?></span>

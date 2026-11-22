@@ -24,7 +24,7 @@ get_header();
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 80px 0;">
+	<div class="container section" style="padding-block: 80px;">
 
 		<!-- 3-Tier Pricing Grid -->
 		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: stretch; margin-bottom: 70px;">
@@ -40,7 +40,7 @@ get_header();
 						<li>✅ Up to 10 Monthly Strategy Hours</li>
 						<li>✅ Full Document & Visa Audits</li>
 						<li>✅ SLA Guaranteed 24-hr Response</li>
-						<li style="color: #94a3b8;">❌ 24/7 Emergency Hotlines</li>
+						<li style="color: #64748b;">❌ 24/7 Emergency Hotlines</li>
 					</ul>
 				</div>
 				<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Choose Standard', 'bizpro-agency' ); ?></a>

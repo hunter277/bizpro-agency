@@ -49,7 +49,7 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 			</p>
 
 			<div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
-				<a href="#products" class="btn btn--primary" style="background: #6366f1; border-color: #6366f1; color: #fff; padding: 14px 32px; font-weight: 700; border-radius: 12px; font-size: 1.05rem; box-shadow: 0 10px 25px rgba(99,102,241,0.4); text-decoration: none;">
+				<a href="#products" class="btn btn--primary" style="background: #4f46e5; border-color: #4f46e5; color: #fff; padding: 14px 32px; font-weight: 700; border-radius: 12px; font-size: 1.05rem; box-shadow: 0 10px 25px rgba(99,102,241,0.4); text-decoration: none;">
 					<?php esc_html_e( 'Browse Digital Products', 'bizpro-agency' ); ?>
 				</a>
 				<a href="#features" class="btn" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 14px 28px; font-weight: 600; border-radius: 12px; font-size: 1.05rem; text-decoration: none;">
@@ -83,14 +83,14 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 	<!-- Continuous Infinite Logo Marquee -->
 	<section class="section section--marquee" style="background: #0b0f19; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); overflow: hidden;">
 		<div class="bpa-marquee-track" style="display: flex; gap: 60px; align-items: center; white-space: nowrap; animation: bpaMarquee 25s linear infinite;">
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">PAYMENT READY</span>
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">WOOCOMMERCE OPTIMIZED</span>
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">VERSION CONTROL</span>
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">FAST CDN DELIVERY</span>
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">PAYPAL COMMERCE</span>
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">SECURE LICENSING</span>
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">PAYMENT READY</span>
-			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;">WOOCOMMERCE OPTIMIZED</span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'PAYMENT READY', 'bizpro-agency' ); ?></span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'WOOCOMMERCE OPTIMIZED', 'bizpro-agency' ); ?></span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'VERSION CONTROL', 'bizpro-agency' ); ?></span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'FAST CDN DELIVERY', 'bizpro-agency' ); ?></span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'PAYPAL COMMERCE', 'bizpro-agency' ); ?></span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'SECURE LICENSING', 'bizpro-agency' ); ?></span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'PAYMENT READY', 'bizpro-agency' ); ?></span>
+			<span style="font-size: 1.1rem; font-weight: 800; color: #475569; letter-spacing: 2px;"><?php esc_html_e( 'WOOCOMMERCE OPTIMIZED', 'bizpro-agency' ); ?></span>
 		</div>
 	</section>
 
@@ -98,7 +98,7 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 	<section id="features" class="section" style="padding: 90px 0; background: var(--bpa-bg, #ffffff);">
 		<div class="container">
 			<div style="text-align: center; max-width: 650px; margin: 0 auto 60px;">
-				<span style="font-size: 0.85rem; font-weight: 700; color: #6366f1; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Architected for Conversions', 'bizpro-agency' ); ?></span>
+				<span style="font-size: 0.85rem; font-weight: 700; color: #4f46e5; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Architected for Conversions', 'bizpro-agency' ); ?></span>
 				<h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--bpa-text, #0f172a); margin: 12px 0;"><?php esc_html_e( 'Everything You Need to Scale Digital Sales', 'bizpro-agency' ); ?></h2>
 				<p style="color: var(--bpa-text-muted, #64748b); font-size: 1.05rem;"><?php esc_html_e( 'Say goodbye to bloated setups. Our modular digital engine provides maximum performance right out of the box.', 'bizpro-agency' ); ?></p>
 			</div>
@@ -246,9 +246,9 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 				</div>
 
 				<!-- Digital Product 4: Lifetime Bundle -->
-				<div style="background: var(--bpa-bg, #ffffff); border: 2px solid #6366f1; border-radius: 18px; overflow: hidden; box-shadow: 0 15px 35px rgba(99,102,241,0.15); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s ease, box-shadow 0.25s ease;">
+				<div style="background: var(--bpa-bg, #ffffff); border: 2px solid #4f46e5; border-radius: 18px; overflow: hidden; box-shadow: 0 15px 35px rgba(99,102,241,0.15); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.25s ease, box-shadow 0.25s ease;">
 					<div style="background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%); padding: 36px 24px; text-align: center; position: relative; color: #fff;">
-						<span style="position: absolute; top: 12px; right: 12px; background: #6366f1; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 20px;"><?php esc_html_e( '🔥 Best Value Bundle', 'bizpro-agency' ); ?></span>
+						<span style="position: absolute; top: 12px; right: 12px; background: #4f46e5; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 20px;"><?php esc_html_e( '🔥 Best Value Bundle', 'bizpro-agency' ); ?></span>
 						<div style="font-size: 42px; margin-bottom: 8px;">💎</div>
 						<span style="font-size: 0.8rem; font-weight: 700; color: #c7d2fe; text-transform: uppercase; letter-spacing: 0.5px;"><?php esc_html_e( 'All-Access Pass', 'bizpro-agency' ); ?></span>
 					</div>
@@ -260,12 +260,12 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 						<div>
 							<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; padding-top: 12px; border-top: 1px solid var(--bpa-border, #f1f5f9);">
 								<div>
-									<span style="font-size: 1.6rem; font-weight: 900; color: #6366f1;">$199</span>
+									<span style="font-size: 1.6rem; font-weight: 900; color: #4f46e5;">$199</span>
 									<span style="font-size: 0.9rem; text-decoration: line-through; color: #94a3b8; margin-left: 6px;">$399</span>
 								</div>
-								<span style="font-size: 0.8rem; color: #6366f1; font-weight: 700;">★ 5.0 (120)</span>
+								<span style="font-size: 0.8rem; color: #4f46e5; font-weight: 700;">★ 5.0 (120)</span>
 							</div>
-							<a href="<?php echo esc_url( $bizpro_buy_p4 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none; background: #6366f1; border-color: #6366f1;">
+							<a href="<?php echo esc_url( $bizpro_buy_p4 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none; background: #4f46e5; border-color: #4f46e5;">
 								<?php esc_html_e( 'Buy All-Access Bundle →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -321,9 +321,9 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 						</p>
 					</div>
 					<div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 20px;">
-						<div style="width: 44px; height: 44px; border-radius: 50%; background: #6366f1; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;">AK</div>
+						<div style="width: 44px; height: 44px; border-radius: 50%; background: #4f46e5; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;"><?php esc_html_e( 'AK', 'bizpro-agency' ); ?></div>
 						<div>
-							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;">Alex K.</div>
+							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;"><?php esc_html_e( 'Alex K.', 'bizpro-agency' ); ?></div>
 							<div style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Lead Frontend Engineer, DevPulse', 'bizpro-agency' ); ?></div>
 						</div>
 					</div>
@@ -338,9 +338,9 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 						</p>
 					</div>
 					<div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 20px;">
-						<div style="width: 44px; height: 44px; border-radius: 50%; background: #10b981; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;">MR</div>
+						<div style="width: 44px; height: 44px; border-radius: 50%; background: #10b981; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;"><?php esc_html_e( 'MR', 'bizpro-agency' ); ?></div>
 						<div>
-							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;">Michael R.</div>
+							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;"><?php esc_html_e( 'Michael R.', 'bizpro-agency' ); ?></div>
 							<div style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Cloud Architect, StackBridge', 'bizpro-agency' ); ?></div>
 						</div>
 					</div>
@@ -355,9 +355,9 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 						</p>
 					</div>
 					<div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 20px;">
-						<div style="width: 44px; height: 44px; border-radius: 50%; background: #ec4899; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;">SL</div>
+						<div style="width: 44px; height: 44px; border-radius: 50%; background: #ec4899; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem;"><?php esc_html_e( 'SL', 'bizpro-agency' ); ?></div>
 						<div>
-							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;">Sarah L.</div>
+							<div style="font-weight: 800; color: var(--bpa-text, #0f172a); font-size: 0.95rem;"><?php esc_html_e( 'Sarah L.', 'bizpro-agency' ); ?></div>
 							<div style="font-size: 0.82rem; color: #64748b;"><?php esc_html_e( 'Independent SaaS Creator', 'bizpro-agency' ); ?></div>
 						</div>
 					</div>
@@ -371,7 +371,7 @@ $bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', w
 	<section id="store-faq" class="section" style="padding: 90px 0; background: var(--bpa-bg-alt, #f8fafc); border-top: 1px solid var(--bpa-border, #e2e8f0);">
 		<div class="container" style="max-width: 850px; margin: 0 auto;">
 			<div style="text-align: center; margin-bottom: 50px;">
-				<span style="font-size: 0.85rem; font-weight: 700; color: #6366f1; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Buyer FAQ', 'bizpro-agency' ); ?></span>
+				<span style="font-size: 0.85rem; font-weight: 700; color: #4f46e5; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Buyer FAQ', 'bizpro-agency' ); ?></span>
 				<h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; color: var(--bpa-text, #0f172a); margin: 10px 0;"><?php esc_html_e( 'Frequently Asked Questions by Digital Buyers', 'bizpro-agency' ); ?></h2>
 			</div>
 

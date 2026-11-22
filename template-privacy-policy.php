@@ -28,7 +28,7 @@ $bizpro_site_url  = home_url( '/' );
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 60px 0; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--bpa-text, #334155); font-size: 1.05rem;">
+	<div class="container section" style="padding-block: 60px; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--bpa-text, #334155); font-size: 1.05rem;">
 		
 		<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 48px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
 			
@@ -57,7 +57,7 @@ $bizpro_site_url  = home_url( '/' );
 			<div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 12px; padding: 24px; margin: 30px 0;">
 				<h2 style="font-size: 1.5rem; color: #166534; margin-top: 0;"><?php esc_html_e( '4. Google DoubleClick DART Cookies & Google AdSense', 'bizpro-agency' ); ?></h2>
 				<p style="color: #15803d;"><?php esc_html_e( 'Google is one of our third-party vendors on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet.', 'bizpro-agency' ); ?></p>
-				<p style="color: #15803d; margin-bottom: 0;"><?php esc_html_e( 'Visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL:', 'bizpro-agency' ); ?> <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: #15803d; font-weight: 700; text-decoration: underline;">https://policies.google.com/technologies/ads</a></p>
+				<p style="color: #15803d; margin-bottom: 0;"><?php esc_html_e( 'Visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL:', 'bizpro-agency' ); ?> <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: #15803d; font-weight: 700; text-decoration: underline;"><?php esc_html_e( 'https://policies.google.com/technologies/ads', 'bizpro-agency' ); ?></a></p>
 			</div>
 
 			<h2 style="font-size: 1.6rem; color: var(--bpa-text, #0f172a);"><?php esc_html_e( '5. Advertising Partners Privacy Policies', 'bizpro-agency' ); ?></h2>

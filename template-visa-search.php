@@ -36,7 +36,7 @@ $bizpro_pathways_query = new WP_Query(
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 70px 0;">
+	<div class="container section" style="padding-block: 70px;">
 		
 		<!-- Search & Filter Form -->
 		<form class="bpa-visa-finder" id="bpa-visa-finder" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; align-items:end; padding:24px; margin:0 0 30px; background:#eff6ff; border:1px solid #dbeafe; border-radius:18px;">
@@ -130,39 +130,39 @@ $bizpro_pathways_query = new WP_Query(
 				<div class="visa-country-card" data-country="canada" data-types="permanent,work,study" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
 					<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
 						<span style="font-size: 32px;">🇨🇦</span>
-						<span style="background: #fef2f2; color: #991b1b; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Express Entry & PNP</span>
+						<span style="background: #fef2f2; color: #991b1b; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;"><?php esc_html_e( 'Express Entry & PNP', 'bizpro-agency' ); ?></span>
 					</div>
-					<h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0 0 8px;">Canada Permanent Residency</h3>
-					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Federal Skilled Worker, Canadian Experience Class and Provincial Nominee streams with complete CRS audits.</p>
+					<h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0 0 8px;"><?php esc_html_e( 'Canada Permanent Residency', 'bizpro-agency' ); ?></h3>
+					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;"><?php esc_html_e( 'Federal Skilled Worker, Canadian Experience Class and Provincial Nominee streams with complete CRS audits.', 'bizpro-agency' ); ?></p>
 					<div style="border-top: 1px solid #f1f5f9; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
-						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;">⏱️ 6 - 8 Months</span>
-						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
+						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;"><?php esc_html_e( '⏱️ 6 - 8 Months', 'bizpro-agency' ); ?></span>
+						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;"><?php esc_html_e( 'Apply Now →', 'bizpro-agency' ); ?></a>
 					</div>
 				</div>
 
 				<div class="visa-country-card" data-country="uk" data-types="work,study" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
 					<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
 						<span style="font-size: 32px;">🇬🇧</span>
-						<span style="background: #eff6ff; color: #1e40af; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Skilled Worker & Tech</span>
+						<span style="background: #eff6ff; color: #1e40af; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;"><?php esc_html_e( 'Skilled Worker & Tech', 'bizpro-agency' ); ?></span>
 					</div>
-					<h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0 0 8px;">United Kingdom Work Visa</h3>
-					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Sponsorship license matching, Global Talent endorsement and Indefinite Leave to Remain (ILR) pathways.</p>
+					<h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0 0 8px;"><?php esc_html_e( 'United Kingdom Work Visa', 'bizpro-agency' ); ?></h3>
+					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;"><?php esc_html_e( 'Sponsorship license matching, Global Talent endorsement and Indefinite Leave to Remain (ILR) pathways.', 'bizpro-agency' ); ?></p>
 					<div style="border-top: 1px solid #f1f5f9; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
-						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;">⏱️ 3 - 6 Weeks</span>
-						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
+						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;"><?php esc_html_e( '⏱️ 3 - 6 Weeks', 'bizpro-agency' ); ?></span>
+						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;"><?php esc_html_e( 'Apply Now →', 'bizpro-agency' ); ?></a>
 					</div>
 				</div>
 
 				<div class="visa-country-card" data-country="australia" data-types="permanent,work" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
 					<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
 						<span style="font-size: 32px;">🇦🇺</span>
-						<span style="background: #ecfdf5; color: #065f46; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Subclass 189 / 190</span>
+						<span style="background: #ecfdf5; color: #065f46; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;"><?php esc_html_e( 'Subclass 189 / 190', 'bizpro-agency' ); ?></span>
 					</div>
-					<h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0 0 8px;">Australia General Skilled Migration</h3>
-					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Skills assessment verification, Expression of Interest (EOI) filing and regional nomination support.</p>
+					<h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0 0 8px;"><?php esc_html_e( 'Australia General Skilled Migration', 'bizpro-agency' ); ?></h3>
+					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;"><?php esc_html_e( 'Skills assessment verification, Expression of Interest (EOI) filing and regional nomination support.', 'bizpro-agency' ); ?></p>
 					<div style="border-top: 1px solid #f1f5f9; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
-						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;">⏱️ 7 - 9 Months</span>
-						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
+						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;"><?php esc_html_e( '⏱️ 7 - 9 Months', 'bizpro-agency' ); ?></span>
+						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;"><?php esc_html_e( 'Apply Now →', 'bizpro-agency' ); ?></a>
 					</div>
 				</div>
 			<?php endif; ?>

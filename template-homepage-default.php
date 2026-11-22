@@ -114,6 +114,16 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 					</div>
 				<?php endif; ?>
 			</div>
+			<?php if ( ! $bizpro_hero_image ) : ?>
+				<div class="hero__visual" aria-hidden="true">
+					<?php for ( $bizpro_hv = 1; $bizpro_hv <= 3; $bizpro_hv++ ) : ?>
+						<div class="hero__stat hero__stat--<?php echo esc_attr( $bizpro_hv ); ?>">
+							<strong><?php echo esc_html( bizpro_agency_get( "stat_{$bizpro_hv}_number" ) . bizpro_agency_get( "stat_{$bizpro_hv}_suffix" ) ); ?></strong>
+							<span><?php echo esc_html( bizpro_agency_get( "stat_{$bizpro_hv}_label" ) ); ?></span>
+						</div>
+					<?php endfor; ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</section>
 

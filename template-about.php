@@ -54,7 +54,7 @@ $bizpro_team = array(
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 70px 0;">
+	<div class="container section" style="padding-block: 70px;">
 
 		<!-- Core Story & Stats -->
 		<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; margin-bottom: 80px;">
@@ -77,7 +77,7 @@ $bizpro_team = array(
 						<span style="font-size: 0.9rem; color: var(--bpa-text-muted, #64748b); font-weight: 600;"><?php esc_html_e( 'Years Established', 'bizpro-agency' ); ?></span>
 					</div>
 					<div>
-						<strong style="font-size: 2.6rem; font-weight: 850; color: #10b981; display: block; line-height: 1;">15k+</strong>
+						<strong style="font-size: 2.6rem; font-weight: 850; color: #047857; display: block; line-height: 1;">15k+</strong>
 						<span style="font-size: 0.9rem; color: var(--bpa-text-muted, #64748b); font-weight: 600;"><?php esc_html_e( 'Cases Delivered', 'bizpro-agency' ); ?></span>
 					</div>
 					<div>
@@ -85,7 +85,7 @@ $bizpro_team = array(
 						<span style="font-size: 0.9rem; color: var(--bpa-text-muted, #64748b); font-weight: 600;"><?php esc_html_e( 'Operating Countries', 'bizpro-agency' ); ?></span>
 					</div>
 					<div>
-						<strong style="font-size: 2.6rem; font-weight: 850; color: #6366f1; display: block; line-height: 1;">98.4%</strong>
+						<strong style="font-size: 2.6rem; font-weight: 850; color: #4f46e5; display: block; line-height: 1;">98.4%</strong>
 						<span style="font-size: 0.9rem; color: var(--bpa-text-muted, #64748b); font-weight: 600;"><?php esc_html_e( 'Client Satisfaction', 'bizpro-agency' ); ?></span>
 					</div>
 				</div>

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'BIZPRO_AGENCY_VERSION', '2.5.0' );
+define( 'BIZPRO_AGENCY_VERSION', '2.6.0' );
 
 /**
  * Default values for every Customizer option.
@@ -18,7 +18,7 @@ define( 'BIZPRO_AGENCY_VERSION', '2.5.0' );
  */
 function bizpro_agency_defaults() {
 	return array(
-		'primary_color'        => '#3b82f6',
+		'primary_color'        => '#2563eb',
 		'topbar_enable'        => true,
 		'show_demo_switcher'   => false,
 		'topbar_phone'         => '+1 (555) 123-4567',
@@ -1274,7 +1274,7 @@ function bizpro_agency_append_demos_to_nav( $items, $args ) {
 			),
 		);
 		$dropdown  = '<li class="menu-item-has-children bpa-demos-dropdown">';
-		$dropdown .= '<a href="#">' . esc_html__( 'All Demos', 'bizpro-agency' ) . ' <span class="bpa-menu-arrow" aria-hidden="true">&#9662;</span></a>';
+		$dropdown .= '<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'All Demos', 'bizpro-agency' ) . ' <span class="bpa-menu-arrow" aria-hidden="true">&#9662;</span></a>';
 		$dropdown .= '<ul class="sub-menu">';
 		foreach ( $demos as $d ) {
 			$dropdown .= '<li><a href="' . esc_url( $d['url'] ) . '">' . esc_html( $d['label'] );
@@ -1304,49 +1304,49 @@ function bizpro_agency_floating_demo_switcher() {
 			'desc'  => 'Multi-Purpose Flagship',
 			'badge' => 'Popular',
 			'url'   => home_url( '/' ),
-			'img'   => $img_uri . 'demo-main.png',
+			'img'   => $img_uri . 'demo-main.jpg',
 		),
 		array(
 			'title' => 'Visa & Immigration',
 			'desc'  => 'Legal Consultancy & Pathways',
 			'badge' => 'Hot',
 			'url'   => home_url( '/visa-immigration/' ),
-			'img'   => $img_uri . 'demo-visa.png',
+			'img'   => $img_uri . 'demo-visa.jpg',
 		),
 		array(
 			'title' => 'Travel & Tour Agency',
 			'desc'  => 'Holiday Packages & Booking',
 			'badge' => 'New',
 			'url'   => home_url( '/travel-agency/' ),
-			'img'   => $img_uri . 'demo-travel.png',
+			'img'   => $img_uri . 'demo-travel.jpg',
 		),
 		array(
 			'title' => 'IT Solutions & Cloud',
 			'desc'  => 'DevOps, Cloud & Engineering',
 			'badge' => 'Tech',
 			'url'   => home_url( '/it-solutions/' ),
-			'img'   => $img_uri . 'demo-it.png',
+			'img'   => $img_uri . 'demo-it.jpg',
 		),
 		array(
 			'title' => 'Business Consulting',
 			'desc'  => 'Strategic Advisory & Retainers',
 			'badge' => 'Pro',
 			'url'   => home_url( '/business-consulting/' ),
-			'img'   => $img_uri . 'demo-consulting.png',
+			'img'   => $img_uri . 'demo-consulting.jpg',
 		),
 		array(
 			'title' => 'Corporate Enterprise',
 			'desc'  => 'Governance & Global Solutions',
 			'badge' => 'Elite',
 			'url'   => home_url( '/corporate/' ),
-			'img'   => $img_uri . 'demo-corporate.png',
+			'img'   => $img_uri . 'demo-corporate.jpg',
 		),
 		array(
 			'title' => 'Digital Store & SaaS',
 			'desc'  => 'eCommerce & Software Selling',
 			'badge' => 'eCom',
 			'url'   => home_url( '/digital-store/' ),
-			'img'   => $img_uri . 'demo-digital.png',
+			'img'   => $img_uri . 'demo-digital.jpg',
 		),
 	);
 	?>

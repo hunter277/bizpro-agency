@@ -32,7 +32,7 @@ get_header();
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 70px 0;">
+	<div class="container section" style="padding-block: 70px;">
 		<?php if ( have_posts() ) : ?>
 			<div class="posts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
 				<?php

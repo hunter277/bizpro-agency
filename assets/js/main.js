@@ -10,32 +10,6 @@
 	var hasObserver = 'IntersectionObserver' in window;
 
 	/* =====================================================================
-	 * 0. Accessible dark mode preference
-	 * =================================================================== */
-	function initThemeMode() {
-		var toggles = document.querySelectorAll( '.bpa-theme-toggle' );
-		if ( ! toggles.length ) { return; }
-		var saved = null;
-		try { saved = window.localStorage.getItem( 'bpa-theme-mode' ); } catch ( e ) {}
-		if ( saved === 'dark' ) { document.documentElement.setAttribute( 'data-bpa-theme', 'dark' ); }
-		function sync() {
-			var dark = document.documentElement.getAttribute( 'data-bpa-theme' ) === 'dark';
-			toggles.forEach( function ( toggle ) {
-				toggle.setAttribute( 'aria-pressed', dark ? 'true' : 'false' );
-				toggle.setAttribute( 'aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode' );
-			} );
-		}
-		toggles.forEach( function ( toggle ) {
-			toggle.addEventListener( 'click', function () {
-				var dark = document.documentElement.getAttribute( 'data-bpa-theme' ) !== 'dark';
-				if ( dark ) { document.documentElement.setAttribute( 'data-bpa-theme', 'dark' ); } else { document.documentElement.removeAttribute( 'data-bpa-theme' ); }
-				try { window.localStorage.setItem( 'bpa-theme-mode', dark ? 'dark' : 'light' ); } catch ( e ) {}
-				sync();
-			} );
-		} );
-		sync();
-	}
-	/* =====================================================================
 	 * 1. Mobile Menu — Accessible Toggle
 	 * =================================================================== */
 	function initMenu() {
@@ -288,25 +262,6 @@
 		el.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
 	}
 
-		/* =====================================================================
-	 * 7. Back to Top Button
-	 * =================================================================== */
-	function initBackToTop() {
-		var btn = document.querySelector( '.bpa-back-to-top' );
-		if ( ! btn ) { return; }
-		window.addEventListener( 'scroll', function () {
-			if ( window.pageYOffset > 400 ) {
-				btn.classList.add( 'is-visible' );
-			} else {
-				btn.classList.remove( 'is-visible' );
-			}
-		}, { passive: true } );
-		btn.addEventListener( 'click', function ( e ) {
-			e.preventDefault();
-			window.scrollTo( { top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' } );
-		} );
-	}
-
 	/* =====================================================================
 	 * 8. GDPR / AdSense Cookie Consent Banner
 	 * =================================================================== */
@@ -397,66 +352,94 @@
 		var forms = document.querySelectorAll( '.visa-quick-form, .travel-inquiry-form, .bpa-lead-form' );
 		if ( ! forms.length || typeof bpaLeadData === 'undefined' ) { return; }
 
+		function labelFor( field ) {
+			var label = null;
+			if ( field.id ) { label = document.querySelector( 'label[for="' + field.id + '"]' ); }
+			if ( ! label && field.closest ) {
+				var wrap = field.closest( '.visa-form-field, .form-group, .contact-form__field' );
+				label = wrap ? wrap.querySelector( 'label' ) : null;
+			}
+			var text = label ? label.textContent : ( field.getAttribute( 'placeholder' ) || field.getAttribute( 'aria-label' ) || field.name );
+			return text.replace( /[*:]/g, '' ).trim();
+		}
+
+		function showMessage( form, text, isError ) {
+			var box = form.querySelector( '.bpa-form-message' );
+			if ( ! box ) {
+				box = document.createElement( 'p' );
+				box.className = 'bpa-form-message';
+				box.setAttribute( 'role', 'alert' );
+				form.appendChild( box );
+			}
+			box.className = 'bpa-form-message ' + ( isError ? 'is-error' : 'is-success' );
+			box.textContent = text;
+		}
+
 		forms.forEach( function( form ) {
+			var opened = Date.now();
+
+			// Honeypot: humans never see or fill this field.
+			var trap = document.createElement( 'input' );
+			trap.type = 'text';
+			trap.name = 'lead_website';
+			trap.tabIndex = -1;
+			trap.autocomplete = 'off';
+			trap.setAttribute( 'aria-hidden', 'true' );
+			trap.className = 'bpa-hp';
+			form.appendChild( trap );
+
 			form.addEventListener( 'submit', function( event ) {
 				event.preventDefault();
 				var btn = form.querySelector( 'button[type="submit"]' );
-				var originalBtnText = btn ? btn.innerHTML : '';
-				if ( btn ) {
-					btn.disabled = true;
-					btn.textContent = bpaLeadData.sending || 'Submitting...';
+				var original = btn ? btn.innerHTML : '';
+				if ( btn ) { btn.disabled = true; btn.textContent = bpaLeadData.sending; }
+
+				var data = new FormData();
+				data.append( 'action', 'bpa_submit_lead' );
+				data.append( 'lead_website', trap.value );
+				data.append( 'lead_elapsed', String( Date.now() - opened ) );
+
+				var type = form.getAttribute( 'data-lead-type' ) || '';
+				if ( ! type ) {
+					if ( form.classList.contains( 'visa-quick-form' ) ) { type = 'Visa & Immigration Assessment'; }
+					else if ( form.classList.contains( 'travel-inquiry-form' ) ) { type = 'Travel Itinerary Inquiry'; }
+					else { type = 'Contact Form'; }
 				}
+				data.append( 'lead_type', type );
 
-				var formData = new FormData( form );
-				formData.append( 'action', 'bpa_submit_lead' );
-				formData.append( 'nonce', bpaLeadData.nonce );
-
-				var nameVal = form.querySelector( '[name*="name"]' );
-				var emailVal = form.querySelector( '[name*="email"]' );
-				var phoneVal = form.querySelector( '[name*="phone"]' );
-				var destVal = form.querySelector( '[name*="dest"], [name*="target"]' );
-				var notesVal = form.querySelector( '[name*="notes"], [name*="details"], textarea' );
-
-				if ( nameVal ) { formData.append( 'lead_name', nameVal.value ); }
-				if ( emailVal ) { formData.append( 'lead_email', emailVal.value ); }
-				if ( phoneVal ) { formData.append( 'lead_phone', phoneVal.value ); }
-				if ( form.classList.contains( 'visa-quick-form' ) ) {
-					formData.append( 'lead_type', 'Visa & Immigration Assessment' );
-				} else if ( form.classList.contains( 'travel-inquiry-form' ) ) {
-					formData.append( 'lead_type', 'Travel Itinerary Booking Inquiry' );
-				}
-				var details = '';
-				if ( destVal ) { details += 'Destination: ' + destVal.value + '; '; }
-				if ( notesVal ) { details += 'Notes: ' + notesVal.value; }
-				if ( details ) { formData.append( 'lead_details', details ); }
-
-				fetch( bpaLeadData.ajaxUrl, {
-					method: 'POST',
-					body: formData
-				} )
-				.then( function( res ) { return res.json(); } )
-				.then( function( data ) {
-					if ( data.success ) {
-						form.innerHTML = '<div class="bpa-form-success" style="padding: 24px; text-align: center; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; color: #065f46;"><div style="font-size: 36px; line-height: 1; margin-bottom: 12px;">✅</div><h4 style="margin: 0 0 8px; font-weight: 800; color: #065f46;">' + (bpaLeadData.success || 'Inquiry Submitted!') + '</h4><p style="margin: 0; font-size: 0.92rem; color: #047857; line-height: 1.5;">' + (data.data.message || 'We have received your details and will contact you shortly.') + '</p></div>';
-					} else {
-						alert( data.data.message || 'Submission failed. Please try again.' );
-						if ( btn ) {
-							btn.disabled = false;
-							btn.innerHTML = originalBtnText;
-						}
-					}
-				} )
-				.catch( function( err ) {
-					form.innerHTML = '<div class="bpa-form-success" style="padding: 24px; text-align: center; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; color: #065f46;"><div style="font-size: 36px; line-height: 1; margin-bottom: 12px;">✅</div><h4 style="margin: 0 0 8px; font-weight: 800; color: #065f46;">Inquiry Received!</h4><p style="margin: 0; font-size: 0.92rem; color: #047857; line-height: 1.5;">Thank you! Your assessment profile has been registered. Our advisors will contact you shortly.</p></div>';
+				form.querySelectorAll( 'input, select, textarea' ).forEach( function( field ) {
+					if ( ! field.name || field.name.indexOf( 'lead_' ) === 0 || field.name.indexOf( 'nonce' ) !== -1 || field.name === '_wp_http_referer' || field.type === 'submit' ) { return; }
+					if ( ( field.type === 'checkbox' || field.type === 'radio' ) && ! field.checked ) { return; }
+					var value = field.tagName === 'SELECT' ? ( field.options[ field.selectedIndex ] ? field.options[ field.selectedIndex ].text : '' ) : field.value;
+					var n = field.name.toLowerCase();
+					if ( /email/.test( n ) ) { data.append( 'lead_email', value ); }
+					else if ( /phone|tel/.test( n ) ) { data.append( 'lead_phone', value ); }
+					else if ( /(^|_)name$/.test( n ) ) { data.append( 'lead_name', value ); }
+					else { data.append( 'lead_fields[' + labelFor( field ) + ']', value ); }
 				} );
+
+				fetch( bpaLeadData.ajaxUrl, { method: 'POST', body: data, credentials: 'same-origin' } )
+					.then( function( res ) { return res.json(); } )
+					.then( function( res ) {
+						if ( res && res.success ) {
+							form.reset();
+							showMessage( form, res.data && res.data.message ? res.data.message : bpaLeadData.success, false );
+							if ( btn ) { btn.disabled = false; btn.innerHTML = original; }
+						} else {
+							showMessage( form, res && res.data && res.data.message ? res.data.message : bpaLeadData.error, true );
+							if ( btn ) { btn.disabled = false; btn.innerHTML = original; }
+						}
+					} )
+					.catch( function() {
+						showMessage( form, bpaLeadData.error, true );
+						if ( btn ) { btn.disabled = false; btn.innerHTML = original; }
+					} );
 			} );
 		} );
 	}
 
 	function init() {
-		initBackToTop();
 		initCookieBanner();
-		initThemeMode();
 		initMenu();
 		initScrollUI();
 		initCounters();

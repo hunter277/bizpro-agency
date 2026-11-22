@@ -72,7 +72,7 @@ get_header();
 
 		<div class="bpa-faq-cta-box">
 			<h3 style="margin: 0 0 8px; color: #1e3a8a; font-size: 1.3rem;"><?php esc_html_e( 'Still have questions? We are here to help.', 'bizpro-agency' ); ?></h3>
-			<p style="color: #3b82f6; margin-bottom: 20px;"><?php esc_html_e( 'Speak directly with our advisory coordinators today.', 'bizpro-agency' ); ?></p>
+			<p style="color: #1d4ed8; margin-bottom: 20px;"><?php esc_html_e( 'Speak directly with our advisory coordinators today.', 'bizpro-agency' ); ?></p>
 			<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn btn--primary" style="background: #2563eb; color: #fff; padding: 12px 24px; border-radius: 10px; font-weight: 700; text-decoration: none;"><?php esc_html_e( 'Contact Advisory Desk', 'bizpro-agency' ); ?></a>
 		</div>
 

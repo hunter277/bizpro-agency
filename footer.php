@@ -102,8 +102,15 @@ $bizpro_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'fo
 	</button>
 
 	<!-- Cookie Notice -->
+	<?php
+	$bizpro_privacy_link = get_privacy_policy_url();
+	if ( ! $bizpro_privacy_link ) {
+		$bizpro_privacy_page = get_page_by_path( 'privacy-policy' );
+		$bizpro_privacy_link = $bizpro_privacy_page ? get_permalink( $bizpro_privacy_page ) : home_url( '/privacy-policy/' );
+	}
+	?>
 	<div id="bpa-cookie-notice" class="bpa-cookie-notice" hidden>
-		<p><?php esc_html_e( 'We use cookies to improve your experience. By continuing you accept our', 'bizpro-agency' ); ?> <a href="<?php echo esc_url( get_privacy_policy_url() ? get_privacy_policy_url() : '#' ); ?>"><?php esc_html_e( 'Privacy Policy', 'bizpro-agency' ); ?></a>.</p>
+		<p><?php esc_html_e( 'We use cookies to improve your experience. By continuing you accept our', 'bizpro-agency' ); ?> <a href="<?php echo esc_url( $bizpro_privacy_link ); ?>"><?php esc_html_e( 'Privacy Policy', 'bizpro-agency' ); ?></a>.</p>
 		<button class="bpa-cookie-accept btn btn--primary"><?php esc_html_e( 'Accept &amp; Close', 'bizpro-agency' ); ?></button>
 	</div>
 

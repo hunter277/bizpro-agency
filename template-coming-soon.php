@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- Email Lead Box -->
 		<form method="post" action="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="display: flex; gap: 10px; max-width: 480px; margin: 0 auto;">
 			<input type="email" placeholder="<?php esc_attr_e( 'Enter your business email...', 'bizpro-agency' ); ?>" required style="flex: 1; padding: 14px 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: #fff; font-size: 1rem;">
-			<button type="submit" class="btn btn--primary" style="padding: 14px 24px; border-radius: 12px; background: #6366f1; border-color: #6366f1; color: #fff; font-weight: 700; cursor: pointer;">Notify Me</button>
+			<button type="submit" class="btn btn--primary" style="padding: 14px 24px; border-radius: 12px; background: #4f46e5; border-color: #4f46e5; color: #fff; font-weight: 700; cursor: pointer;">Notify Me</button>
 		</form>
 
 	</div>

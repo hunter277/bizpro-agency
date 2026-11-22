@@ -138,11 +138,6 @@ if ( $bizpro_cta_url && 0 === strpos( $bizpro_cta_url, '#' ) ) {
 				}
 				?>
 
-				<button class="bpa-theme-toggle" type="button" aria-label="<?php esc_attr_e( 'Toggle dark mode', 'bizpro-agency' ); ?>" aria-pressed="false">
-					<span aria-hidden="true">◐</span>
-					<span class="screen-reader-text"><?php esc_html_e( 'Toggle dark mode', 'bizpro-agency' ); ?></span>
-				</button>
-
 				<?php if ( $bizpro_cta_txt ) : ?>
 					<a class="btn btn--primary header-cta" href="<?php echo esc_url( $bizpro_cta_url ); ?>"><?php echo esc_html( $bizpro_cta_txt ); ?></a>
 				<?php endif; ?>

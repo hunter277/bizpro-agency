@@ -15,7 +15,7 @@ get_header();
 <main id="primary" class="site-main site-main--404" style="min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 90px 0; background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #0f172a 70%, #090d16 100%); color: #ffffff; text-align: center;">
 	<div class="container" style="max-width: 700px; margin: 0 auto;">
 		
-		<div style="font-size: clamp(6rem, 15vw, 10rem); font-weight: 900; line-height: 1; color: transparent; background: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%); -webkit-background-clip: text; background-clip: text; margin-bottom: 20px; letter-spacing: -0.04em;">
+		<div style="font-size: clamp(6rem, 15vw, 10rem); font-weight: 900; line-height: 1; color: transparent; background: linear-gradient(135deg, #4f46e5 0%, #38bdf8 100%); -webkit-background-clip: text; background-clip: text; margin-bottom: 20px; letter-spacing: -0.04em;">
 			404
 		</div>
 
@@ -30,7 +30,7 @@ get_header();
 		<div style="max-width: 480px; margin: 0 auto 40px;">
 			<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" style="display: flex; gap: 8px;">
 				<input type="search" class="search-field" placeholder="<?php esc_attr_e( 'Search our entire site...', 'bizpro-agency' ); ?>" value="<?php echo get_search_query(); ?>" name="s" style="flex: 1; padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color: #fff; font-size: 1rem;" required>
-				<button type="submit" class="search-submit btn btn--primary" style="padding: 14px 24px; border-radius: 12px; background: #6366f1; border-color: #6366f1; color: #fff; font-weight: 700;">
+				<button type="submit" class="search-submit btn btn--primary" style="padding: 14px 24px; border-radius: 12px; background: #4f46e5; border-color: #4f46e5; color: #fff; font-weight: 700;">
 					<?php esc_html_e( 'Search', 'bizpro-agency' ); ?>
 				</button>
 			</form>

@@ -3,7 +3,7 @@ Contributors: kamrulhasan
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.5.0
+Stable tag: 2.6.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: business, custom-colors, custom-logo, custom-menu, featured-images, one-column, two-columns, threaded-comments, translation-ready, theme-options, blog, e-commerce, rtl-language-support, block-patterns
@@ -114,6 +114,16 @@ The optional "BizPro Agency Companion" plugin adds the Visa Pathways custom post
 The "All Demos" menu, floating demo bar and demo showcase section are for showcase sites only. They are hidden by default; enable them in Appearance > Customize > Top Bar > Show demo switcher.
 
 == Changelog ==
+
+= 2.6.0 =
+* Lead forms rewritten: honeypot, minimum-time and per-IP rate limit (no expiring nonce on cached pages), real error messages on network failure, no innerHTML injection.
+* Visa hero form fixed (blank options, labels).
+* Dark mode removed (it left headings and logo unreadable).
+* Accessibility: colour-contrast fixes, relaxed letter-spacing.
+* About 370 more strings made translatable.
+* Hero statistic cards added to the default and front-page heroes.
+* Mobile menu: drawer no longer covered by the overlay, header padding fixed.
+* Demo previews now JPEG, Customizer null-guard added.
 
 = 2.5.0 =
 * Demo import rewritten: seven independent demo packs (demo-data/<demo>/content.xml), each with its own inner pages, posts, menus and homepage assignment.

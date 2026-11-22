@@ -17,8 +17,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 function bizpro_agency_customize_register( $wp_customize ) {
 	$d = bizpro_agency_defaults();
 
-	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+	foreach ( array( 'blogname', 'blogdescription' ) as $bizpro_core_setting ) {
+		$bizpro_setting = $wp_customize->get_setting( $bizpro_core_setting );
+		if ( $bizpro_setting ) {
+			$bizpro_setting->transport = 'postMessage';
+		}
+	}
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(

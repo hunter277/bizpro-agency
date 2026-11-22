@@ -28,7 +28,7 @@ $bizpro_site_url  = home_url( '/' );
 		</div>
 	</header>
 
-	<div class="container section" style="padding: 60px 0; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--bpa-text, #334155); font-size: 1.05rem;">
+	<div class="container section" style="padding-block: 60px; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--bpa-text, #334155); font-size: 1.05rem;">
 		
 		<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 48px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
 			
