@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$bpa_email = bizpro_agency_get( 'topbar_email', get_bloginfo( 'admin_email' ) );
-$site_name = get_bloginfo( 'name' );
-$site_url  = home_url( '/' );
+$bizpro_email     = bizpro_agency_get( 'topbar_email', get_bloginfo( 'admin_email' ) );
+$bizpro_site_name = get_bloginfo( 'name' );
+$bizpro_site_url  = home_url( '/' );
 ?>
 
 <main id="primary" class="site-main site-main--legal">
@@ -33,7 +33,7 @@ $site_url  = home_url( '/' );
 		<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 48px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
 			
 			<h2 style="font-size: 1.6rem; color: var(--bpa-text, #0f172a); margin-top: 0;"><?php esc_html_e( '1. Agreement to Terms', 'bizpro-agency' ); ?></h2>
-			<p><?php printf( esc_html__( 'These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and %1$s ("we", "us", or "our"), concerning your access to and use of the %2$s website as well as any other media form, channel, or mobile website related, linked, or otherwise connected thereto.', 'bizpro-agency' ), esc_html( $site_name ), esc_url( $site_url ) ); ?></p>
+			<p><?php printf( /* translators: 1: first value, 2: second value. */ esc_html__( 'These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and %1$s ("we", "us", or "our"), concerning your access to and use of the %2$s website as well as any other media form, channel, or mobile website related, linked, or otherwise connected thereto.', 'bizpro-agency' ), esc_html( $bizpro_site_name ), esc_url( $bizpro_site_url ) ); ?></p>
 
 			<hr style="margin: 36px 0; border: none; border-top: 1px solid var(--bpa-border, #e2e8f0);">
 
@@ -54,7 +54,7 @@ $site_url  = home_url( '/' );
 
 			<h2 style="font-size: 1.6rem; color: var(--bpa-text, #0f172a);"><?php esc_html_e( '5. Contact Inquiries', 'bizpro-agency' ); ?></h2>
 			<p><?php esc_html_e( 'In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:', 'bizpro-agency' ); ?></p>
-			<p style="margin-bottom: 0;"><strong><?php esc_html_e( 'Email:', 'bizpro-agency' ); ?></strong> <a href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>" style="color: #2563eb; font-weight: 600;"><?php echo esc_html( $bpa_email ); ?></a></p>
+			<p style="margin-bottom: 0;"><strong><?php esc_html_e( 'Email:', 'bizpro-agency' ); ?></strong> <a href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>" style="color: #2563eb; font-weight: 600;"><?php echo esc_html( $bizpro_email ); ?></a></p>
 
 		</div>
 

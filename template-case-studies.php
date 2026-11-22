@@ -37,7 +37,7 @@ get_header();
 				<div style="padding: 28px;">
 					<h3 style="font-size: 1.3rem; font-weight: 800; margin: 0 0 10px; color: #0f172a;">Multi-Region AWS Kubernetes Modernization</h3>
 					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Migrated 120 legacy VMs into automated Docker clusters with Terraform, achieving zero downtime and cutting monthly server costs by $180,000.</p>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">View Project Breakdown →</a>
+					<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">View Project Breakdown →</a>
 				</div>
 			</article>
 
@@ -50,7 +50,7 @@ get_header();
 				<div style="padding: 28px;">
 					<h3 style="font-size: 1.3rem; font-weight: 800; margin: 0 0 10px; color: #0f172a;">Tech Founder UK Endorsement & Family PR</h3>
 					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Prepared comprehensive peer review portfolios for a Series-B AI company founding team, securing unconditional stage-1 endorsement within two weeks.</p>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" style="color: #10b981; font-weight: 700; text-decoration: none;">View Project Breakdown →</a>
+					<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #10b981; font-weight: 700; text-decoration: none;">View Project Breakdown →</a>
 				</div>
 			</article>
 
@@ -63,7 +63,7 @@ get_header();
 				<div style="padding: 28px;">
 					<h3 style="font-size: 1.3rem; font-weight: 800; margin: 0 0 10px; color: #0f172a;">Supply Chain & Procurement Rationalization</h3>
 					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Redesigned cross-border supplier contracts across 7 distribution hubs, unlocking $4.2M in annual recurring operational savings.</p>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" style="color: #d97706; font-weight: 700; text-decoration: none;">View Project Breakdown →</a>
+					<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #d97706; font-weight: 700; text-decoration: none;">View Project Breakdown →</a>
 				</div>
 			</article>
 

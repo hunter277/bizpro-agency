@@ -37,7 +37,7 @@ function bizpro_agency_breadcrumbs() {
 			echo '<a itemprop="item" href="' . esc_url( get_category_link( $category->term_id ) ) . '"><span itemprop="name">' . esc_html( $category->name ) . '</span></a>';
 			echo '<meta itemprop="position" content="' . esc_attr( $position ) . '" />';
 			echo '</li>';
-			$position++;
+			++$position;
 		}
 		echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="is-active">';
 		echo '<span itemprop="name">' . esc_html( get_the_title() ) . '</span>';
@@ -52,7 +52,7 @@ function bizpro_agency_breadcrumbs() {
 				echo '<a itemprop="item" href="' . esc_url( get_permalink( $ancestor ) ) . '"><span itemprop="name">' . esc_html( get_the_title( $ancestor ) ) . '</span></a>';
 				echo '<meta itemprop="position" content="' . esc_attr( $position ) . '" />';
 				echo '</li>';
-				$position++;
+				++$position;
 			}
 		}
 		echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="is-active">';
@@ -66,7 +66,7 @@ function bizpro_agency_breadcrumbs() {
 		echo '</li>';
 	} elseif ( is_search() ) {
 		echo '<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="is-active">';
-		echo '<span itemprop="name">' . sprintf( esc_html__( 'Search: %s', 'bizpro-agency' ), esc_html( get_search_query() ) ) . '</span>';
+		echo '<span itemprop="name">' . sprintf( /* translators: %s: dynamic value. */ esc_html__( 'Search: %s', 'bizpro-agency' ), esc_html( get_search_query() ) ) . '</span>';
 		echo '<meta itemprop="position" content="' . esc_attr( $position ) . '" />';
 		echo '</li>';
 	} elseif ( is_404() ) {

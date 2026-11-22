@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$bpa_phone = bizpro_agency_get( 'topbar_phone', '+1 (555) 123-4567' );
+$bizpro_phone = bizpro_agency_get( 'topbar_phone', '+1 (555) 123-4567' );
 
-$team = array(
+$bizpro_team = array(
 	array(
 		'name'  => 'Alexander Wright',
 		'role'  => 'Managing Partner & Founder',
@@ -65,8 +65,8 @@ $team = array(
 				<p style="color: var(--bpa-text-muted, #64748b); font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;"><?php esc_html_e( 'Every mandate we take on is backed by bilateral non-disclosure agreements, clear milestone deliverables, and seasoned senior partner involvement from inception to completion.', 'bizpro-agency' ); ?></p>
 				
 				<div style="display: flex; gap: 16px; flex-wrap: wrap;">
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary"><?php esc_html_e( 'Schedule Executive Consultation', 'bizpro-agency' ); ?></a>
-					<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" class="btn btn--outline"><?php esc_html_e( 'Explore Services', 'bizpro-agency' ); ?></a>
+					<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn btn--primary"><?php esc_html_e( 'Schedule Executive Consultation', 'bizpro-agency' ); ?></a>
+					<a href="<?php echo esc_url( bizpro_agency_page_url( 'services' ) ); ?>" class="btn btn--outline"><?php esc_html_e( 'Explore Services', 'bizpro-agency' ); ?></a>
 				</div>
 			</div>
 
@@ -101,16 +101,16 @@ $team = array(
 			</header>
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;">
-				<?php foreach ( $team as $tm ) : ?>
+				<?php foreach ( $bizpro_team as $bizpro_tm ) : ?>
 					<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 28px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
 						<div>
 							<div style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800; margin-bottom: 18px;">
-								<?php echo esc_html( substr( $tm['name'], 0, 1 ) ); ?>
+								<?php echo esc_html( substr( $bizpro_tm['name'], 0, 1 ) ); ?>
 							</div>
-							<span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; text-transform: uppercase; background: rgba(37,99,235,0.08); padding: 3px 8px; border-radius: 20px; display: inline-block; margin-bottom: 8px;"><?php echo esc_html( $tm['badge'] ); ?></span>
-							<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $tm['name'] ); ?></h3>
-							<p style="font-size: 0.85rem; font-weight: 600; color: var(--bpa-text-muted, #64748b); margin-bottom: 12px;"><?php echo esc_html( $tm['role'] ); ?></p>
-							<p style="font-size: 0.92rem; color: var(--bpa-text-muted, #64748b); line-height: 1.6; margin: 0;"><?php echo esc_html( $tm['bio'] ); ?></p>
+							<span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; text-transform: uppercase; background: rgba(37,99,235,0.08); padding: 3px 8px; border-radius: 20px; display: inline-block; margin-bottom: 8px;"><?php echo esc_html( $bizpro_tm['badge'] ); ?></span>
+							<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $bizpro_tm['name'] ); ?></h3>
+							<p style="font-size: 0.85rem; font-weight: 600; color: var(--bpa-text-muted, #64748b); margin-bottom: 12px;"><?php echo esc_html( $bizpro_tm['role'] ); ?></p>
+							<p style="font-size: 0.92rem; color: var(--bpa-text-muted, #64748b); line-height: 1.6; margin: 0;"><?php echo esc_html( $bizpro_tm['bio'] ); ?></p>
 						</div>
 					</div>
 				<?php endforeach; ?>

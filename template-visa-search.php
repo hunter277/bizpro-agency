@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // Query custom post type pathways
-$bpa_pathways_query = new WP_Query(
+$bizpro_pathways_query = new WP_Query(
 	array(
 		'post_type'      => 'bpa_visa_pathway',
 		'posts_per_page' => -1,
@@ -73,32 +73,35 @@ $bpa_pathways_query = new WP_Query(
 		<div class="bpa-visa-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
 
 			<?php
-			if ( $bpa_pathways_query->have_posts() ) :
-				while ( $bpa_pathways_query->have_posts() ) :
-					$bpa_pathways_query->the_post();
+			if ( $bizpro_pathways_query->have_posts() ) :
+				while ( $bizpro_pathways_query->have_posts() ) :
+					$bizpro_pathways_query->the_post();
 
-					$flag      = get_post_meta( get_the_ID(), '_bpa_flag_emoji', true );
-					$code      = get_post_meta( get_the_ID(), '_bpa_country_code', true );
-					$badge     = get_post_meta( get_the_ID(), '_bpa_badge_text', true );
-					$proc_time = get_post_meta( get_the_ID(), '_bpa_processing_time', true );
-					$rate      = get_post_meta( get_the_ID(), '_bpa_success_rate', true );
-					$apply_url = get_post_meta( get_the_ID(), '_bpa_apply_url', true );
+					$bizpro_flag      = get_post_meta( get_the_ID(), '_bpa_flag_emoji', true );
+					$bizpro_code      = get_post_meta( get_the_ID(), '_bpa_country_code', true );
+					$bizpro_badge     = get_post_meta( get_the_ID(), '_bpa_badge_text', true );
+					$bizpro_proc_time = get_post_meta( get_the_ID(), '_bpa_processing_time', true );
+					$bizpro_rate      = get_post_meta( get_the_ID(), '_bpa_success_rate', true );
+					$bizpro_apply_url = get_post_meta( get_the_ID(), '_bpa_apply_url', true );
 
-					if ( ! $flag ) { $flag = '🌐'; }
-					if ( ! $code ) { $code = 'other'; }
-					if ( ! $apply_url ) { $apply_url = home_url( '/contact/' ); }
+					if ( ! $bizpro_flag ) {
+						$bizpro_flag = '🌐'; }
+					if ( ! $bizpro_code ) {
+						$bizpro_code = 'other'; }
+					if ( ! $bizpro_apply_url ) {
+						$bizpro_apply_url = bizpro_agency_page_url( 'contact' ); }
 
 					// Fetch categories for filtering
-					$terms = wp_get_post_terms( get_the_ID(), 'bpa_visa_category', array( 'fields' => 'slugs' ) );
-					$data_types = ! empty( $terms ) && ! is_wp_error( $terms ) ? implode( ',', $terms ) : 'permanent,work';
+					$bizpro_terms      = wp_get_post_terms( get_the_ID(), 'bpa_visa_category', array( 'fields' => 'slugs' ) );
+					$bizpro_data_types = ! empty( $bizpro_terms ) && ! is_wp_error( $bizpro_terms ) ? implode( ',', $bizpro_terms ) : 'permanent,work';
 					?>
-					<div class="visa-country-card" data-country="<?php echo esc_attr( $code ); ?>" data-types="<?php echo esc_attr( $data_types ); ?>" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+					<div class="visa-country-card" data-country="<?php echo esc_attr( $bizpro_code ); ?>" data-types="<?php echo esc_attr( $bizpro_data_types ); ?>" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
 						<div>
 							<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-								<span style="font-size: 32px;"><?php echo esc_html( $flag ); ?></span>
-								<?php if ( $badge ) : ?>
+								<span style="font-size: 32px;"><?php echo esc_html( $bizpro_flag ); ?></span>
+								<?php if ( $bizpro_badge ) : ?>
 									<span style="background: #eff6ff; color: #1e40af; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">
-										<?php echo esc_html( $badge ); ?>
+										<?php echo esc_html( $bizpro_badge ); ?>
 									</span>
 								<?php endif; ?>
 							</div>
@@ -111,9 +114,9 @@ $bpa_pathways_query = new WP_Query(
 						</div>
 						<div style="border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
 							<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;">
-								⏱️ <?php echo esc_html( $proc_time ? $proc_time : __( 'Processing time varies', 'bizpro-agency' ) ); ?>
+								⏱️ <?php echo esc_html( $bizpro_proc_time ? $bizpro_proc_time : __( 'Processing time varies', 'bizpro-agency' ) ); ?>
 							</span>
-							<a href="<?php echo esc_url( $apply_url ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">
+							<a href="<?php echo esc_url( $bizpro_apply_url ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">
 								<?php esc_html_e( 'Apply Now →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -133,7 +136,7 @@ $bpa_pathways_query = new WP_Query(
 					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Federal Skilled Worker, Canadian Experience Class and Provincial Nominee streams with complete CRS audits.</p>
 					<div style="border-top: 1px solid #f1f5f9; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
 						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;">⏱️ 6 - 8 Months</span>
-						<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
+						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
 					</div>
 				</div>
 
@@ -146,7 +149,7 @@ $bpa_pathways_query = new WP_Query(
 					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Sponsorship license matching, Global Talent endorsement and Indefinite Leave to Remain (ILR) pathways.</p>
 					<div style="border-top: 1px solid #f1f5f9; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
 						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;">⏱️ 3 - 6 Weeks</span>
-						<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
+						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
 					</div>
 				</div>
 
@@ -159,7 +162,7 @@ $bpa_pathways_query = new WP_Query(
 					<p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Skills assessment verification, Expression of Interest (EOI) filing and regional nomination support.</p>
 					<div style="border-top: 1px solid #f1f5f9; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
 						<span style="font-size: 0.85rem; color: #0284c7; font-weight: 700;">⏱️ 7 - 9 Months</span>
-						<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
+						<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none;">Apply Now →</a>
 					</div>
 				</div>
 			<?php endif; ?>

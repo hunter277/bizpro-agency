@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$bpa_phone     = bizpro_agency_get( 'topbar_phone' );
-$bpa_email     = bizpro_agency_get( 'topbar_email' );
-$bpa_address   = bizpro_agency_get( 'topbar_address' );
-$bpa_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'footer_copyright' ) );
+$bizpro_phone     = bizpro_agency_get( 'topbar_phone' );
+$bizpro_email     = bizpro_agency_get( 'topbar_email' );
+$bizpro_address   = bizpro_agency_get( 'topbar_address' );
+$bizpro_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'footer_copyright' ) );
 ?>
 	</div><!-- #content -->
 
@@ -27,7 +27,7 @@ $bpa_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'foote
 					<?php else : ?>
 						<section class="widget">
 							<h3 class="widget-title"><?php esc_html_e( 'About BizPro', 'bizpro-agency' ); ?></h3>
-							<p><?php esc_html_e( 'BizPro Agency is a versatile multi-purpose WordPress theme with 7 niche demo layouts for Agency, Visa, Travel, IT Solutions, Consulting, Corporate, and Digital Products businesses.', 'bizpro-agency' ); ?></p>
+							<p><?php esc_html_e( 'We are a trusted agency delivering professional consulting, technology, visa and travel services to clients worldwide.', 'bizpro-agency' ); ?></p>
 						</section>
 					<?php endif; ?>
 				</div>
@@ -37,15 +37,13 @@ $bpa_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'foote
 						<?php dynamic_sidebar( 'footer-2' ); ?>
 					<?php else : ?>
 						<section class="widget">
-							<h3 class="widget-title"><?php esc_html_e( 'Explore Demos', 'bizpro-agency' ); ?></h3>
+							<h3 class="widget-title"><?php esc_html_e( 'Quick Links', 'bizpro-agency' ); ?></h3>
 							<ul>
-								<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Agency Default', 'bizpro-agency' ); ?></a></li>
-								<li><a href="<?php echo esc_url( home_url( '/visa-immigration/' ) ); ?>"><?php esc_html_e( 'Visa & Immigration', 'bizpro-agency' ); ?></a></li>
-								<li><a href="<?php echo esc_url( home_url( '/travel-agency/' ) ); ?>"><?php esc_html_e( 'Travel Agency', 'bizpro-agency' ); ?></a></li>
-								<li><a href="<?php echo esc_url( home_url( '/it-solutions/' ) ); ?>"><?php esc_html_e( 'IT Solutions', 'bizpro-agency' ); ?></a></li>
-								<li><a href="<?php echo esc_url( home_url( '/business-consulting/' ) ); ?>"><?php esc_html_e( 'Business Consulting', 'bizpro-agency' ); ?></a></li>
-								<li><a href="<?php echo esc_url( home_url( '/corporate/' ) ); ?>"><?php esc_html_e( 'Corporate Enterprise', 'bizpro-agency' ); ?></a></li>
-								<li><a href="<?php echo esc_url( home_url( '/digital-store/' ) ); ?>"><?php esc_html_e( 'Digital &amp; SaaS Store', 'bizpro-agency' ); ?></a></li>
+								<li><a href="<?php echo esc_url( bizpro_agency_page_url( 'about' ) ); ?>"><?php esc_html_e( 'About Us', 'bizpro-agency' ); ?></a></li>
+								<li><a href="<?php echo esc_url( bizpro_agency_page_url( 'services' ) ); ?>"><?php esc_html_e( 'Services', 'bizpro-agency' ); ?></a></li>
+								<li><a href="<?php echo esc_url( bizpro_agency_page_url( 'pricing' ) ); ?>"><?php esc_html_e( 'Pricing', 'bizpro-agency' ); ?></a></li>
+								<li><a href="<?php echo esc_url( bizpro_agency_page_url( 'faq' ) ); ?>"><?php esc_html_e( 'FAQs', 'bizpro-agency' ); ?></a></li>
+								<li><a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>"><?php esc_html_e( 'Contact', 'bizpro-agency' ); ?></a></li>
 							</ul>
 						</section>
 					<?php endif; ?>
@@ -58,14 +56,14 @@ $bpa_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'foote
 						<section class="widget">
 							<h3 class="widget-title"><?php esc_html_e( 'Contact Info', 'bizpro-agency' ); ?></h3>
 							<ul>
-								<?php if ( $bpa_address ) : ?>
-									<li><?php echo esc_html( $bpa_address ); ?></li>
+								<?php if ( $bizpro_address ) : ?>
+									<li><?php echo esc_html( $bizpro_address ); ?></li>
 								<?php endif; ?>
-								<?php if ( $bpa_phone ) : ?>
-									<li><a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bpa_phone ) ); ?>"><?php echo esc_html( $bpa_phone ); ?></a></li>
+								<?php if ( $bizpro_phone ) : ?>
+									<li><a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>"><?php echo esc_html( $bizpro_phone ); ?></a></li>
 								<?php endif; ?>
-								<?php if ( $bpa_email && is_email( $bpa_email ) ) : ?>
-									<li><a href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>"><?php echo esc_html( $bpa_email ); ?></a></li>
+								<?php if ( $bizpro_email && is_email( $bizpro_email ) ) : ?>
+									<li><a href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>"><?php echo esc_html( $bizpro_email ); ?></a></li>
 								<?php endif; ?>
 							</ul>
 						</section>
@@ -77,7 +75,7 @@ $bpa_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'foote
 
 		<div class="footer-bottom">
 			<div class="container footer-bottom__inner">
-				<p class="footer-bottom__copy"><?php echo wp_kses_post( $bpa_copyright ); ?></p>
+				<p class="footer-bottom__copy"><?php echo wp_kses_post( $bizpro_copyright ); ?></p>
 
 				<?php if ( has_nav_menu( 'footer' ) ) : ?>
 					<?php

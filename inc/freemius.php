@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'bpa_fs' ) ) {
+if ( ! function_exists( 'bizpro_agency_fs' ) ) {
 
 	/**
 	 * Returns the Freemius instance (Premium builds only).
@@ -22,16 +22,16 @@ if ( ! function_exists( 'bpa_fs' ) ) {
 	 *
 	 * @return Freemius|null
 	 */
-	function bpa_fs() {
-		global $bpa_fs;
+	function bizpro_agency_fs() {
+		global $bizpro_fs;
 
-		if ( ! isset( $bpa_fs ) ) {
+		if ( ! isset( $bizpro_fs ) ) {
 			// Freemius SDK — only load if bundled (premium build).
 			$sdk_path = get_template_directory() . '/inc/freemius/start.php';
 			if ( file_exists( $sdk_path ) ) {
 				require_once $sdk_path;
 
-				$bpa_fs = fs_dynamic_init(
+				$bizpro_fs = fs_dynamic_init(
 					array(
 						'id'             => 'YOUR_FREEMIUS_PRODUCT_ID', // Replace with your Freemius Product ID.
 						'slug'           => 'bizpro-agency',
@@ -49,16 +49,16 @@ if ( ! function_exists( 'bpa_fs' ) ) {
 					)
 				);
 			} else {
-				$bpa_fs = null; // SDK not bundled (free/lite version).
+				$bizpro_fs = null; // SDK not bundled (free/lite version).
 			}
 		}
 
-		return $bpa_fs;
+		return $bizpro_fs;
 	}
 
 	// Init only if SDK is present.
 	if ( file_exists( get_template_directory() . '/inc/freemius/start.php' ) ) {
-		bpa_fs();
-		do_action( 'bpa_fs_loaded' );
+		bizpro_agency_fs();
+		do_action( 'bizpro_agency_fs_loaded' );
 	}
 }

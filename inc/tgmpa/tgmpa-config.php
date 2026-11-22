@@ -51,7 +51,7 @@ function bizpro_agency_register_required_plugins() {
 			'slug'               => 'bizpro-agency-companion',
 			'source'             => $companion_zip,
 			'required'           => false,
-			'version'            => '1.1.0',
+			'version'            => '1.2.0',
 			'force_activation'   => false,
 			'force_deactivation' => false,
 		);

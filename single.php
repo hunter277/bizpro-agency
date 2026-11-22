@@ -95,7 +95,18 @@ get_header();
 				<!-- Blog Pro: Author Info Box & Bio -->
 				<div class="entry-author-box" style="margin-top: 50px; background: var(--bpa-bg-alt, #f8fafc); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 28px; display: flex; gap: 20px; align-items: center;">
 					<div style="flex-shrink: 0;">
-						<?php echo get_avatar( get_the_author_meta( 'ID' ), 80, '', '', array( 'class' => 'author-avatar', 'style' => 'border-radius: 50%; display: block;' ) ); ?>
+						<?php
+						echo get_avatar(
+							get_the_author_meta( 'ID' ),
+							80,
+							'',
+							'',
+							array(
+								'class' => 'author-avatar',
+								'style' => 'border-radius: 50%; display: block;',
+							)
+						);
+						?>
 					</div>
 					<div>
 						<span style="font-size: 0.8rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 1px;"><?php esc_html_e( 'Written By', 'bizpro-agency' ); ?></span>
@@ -113,9 +124,9 @@ get_header();
 
 				<?php
 				if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
-			?>
+					comments_template();
+				}
+				?>
 		</div>
 
 	<?php endwhile; ?>

@@ -29,14 +29,17 @@ function bizpro_agency_ajax_submit_lead() {
 	}
 
 	// Prepare email content
-	$admin_email = get_option( 'admin_email' );
+	$admin_email   = get_option( 'admin_email' );
 	$email_subject = sprintf( '[%s] %s from %s', get_bloginfo( 'name' ), $subject, $name );
-	$body  = "You received a new inquiry from your BizPro Agency website:\n\n";
-	$body .= "Name: " . $name . "\n";
-	if ( $email ) { $body .= "Email: " . $email . "\n"; }
-	if ( $phone ) { $body .= "Phone / WhatsApp: " . $phone . "\n"; }
-	if ( $details ) { $body .= "Details / Preferences: " . $details . "\n"; }
-	$body .= "Submitted on: " . current_time( 'mysql' ) . "\n";
+	$body          = "You received a new inquiry from your BizPro Agency website:\n\n";
+	$body         .= 'Name: ' . $name . "\n";
+	if ( $email ) {
+		$body .= 'Email: ' . $email . "\n"; }
+	if ( $phone ) {
+		$body .= 'Phone / WhatsApp: ' . $phone . "\n"; }
+	if ( $details ) {
+		$body .= 'Details / Preferences: ' . $details . "\n"; }
+	$body .= 'Submitted on: ' . current_time( 'mysql' ) . "\n";
 	$body .= "\n---\nNotification sent automatically by BizPro Agency Theme.";
 
 	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
@@ -44,44 +47,53 @@ function bizpro_agency_ajax_submit_lead() {
 		$headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
 	}
 
-	@wp_mail( $admin_email, $email_subject, $body, $headers );
+	wp_mail( $admin_email, $email_subject, $body, $headers );
 
 	// Store recent inquiry in transient for demo verification
 	$recent_leads = get_option( 'bpa_recent_leads', array() );
 	if ( ! is_array( $recent_leads ) ) {
 		$recent_leads = array();
 	}
-	array_unshift( $recent_leads, array(
-		'name'    => $name,
-		'email'   => $email,
-		'phone'   => $phone,
-		'type'    => $subject,
-		'details' => $details,
-		'date'    => current_time( 'mysql' ),
-	) );
+	array_unshift(
+		$recent_leads,
+		array(
+			'name'    => $name,
+			'email'   => $email,
+			'phone'   => $phone,
+			'type'    => $subject,
+			'details' => $details,
+			'date'    => current_time( 'mysql' ),
+		)
+	);
 	// Keep last 25 leads
 	$recent_leads = array_slice( $recent_leads, 0, 25 );
 	update_option( 'bpa_recent_leads', $recent_leads );
 
-	wp_send_json_success( array(
-		'message' => sprintf(
-			esc_html__( 'Thank you, %s! Your inquiry has been received successfully. Our specialist team will review your details and contact you shortly.', 'bizpro-agency' ),
-			$name
-		),
-	) );
+	wp_send_json_success(
+		array(
+			'message' => sprintf(
+				/* translators: %s: dynamic value. */                esc_html__( 'Thank you, %s! Your inquiry has been received successfully. Our specialist team will review your details and contact you shortly.', 'bizpro-agency' ),
+				$name
+			),
+		)
+	);
 }
-add_action( 'wp_ajax_bpa_submit_lead',        'bizpro_agency_ajax_submit_lead' );
+add_action( 'wp_ajax_bpa_submit_lead', 'bizpro_agency_ajax_submit_lead' );
 add_action( 'wp_ajax_nopriv_bpa_submit_lead', 'bizpro_agency_ajax_submit_lead' );
 
 /**
  * Enqueue AJAX script parameters for lead forms.
  */
 function bizpro_agency_enqueue_lead_scripts() {
-	wp_localize_script( 'bizpro-agency-main', 'bpaLeadData', array(
-		'ajaxUrl' => admin_url( 'admin-ajax.php' ),
-		'nonce'   => wp_create_nonce( 'bpa_lead_nonce' ),
-		'sending' => esc_html__( 'Submitting your details...', 'bizpro-agency' ),
-		'success' => esc_html__( 'Inquiry Received Successfully!', 'bizpro-agency' ),
-	) );
+	wp_localize_script(
+		'bizpro-agency-main',
+		'bpaLeadData',
+		array(
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			'nonce'   => wp_create_nonce( 'bpa_lead_nonce' ),
+			'sending' => esc_html__( 'Submitting your details...', 'bizpro-agency' ),
+			'success' => esc_html__( 'Inquiry Received Successfully!', 'bizpro-agency' ),
+		)
+	);
 }
 add_action( 'wp_enqueue_scripts', 'bizpro_agency_enqueue_lead_scripts', 20 );

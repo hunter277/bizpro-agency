@@ -13,48 +13,48 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$services = array(
+$bizpro_services = array(
 	array(
 		'title' => 'Visa & Global Immigration Consultancy',
 		'tag'   => 'Immigration Law',
 		'desc'  => 'Comprehensive end-to-end legal representation for permanent residency, skilled worker visas, provincial nominations, and university admissions across Canada, UK, Australia, and USA.',
 		'icon'  => 'visa',
-		'link'  => home_url( '/visa-immigration/' ),
+		'link'  => bizpro_agency_page_url( 'home', 'visa' ),
 	),
 	array(
 		'title' => 'Enterprise Cloud & Custom Software',
 		'tag'   => 'Technology & SRE',
 		'desc'  => 'High-throughput microservices, multi-region Kubernetes deployments, automated CI/CD pipelines, and zero-trust cybersecurity architectures built for scale.',
 		'icon'  => 'it',
-		'link'  => home_url( '/it-solutions/' ),
+		'link'  => bizpro_agency_page_url( 'home', 'it' ),
 	),
 	array(
 		'title' => 'Strategic Management & M&A Advisory',
 		'tag'   => 'Business Advisory',
 		'desc'  => 'Pragmatic market penetration blueprints, commercial due diligence, supply chain cost optimization, and capital restructuring for high-growth enterprises.',
 		'icon'  => 'consulting',
-		'link'  => home_url( '/business-consulting/' ),
+		'link'  => bizpro_agency_page_url( 'home', 'consulting' ),
 	),
 	array(
 		'title' => 'Global Travel Planning & Group Tours',
 		'tag'   => 'Travel & Hospitality',
 		'desc'  => 'Bespoke international holiday itineraries, curated luxury destination packages, corporate retreat logistics, and verified flight reservations worldwide.',
 		'icon'  => 'travel',
-		'link'  => home_url( '/travel-agency/' ),
+		'link'  => bizpro_agency_page_url( 'home', 'travel' ),
 	),
 	array(
 		'title' => 'Institutional Corporate Governance',
 		'tag'   => 'Enterprise Solutions',
 		'desc'  => 'Cross-border regulatory compliance, global executive mobility programs, board succession frameworks, and multi-jurisdiction entity setup.',
 		'icon'  => 'security',
-		'link'  => home_url( '/corporate/' ),
+		'link'  => bizpro_agency_page_url( 'home', 'corporate' ),
 	),
 	array(
 		'title' => 'Financial Modeling & Valuation',
 		'tag'   => 'Financial Services',
 		'desc'  => 'Quantitative business valuation, working capital optimization, debt advisory, and scenario stress-testing for institutional investors.',
 		'icon'  => 'finance',
-		'link'  => home_url( '/business-consulting/' ),
+		'link'  => bizpro_agency_page_url( 'home', 'consulting' ),
 	),
 );
 ?>
@@ -74,20 +74,20 @@ $services = array(
 
 		<!-- Services Grid -->
 		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 70px;">
-			<?php foreach ( $services as $s ) : ?>
+			<?php foreach ( $bizpro_services as $bizpro_s ) : ?>
 				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
 					<div>
 						<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
 							<div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(37,99,235,0.1); color: #2563eb; display: inline-flex; align-items: center; justify-content: center;">
-								<?php echo bizpro_agency_get_icon( $s['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								<?php echo bizpro_agency_get_icon( $bizpro_s['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 							</div>
-							<span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; background: rgba(37,99,235,0.08); padding: 4px 10px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $s['tag'] ); ?></span>
+							<span style="font-size: 0.75rem; font-weight: 700; color: #2563eb; background: rgba(37,99,235,0.08); padding: 4px 10px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $bizpro_s['tag'] ); ?></span>
 						</div>
-						<h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $s['title'] ); ?></h3>
-						<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;"><?php echo esc_html( $s['desc'] ); ?></p>
+						<h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $bizpro_s['title'] ); ?></h3>
+						<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;"><?php echo esc_html( $bizpro_s['desc'] ); ?></p>
 					</div>
 					<div>
-						<a href="<?php echo esc_url( $s['link'] ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+						<a href="<?php echo esc_url( $bizpro_s['link'] ); ?>" style="color: #2563eb; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
 							<span>Explore Dedicated Demo</span>
 							<span aria-hidden="true">&rarr;</span>
 						</a>
@@ -100,7 +100,7 @@ $services = array(
 		<div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); color: #ffffff; border-radius: 24px; padding: 50px 40px; text-align: center; box-shadow: 0 20px 45px rgba(0,0,0,0.14);">
 			<h2 style="font-size: 2rem; font-weight: 800; color: #ffffff; margin-bottom: 14px;"><?php esc_html_e( 'Need a Custom Multi-Disciplinary Scope?', 'bizpro-agency' ); ?></h2>
 			<p style="max-width: 620px; margin: 0 auto 28px; color: #cbd5e1; font-size: 1.05rem; line-height: 1.6;"><?php esc_html_e( 'Our senior partners can assemble an integrated advisory pod spanning business strategy, legal visas, and enterprise engineering.', 'bizpro-agency' ); ?></p>
-			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--light btn--lg"><?php esc_html_e( 'Schedule Executive Discovery Call', 'bizpro-agency' ); ?></a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn btn--light btn--lg"><?php esc_html_e( 'Schedule Executive Discovery Call', 'bizpro-agency' ); ?></a>
 		</div>
 
 	</div>

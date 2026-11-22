@@ -27,10 +27,10 @@ if ( have_posts() && bizpro_agency_is_elementor() ) {
 	}
 }
 
-$bpa_phone = bizpro_agency_get( 'topbar_phone' );
-$bpa_email = bizpro_agency_get( 'topbar_email' );
+$bizpro_phone = bizpro_agency_get( 'topbar_phone' );
+$bizpro_email = bizpro_agency_get( 'topbar_email' );
 
-$it_services = array(
+$bizpro_it_services = array(
 	array(
 		'title' => __( 'Cloud Infrastructure & DevOps', 'bizpro-agency' ),
 		'desc'  => __( 'AWS, Azure, and Google Cloud architected with Terraform IaC, multi-region Kubernetes, auto-scaling, and CI/CD pipelines.', 'bizpro-agency' ),
@@ -69,14 +69,14 @@ $it_services = array(
 	),
 );
 
-$tech_stack = array(
-	'Cloud & DevOps'      => array( 'AWS', 'Google Cloud', 'Microsoft Azure', 'Docker', 'Kubernetes', 'Terraform', 'Helm', 'GitLab CI' ),
-	'Backend & DB'        => array( 'Python', 'Go', 'Node.js', 'PostgreSQL', 'Redis', 'Apache Kafka', 'GraphQL', 'MongoDB' ),
-	'Frontend & Mobile'   => array( 'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js', 'React Native', 'Flutter' ),
+$bizpro_tech_stack = array(
+	'Cloud & DevOps'         => array( 'AWS', 'Google Cloud', 'Microsoft Azure', 'Docker', 'Kubernetes', 'Terraform', 'Helm', 'GitLab CI' ),
+	'Backend & DB'           => array( 'Python', 'Go', 'Node.js', 'PostgreSQL', 'Redis', 'Apache Kafka', 'GraphQL', 'MongoDB' ),
+	'Frontend & Mobile'      => array( 'React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js', 'React Native', 'Flutter' ),
 	'Security & Reliability' => array( 'HashiCorp Vault', 'Cloudflare Enterprise', 'SOC2 Certified', 'Datadog', 'Prometheus', 'Grafana' ),
 );
 
-$it_cases = array(
+$bizpro_it_cases = array(
 	array(
 		'client' => 'FinTech Global Payments',
 		'title'  => 'Cloud-Native Migration & Microservices Architecture',
@@ -131,14 +131,14 @@ $it_cases = array(
 			</header>
 
 			<div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-				<?php foreach ( $it_services as $s ) : ?>
+				<?php foreach ( $bizpro_it_services as $bizpro_s ) : ?>
 					<article class="service-card" style="position: relative; border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-						<span style="position: absolute; top: 16px; right: 16px; font-size: 11px; font-weight: 700; color: #6366f1; background: rgba(99,102,241,0.1); padding: 3px 8px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $s['tag'] ); ?></span>
+						<span style="position: absolute; top: 16px; right: 16px; font-size: 11px; font-weight: 700; color: #6366f1; background: rgba(99,102,241,0.1); padding: 3px 8px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $bizpro_s['tag'] ); ?></span>
 						<div class="service-card__icon" style="background: rgba(99,102,241,0.1); color: #6366f1;">
-							<?php echo bizpro_agency_get_icon( $s['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo bizpro_agency_get_icon( $bizpro_s['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</div>
-						<h3 class="service-card__title"><?php echo esc_html( $s['title'] ); ?></h3>
-						<p class="service-card__text"><?php echo esc_html( $s['desc'] ); ?></p>
+						<h3 class="service-card__title"><?php echo esc_html( $bizpro_s['title'] ); ?></h3>
+						<p class="service-card__text"><?php echo esc_html( $bizpro_s['desc'] ); ?></p>
 					</article>
 				<?php endforeach; ?>
 			</div>
@@ -155,12 +155,12 @@ $it_cases = array(
 			</header>
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
-				<?php foreach ( $tech_stack as $category => $items ) : ?>
+				<?php foreach ( $bizpro_tech_stack as $bizpro_category => $bizpro_items ) : ?>
 					<div class="bpa-tech-card" style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.04); transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;">
-						<h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; color: var(--bpa-text, #0f172a); border-bottom: 2px solid #6366f1; padding-bottom: 8px; display: inline-block;"><?php echo esc_html( $category ); ?></h3>
+						<h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 16px; color: var(--bpa-text, #0f172a); border-bottom: 2px solid #6366f1; padding-bottom: 8px; display: inline-block;"><?php echo esc_html( $bizpro_category ); ?></h3>
 						<div style="display: flex; flex-wrap: wrap; gap: 8px;">
-							<?php foreach ( $items as $tech ) : ?>
-								<span style="background: var(--bpa-bg-alt, #f1f5f9); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 8px; padding: 7px 13px; font-size: 0.88rem; font-weight: 600; color: var(--bpa-text, #334155); transition: all 0.2s ease;"><?php echo esc_html( $tech ); ?></span>
+							<?php foreach ( $bizpro_items as $bizpro_tech ) : ?>
+								<span style="background: var(--bpa-bg-alt, #f1f5f9); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 8px; padding: 7px 13px; font-size: 0.88rem; font-weight: 600; color: var(--bpa-text, #334155); transition: all 0.2s ease;"><?php echo esc_html( $bizpro_tech ); ?></span>
 							<?php endforeach; ?>
 						</div>
 					</div>
@@ -179,19 +179,19 @@ $it_cases = array(
 			</header>
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-				<?php foreach ( $it_cases as $cs ) : ?>
+				<?php foreach ( $bizpro_it_cases as $bizpro_cs ) : ?>
 					<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(0,0,0,0.05);">
 						<div>
 							<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-								<span style="font-size: 0.8rem; font-weight: 700; color: var(--bpa-text-muted, #64748b); text-transform: uppercase;"><?php echo esc_html( $cs['client'] ); ?></span>
-								<span style="background: rgba(16,185,129,0.1); color: #10b981; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 20px;"><?php echo esc_html( $cs['badge'] ); ?></span>
+								<span style="font-size: 0.8rem; font-weight: 700; color: var(--bpa-text-muted, #64748b); text-transform: uppercase;"><?php echo esc_html( $bizpro_cs['client'] ); ?></span>
+								<span style="background: rgba(16,185,129,0.1); color: #10b981; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 20px;"><?php echo esc_html( $bizpro_cs['badge'] ); ?></span>
 							</div>
-							<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $cs['title'] ); ?></h3>
-							<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;"><?php echo esc_html( $cs['desc'] ); ?></p>
+							<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $bizpro_cs['title'] ); ?></h3>
+							<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;"><?php echo esc_html( $bizpro_cs['desc'] ); ?></p>
 						</div>
 						<div style="border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
 							<span style="font-size: 0.85rem; color: var(--bpa-text-muted, #64748b);"><?php esc_html_e( 'Key Result:', 'bizpro-agency' ); ?></span>
-							<strong style="color: #2563eb; font-size: 1.15rem; font-weight: 800;"><?php echo esc_html( $cs['result'] ); ?></strong>
+							<strong style="color: #2563eb; font-size: 1.15rem; font-weight: 800;"><?php echo esc_html( $bizpro_cs['result'] ); ?></strong>
 						</div>
 					</div>
 				<?php endforeach; ?>
@@ -291,11 +291,11 @@ $it_cases = array(
 				<p class="cta-banner__subtitle"><?php esc_html_e( 'Schedule a zero-obligation 30-minute architectural audit with our principal cloud engineers today.', 'bizpro-agency' ); ?></p>
 			</div>
 			<div class="cta-banner__actions">
-				<?php if ( $bpa_phone ) : ?>
-					<a class="btn btn--light btn--lg" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bpa_phone ) ); ?>"><?php echo esc_html( $bpa_phone ); ?></a>
+				<?php if ( $bizpro_phone ) : ?>
+					<a class="btn btn--light btn--lg" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>"><?php echo esc_html( $bizpro_phone ); ?></a>
 				<?php endif; ?>
-				<?php if ( $bpa_email ) : ?>
-					<a class="btn btn--outline btn--lg" href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>"><?php esc_html_e( 'Email Engineering Team', 'bizpro-agency' ); ?></a>
+				<?php if ( $bizpro_email ) : ?>
+					<a class="btn btn--outline btn--lg" href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>"><?php esc_html_e( 'Email Engineering Team', 'bizpro-agency' ); ?></a>
 				<?php endif; ?>
 			</div>
 		</div>

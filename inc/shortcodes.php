@@ -47,7 +47,7 @@ add_shortcode( 'bpa_breadcrumbs', 'bizpro_agency_breadcrumbs_shortcode' );
  * [bpa_search placeholder="..."] — Accessible AJAX-ready search bar
  * ================================================================== */
 function bizpro_agency_search_shortcode( $atts ) {
-	$a = shortcode_atts(
+	$a  = shortcode_atts(
 		array(
 			'placeholder' => __( 'Search anything...', 'bizpro-agency' ),
 			'style'       => 'default',
@@ -97,7 +97,7 @@ function bizpro_agency_mini_cart_shortcode() {
 	<div class="bpa-mini-cart" id="bpa-mini-cart-wrap">
 		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>"
 			class="bpa-mini-cart__link"
-			aria-label="<?php echo esc_attr( sprintf( _n( 'View cart (%d item)', 'View cart (%d items)', $count, 'bizpro-agency' ), $count ) ); ?>">
+			aria-label="<?php echo esc_attr( sprintf( /* translators: %d: number. */ _n( 'View cart (%d item)', 'View cart (%d items)', $count, 'bizpro-agency' ), $count ) ); ?>">
 			<svg class="bpa-mini-cart__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 				<path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
 				<line x1="3" y1="6" x2="21" y2="6"/>
@@ -136,15 +136,50 @@ function bizpro_agency_demos_shortcode( $atts ) {
 		'bpa_demos'
 	);
 
-	$img_uri = trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/';
+	$img_uri   = trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/';
 	$all_demos = array(
-		'agency'      => array( 'title' => 'Main Flagship Agency',           'url' => home_url( '/' ),                     'img' => $img_uri . 'demo-main.png',        'badge' => 'Popular' ),
-		'visa'        => array( 'title' => 'Visa & Immigration',             'url' => home_url( '/visa-immigration/' ),    'img' => $img_uri . 'demo-visa.png',        'badge' => 'Hot' ),
-		'travel'      => array( 'title' => 'Travel & Tour Agency',           'url' => home_url( '/travel-agency/' ),       'img' => $img_uri . 'demo-travel.png',      'badge' => 'New' ),
-		'it'          => array( 'title' => 'IT Solutions & Cloud',           'url' => home_url( '/it-solutions/' ),        'img' => $img_uri . 'demo-it.png',          'badge' => 'Tech' ),
-		'consulting'  => array( 'title' => 'Business Consulting',            'url' => home_url( '/business-consulting/' ),   'img' => $img_uri . 'demo-consulting.png',  'badge' => 'Pro' ),
-		'corporate'   => array( 'title' => 'Corporate Enterprise',           'url' => home_url( '/corporate/' ),           'img' => $img_uri . 'demo-corporate.png',   'badge' => 'Elite' ),
-		'digital'     => array( 'title' => 'Digital Products & SaaS',        'url' => home_url( '/digital-store/' ),       'img' => $img_uri . 'demo-digital.png',     'badge' => 'eCom' ),
+		'agency'     => array(
+			'title' => 'Main Flagship Agency',
+			'url'   => home_url( '/' ),
+			'img'   => $img_uri . 'demo-main.png',
+			'badge' => 'Popular',
+		),
+		'visa'       => array(
+			'title' => 'Visa & Immigration',
+			'url'   => bizpro_agency_page_url( 'home', 'visa' ),
+			'img'   => $img_uri . 'demo-visa.png',
+			'badge' => 'Hot',
+		),
+		'travel'     => array(
+			'title' => 'Travel & Tour Agency',
+			'url'   => bizpro_agency_page_url( 'home', 'travel' ),
+			'img'   => $img_uri . 'demo-travel.png',
+			'badge' => 'New',
+		),
+		'it'         => array(
+			'title' => 'IT Solutions & Cloud',
+			'url'   => bizpro_agency_page_url( 'home', 'it' ),
+			'img'   => $img_uri . 'demo-it.png',
+			'badge' => 'Tech',
+		),
+		'consulting' => array(
+			'title' => 'Business Consulting',
+			'url'   => bizpro_agency_page_url( 'home', 'consulting' ),
+			'img'   => $img_uri . 'demo-consulting.png',
+			'badge' => 'Pro',
+		),
+		'corporate'  => array(
+			'title' => 'Corporate Enterprise',
+			'url'   => bizpro_agency_page_url( 'home', 'corporate' ),
+			'img'   => $img_uri . 'demo-corporate.png',
+			'badge' => 'Elite',
+		),
+		'digital'    => array(
+			'title' => 'Digital Products & SaaS',
+			'url'   => bizpro_agency_page_url( 'home', 'digital' ),
+			'img'   => $img_uri . 'demo-digital.png',
+			'badge' => 'eCom',
+		),
 	);
 
 	$demos = $all_demos;

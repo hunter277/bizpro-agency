@@ -14,18 +14,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$bpa_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
+$bizpro_email = bizpro_agency_get( 'topbar_email', 'sales@bizproagency.com' );
 
 // Dynamic WooCommerce Checkout / Cart Integration
-$bpa_has_wc = function_exists( 'wc_get_checkout_url' );
-$bpa_buy_p1 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '1', wc_get_checkout_url() ) : home_url( '/contact/?product=saas-ui-kit' );
-$bpa_buy_p2 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '2', wc_get_checkout_url() ) : home_url( '/contact/?product=devops-pack' );
-$bpa_buy_p3 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '3', wc_get_checkout_url() ) : home_url( '/contact/?product=nextjs-boilerplate' );
-$bpa_buy_p4 = $bpa_has_wc ? add_query_arg( 'add-to-cart', '4', wc_get_checkout_url() ) : home_url( '/contact/?product=lifetime-bundle' );
+$bizpro_has_wc = function_exists( 'wc_get_checkout_url' );
+$bizpro_buy_p1 = $bizpro_has_wc ? add_query_arg( 'add-to-cart', '1', wc_get_checkout_url() ) : add_query_arg( wp_parse_args( 'product=saas-ui-kit' ), bizpro_agency_page_url( 'contact' ) );
+$bizpro_buy_p2 = $bizpro_has_wc ? add_query_arg( 'add-to-cart', '2', wc_get_checkout_url() ) : add_query_arg( wp_parse_args( 'product=devops-pack' ), bizpro_agency_page_url( 'contact' ) );
+$bizpro_buy_p3 = $bizpro_has_wc ? add_query_arg( 'add-to-cart', '3', wc_get_checkout_url() ) : add_query_arg( wp_parse_args( 'product=nextjs-boilerplate' ), bizpro_agency_page_url( 'contact' ) );
+$bizpro_buy_p4 = $bizpro_has_wc ? add_query_arg( 'add-to-cart', '4', wc_get_checkout_url() ) : add_query_arg( wp_parse_args( 'product=lifetime-bundle' ), bizpro_agency_page_url( 'contact' ) );
 
-$bpa_buy_starter = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'starter', wc_get_checkout_url() ) : home_url( '/contact/?plan=starter' );
-$bpa_buy_pro     = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'pro', wc_get_checkout_url() ) : home_url( '/contact/?plan=pro' );
-$bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_checkout_url() ) : home_url( '/contact/?plan=agency' );
+$bizpro_buy_starter = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'starter', wc_get_checkout_url() ) : add_query_arg( wp_parse_args( 'plan=starter' ), bizpro_agency_page_url( 'contact' ) );
+$bizpro_buy_pro     = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'pro', wc_get_checkout_url() ) : add_query_arg( wp_parse_args( 'plan=pro' ), bizpro_agency_page_url( 'contact' ) );
+$bizpro_buy_agency  = $bizpro_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_checkout_url() ) : add_query_arg( wp_parse_args( 'plan=agency' ), bizpro_agency_page_url( 'contact' ) );
 ?>
 
 <main id="primary" class="site-main site-main--digital">
@@ -151,8 +151,8 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 	</section>
 
 	<!-- =====================================================================
-	     DIGITAL PRODUCT STORE (SHOP GRID) SECTION
-	     =================================================================== -->
+		DIGITAL PRODUCT STORE (SHOP GRID) SECTION
+		=================================================================== -->
 	<section id="products" class="section section--digital-products" style="padding: 90px 0; background: var(--bpa-bg-alt, #f8fafc); border-top: 1px solid var(--bpa-border, #e2e8f0);">
 		<div class="container">
 			<div style="text-align: center; max-width: 700px; margin: 0 auto 60px;">
@@ -184,7 +184,7 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 								</div>
 								<span style="font-size: 0.8rem; color: #10b981; font-weight: 700;">★ 4.9 (48)</span>
 							</div>
-							<a href="<?php echo esc_url( $bpa_buy_p1 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
+							<a href="<?php echo esc_url( $bizpro_buy_p1 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
 								<?php esc_html_e( 'Get Instant Access →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -211,7 +211,7 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 								</div>
 								<span style="font-size: 0.8rem; color: #10b981; font-weight: 700;">★ 5.0 (32)</span>
 							</div>
-							<a href="<?php echo esc_url( $bpa_buy_p2 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
+							<a href="<?php echo esc_url( $bizpro_buy_p2 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
 								<?php esc_html_e( 'Get Instant Access →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -238,7 +238,7 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 								</div>
 								<span style="font-size: 0.8rem; color: #10b981; font-weight: 700;">★ 4.9 (61)</span>
 							</div>
-							<a href="<?php echo esc_url( $bpa_buy_p3 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
+							<a href="<?php echo esc_url( $bizpro_buy_p3 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none;">
 								<?php esc_html_e( 'Get Instant Access →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -265,7 +265,7 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 								</div>
 								<span style="font-size: 0.8rem; color: #6366f1; font-weight: 700;">★ 5.0 (120)</span>
 							</div>
-							<a href="<?php echo esc_url( $bpa_buy_p4 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none; background: #6366f1; border-color: #6366f1;">
+							<a href="<?php echo esc_url( $bizpro_buy_p4 ); ?>" class="btn btn--primary" style="display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none; background: #6366f1; border-color: #6366f1;">
 								<?php esc_html_e( 'Buy All-Access Bundle →', 'bizpro-agency' ); ?>
 							</a>
 						</div>
@@ -412,10 +412,10 @@ $bpa_buy_agency  = $bpa_has_wc ? add_query_arg( 'add-to-cart', 'agency', wc_get_
 				<h3 style="margin: 0 0 8px; color: var(--bpa-text, #0f172a); font-size: 1.3rem; font-weight: 800;"><?php esc_html_e( 'Have a question before buying?', 'bizpro-agency' ); ?></h3>
 				<p style="color: var(--bpa-text-muted, #64748b); margin-bottom: 20px; font-size: 0.95rem;"><?php esc_html_e( 'Our sales and technical support team is available 24/7 to assist with compatibility inquiries.', 'bizpro-agency' ); ?></p>
 				<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-					<a href="mailto:<?php echo esc_attr( $bpa_email ); ?>" class="btn btn--primary" style="text-decoration: none;">
+					<a href="mailto:<?php echo esc_attr( $bizpro_email ); ?>" class="btn btn--primary" style="text-decoration: none;">
 						<?php esc_html_e( 'Email Sales Desk', 'bizpro-agency' ); ?>
 					</a>
-					<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn" style="background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1; text-decoration: none;">
+					<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn" style="background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1; text-decoration: none;">
 						<?php esc_html_e( 'Submit Support Ticket', 'bizpro-agency' ); ?>
 					</a>
 				</div>

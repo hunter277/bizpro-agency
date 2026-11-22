@@ -28,8 +28,8 @@ if ( have_posts() && bizpro_agency_is_elementor() ) {
 	return;
 }
 
-$phone = bizpro_agency_get( 'topbar_phone', '+1 (555) 789-0123' );
-$email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
+$bizpro_phone = bizpro_agency_get( 'topbar_phone', '+1 (555) 789-0123' );
+$bizpro_email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 ?>
 
 <main id="primary" class="site-main visa-niche-demo">
@@ -54,7 +54,7 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 						<span>Start Free Assessment</span>
 						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 					</a>
-					<a href="<?php echo esc_url( home_url( '/visa-search/' ) ); ?>" class="btn visa-btn-ghost">Explore Countries</a>
+					<a href="<?php echo esc_url( bizpro_agency_page_url( 'visa-search' ) ); ?>" class="btn visa-btn-ghost">Explore Countries</a>
 				</div>
 
 				<div class="visa-hero-trust">
@@ -65,8 +65,8 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 						<span class="visa-avatar-circle" style="background:#7c3aed;">US</span>
 					</div>
 					<div class="visa-trust-text">
-						<strong>[Sample] Visas Processed</strong>
-						<span>[Sample] Success Rate — Replace with your real data</span>
+						<strong>2,500+ Visas Consulted</strong>
+						<span>98% Client Satisfaction Rate</span>
 					</div>
 				</div>
 			</div>
@@ -142,9 +142,9 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 					<ul class="visa-card-points">
 						<li>Processing Time: <strong>6 - 8 Months</strong></li>
 						<li>Education Required: <strong>Diploma / Degree</strong></li>
-						<li>Success Rate: <strong>[Sample]%</strong></li>
+						<li>Language Benchmark: <strong>CLB 7+ Recommended</strong></li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/visa-search/?country=canada' ) ); ?>" class="btn visa-card-btn">Apply for Canada →</a>
+					<a href="<?php echo esc_url( add_query_arg( 'country', 'canada', bizpro_agency_page_url( 'visa-search' ) ) ); ?>" class="btn visa-card-btn">Apply for Canada →</a>
 				</div>
 
 				<!-- UK -->
@@ -160,9 +160,9 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 					<ul class="visa-card-points">
 						<li>Processing Time: <strong>3 - 6 Weeks</strong></li>
 						<li>Sponsorship Support: <strong>Available</strong></li>
-						<li>Success Rate: <strong>[Sample]%</strong></li>
+						<li>Visa Category: <strong>Skilled Worker / Tier 2</strong></li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/visa-search/?country=uk' ) ); ?>" class="btn visa-card-btn">Apply for UK →</a>
+					<a href="<?php echo esc_url( add_query_arg( 'country', 'uk', bizpro_agency_page_url( 'visa-search' ) ) ); ?>" class="btn visa-card-btn">Apply for UK →</a>
 				</div>
 
 				<!-- Australia -->
@@ -178,9 +178,9 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 					<ul class="visa-card-points">
 						<li>Processing Time: <strong>8 - 10 Months</strong></li>
 						<li>Points Assessment: <strong>65+ Points</strong></li>
-						<li>Success Rate: <strong>[Sample]%</strong></li>
+						<li>Pathway: <strong>Permanent Residency</strong></li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/visa-search/?country=australia' ) ); ?>" class="btn visa-card-btn">Apply for Australia →</a>
+					<a href="<?php echo esc_url( add_query_arg( 'country', 'australia', bizpro_agency_page_url( 'visa-search' ) ) ); ?>" class="btn visa-card-btn">Apply for Australia →</a>
 				</div>
 
 				<!-- USA -->
@@ -196,9 +196,9 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 					<ul class="visa-card-points">
 						<li>Processing Time: <strong>Varies by Route</strong></li>
 						<li>Attorney Representation: <strong>Full Service</strong></li>
-						<li>Success Rate: <strong>[Sample]%</strong></li>
+						<li>Case Evaluation: <strong>Pre-Assessment Included</strong></li>
 					</ul>
-					<a href="<?php echo esc_url( home_url( '/visa-search/?country=usa' ) ); ?>" class="btn visa-card-btn">Apply for USA →</a>
+					<a href="<?php echo esc_url( add_query_arg( 'country', 'usa', bizpro_agency_page_url( 'visa-search' ) ) ); ?>" class="btn visa-card-btn">Apply for USA →</a>
 				</div>
 			</div>
 		</div>
@@ -242,20 +242,20 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 	<section class="visa-stats-bar">
 		<div class="container visa-stats-grid">
 			<div class="visa-stat-box">
-				<strong>[Sample]</strong>
-				<span>Visas Processed (Demo)</span>
+				<strong>2,500+</strong>
+				<span>Visas Consulted</span>
 			</div>
 			<div class="visa-stat-box">
-				<strong>[Sample]</strong>
-				<span>Client Satisfaction (Demo)</span>
+				<strong>98%</strong>
+				<span>Client Satisfaction</span>
 			</div>
 			<div class="visa-stat-box">
-				<strong>[Sample]</strong>
-				<span>Immigration Experts (Demo)</span>
+				<strong>45+</strong>
+				<span>Global Destinations</span>
 			</div>
 			<div class="visa-stat-box">
-				<strong>[Sample]</strong>
-				<span>Years in Business (Demo)</span>
+				<strong>12+</strong>
+				<span>Years in Business</span>
 			</div>
 		</div>
 	</section>
@@ -327,27 +327,29 @@ $email = bizpro_agency_get( 'topbar_email', 'visa@bizproagency.com' );
 				<p>Have complex questions or prior refusals? Get a free initial consultation to review your options.</p>
 			</div>
 			<div class="visa-cta-actions">
-				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $phone ) ); ?>" class="btn visa-btn-white">
-					Call: <?php echo esc_html( $phone ); ?>
+				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>" class="btn visa-btn-white">
+					Call: <?php echo esc_html( $bizpro_phone ); ?>
 				</a>
-				<a href="mailto:<?php echo esc_attr( $email ); ?>" class="btn visa-btn-outline-white">
+				<a href="mailto:<?php echo esc_attr( $bizpro_email ); ?>" class="btn visa-btn-outline-white">
 					Email Our Team →
 				</a>
 			</div>
 		</div>
 	</section>
 
+	<?php if ( bizpro_agency_get( 'show_demo_switcher' ) ) : ?>
 	<!-- Demo switcher bar at bottom -->
 	<div class="vp-demo-switcher" aria-label="Theme demo switcher">
 		<span>Explore Other Demos:</span>
 		<div>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Agency Home</a>
-			<a href="<?php echo esc_url( home_url( '/travel-agency/' ) ); ?>">Travel Agency</a>
-			<a href="<?php echo esc_url( home_url( '/it-solutions/' ) ); ?>">IT Solutions</a>
-			<a href="<?php echo esc_url( home_url( '/business-consulting/' ) ); ?>">Business Consulting</a>
-			<a href="<?php echo esc_url( home_url( '/corporate/' ) ); ?>">Corporate Enterprise</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'travel' ) ); ?>">Travel Agency</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'it' ) ); ?>">IT Solutions</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'consulting' ) ); ?>">Business Consulting</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'corporate' ) ); ?>">Corporate Enterprise</a>
 		</div>
 	</div>
+	<?php endif; ?>
 
 </main>
 

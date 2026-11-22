@@ -26,7 +26,7 @@ get_header();
 			<p style="color: #94a3b8; font-size: 1.05rem; margin: 0;">
 				<?php
 				global $wp_query;
-				printf( esc_html( _n( '%d result found', '%d results found', (int) $wp_query->found_posts, 'bizpro-agency' ) ), (int) $wp_query->found_posts );
+				printf( esc_html( /* translators: %d: number. */ _n( '%d result found', '%d results found', (int) $wp_query->found_posts, 'bizpro-agency' ) ), (int) $wp_query->found_posts );
 				?>
 			</p>
 		</div>

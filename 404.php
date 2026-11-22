@@ -40,7 +40,7 @@ get_header();
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn--primary" style="background: #2563eb; border-color: #2563eb; color: #ffffff; font-weight: 700; padding: 12px 28px; border-radius: 10px; text-decoration: none;">
 				<?php esc_html_e( 'Back to Homepage', 'bizpro-agency' ); ?>
 			</a>
-			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #ffffff; font-weight: 600; padding: 12px 24px; border-radius: 10px; text-decoration: none;">
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #ffffff; font-weight: 600; padding: 12px 24px; border-radius: 10px; text-decoration: none;">
 				<?php esc_html_e( 'Contact Support', 'bizpro-agency' ); ?>
 			</a>
 		</div>

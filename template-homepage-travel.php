@@ -28,15 +28,15 @@ if ( have_posts() && bizpro_agency_is_elementor() ) {
 	return;
 }
 
-$phone = bizpro_agency_get( 'topbar_phone', '+1 (555) 345-6789' );
-$email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
+$bizpro_phone = bizpro_agency_get( 'topbar_phone', '+1 (555) 345-6789' );
+$bizpro_email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 ?>
 
 <main id="primary" class="site-main travel-niche-demo">
 
 	<!-- 1. HERO WITH SEARCH BAR WIDGET -->
 	<section class="travel-hero">
-		<div class="travel-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2000&q=85') /* TODO: bundle locally */ /* TODO: Replace with locally-bundled image in demo import */;"></div>
+		<div class="travel-hero__bg" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-01.svg' ) ); ?>');"></div>
 		<div class="travel-hero__overlay"></div>
 		<div class="container travel-hero__container">
 			<div class="travel-hero__content">
@@ -136,7 +136,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 
 			<div class="travel-dest-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
 				<!-- Dest 1 -->
-				<a href="<?php echo esc_url( home_url( '/tour-packages/' ) ); ?>" class="travel-dest-card" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85') /* TODO: bundle locally */; text-decoration: none; color: inherit; display: block;">
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'tour-packages' ) ); ?>" class="travel-dest-card" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-02.svg' ) ); ?>'); text-decoration: none; color: inherit; display: block;">
 					<div class="travel-dest-overlay"></div>
 					<div class="travel-dest-tag">Top Choice</div>
 					<div class="travel-dest-content">
@@ -150,7 +150,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				</a>
 
 				<!-- Dest 2 -->
-				<a href="<?php echo esc_url( home_url( '/tour-packages/' ) ); ?>" class="travel-dest-card" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=85') /* TODO: bundle locally */; text-decoration: none; color: inherit; display: block;">
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'tour-packages' ) ); ?>" class="travel-dest-card" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-03.svg' ) ); ?>'); text-decoration: none; color: inherit; display: block;">
 					<div class="travel-dest-overlay"></div>
 					<div class="travel-dest-content">
 						<span class="travel-dest-country">France</span>
@@ -163,7 +163,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				</a>
 
 				<!-- Dest 3 -->
-				<a href="<?php echo esc_url( home_url( '/tour-packages/' ) ); ?>" class="travel-dest-card" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=85') /* TODO: bundle locally */; text-decoration: none; color: inherit; display: block;">
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'tour-packages' ) ); ?>" class="travel-dest-card" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-04.svg' ) ); ?>'); text-decoration: none; color: inherit; display: block;">
 					<div class="travel-dest-overlay"></div>
 					<div class="travel-dest-content">
 						<span class="travel-dest-country">Australia</span>
@@ -176,7 +176,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				</a>
 
 				<!-- Dest 4 -->
-				<a href="<?php echo esc_url( home_url( '/tour-packages/' ) ); ?>" class="travel-dest-card" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=85') /* TODO: bundle locally */; text-decoration: none; color: inherit; display: block;">
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'tour-packages' ) ); ?>" class="travel-dest-card" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-05.svg' ) ); ?>'); text-decoration: none; color: inherit; display: block;">
 					<div class="travel-dest-overlay"></div>
 					<div class="travel-dest-content">
 						<span class="travel-dest-country">United Arab Emirates</span>
@@ -189,7 +189,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				</a>
 
 				<!-- Dest 5 -->
-				<a href="<?php echo esc_url( home_url( '/tour-packages/' ) ); ?>" class="travel-dest-card" style="background-image: url('https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1000&q=85') /* TODO: bundle locally */; text-decoration: none; color: inherit; display: block;">
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'tour-packages' ) ); ?>" class="travel-dest-card" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-06.svg' ) ); ?>'); text-decoration: none; color: inherit; display: block;">
 					<div class="travel-dest-overlay"></div>
 					<div class="travel-dest-tag">Winter & Summer</div>
 					<div class="travel-dest-content">
@@ -203,7 +203,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				</a>
 
 				<!-- Dest 6 -->
-				<a href="<?php echo esc_url( home_url( '/tour-packages/' ) ); ?>" class="travel-dest-card" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=85') /* TODO: bundle locally */; text-decoration: none; color: inherit; display: block;">
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'tour-packages' ) ); ?>" class="travel-dest-card" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-07.svg' ) ); ?>'); text-decoration: none; color: inherit; display: block;">
 					<div class="travel-dest-overlay"></div>
 					<div class="travel-dest-tag">Cultural Choice</div>
 					<div class="travel-dest-content">
@@ -232,7 +232,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				<!-- Package 1 -->
 				<article class="travel-pkg-card">
 					<div class="travel-pkg-thumb">
-						<img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=85" alt="Maldives Overwater Bungalow">
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-08.svg' ) ); ?>" alt="Maldives Overwater Bungalow">
 						<span class="travel-pkg-badge">Best Seller</span>
 						<span class="travel-pkg-duration">7 Days / 6 Nights</span>
 					</div>
@@ -240,7 +240,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 						<div class="travel-pkg-rating">
 							<span class="travel-stars">★★★★★</span>
 							<span class="travel-score">4.9</span>
-							<span class="travel-reviews">([Sample] reviews)</span>
+							<span class="travel-reviews">(120+ reviews)</span>
 						</div>
 						<h3 class="travel-pkg-title">Maldives Private Lagoon & Luxury Overwater Escape</h3>
 						<ul class="travel-pkg-features">
@@ -262,7 +262,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				<!-- Package 2 -->
 				<article class="travel-pkg-card">
 					<div class="travel-pkg-thumb">
-						<img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=85" alt="Tokyo & Kyoto Japan">
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-09.svg' ) ); ?>" alt="Tokyo & Kyoto Japan">
 						<span class="travel-pkg-badge travel-pkg-badge--trending">Trending</span>
 						<span class="travel-pkg-duration">10 Days / 9 Nights</span>
 					</div>
@@ -270,7 +270,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 						<div class="travel-pkg-rating">
 							<span class="travel-stars">★★★★★</span>
 							<span class="travel-score">5.0</span>
-							<span class="travel-reviews">([Sample] reviews)</span>
+							<span class="travel-reviews">(95+ reviews)</span>
 						</div>
 						<h3 class="travel-pkg-title">Japan Golden Route: Tokyo, Kyoto & Mt. Fuji Bullet Train</h3>
 						<ul class="travel-pkg-features">
@@ -292,7 +292,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				<!-- Package 3 -->
 				<article class="travel-pkg-card">
 					<div class="travel-pkg-thumb">
-						<img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=85" alt="Santorini Sunset">
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-10.svg' ) ); ?>" alt="Santorini Sunset">
 						<span class="travel-pkg-badge">Summer Special</span>
 						<span class="travel-pkg-duration">8 Days / 7 Nights</span>
 					</div>
@@ -300,7 +300,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 						<div class="travel-pkg-rating">
 							<span class="travel-stars">★★★★★</span>
 							<span class="travel-score">4.9</span>
-							<span class="travel-reviews">([Sample] reviews)</span>
+							<span class="travel-reviews">(140+ reviews)</span>
 						</div>
 						<h3 class="travel-pkg-title">Greek Island Hopping: Athens, Mykonos & Santorini</h3>
 						<ul class="travel-pkg-features">
@@ -367,7 +367,7 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 
 				<div class="travel-why-visual">
 					<div class="travel-why-img-card">
-						<img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=85" alt="Happy couple traveling">
+						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/art/art-11.svg' ) ); ?>" alt="Happy couple traveling">
 						<div class="travel-floating-badge travel-floating-badge--top">
 							<span class="travel-float-icon">🏆</span>
 							<div>
@@ -378,8 +378,8 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 						<div class="travel-floating-badge travel-floating-badge--bottom">
 							<span class="travel-float-icon">⭐</span>
 							<div>
-								<strong>[Sample] Star Rating</strong>
-								<small>[Sample] Verified Reviews</small>
+								<strong>4.9 Star Rating</strong>
+								<small>500+ Verified Traveler Reviews</small>
 							</div>
 						</div>
 					</div>
@@ -397,10 +397,10 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 				<p>Book your summer holiday package 60 days in advance and enjoy complimentary resort upgrades, free travel insurance, and zero cancellation fee.</p>
 			</div>
 			<div class="travel-promo-actions">
-				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $phone ) ); ?>" class="btn travel-promo-call-btn">
-					<span>Call Us: <?php echo esc_html( $phone ); ?></span>
+				<a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>" class="btn travel-promo-call-btn">
+					<span>Call Us: <?php echo esc_html( $bizpro_phone ); ?></span>
 				</a>
-				<a href="mailto:<?php echo esc_attr( $email ); ?>" class="btn travel-promo-email-btn">
+				<a href="mailto:<?php echo esc_attr( $bizpro_email ); ?>" class="btn travel-promo-email-btn">
 					Request Custom Quote →
 				</a>
 			</div>
@@ -476,14 +476,14 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 							<span class="travel-c-icon">📞</span>
 							<div>
 								<small>Direct Phone & WhatsApp</small>
-								<strong><?php echo esc_html( $phone ); ?></strong>
+								<strong><?php echo esc_html( $bizpro_phone ); ?></strong>
 							</div>
 						</div>
 						<div class="travel-contact-row">
 							<span class="travel-c-icon">✉️</span>
 							<div>
 								<small>Concierge Desk Email</small>
-								<strong><?php echo esc_html( $email ); ?></strong>
+								<strong><?php echo esc_html( $bizpro_email ); ?></strong>
 							</div>
 						</div>
 						<div class="travel-contact-row">
@@ -528,17 +528,19 @@ $email = bizpro_agency_get( 'topbar_email', 'travel@bizproagency.com' );
 		</div>
 	</section>
 
+	<?php if ( bizpro_agency_get( 'show_demo_switcher' ) ) : ?>
 	<!-- Demo switcher bar at bottom -->
 	<div class="vp-demo-switcher" aria-label="Theme demo switcher">
 		<span>Explore Other Demos:</span>
 		<div>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Agency Home</a>
-			<a href="<?php echo esc_url( home_url( '/visa-immigration/' ) ); ?>">Visa & Immigration</a>
-			<a href="<?php echo esc_url( home_url( '/it-solutions/' ) ); ?>">IT Solutions</a>
-			<a href="<?php echo esc_url( home_url( '/business-consulting/' ) ); ?>">Business Consulting</a>
-			<a href="<?php echo esc_url( home_url( '/corporate/' ) ); ?>">Corporate Enterprise</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'visa' ) ); ?>">Visa & Immigration</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'it' ) ); ?>">IT Solutions</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'consulting' ) ); ?>">Business Consulting</a>
+			<a href="<?php echo esc_url( bizpro_agency_page_url( 'home', 'corporate' ) ); ?>">Corporate Enterprise</a>
 		</div>
 	</div>
+	<?php endif; ?>
 
 </main>
 

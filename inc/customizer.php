@@ -92,6 +92,22 @@ function bizpro_agency_customize_register( $wp_customize ) {
 			'type'    => 'checkbox',
 		)
 	);
+	$wp_customize->add_setting(
+		'show_demo_switcher',
+		array(
+			'default'           => false,
+			'sanitize_callback' => 'bizpro_agency_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'show_demo_switcher',
+		array(
+			'label'       => esc_html__( 'Show demo switcher (showcase sites only)', 'bizpro-agency' ),
+			'description' => esc_html__( 'Adds an "All Demos" menu and floating demo bar. Leave off on a live client site.', 'bizpro-agency' ),
+			'section'     => 'bizpro_agency_topbar',
+			'type'        => 'checkbox',
+		)
+	);
 	$text_fields = array(
 		'topbar_phone'   => esc_html__( 'Phone', 'bizpro-agency' ),
 		'topbar_email'   => esc_html__( 'Email', 'bizpro-agency' ),
@@ -865,14 +881,46 @@ function bizpro_agency_customize_register( $wp_customize ) {
 		)
 	);
 	// Enable toggle
-	$wp_customize->add_setting( 'client_logos_enable', array( 'default' => $d['client_logos_enable'], 'sanitize_callback' => 'bizpro_agency_sanitize_checkbox' ) );
-	$wp_customize->add_control( 'client_logos_enable', array( 'label' => esc_html__( 'Show Client Logos Bar', 'bizpro-agency' ), 'section' => 'bizpro_agency_client_logos', 'type' => 'checkbox' ) );
+	$wp_customize->add_setting(
+		'client_logos_enable',
+		array(
+			'default'           => $d['client_logos_enable'],
+			'sanitize_callback' => 'bizpro_agency_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'client_logos_enable',
+		array(
+			'label'   => esc_html__( 'Show Client Logos Bar', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_client_logos',
+			'type'    => 'checkbox',
+		)
+	);
 	// Title
-	$wp_customize->add_setting( 'client_logos_title', array( 'default' => $d['client_logos_title'], 'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'client_logos_title', array( 'label' => esc_html__( 'Bar Title', 'bizpro-agency' ), 'section' => 'bizpro_agency_client_logos', 'type' => 'text' ) );
+	$wp_customize->add_setting(
+		'client_logos_title',
+		array(
+			'default'           => $d['client_logos_title'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'client_logos_title',
+		array(
+			'label'   => esc_html__( 'Bar Title', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_client_logos',
+			'type'    => 'text',
+		)
+	);
 	// Logo names 1-6
 	for ( $l = 1; $l <= 6; $l++ ) {
-		$wp_customize->add_setting( "client_logo_{$l}", array( 'default' => $d[ "client_logo_{$l}" ], 'sanitize_callback' => 'sanitize_text_field' ) );
+		$wp_customize->add_setting(
+			"client_logo_{$l}",
+			array(
+				'default'           => $d[ "client_logo_{$l}" ],
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
 		$wp_customize->add_control(
 			"client_logo_{$l}",
 			array(
@@ -894,21 +942,112 @@ function bizpro_agency_customize_register( $wp_customize ) {
 			'panel' => 'bizpro_agency_panel',
 		)
 	);
-	$wp_customize->add_setting( 'cases_enable', array( 'default' => $d['cases_enable'], 'sanitize_callback' => 'bizpro_agency_sanitize_checkbox' ) );
-	$wp_customize->add_control( 'cases_enable', array( 'label' => esc_html__( 'Show Case Studies Section', 'bizpro-agency' ), 'section' => 'bizpro_agency_cases', 'type' => 'checkbox' ) );
-	$wp_customize->add_setting( 'cases_eyebrow', array( 'default' => $d['cases_eyebrow'], 'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'cases_eyebrow', array( 'label' => esc_html__( 'Eyebrow Text', 'bizpro-agency' ), 'section' => 'bizpro_agency_cases', 'type' => 'text' ) );
-	$wp_customize->add_setting( 'cases_title', array( 'default' => $d['cases_title'], 'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'cases_title', array( 'label' => esc_html__( 'Section Title', 'bizpro-agency' ), 'section' => 'bizpro_agency_cases', 'type' => 'text' ) );
+	$wp_customize->add_setting(
+		'cases_enable',
+		array(
+			'default'           => $d['cases_enable'],
+			'sanitize_callback' => 'bizpro_agency_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'cases_enable',
+		array(
+			'label'   => esc_html__( 'Show Case Studies Section', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_cases',
+			'type'    => 'checkbox',
+		)
+	);
+	$wp_customize->add_setting(
+		'cases_eyebrow',
+		array(
+			'default'           => $d['cases_eyebrow'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'cases_eyebrow',
+		array(
+			'label'   => esc_html__( 'Eyebrow Text', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_cases',
+			'type'    => 'text',
+		)
+	);
+	$wp_customize->add_setting(
+		'cases_title',
+		array(
+			'default'           => $d['cases_title'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'cases_title',
+		array(
+			'label'   => esc_html__( 'Section Title', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_cases',
+			'type'    => 'text',
+		)
+	);
 	for ( $c = 1; $c <= 3; $c++ ) {
-		$wp_customize->add_setting( "case_{$c}_tag",   array( 'default' => $d["case_{$c}_tag"],   'sanitize_callback' => 'sanitize_text_field' ) );
-		$wp_customize->add_setting( "case_{$c}_title", array( 'default' => $d["case_{$c}_title"], 'sanitize_callback' => 'sanitize_text_field' ) );
-		$wp_customize->add_setting( "case_{$c}_desc",  array( 'default' => $d["case_{$c}_desc"],  'sanitize_callback' => 'sanitize_text_field' ) );
-		$wp_customize->add_setting( "case_{$c}_result",array( 'default' => $d["case_{$c}_result"],'sanitize_callback' => 'sanitize_text_field' ) );
-		$wp_customize->add_control( "case_{$c}_tag",   array( 'label' => sprintf( esc_html__( 'Case %d: Tag', 'bizpro-agency' ), $c ),    'section' => 'bizpro_agency_cases', 'type' => 'text' ) );
-		$wp_customize->add_control( "case_{$c}_title", array( 'label' => sprintf( esc_html__( 'Case %d: Title', 'bizpro-agency' ), $c ),   'section' => 'bizpro_agency_cases', 'type' => 'text' ) );
-		$wp_customize->add_control( "case_{$c}_desc",  array( 'label' => sprintf( esc_html__( 'Case %d: Description', 'bizpro-agency' ), $c ), 'section' => 'bizpro_agency_cases', 'type' => 'textarea' ) );
-		$wp_customize->add_control( "case_{$c}_result",array( 'label' => sprintf( esc_html__( 'Case %d: Result Metric', 'bizpro-agency' ), $c ),'section' => 'bizpro_agency_cases', 'type' => 'text' ) );
+		$wp_customize->add_setting(
+			"case_{$c}_tag",
+			array(
+				'default'           => $d[ "case_{$c}_tag" ],
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
+		$wp_customize->add_setting(
+			"case_{$c}_title",
+			array(
+				'default'           => $d[ "case_{$c}_title" ],
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
+		$wp_customize->add_setting(
+			"case_{$c}_desc",
+			array(
+				'default'           => $d[ "case_{$c}_desc" ],
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
+		$wp_customize->add_setting(
+			"case_{$c}_result",
+			array(
+				'default'           => $d[ "case_{$c}_result" ],
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
+		$wp_customize->add_control(
+			"case_{$c}_tag",
+			array(
+				'label'   => sprintf( /* translators: %d: number. */ esc_html__( 'Case %d: Tag', 'bizpro-agency' ), $c ),
+				'section' => 'bizpro_agency_cases',
+				'type'    => 'text',
+			)
+		);
+		$wp_customize->add_control(
+			"case_{$c}_title",
+			array(
+				'label'   => sprintf( /* translators: %d: number. */ esc_html__( 'Case %d: Title', 'bizpro-agency' ), $c ),
+				'section' => 'bizpro_agency_cases',
+				'type'    => 'text',
+			)
+		);
+		$wp_customize->add_control(
+			"case_{$c}_desc",
+			array(
+				'label'   => sprintf( /* translators: %d: number. */ esc_html__( 'Case %d: Description', 'bizpro-agency' ), $c ),
+				'section' => 'bizpro_agency_cases',
+				'type'    => 'textarea',
+			)
+		);
+		$wp_customize->add_control(
+			"case_{$c}_result",
+			array(
+				'label'   => sprintf( /* translators: %d: number. */ esc_html__( 'Case %d: Result Metric', 'bizpro-agency' ), $c ),
+				'section' => 'bizpro_agency_cases',
+				'type'    => 'text',
+			)
+		);
 	}
 
 	/* =========================================================================
@@ -921,31 +1060,102 @@ function bizpro_agency_customize_register( $wp_customize ) {
 			'panel' => 'bizpro_agency_panel',
 		)
 	);
-	$wp_customize->add_setting( 'pricing_enable',   array( 'default' => $d['pricing_enable'],   'sanitize_callback' => 'bizpro_agency_sanitize_checkbox' ) );
-	$wp_customize->add_control( 'pricing_enable',   array( 'label' => esc_html__( 'Show Pricing Section', 'bizpro-agency' ), 'section' => 'bizpro_agency_pricing', 'type' => 'checkbox' ) );
-	$wp_customize->add_setting( 'pricing_eyebrow',  array( 'default' => $d['pricing_eyebrow'],  'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'pricing_eyebrow',  array( 'label' => esc_html__( 'Eyebrow Text', 'bizpro-agency' ), 'section' => 'bizpro_agency_pricing', 'type' => 'text' ) );
-	$wp_customize->add_setting( 'pricing_title',    array( 'default' => $d['pricing_title'],    'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'pricing_title',    array( 'label' => esc_html__( 'Section Title', 'bizpro-agency' ), 'section' => 'bizpro_agency_pricing', 'type' => 'text' ) );
-	$wp_customize->add_setting( 'pricing_subtitle', array( 'default' => $d['pricing_subtitle'], 'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'pricing_subtitle', array( 'label' => esc_html__( 'Section Subtitle', 'bizpro-agency' ), 'section' => 'bizpro_agency_pricing', 'type' => 'textarea' ) );
+	$wp_customize->add_setting(
+		'pricing_enable',
+		array(
+			'default'           => $d['pricing_enable'],
+			'sanitize_callback' => 'bizpro_agency_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'pricing_enable',
+		array(
+			'label'   => esc_html__( 'Show Pricing Section', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_pricing',
+			'type'    => 'checkbox',
+		)
+	);
+	$wp_customize->add_setting(
+		'pricing_eyebrow',
+		array(
+			'default'           => $d['pricing_eyebrow'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'pricing_eyebrow',
+		array(
+			'label'   => esc_html__( 'Eyebrow Text', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_pricing',
+			'type'    => 'text',
+		)
+	);
+	$wp_customize->add_setting(
+		'pricing_title',
+		array(
+			'default'           => $d['pricing_title'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'pricing_title',
+		array(
+			'label'   => esc_html__( 'Section Title', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_pricing',
+			'type'    => 'text',
+		)
+	);
+	$wp_customize->add_setting(
+		'pricing_subtitle',
+		array(
+			'default'           => $d['pricing_subtitle'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'pricing_subtitle',
+		array(
+			'label'   => esc_html__( 'Section Subtitle', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_pricing',
+			'type'    => 'textarea',
+		)
+	);
 	for ( $p = 1; $p <= 3; $p++ ) {
 		$keys = array( 'name', 'price', 'period', 'features', 'cta_text', 'cta_link' );
 		foreach ( $keys as $key ) {
 			$sanitize = ( 'features' === $key ) ? 'sanitize_textarea_field' : 'sanitize_text_field';
 			$type     = ( 'features' === $key ) ? 'textarea' : 'text';
-			$wp_customize->add_setting( "pricing_{$p}_{$key}", array( 'default' => $d[ "pricing_{$p}_{$key}" ], 'sanitize_callback' => $sanitize ) );
+			$wp_customize->add_setting(
+				"pricing_{$p}_{$key}",
+				array(
+					'default'           => $d[ "pricing_{$p}_{$key}" ],
+					'sanitize_callback' => $sanitize,
+				)
+			);
 			$wp_customize->add_control(
 				"pricing_{$p}_{$key}",
 				array(
-					'label'   => sprintf( esc_html__( 'Plan %1$d: %2$s', 'bizpro-agency' ), $p, ucfirst( str_replace( '_', ' ', $key ) ) ),
+					'label'   => sprintf( /* translators: 1: first value, 2: second value. */ esc_html__( 'Plan %1$d: %2$s', 'bizpro-agency' ), $p, ucfirst( str_replace( '_', ' ', $key ) ) ),
 					'section' => 'bizpro_agency_pricing',
 					'type'    => $type,
 				)
 			);
 		}
-		$wp_customize->add_setting( "pricing_{$p}_popular", array( 'default' => $d[ "pricing_{$p}_popular" ], 'sanitize_callback' => 'bizpro_agency_sanitize_checkbox' ) );
-		$wp_customize->add_control( "pricing_{$p}_popular", array( 'label' => sprintf( esc_html__( 'Plan %d: Mark as Popular', 'bizpro-agency' ), $p ), 'section' => 'bizpro_agency_pricing', 'type' => 'checkbox' ) );
+		$wp_customize->add_setting(
+			"pricing_{$p}_popular",
+			array(
+				'default'           => $d[ "pricing_{$p}_popular" ],
+				'sanitize_callback' => 'bizpro_agency_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			"pricing_{$p}_popular",
+			array(
+				'label'   => sprintf( /* translators: %d: number. */ esc_html__( 'Plan %d: Mark as Popular', 'bizpro-agency' ), $p ),
+				'section' => 'bizpro_agency_pricing',
+				'type'    => 'checkbox',
+			)
+		);
 	}
 
 	/* =========================================================================
@@ -958,17 +1168,82 @@ function bizpro_agency_customize_register( $wp_customize ) {
 			'panel' => 'bizpro_agency_panel',
 		)
 	);
-	$wp_customize->add_setting( 'faq_enable',  array( 'default' => $d['faq_enable'],  'sanitize_callback' => 'bizpro_agency_sanitize_checkbox' ) );
-	$wp_customize->add_control( 'faq_enable',  array( 'label' => esc_html__( 'Show FAQ Section', 'bizpro-agency' ), 'section' => 'bizpro_agency_faq', 'type' => 'checkbox' ) );
-	$wp_customize->add_setting( 'faq_eyebrow', array( 'default' => $d['faq_eyebrow'], 'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'faq_eyebrow', array( 'label' => esc_html__( 'Eyebrow Text', 'bizpro-agency' ), 'section' => 'bizpro_agency_faq', 'type' => 'text' ) );
-	$wp_customize->add_setting( 'faq_title',   array( 'default' => $d['faq_title'],   'sanitize_callback' => 'sanitize_text_field' ) );
-	$wp_customize->add_control( 'faq_title',   array( 'label' => esc_html__( 'Section Title', 'bizpro-agency' ), 'section' => 'bizpro_agency_faq', 'type' => 'text' ) );
+	$wp_customize->add_setting(
+		'faq_enable',
+		array(
+			'default'           => $d['faq_enable'],
+			'sanitize_callback' => 'bizpro_agency_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'faq_enable',
+		array(
+			'label'   => esc_html__( 'Show FAQ Section', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_faq',
+			'type'    => 'checkbox',
+		)
+	);
+	$wp_customize->add_setting(
+		'faq_eyebrow',
+		array(
+			'default'           => $d['faq_eyebrow'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'faq_eyebrow',
+		array(
+			'label'   => esc_html__( 'Eyebrow Text', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_faq',
+			'type'    => 'text',
+		)
+	);
+	$wp_customize->add_setting(
+		'faq_title',
+		array(
+			'default'           => $d['faq_title'],
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'faq_title',
+		array(
+			'label'   => esc_html__( 'Section Title', 'bizpro-agency' ),
+			'section' => 'bizpro_agency_faq',
+			'type'    => 'text',
+		)
+	);
 	for ( $f = 1; $f <= 6; $f++ ) {
-		$wp_customize->add_setting( "faq_{$f}_q", array( 'default' => $d["faq_{$f}_q"], 'sanitize_callback' => 'sanitize_text_field' ) );
-		$wp_customize->add_setting( "faq_{$f}_a", array( 'default' => $d["faq_{$f}_a"], 'sanitize_callback' => 'sanitize_textarea_field' ) );
-		$wp_customize->add_control( "faq_{$f}_q", array( 'label' => sprintf( esc_html__( 'FAQ %d: Question', 'bizpro-agency' ), $f ), 'section' => 'bizpro_agency_faq', 'type' => 'text' ) );
-		$wp_customize->add_control( "faq_{$f}_a", array( 'label' => sprintf( esc_html__( 'FAQ %d: Answer', 'bizpro-agency' ), $f ),   'section' => 'bizpro_agency_faq', 'type' => 'textarea' ) );
+		$wp_customize->add_setting(
+			"faq_{$f}_q",
+			array(
+				'default'           => $d[ "faq_{$f}_q" ],
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
+		$wp_customize->add_setting(
+			"faq_{$f}_a",
+			array(
+				'default'           => $d[ "faq_{$f}_a" ],
+				'sanitize_callback' => 'sanitize_textarea_field',
+			)
+		);
+		$wp_customize->add_control(
+			"faq_{$f}_q",
+			array(
+				'label'   => sprintf( /* translators: %d: number. */ esc_html__( 'FAQ %d: Question', 'bizpro-agency' ), $f ),
+				'section' => 'bizpro_agency_faq',
+				'type'    => 'text',
+			)
+		);
+		$wp_customize->add_control(
+			"faq_{$f}_a",
+			array(
+				'label'   => sprintf( /* translators: %d: number. */ esc_html__( 'FAQ %d: Answer', 'bizpro-agency' ), $f ),
+				'section' => 'bizpro_agency_faq',
+				'type'    => 'textarea',
+			)
+		);
 	}
 }
 add_action( 'customize_register', 'bizpro_agency_customize_register' );

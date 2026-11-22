@@ -3,7 +3,7 @@ Contributors: kamrulhasan
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 2.4.0
+Stable tag: 2.5.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: business, custom-colors, custom-logo, custom-menu, featured-images, one-column, two-columns, threaded-comments, translation-ready, theme-options, blog, e-commerce, rtl-language-support, block-patterns
@@ -97,54 +97,56 @@ To edit the six questions and answers, go to Appearance > Customize > BizPro Age
 
 == Importing Demo Data ==
 
-1. Activate BizPro Agency.
-2. Install and activate the free One Click Demo Import plugin (Appearance > Install Plugins if the theme recommends it, or Plugins > Add New and search for "One Click Demo Import").
-3. Open Appearance > Import Demo Data.
-4. Choose the starter site you want (Main Agency, Visa & Immigration, Travel, IT Solutions, Business Consulting, Corporate Enterprise, or Digital Products & SaaS) and click Import.
-5. Wait for the importer to finish. It imports sample pages and menus, assigns the selected homepage layout, and rewrites internal demo links to your own site.
-6. Go to Settings > Reading and confirm that Home is selected as the static homepage if it was not selected automatically.
-7. Visit Appearance > Customize > BizPro Agency Options > FAQ Section to edit the FAQ content.
+Each demo is a separate, self-contained content pack with its own homepage, inner pages (About, Services, Pricing, FAQ, Case Studies, Team, Contact, Privacy Policy, Terms, Disclaimer), blog page, sample posts and menus. Import only the one you want, or several side by side.
 
-The importer adds sample page content and menu structure; it does not import a WordPress database backup or guarantee that every third-party image is locally downloaded. Back up your site before importing demo data. The theme provides its own OCDI integration; the optional companion ZIP is not required for the theme importer.
+1. Activate BizPro Agency.
+2. Install and activate the free One Click Demo Import plugin (Appearance > Install Plugins, or Plugins > Add New).
+3. Open Appearance > Import Demo Data.
+4. Choose a demo (Main Agency, Visa & Immigration, Travel & Tour, IT Solutions, Business Consulting, Corporate Enterprise, or Digital Products & SaaS) and click Import.
+5. The importer sets the homepage and posts page, the tagline, the header button, and assigns the demo's primary and footer menus.
+
+The Digital Products & SaaS demo needs WooCommerce; the importer stops with a clear message if it is not active. Back up your site before importing. Demos import text content and menus only; images are theme artwork, not downloaded from third-party sites.
+
+The optional "BizPro Agency Companion" plugin adds the Visa Pathways custom post type and Elementor templates. It is not required for demo import.
+
+== Demo switcher ==
+
+The "All Demos" menu, floating demo bar and demo showcase section are for showcase sites only. They are hidden by default; enable them in Appearance > Customize > Top Bar > Show demo switcher.
 
 == Changelog ==
 
-= 1.5.1 =
-* Fixed FAQ accordion answers remaining hidden because of the HTML hidden attribute.
-* Synchronized FAQ aria-expanded and hidden states when opening and closing accordion items.
-* Demo import now restores missing default FAQ questions and answers.
-* Updated installation and FAQ troubleshooting documentation.
+= 2.5.0 =
+* Demo import rewritten: seven independent demo packs (demo-data/<demo>/content.xml), each with its own inner pages, posts, menus and homepage assignment.
+* Inner pages are found through page keys (bizpro_agency_page_url), so prefixed demo pages link to each other correctly and no longer depend on page slugs.
+* Removed slug-substring template routing; the Page Template chosen in the editor is always honoured.
+* Theme activation no longer creates 19 pages automatically.
+* Demo switcher, "All Demos" menu and demo showcase are off by default (Customizer option).
+* Fonts (Outfit, Plus Jakarta Sans) are now bundled locally (WOFF2, SIL OFL); no Google Fonts request.
+* Replaced hotlinked Unsplash photos with bundled SVG artwork.
+* SEO meta, Open Graph and schema output stand down when Yoast, Rank Math, AIOSEO, SEOPress or The SEO Framework is active.
+* Removed the forced robots meta tag; JSON-LD is hex-encoded.
+* AdSense: ad code is supplied through widget areas only; removed raw theme_mod output.
+* WordPress Coding Standards: zero PHPCS errors/warnings (WordPress-Extra), prefixed template variables, translators comments, nonce-safe reads.
+* Companion plugin 1.2.0: demo importer removed (the theme owns it), text domain corrected.
 
+= 2.4.0 =
+* Added Digital Products & SaaS demo, FAQ, Pricing, Case Studies, Team, Visa Pathways and Tour Packages templates.
+* Added lead handler, shortcodes and white-label settings.
+
+= 2.2.1 =
+* Fixed PHP syntax errors in front-page and single templates; corrected Digital/Corporate importer registration.
+
+= 1.5.1 =
+* Fixed FAQ accordion answers remaining hidden; synchronised aria-expanded and hidden states.
 
 = 1.2.0 =
-* Added Client Trust Logos Bar with Customizer options.
-* Added Case Studies section with metric results tags.
-* Added Interactive Pricing Tables with 3 tiered plans and popular ribbon.
-* Added dynamic FAQ Accordion with accessible ARIA tags and vanilla JS.
-* Added Schema.org LocalBusiness microdata JSON-LD for rich SEO snippets.
-* Added Open Graph & Twitter Card social sharing meta tags.
-* Added Schema breadcrumbs navigation helper (inc/breadcrumbs.php).
-* Added GDPR Cookie Consent banner with smooth dismiss animation.
-* Updated POT translation catalog to 329 translatable strings.
-* Updated theme root screenshot and documentation.
+* Added Client Trust Logos bar, Case Studies, Pricing Tables, FAQ accordion, JSON-LD, Open Graph tags, breadcrumbs and cookie notice.
 
 = 1.1.0 =
-* Added dynamic Customizer controls for Services, About, Stats, Testimonials, and CTA sections.
-* Added native Right-to-Left (RTL) language support with rtl.css.
-* Added full WooCommerce compatibility with dedicated styling.
-* Added Gutenberg Block Patterns for Hero, Services, and CTA Banner.
-* Added One Click Demo Import (OCDI) integration.
-* Added official translation template (languages/bizpro-agency.pot).
-* Added Theme Info & Welcome page under Appearance > BizPro Agency.
+* Added Customizer controls, RTL support, WooCommerce styling, block patterns, OCDI integration and the welcome page.
 
 = 1.0.0 =
 * Initial release.
-
-== Resources & Licenses ==
-
-* System Font Stack (Segoe UI, Roboto, Helvetica Neue, Arial) - Native OS System Fonts (No third-party CDN or Google Fonts tracking, 100% GDPR compliant).
-* Built-in SVG Icons - Created by Kamrul Hasan, licensed under GNU GPL v2 or later.
-* Mockup Graphics & Screenshot - Created by Kamrul Hasan, licensed under CC0 / GNU GPL v2.
 
 == Copyright ==
 
@@ -153,40 +155,7 @@ BizPro Agency is distributed under the terms of the GNU GPL v2 or later.
 
 == Resources ==
 
-This theme does not bundle third-party fonts, libraries or images.
-
-* Fonts: the theme uses the visitor's system font stack.
-* Icons: inline SVG icons created for this theme and released under the same GPL license.
+* Outfit and Plus Jakarta Sans fonts - SIL Open Font License 1.1 (assets/fonts/OFL.txt), bundled as WOFF2.
+* TGM Plugin Activation - GPL v2 or later, https://tgmpluginactivation.com
+* Inline SVG icons, SVG artwork (assets/images/art), mockup graphics and screenshot - created for this theme, GNU GPL v2 or later.
 * JavaScript: original vanilla JavaScript, no external libraries.
-
-
-= 1.3.0 =
-* Refreshed the visual system with a modern indigo palette, refined typography, updated cards, buttons, spacing and responsive layouts.
-* Added polished starter content pages for About Us, Services and Contact to the demo import.
-
-
-== Version 1.5.0 ==
-* Refined Visa & Immigration demo with stronger section labels, elevated service cards, hover motion and improved testimonial readability.
-* Added a photo-led About section with image zoom interaction and responsive sizing.
-* Added travel-style demo page and included it in the demo content import.
-* Added Elementor-ready and Gutenberg-compatible demo indicators and an in-page dark-mode toggle.
-* Updated sample pricing to consultancy service packages rather than WordPress theme licence tiers. Prices are illustrative demo content and must be reviewed before publishing.
-* Improved pricing badge alignment and CTA button hierarchy.
-* Country finder remains a front-end enquiry selector; it does not determine visa eligibility or retrieve live processing times.
-
-== 1.5.3 ==
-* Fixed generic page template fallback so non-home pages no longer render the same homepage layout.
-* Added page-template body classes and visual differentiation for Visa, Travel, IT, Consulting and Corporate demos.
-
-== 1.5.4 ==
-* Premium art direction for Visa, Travel, IT, Consulting, Corporate and Default homepage templates.
-* Distinct hero photography, backgrounds, card styling, section treatments and responsive adjustments.
-
-
-== 2.2.1 ==
-* Fixed PHP syntax errors in the front-page and single-post templates.
-* Fixed duplicate header rendering when a niche homepage template is delegated from the front page.
-* Corrected the Digital Products and Corporate demo importer registration.
-* Prevented the companion plugin from registering duplicate demo-import callbacks when the theme importer is available.
-* Rewrote example.com internal links after demo import so links point to the buyer's own site.
-* Added a working country and visa-type filter to the Visa Pathways Finder and removed fixed processing-time claims.

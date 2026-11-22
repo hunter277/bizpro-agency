@@ -19,11 +19,11 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-			$bpa_comment_count = get_comments_number();
+			$bizpro_comment_count = get_comments_number();
 			printf(
 				/* translators: 1: comment count number, 2: post title. */
-				esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $bpa_comment_count, 'comments title', 'bizpro-agency' ) ),
-				esc_html( number_format_i18n( $bpa_comment_count ) ),
+				esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $bizpro_comment_count, 'comments title', 'bizpro-agency' ) ),
+				esc_html( number_format_i18n( $bizpro_comment_count ) ),
 				'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 			);
 			?>
@@ -35,8 +35,8 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'style'       => 'ol',
+					'short_ping'  => true,
 					'avatar_size' => 48,
 				)
 			);

@@ -27,10 +27,10 @@ if ( have_posts() && bizpro_agency_is_elementor() ) {
 	}
 }
 
-$bpa_phone = bizpro_agency_get( 'topbar_phone' );
-$bpa_email = bizpro_agency_get( 'topbar_email' );
+$bizpro_phone = bizpro_agency_get( 'topbar_phone' );
+$bizpro_email = bizpro_agency_get( 'topbar_email' );
 
-$capabilities = array(
+$bizpro_capabilities = array(
 	array(
 		'title' => __( 'Corporate Governance & Compliance', 'bizpro-agency' ),
 		'desc'  => __( 'Institutional-grade regulatory oversight, risk mitigation, and corporate governance architectures.', 'bizpro-agency' ),
@@ -81,13 +81,13 @@ $capabilities = array(
 			</header>
 
 			<div class="services-grid">
-				<?php foreach ( $capabilities as $c ) : ?>
+				<?php foreach ( $bizpro_capabilities as $bizpro_c ) : ?>
 					<article class="service-card">
 						<div class="service-card__icon">
-							<?php echo bizpro_agency_get_icon( $c['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo bizpro_agency_get_icon( $bizpro_c['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</div>
-						<h3 class="service-card__title"><?php echo esc_html( $c['title'] ); ?></h3>
-						<p class="service-card__text"><?php echo esc_html( $c['desc'] ); ?></p>
+						<h3 class="service-card__title"><?php echo esc_html( $bizpro_c['title'] ); ?></h3>
+						<p class="service-card__text"><?php echo esc_html( $bizpro_c['desc'] ); ?></p>
 					</article>
 				<?php endforeach; ?>
 			</div>
@@ -102,11 +102,11 @@ $capabilities = array(
 				<p class="cta-banner__subtitle"><?php esc_html_e( 'Connect with our corporate client engagement team for customized proposals.', 'bizpro-agency' ); ?></p>
 			</div>
 			<div class="cta-banner__actions">
-				<?php if ( $bpa_phone ) : ?>
-					<a class="btn btn--light btn--lg" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bpa_phone ) ); ?>"><?php echo esc_html( $bpa_phone ); ?></a>
+				<?php if ( $bizpro_phone ) : ?>
+					<a class="btn btn--light btn--lg" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>"><?php echo esc_html( $bizpro_phone ); ?></a>
 				<?php endif; ?>
-				<?php if ( $bpa_email ) : ?>
-					<a class="btn btn--outline btn--lg" href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>"><?php esc_html_e( 'Email Us', 'bizpro-agency' ); ?></a>
+				<?php if ( $bizpro_email ) : ?>
+					<a class="btn btn--outline btn--lg" href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>"><?php esc_html_e( 'Email Us', 'bizpro-agency' ); ?></a>
 				<?php endif; ?>
 			</div>
 		</div>

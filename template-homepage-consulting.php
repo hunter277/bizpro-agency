@@ -27,10 +27,10 @@ if ( have_posts() && bizpro_agency_is_elementor() ) {
 	}
 }
 
-$bpa_phone = bizpro_agency_get( 'topbar_phone' );
-$bpa_email = bizpro_agency_get( 'topbar_email' );
+$bizpro_phone = bizpro_agency_get( 'topbar_phone' );
+$bizpro_email = bizpro_agency_get( 'topbar_email' );
 
-$pillars = array(
+$bizpro_pillars = array(
 	array(
 		'title' => __( 'Corporate Growth & Market Entry', 'bizpro-agency' ),
 		'desc'  => __( 'Data-backed market expansion blueprints, customer segmentation, pricing optimization, and commercial due diligence.', 'bizpro-agency' ),
@@ -69,7 +69,7 @@ $pillars = array(
 	),
 );
 
-$methodology = array(
+$bizpro_methodology = array(
 	array(
 		'step'  => '01',
 		'title' => 'Diagnostic & Commercial Audit',
@@ -96,7 +96,7 @@ $methodology = array(
 	),
 );
 
-$results = array(
+$bizpro_results = array(
 	array(
 		'client' => 'Global Manufacturing Group ($450M Rev)',
 		'title'  => 'Supply Chain Overhaul & Procurement Restructuring',
@@ -148,14 +148,14 @@ $results = array(
 			</header>
 
 			<div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-				<?php foreach ( $pillars as $p ) : ?>
+				<?php foreach ( $bizpro_pillars as $bizpro_p ) : ?>
 					<article class="service-card" style="position: relative; border-radius: 16px;">
-						<span style="position: absolute; top: 16px; right: 16px; font-size: 11px; font-weight: 700; color: #d97706; background: rgba(217,119,6,0.1); padding: 3px 8px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $p['tag'] ); ?></span>
+						<span style="position: absolute; top: 16px; right: 16px; font-size: 11px; font-weight: 700; color: #d97706; background: rgba(217,119,6,0.1); padding: 3px 8px; border-radius: 20px; text-transform: uppercase;"><?php echo esc_html( $bizpro_p['tag'] ); ?></span>
 						<div class="service-card__icon" style="background: rgba(217,119,6,0.1); color: #d97706;">
-							<?php echo bizpro_agency_get_icon( $p['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo bizpro_agency_get_icon( $bizpro_p['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</div>
-						<h3 class="service-card__title"><?php echo esc_html( $p['title'] ); ?></h3>
-						<p class="service-card__text"><?php echo esc_html( $p['desc'] ); ?></p>
+						<h3 class="service-card__title"><?php echo esc_html( $bizpro_p['title'] ); ?></h3>
+						<p class="service-card__text"><?php echo esc_html( $bizpro_p['desc'] ); ?></p>
 					</article>
 				<?php endforeach; ?>
 			</div>
@@ -172,12 +172,12 @@ $results = array(
 			</header>
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-				<?php foreach ( $methodology as $m ) : ?>
+				<?php foreach ( $bizpro_methodology as $bizpro_m ) : ?>
 					<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 30px; position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
-						<div style="font-size: 2.2rem; font-weight: 800; color: rgba(217,119,6,0.25); line-height: 1; margin-bottom: 12px;"><?php echo esc_html( $m['step'] ); ?></div>
-						<div style="font-size: 0.78rem; font-weight: 700; color: #d97706; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;"><?php echo esc_html( $m['time'] ); ?></div>
-						<h3 style="font-size: 1.15rem; font-weight: 700; color: var(--bpa-text, #0f172a); margin-bottom: 10px;"><?php echo esc_html( $m['title'] ); ?></h3>
-						<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.92rem; line-height: 1.55;"><?php echo esc_html( $m['desc'] ); ?></p>
+						<div style="font-size: 2.2rem; font-weight: 800; color: rgba(217,119,6,0.25); line-height: 1; margin-bottom: 12px;"><?php echo esc_html( $bizpro_m['step'] ); ?></div>
+						<div style="font-size: 0.78rem; font-weight: 700; color: #d97706; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;"><?php echo esc_html( $bizpro_m['time'] ); ?></div>
+						<h3 style="font-size: 1.15rem; font-weight: 700; color: var(--bpa-text, #0f172a); margin-bottom: 10px;"><?php echo esc_html( $bizpro_m['title'] ); ?></h3>
+						<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.92rem; line-height: 1.55;"><?php echo esc_html( $bizpro_m['desc'] ); ?></p>
 					</div>
 				<?php endforeach; ?>
 			</div>
@@ -194,16 +194,16 @@ $results = array(
 			</header>
 
 			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-				<?php foreach ( $results as $r ) : ?>
+				<?php foreach ( $bizpro_results as $bizpro_r ) : ?>
 					<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 18px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 30px rgba(0,0,0,0.05);">
 						<div>
-							<span style="font-size: 0.8rem; font-weight: 700; color: var(--bpa-text-muted, #64748b); text-transform: uppercase; margin-bottom: 12px; display: block;"><?php echo esc_html( $r['client'] ); ?></span>
-							<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $r['title'] ); ?></h3>
-							<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;"><?php echo esc_html( $r['desc'] ); ?></p>
+							<span style="font-size: 0.8rem; font-weight: 700; color: var(--bpa-text-muted, #64748b); text-transform: uppercase; margin-bottom: 12px; display: block;"><?php echo esc_html( $bizpro_r['client'] ); ?></span>
+							<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $bizpro_r['title'] ); ?></h3>
+							<p style="color: var(--bpa-text-muted, #64748b); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;"><?php echo esc_html( $bizpro_r['desc'] ); ?></p>
 						</div>
 						<div style="border-top: 1px solid var(--bpa-border, #f1f5f9); padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
 							<span style="font-size: 0.85rem; color: var(--bpa-text-muted, #64748b);"><?php esc_html_e( 'Quantified Value:', 'bizpro-agency' ); ?></span>
-							<strong style="color: #d97706; font-size: 1.2rem; font-weight: 800;"><?php echo esc_html( $r['result'] ); ?></strong>
+							<strong style="color: #d97706; font-size: 1.2rem; font-weight: 800;"><?php echo esc_html( $bizpro_r['result'] ); ?></strong>
 						</div>
 					</div>
 				<?php endforeach; ?>
@@ -279,11 +279,11 @@ $results = array(
 				<p class="cta-banner__subtitle"><?php esc_html_e( 'Book a strictly confidential 45-minute executive briefing with our senior management partners.', 'bizpro-agency' ); ?></p>
 			</div>
 			<div class="cta-banner__actions">
-				<?php if ( $bpa_phone ) : ?>
-					<a class="btn btn--light btn--lg" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bpa_phone ) ); ?>"><?php echo esc_html( $bpa_phone ); ?></a>
+				<?php if ( $bizpro_phone ) : ?>
+					<a class="btn btn--light btn--lg" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>"><?php echo esc_html( $bizpro_phone ); ?></a>
 				<?php endif; ?>
-				<?php if ( $bpa_email ) : ?>
-					<a class="btn btn--outline btn--lg" href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>"><?php esc_html_e( 'Email Senior Partners', 'bizpro-agency' ); ?></a>
+				<?php if ( $bizpro_email ) : ?>
+					<a class="btn btn--outline btn--lg" href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>"><?php esc_html_e( 'Email Senior Partners', 'bizpro-agency' ); ?></a>
 				<?php endif; ?>
 			</div>
 		</div>

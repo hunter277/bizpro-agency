@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-$bpa_email = bizpro_agency_get( 'topbar_email', get_bloginfo( 'admin_email' ) );
-$site_name = get_bloginfo( 'name' );
-$site_url  = home_url( '/' );
+$bizpro_email     = bizpro_agency_get( 'topbar_email', get_bloginfo( 'admin_email' ) );
+$bizpro_site_name = get_bloginfo( 'name' );
+$bizpro_site_url  = home_url( '/' );
 ?>
 
 <main id="primary" class="site-main site-main--legal">
@@ -33,7 +33,7 @@ $site_url  = home_url( '/' );
 		<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 16px; padding: 48px; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
 			
 			<h2 style="font-size: 1.6rem; color: var(--bpa-text, #0f172a); margin-top: 0;"><?php esc_html_e( '1. Introduction and Scope', 'bizpro-agency' ); ?></h2>
-			<p><?php printf( esc_html__( 'At %1$s, accessible from %2$s, one of our main priorities is the privacy of our visitors. This Privacy Policy document outlines the types of information that is collected and recorded by %1$s and how we use it.', 'bizpro-agency' ), esc_html( $site_name ), esc_url( $site_url ) ); ?></p>
+			<p><?php printf( /* translators: 1: first value, 2: second value. */ esc_html__( 'At %1$s, accessible from %2$s, one of our main priorities is the privacy of our visitors. This Privacy Policy document outlines the types of information that is collected and recorded by %1$s and how we use it.', 'bizpro-agency' ), esc_html( $bizpro_site_name ), esc_url( $bizpro_site_url ) ); ?></p>
 			<p><?php esc_html_e( 'If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact our Data Protection team.', 'bizpro-agency' ); ?></p>
 
 			<hr style="margin: 36px 0; border: none; border-top: 1px solid var(--bpa-border, #e2e8f0);">
@@ -84,7 +84,7 @@ $site_url  = home_url( '/' );
 
 			<h2 style="font-size: 1.6rem; color: var(--bpa-text, #0f172a);"><?php esc_html_e( '8. Contact Information', 'bizpro-agency' ); ?></h2>
 			<p><?php esc_html_e( 'If you have any questions or suggestions about our Privacy Policy, do not hesitate to reach out:', 'bizpro-agency' ); ?></p>
-			<p style="margin-bottom: 0;"><strong><?php esc_html_e( 'Official Email:', 'bizpro-agency' ); ?></strong> <a href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>" style="color: #2563eb; font-weight: 600;"><?php echo esc_html( $bpa_email ); ?></a></p>
+			<p style="margin-bottom: 0;"><strong><?php esc_html_e( 'Official Email:', 'bizpro-agency' ); ?></strong> <a href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>" style="color: #2563eb; font-weight: 600;"><?php echo esc_html( $bizpro_email ); ?></a></p>
 
 		</div>
 

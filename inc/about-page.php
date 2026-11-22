@@ -50,14 +50,14 @@ function bizpro_agency_about_page_render() {
 			</div>
 
 			
-			<!-- 1-Click AdSense Essential Pages Banner -->
+			<!-- Demo importer banner -->
 			<div style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 12px; padding: 24px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between;">
 				<div>
-					<h3 style="margin: 0 0 6px; color: #1e1b4b; font-size: 18px;"><?php esc_html_e( '⚡ 1-Click AdSense Essential Pages Generator', 'bizpro-agency' ); ?></h3>
-					<p style="margin: 0; color: #4338ca; font-size: 14px;"><?php esc_html_e( 'Automatically generate Privacy Policy, Terms & Conditions, Disclaimer, Contact Us, About Us and Services pages.', 'bizpro-agency' ); ?></p>
+					<h3 style="margin: 0 0 6px; color: #1e1b4b; font-size: 18px;"><?php esc_html_e( 'Start with a ready-made demo', 'bizpro-agency' ); ?></h3>
+					<p style="margin: 0; color: #4338ca; font-size: 14px;"><?php esc_html_e( 'Each demo imports its own homepage, inner pages (About, Services, Pricing, FAQ, Contact, Privacy, Terms), menus and sample posts.', 'bizpro-agency' ); ?></p>
 				</div>
-				<a href="<?php echo esc_url( admin_url( 'admin.php?page=bizpro-agency-welcome&bpa_generate_pages=1' ) ); ?>" class="button button-primary" style="background: #4f46e5; border-color: #4f46e5; height: 38px; line-height: 36px; padding: 0 20px;">
-					<?php esc_html_e( 'Generate All Pages Now', 'bizpro-agency' ); ?>
+				<a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import' ) ); ?>" class="button button-primary" style="background: #4f46e5; border-color: #4f46e5; height: 38px; line-height: 36px; padding: 0 20px;">
+					<?php esc_html_e( 'Open Demo Importer', 'bizpro-agency' ); ?>
 				</a>
 			</div>
 
@@ -98,15 +98,57 @@ function bizpro_agency_about_page_render() {
 				</div>
 
 				<?php
-				$img_uri = trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/';
+				$img_uri     = trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/';
 				$admin_demos = array(
-					array( 'title' => 'Digital Products & SaaS Store', 'niche' => 'eCommerce', 'badge' => 'eCom', 'url' => home_url( '/digital-store/' ), 'img' => $img_uri . 'demo-digital.png' ),
-					array( 'title' => 'Visa & Immigration Consultancy', 'niche' => 'Immigration', 'badge' => 'Hot', 'url' => home_url( '/visa-immigration/' ), 'img' => $img_uri . 'demo-visa.png' ),
-					array( 'title' => 'Travel & Tour Operator', 'niche' => 'Tourism', 'badge' => 'New', 'url' => home_url( '/travel-agency/' ), 'img' => $img_uri . 'demo-travel.png' ),
-					array( 'title' => 'IT Solutions & Cloud Services', 'niche' => 'Technology', 'badge' => 'Tech', 'url' => home_url( '/it-solutions/' ), 'img' => $img_uri . 'demo-it.png' ),
-					array( 'title' => 'Business & Management Consulting', 'niche' => 'Consulting', 'badge' => 'Pro', 'url' => home_url( '/business-consulting/' ), 'img' => $img_uri . 'demo-consulting.png' ),
-					array( 'title' => 'Corporate Enterprise & Governance', 'niche' => 'Enterprise', 'badge' => 'Elite', 'url' => home_url( '/corporate/' ), 'img' => $img_uri . 'demo-corporate.png' ),
-					array( 'title' => 'Main Agency (Flagship Multi-Purpose)', 'niche' => 'All-in-One', 'badge' => 'Popular', 'url' => home_url( '/' ), 'img' => $img_uri . 'demo-main.png' ),
+					array(
+						'title' => 'Digital Products & SaaS Store',
+						'niche' => 'eCommerce',
+						'badge' => 'eCom',
+						'url'   => bizpro_agency_page_url( 'home', 'digital' ),
+						'img'   => $img_uri . 'demo-digital.png',
+					),
+					array(
+						'title' => 'Visa & Immigration Consultancy',
+						'niche' => 'Immigration',
+						'badge' => 'Hot',
+						'url'   => bizpro_agency_page_url( 'home', 'visa' ),
+						'img'   => $img_uri . 'demo-visa.png',
+					),
+					array(
+						'title' => 'Travel & Tour Operator',
+						'niche' => 'Tourism',
+						'badge' => 'New',
+						'url'   => bizpro_agency_page_url( 'home', 'travel' ),
+						'img'   => $img_uri . 'demo-travel.png',
+					),
+					array(
+						'title' => 'IT Solutions & Cloud Services',
+						'niche' => 'Technology',
+						'badge' => 'Tech',
+						'url'   => bizpro_agency_page_url( 'home', 'it' ),
+						'img'   => $img_uri . 'demo-it.png',
+					),
+					array(
+						'title' => 'Business & Management Consulting',
+						'niche' => 'Consulting',
+						'badge' => 'Pro',
+						'url'   => bizpro_agency_page_url( 'home', 'consulting' ),
+						'img'   => $img_uri . 'demo-consulting.png',
+					),
+					array(
+						'title' => 'Corporate Enterprise & Governance',
+						'niche' => 'Enterprise',
+						'badge' => 'Elite',
+						'url'   => bizpro_agency_page_url( 'home', 'corporate' ),
+						'img'   => $img_uri . 'demo-corporate.png',
+					),
+					array(
+						'title' => 'Main Agency (Flagship Multi-Purpose)',
+						'niche' => 'All-in-One',
+						'badge' => 'Popular',
+						'url'   => home_url( '/' ),
+						'img'   => $img_uri . 'demo-main.png',
+					),
 				);
 				?>
 

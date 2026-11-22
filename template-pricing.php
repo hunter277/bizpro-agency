@@ -43,7 +43,7 @@ get_header();
 						<li style="color: #94a3b8;">❌ 24/7 Emergency Hotlines</li>
 					</ul>
 				</div>
-				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Choose Standard', 'bizpro-agency' ); ?></a>
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn" style="display: block; text-align: center; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; border: 1px solid #cbd5e1;"><?php esc_html_e( 'Choose Standard', 'bizpro-agency' ); ?></a>
 			</div>
 
 			<!-- Growth Pro Plan (Featured) -->
@@ -61,7 +61,7 @@ get_header();
 						<li>✅ Multi-Jurisdiction Legal Review</li>
 					</ul>
 				</div>
-				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary" style="display: block; text-align: center; background: #2563eb; border-color: #2563eb; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 20px rgba(37,99,235,0.3);"><?php esc_html_e( 'Get Started with Growth', 'bizpro-agency' ); ?></a>
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn btn--primary" style="display: block; text-align: center; background: #2563eb; border-color: #2563eb; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none; box-shadow: 0 10px 20px rgba(37,99,235,0.3);"><?php esc_html_e( 'Get Started with Growth', 'bizpro-agency' ); ?></a>
 			</div>
 
 			<!-- Enterprise Mandate -->
@@ -78,7 +78,7 @@ get_header();
 						<li>✅ On-Site Advisory Visits Included</li>
 					</ul>
 				</div>
-				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn" style="display: block; text-align: center; background: #0f172a; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none;"><?php esc_html_e( 'Contact Executive Desk', 'bizpro-agency' ); ?></a>
+				<a href="<?php echo esc_url( bizpro_agency_page_url( 'contact' ) ); ?>" class="btn" style="display: block; text-align: center; background: #0f172a; color: #ffffff; font-weight: 700; padding: 14px; border-radius: 12px; text-decoration: none;"><?php esc_html_e( 'Contact Executive Desk', 'bizpro-agency' ); ?></a>
 			</div>
 
 		</div>

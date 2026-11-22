@@ -9,26 +9,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$bpa_phone   = bizpro_agency_get( 'topbar_phone' );
-$bpa_email   = bizpro_agency_get( 'topbar_email' );
-$bpa_address = bizpro_agency_get( 'topbar_address' );
+$bizpro_phone   = bizpro_agency_get( 'topbar_phone' );
+$bizpro_email   = bizpro_agency_get( 'topbar_email' );
+$bizpro_address = bizpro_agency_get( 'topbar_address' );
 
 // Context-aware CTA per niche demo
-$bpa_demo_context = function_exists( 'bizpro_agency_get_demo_context' ) ? bizpro_agency_get_demo_context() : 'default';
-$bpa_demo_info    = function_exists( 'bizpro_agency_get_demo_info' ) ? bizpro_agency_get_demo_info( $bpa_demo_context ) : array(
+$bizpro_demo_context = function_exists( 'bizpro_agency_get_demo_context' ) ? bizpro_agency_get_demo_context() : 'default';
+$bizpro_demo_info    = function_exists( 'bizpro_agency_get_demo_info' ) ? bizpro_agency_get_demo_info( $bizpro_demo_context ) : array(
 	'cta_text'  => bizpro_agency_get( 'header_cta_text', __( 'Get a Quote', 'bizpro-agency' ) ),
 	'cta_url'   => bizpro_agency_get( 'header_cta_link', '#contact' ),
 	'tagline'   => __( 'Agency', 'bizpro-agency' ),
 	'top_badge' => '',
 );
-$bpa_cta_txt  = $bpa_demo_info['cta_text'];
-$bpa_cta_url  = $bpa_demo_info['cta_url'];
-$bpa_tagline  = $bpa_demo_info['tagline'];
-$bpa_top_badge = $bpa_demo_info['top_badge'];
+$bizpro_cta_txt      = $bizpro_demo_info['cta_text'];
+$bizpro_cta_url      = $bizpro_demo_info['cta_url'];
+$bizpro_tagline      = $bizpro_demo_info['tagline'];
+$bizpro_top_badge    = $bizpro_demo_info['top_badge'];
 
 // Anchor-only links (e.g. #contact) must keep working on inner pages.
-if ( $bpa_cta_url && 0 === strpos( $bpa_cta_url, '#' ) ) {
-	$bpa_cta_url = home_url( '/' ) . $bpa_cta_url;
+if ( $bizpro_cta_url && 0 === strpos( $bizpro_cta_url, '#' ) ) {
+	$bizpro_cta_url = home_url( '/' ) . $bizpro_cta_url;
 }
 ?>
 <!doctype html>
@@ -47,26 +47,26 @@ if ( $bpa_cta_url && 0 === strpos( $bpa_cta_url, '#' ) ) {
 
 <div id="page" class="site">
 
-	<?php if ( bizpro_agency_get( 'topbar_enable', true ) && ( $bpa_phone || $bpa_email || $bpa_address ) ) : ?>
+	<?php if ( bizpro_agency_get( 'topbar_enable', true ) && ( $bizpro_phone || $bizpro_email || $bizpro_address ) ) : ?>
 		<div class="top-bar">
 			<div class="container top-bar__inner">
 				<ul class="top-bar__list">
-					<?php if ( $bpa_phone ) : ?>
+					<?php if ( $bizpro_phone ) : ?>
 						<li class="top-bar__item top-bar__item--phone">
 							<span class="screen-reader-text"><?php esc_html_e( 'Phone:', 'bizpro-agency' ); ?></span>
-							<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bpa_phone ) ); ?>"><?php echo esc_html( $bpa_phone ); ?></a>
+							<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>"><?php echo esc_html( $bizpro_phone ); ?></a>
 						</li>
 					<?php endif; ?>
-					<?php if ( $bpa_email && is_email( $bpa_email ) ) : ?>
+					<?php if ( $bizpro_email && is_email( $bizpro_email ) ) : ?>
 						<li class="top-bar__item top-bar__item--email">
 							<span class="screen-reader-text"><?php esc_html_e( 'Email:', 'bizpro-agency' ); ?></span>
-							<a href="<?php echo esc_url( 'mailto:' . $bpa_email ); ?>"><?php echo esc_html( $bpa_email ); ?></a>
+							<a href="<?php echo esc_url( 'mailto:' . $bizpro_email ); ?>"><?php echo esc_html( $bizpro_email ); ?></a>
 						</li>
 					<?php endif; ?>
-					<?php if ( $bpa_address ) : ?>
+					<?php if ( $bizpro_address ) : ?>
 						<li class="top-bar__item top-bar__item--address">
 							<span class="screen-reader-text"><?php esc_html_e( 'Address:', 'bizpro-agency' ); ?></span>
-							<?php echo esc_html( $bpa_address ); ?>
+							<?php echo esc_html( $bizpro_address ); ?>
 						</li>
 					<?php endif; ?>
 				</ul>
@@ -96,7 +96,7 @@ if ( $bpa_cta_url && 0 === strpos( $bpa_cta_url, '#' ) ) {
 						</span>
 						<span class="site-brand-text">
 							<span class="site-brand-name">Biz<span class="site-brand-accent">Pro</span></span>
-							<span class="site-brand-tagline"><?php echo esc_html( $bpa_tagline ); ?></span>
+							<span class="site-brand-tagline"><?php echo esc_html( $bizpro_tagline ); ?></span>
 						</span>
 					</a>
 				<?php endif; ?>
@@ -117,10 +117,10 @@ if ( $bpa_cta_url && 0 === strpos( $bpa_cta_url, '#' ) ) {
 					</button>
 				</div>
 				<?php
-				$bpa_nav_location = function_exists( 'bizpro_agency_get_demo_menu_location' ) ? bizpro_agency_get_demo_menu_location() : 'primary';
-				$bpa_menu = wp_nav_menu(
+				$bizpro_nav_location = function_exists( 'bizpro_agency_get_demo_menu_location' ) ? bizpro_agency_get_demo_menu_location() : 'primary';
+				$bizpro_menu         = wp_nav_menu(
 					array(
-						'theme_location'       => $bpa_nav_location,
+						'theme_location'       => $bizpro_nav_location,
 						'menu_id'              => 'primary-menu',
 						'menu_class'           => 'menu',
 						'container'            => 'nav',
@@ -131,8 +131,8 @@ if ( $bpa_cta_url && 0 === strpos( $bpa_cta_url, '#' ) ) {
 					)
 				);
 
-				if ( ! empty( $bpa_menu ) ) {
-					echo $bpa_menu; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				if ( ! empty( $bizpro_menu ) ) {
+					echo $bizpro_menu; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				} else {
 					bizpro_agency_fallback_menu();
 				}
@@ -143,8 +143,8 @@ if ( $bpa_cta_url && 0 === strpos( $bpa_cta_url, '#' ) ) {
 					<span class="screen-reader-text"><?php esc_html_e( 'Toggle dark mode', 'bizpro-agency' ); ?></span>
 				</button>
 
-				<?php if ( $bpa_cta_txt ) : ?>
-					<a class="btn btn--primary header-cta" href="<?php echo esc_url( $bpa_cta_url ); ?>"><?php echo esc_html( $bpa_cta_txt ); ?></a>
+				<?php if ( $bizpro_cta_txt ) : ?>
+					<a class="btn btn--primary header-cta" href="<?php echo esc_url( $bizpro_cta_url ); ?>"><?php echo esc_html( $bizpro_cta_txt ); ?></a>
 				<?php endif; ?>
 			</div>
 
