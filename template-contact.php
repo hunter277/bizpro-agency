@@ -146,21 +146,14 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 						<div>
 							<label for="bpa_service" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--bpa-text, #334155);"><?php esc_html_e( 'Primary Area of Interest', 'bizpro-agency' ); ?></label>
 							<?php
+							$bizpro_context        = function_exists( 'bizpro_agency_get_demo_context' ) ? bizpro_agency_get_demo_context() : 'default';
+							$bizpro_services       = function_exists( 'bizpro_agency_get_demo_services' ) ? bizpro_agency_get_demo_services( $bizpro_context ) : array();
 							$bizpro_preset_service = isset( $_GET['service'] ) ? sanitize_text_field( wp_unslash( $_GET['service'] ) ) : '';
-							if ( isset( $_GET['tour'] ) ) {
-								$bizpro_preset_service = 'travel'; }
-							if ( isset( $_GET['pathway'] ) || isset( $_GET['country'] ) ) {
-								$bizpro_preset_service = 'visa'; }
-							if ( isset( $_GET['product'] ) || isset( $_GET['plan'] ) ) {
-								$bizpro_preset_service = 'digital'; }
 							?>
 							<select id="bpa_service" name="bpa_service" style="width: 100%; padding: 13px 16px; border: 1px solid var(--bpa-border, #cbd5e1); border-radius: 10px; font-size: 16px; background: var(--bpa-bg-alt, #f8fafc);">
-								<option value="digital" <?php selected( $bizpro_preset_service, 'digital' ); ?>><?php esc_html_e( 'Digital Products, Software & SaaS', 'bizpro-agency' ); ?></option>
-								<option value="visa" <?php selected( $bizpro_preset_service, 'visa' ); ?>><?php esc_html_e( 'Visa & Immigration Consultancy', 'bizpro-agency' ); ?></option>
-								<option value="it" <?php selected( $bizpro_preset_service, 'it' ); ?>><?php esc_html_e( 'IT Solutions, Cloud & Software', 'bizpro-agency' ); ?></option>
-								<option value="travel" <?php selected( $bizpro_preset_service, 'travel' ); ?>><?php esc_html_e( 'Travel Planning & Holiday Tours', 'bizpro-agency' ); ?></option>
-								<option value="consulting" <?php selected( $bizpro_preset_service, 'consulting' ); ?>><?php esc_html_e( 'Strategic Business Consulting', 'bizpro-agency' ); ?></option>
-								<option value="corporate" <?php selected( $bizpro_preset_service, 'corporate' ); ?>><?php esc_html_e( 'Corporate Enterprise Solutions', 'bizpro-agency' ); ?></option>
+								<?php foreach ( $bizpro_services as $bizpro_svc_k => $bizpro_svc_label ) : ?>
+									<option value="<?php echo esc_attr( $bizpro_svc_k ); ?>" <?php selected( $bizpro_preset_service, $bizpro_svc_k ); ?>><?php echo esc_html( $bizpro_svc_label ); ?></option>
+								<?php endforeach; ?>
 							</select>
 						</div>
 					</div>
@@ -175,10 +168,63 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 				<?php endif; ?>
 			</div>
 
+			<?php
+			// Contextual right sidebar copy
+			$bizpro_why_titles = array(
+				'travel'     => __( 'Why Book With BizPro Travel?', 'bizpro-agency' ),
+				'visa'       => __( 'Why Choose BizPro Visa?', 'bizpro-agency' ),
+				'it'         => __( 'Why Partner With BizPro Tech?', 'bizpro-agency' ),
+				'digital'    => __( 'Why Buy From BizPro Store?', 'bizpro-agency' ),
+				'consulting' => __( 'Why Consult With BizPro?', 'bizpro-agency' ),
+				'corporate'  => __( 'Why Partner With BizPro Enterprise?', 'bizpro-agency' ),
+				'default'    => __( 'Why Work With BizPro Agency?', 'bizpro-agency' ),
+			);
+			$bizpro_why_title = isset( $bizpro_why_titles[ $bizpro_context ] ) ? $bizpro_why_titles[ $bizpro_context ] : $bizpro_why_titles['default'];
+
+			$bizpro_emergency_data = array(
+				'travel'     => array(
+					'title' => __( 'Urgent Traveler Assistance?', 'bizpro-agency' ),
+					'desc'  => __( 'For flight schedule disruptions, same-day hotel issues or immediate itinerary assistance, reach our 24/7 dedicated travel desk.', 'bizpro-agency' ),
+					'btn'   => __( 'Call Travel Desk', 'bizpro-agency' ),
+				),
+				'visa'       => array(
+					'title' => __( 'Urgent Visa Deadlines?', 'bizpro-agency' ),
+					'desc'  => __( 'For urgent consular submission deadlines, interview clearances, or time-sensitive appeals, reach our 24/7 legal immigration desk.', 'bizpro-agency' ),
+					'btn'   => __( 'Call Immigration Desk', 'bizpro-agency' ),
+				),
+				'it'         => array(
+					'title' => __( 'Emergency Outages?', 'bizpro-agency' ),
+					'desc'  => __( 'For critical enterprise IT incidents, cloud infrastructure outages or server downtime, reach our 24/7 dedicated DevOps desk.', 'bizpro-agency' ),
+					'btn'   => __( 'Call Incident Desk', 'bizpro-agency' ),
+				),
+				'digital'    => array(
+					'title' => __( 'Priority Product Support?', 'bizpro-agency' ),
+					'desc'  => __( 'For urgent digital license activations, enterprise deployment issues or technical assistance, reach our dedicated product desk.', 'bizpro-agency' ),
+					'btn'   => __( 'Call Support Desk', 'bizpro-agency' ),
+				),
+				'consulting' => array(
+					'title' => __( 'Executive Escalations?', 'bizpro-agency' ),
+					'desc'  => __( 'For time-critical boardroom decisions, crisis management or urgent transaction advisory, contact our senior practice lead.', 'bizpro-agency' ),
+					'btn'   => __( 'Call Advisory Desk', 'bizpro-agency' ),
+				),
+				'corporate'  => array(
+					'title' => __( 'Corporate Escalations?', 'bizpro-agency' ),
+					'desc'  => __( 'For enterprise compliance matters, regulatory filings or urgent cross-border institutional inquiries, reach our dedicated client liaison.', 'bizpro-agency' ),
+					'btn'   => __( 'Call Enterprise Desk', 'bizpro-agency' ),
+				),
+				'default'    => array(
+					'title' => __( 'Emergency Escalations?', 'bizpro-agency' ),
+					'desc'  => __( 'For critical business inquiries or urgent project submission deadlines, reach our 24/7 dedicated escalation desk.', 'bizpro-agency' ),
+					'btn'   => __( 'Call Emergency Desk', 'bizpro-agency' ),
+				),
+			);
+			$bizpro_emergency = isset( $bizpro_emergency_data[ $bizpro_context ] ) ? $bizpro_emergency_data[ $bizpro_context ] : $bizpro_emergency_data['default'];
+			?>
+
 			<!-- Right: Office Highlights & Security -->
 			<div style="display: flex; flex-direction: column; gap: 24px;">
 				<div style="background: var(--bpa-bg, #ffffff); border: 1px solid var(--bpa-border, #e2e8f0); border-radius: 20px; padding: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.04);">
-					<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: var(--bpa-text, #0f172a);"><?php esc_html_e( 'Why Work With BizPro Agency?', 'bizpro-agency' ); ?></h3>
+					<h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: var(--bpa-text, #0f172a);"><?php echo esc_html( $bizpro_why_title ); ?></h3>
 					<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
 						<li style="display: flex; gap: 12px; font-size: 0.95rem; color: var(--bpa-text-muted, #475569);">
 							<span style="color: #10b981; font-weight: 700;">✓</span>
@@ -196,9 +242,9 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['bpa_contact_nonce']
 				</div>
 
 				<div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #ffffff; border-radius: 20px; padding: 32px; box-shadow: 0 12px 30px rgba(0,0,0,0.12);">
-					<h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 12px;"><?php esc_html_e( 'Emergency Escalations?', 'bizpro-agency' ); ?></h3>
-					<p style="color: #64748b; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;"><?php esc_html_e( 'For critical enterprise IT incidents or urgent visa submission deadlines, reach our 24/7 dedicated escalation desk.', 'bizpro-agency' ); ?></p>
-					<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>" class="btn btn--light" style="width: 100%; justify-content: center;"><?php esc_html_e( 'Call Emergency Desk', 'bizpro-agency' ); ?></a>
+					<h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 12px;"><?php echo esc_html( $bizpro_emergency['title'] ); ?></h3>
+					<p style="color: #64748b; font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;"><?php echo esc_html( $bizpro_emergency['desc'] ); ?></p>
+					<a href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $bizpro_phone ) ); ?>" class="btn btn--light" style="width: 100%; justify-content: center;"><?php echo esc_html( $bizpro_emergency['btn'] ); ?></a>
 				</div>
 			</div>
 

@@ -559,15 +559,11 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 		</section>
 	<?php endif; ?>
 
-</main><!-- #primary -->
-
-?>
-
-<?php if ( bizpro_agency_get( 'show_demo_switcher' ) ) : ?>
-<!-- =========================================================================
-	7 READY-MADE STARTER SITES SHOWCASE SECTION
-	========================================================================= -->
-<section class="section section--demos-showcase" id="demos" style="padding: 100px 0; background: var(--bpa-bg-alt, #f8fafc); border-top: 1px solid var(--bpa-border, #e2e8f0); border-bottom: 1px solid var(--bpa-border, #e2e8f0);">
+	<?php if ( bizpro_agency_get( 'show_demos_showcase', true ) ) : ?>
+	<!-- =========================================================================
+		7 READY-MADE STARTER SITES SHOWCASE SECTION
+		========================================================================= -->
+	<section class="section section--demos-showcase" id="demos" style="padding: 100px 0; background: var(--bpa-bg-alt, #f8fafc); border-top: 1px solid var(--bpa-border, #e2e8f0); border-bottom: 1px solid var(--bpa-border, #e2e8f0);">
 	<div class="container">
 		<div style="text-align: center; max-width: 750px; margin: 0 auto 60px;">
 			<div style="display: inline-flex; align-items: center; gap: 8px; background: #e0e7ff; color: #4338ca; padding: 6px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">
@@ -678,6 +674,8 @@ $bizpro_faq_title   = bizpro_agency_get( 'faq_title' );
 	</div>
 </section>
 <?php endif; ?>
+
+</main><!-- #primary -->
 
 <?php
 get_footer();

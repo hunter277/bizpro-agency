@@ -25,9 +25,43 @@ $bizpro_copyright = str_replace( '{year}', gmdate( 'Y' ), bizpro_agency_get( 'fo
 					<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
 						<?php dynamic_sidebar( 'footer-1' ); ?>
 					<?php else : ?>
+						<?php
+						$bizpro_footer_context  = function_exists( 'bizpro_agency_get_demo_context' ) ? bizpro_agency_get_demo_context() : 'default';
+						$bizpro_about_fallbacks = array(
+							'travel'     => array(
+								'title' => __( 'About BizPro Travel', 'bizpro-agency' ),
+								'desc'  => __( 'We are a premier travel and tour operator curating unforgettable journeys, customized holiday packages, and seamless flights worldwide.', 'bizpro-agency' ),
+							),
+							'visa'       => array(
+								'title' => __( 'About BizPro Visa', 'bizpro-agency' ),
+								'desc'  => __( 'We are a licensed immigration consultancy providing legal pathway guidance, document clearance, and seamless relocation support worldwide.', 'bizpro-agency' ),
+							),
+							'it'         => array(
+								'title' => __( 'About BizPro Tech', 'bizpro-agency' ),
+								'desc'  => __( 'We are an enterprise technology agency engineering scalable cloud infrastructure, custom software, and reliable DevOps solutions.', 'bizpro-agency' ),
+							),
+							'digital'    => array(
+								'title' => __( 'About BizPro Store', 'bizpro-agency' ),
+								'desc'  => __( 'We are a curated digital marketplace delivering high-performance UI kits, software tools, templates, and digital assets for creators.', 'bizpro-agency' ),
+							),
+							'consulting' => array(
+								'title' => __( 'About BizPro Consulting', 'bizpro-agency' ),
+								'desc'  => __( 'We are a strategic management consulting firm driving operational excellence, corporate growth, and long-term enterprise value.', 'bizpro-agency' ),
+							),
+							'corporate'  => array(
+								'title' => __( 'About BizPro Corporate', 'bizpro-agency' ),
+								'desc'  => __( 'We are a global institutional enterprise delivering boardroom advisory, regulatory compliance, and cross-border commercial solutions.', 'bizpro-agency' ),
+							),
+							'default'    => array(
+								'title' => __( 'About BizPro', 'bizpro-agency' ),
+								'desc'  => __( 'We are a trusted agency delivering professional consulting, technology, visa and travel services to clients worldwide.', 'bizpro-agency' ),
+							),
+						);
+						$bizpro_about_info      = isset( $bizpro_about_fallbacks[ $bizpro_footer_context ] ) ? $bizpro_about_fallbacks[ $bizpro_footer_context ] : $bizpro_about_fallbacks['default'];
+						?>
 						<section class="widget">
-							<h3 class="widget-title"><?php esc_html_e( 'About BizPro', 'bizpro-agency' ); ?></h3>
-							<p><?php esc_html_e( 'We are a trusted agency delivering professional consulting, technology, visa and travel services to clients worldwide.', 'bizpro-agency' ); ?></p>
+							<h3 class="widget-title"><?php echo esc_html( $bizpro_about_info['title'] ); ?></h3>
+							<p><?php echo esc_html( $bizpro_about_info['desc'] ); ?></p>
 						</section>
 					<?php endif; ?>
 				</div>

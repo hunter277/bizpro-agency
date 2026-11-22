@@ -1,4647 +1,3578 @@
-# Copyright (C) 2026 Kamrul Hasan
-# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BizPro Agency 2.6.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bizpro-agency\n"
-"Last-Translator: Kamrul Hasan <info@kamrulhasan.me>\n"
-"Language-Team: English <info@kamrulhasan.me>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 19:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-22 09:19+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: BizPro POT Generator 2.6.0\n"
+"X-Generator: Python\n"
 "X-Domain: bizpro-agency\n"
 
-#: template-homepage-visa.php:278
 msgid "\"After two rejections with previous agencies, BizPro Agency fixed my ECA discrepancies and filed my Express Entry. Received my Canadian CoPR in just 5 months!\""
 msgstr ""
 
-#: template-homepage-visa.php:308
 msgid "\"Got into University of Melbourne with a 30% scholarship! BizPro handled both my university admission and student visa without any stress. Highly recommended!\""
 msgstr ""
 
-#: template-homepage-travel.php:423
 msgid "\"Our honeymoon trip to Bali was magical from start to finish! The private pool villa, daily driver, and romantic beach dinner were organized with such care. Will never book with anyone else!\""
 msgstr ""
 
-#: template-homepage-visa.php:293
 msgid "\"Securing my UK healthcare worker visa was so simple with their legal guidance. They handled the Certificate of Sponsorship and biometric appointment seamlessly.\""
 msgstr ""
 
-#: template-homepage-travel.php:437
 msgid "\"The Swiss Alps tour was extraordinary. Every train connection, hotel voucher, and mountain pass was ready in our travel app. 24/7 WhatsApp support gave us complete peace of mind.\""
 msgstr ""
 
-#: template-homepage-travel.php:451
 msgid "\"Traveling with 3 young kids can be chaotic, but BizPro Travel arranged baby car seats, family-friendly hotel suites, and private Tokyo guides. Best family vacation of our lives!\""
 msgstr ""
 
-#: functions.php:122
 msgid "&copy; {year} BizPro Agency. All rights reserved."
 msgstr ""
 
-#: template-homepage-travel.php:243
-#: template-homepage-travel.php:273
-#: template-homepage-travel.php:303
 msgid "(128 reviews)"
 msgstr ""
 
-#: template-case-studies.php:60
 msgid "+38% EBITDA"
 msgstr ""
 
-#: template-case-studies.php:34
 msgid "-45% Cloud Spend"
 msgstr ""
 
-#: template-homepage-consulting.php:228
 msgid "/ 2-week sprint"
 msgstr ""
 
-#: template-tour-packages.php:74
 msgid "/ couple"
 msgstr ""
 
-#: template-homepage-consulting.php:260
 msgid "/ milestone basis"
 msgstr ""
 
-#: template-homepage-it.php:240
-#: template-homepage-it.php:256
-#: inc/shortcodes.php:238
-#: inc/shortcodes.php:255
-#: inc/shortcodes.php:271
 msgid "/ month"
 msgstr ""
 
-#: functions.php:165
-#: template-homepage-consulting.php:244
 msgid "/ month retainer"
 msgstr ""
 
-#: template-homepage-travel.php:255
-#: template-homepage-travel.php:285
-#: template-homepage-travel.php:315
-#: template-tour-packages.php:38
-#: template-tour-packages.php:56
 msgid "/ person"
 msgstr ""
 
-#: functions.php:158
 msgid "/ project kickoff"
 msgstr ""
 
-#: functions.php:172
-#: template-homepage-it.php:272
 msgid "/ tailored scope"
 msgstr ""
 
-#: template-homepage-travel.php:512
 msgid "1 Traveler (Solo)"
 msgstr ""
 
-#: functions.php:1365
 msgid "1-Click import ready with complete pages & layouts"
 msgstr ""
 
-#: template-terms-conditions.php:35
 msgid "1. Agreement to Terms"
 msgstr ""
 
-#: template-disclaimer.php:35
 msgid "1. General Website Disclaimer"
 msgstr ""
 
-#: template-privacy-policy.php:35
 msgid "1. Introduction and Scope"
 msgstr ""
 
-#: template-homepage-travel.php:267
 msgid "10 Days / 9 Nights"
 msgstr ""
 
-#: template-tour-packages.php:53
 msgid "10 Days / 9 Nights Panoramic Rail"
 msgstr ""
 
-#: template-homepage-travel.php:340
 msgid "100% Price & Quality Guarantee"
 msgstr ""
 
-#: template-homepage-travel.php:355
 msgid "100% tailored to your pace, preferences, dietary needs, and traveling style."
 msgstr ""
 
-#: template-homepage-travel.php:172
 msgid "11 Tour Packages"
 msgstr ""
 
-#: template-homepage-travel.php:493
 msgid "123 Business Avenue, New York, NY"
 msgstr ""
 
-#: template-case-studies.php:47
 msgid "14 Days Fast-Track"
 msgstr ""
 
-#: template-homepage-travel.php:159
 msgid "14 Tour Packages"
 msgstr ""
 
-#: template-homepage-travel.php:199
 msgid "16 Tour Packages"
 msgstr ""
 
-#: template-homepage-travel.php:146
 msgid "18 Tour Packages"
 msgstr ""
 
-#: template-homepage-travel.php:213
 msgid "19 Tour Packages"
 msgstr ""
 
-#: template-homepage-travel.php:513
 msgid "2 Travelers (Couple)"
 msgstr ""
 
-#: template-homepage-visa.php:68
 msgid "2,500+ Visas Consulted"
 msgstr ""
 
-#: front-page.php:598
 msgid "2-minute eligibility checker, country pathway cards, and 4-step client onboarding framework."
 msgstr ""
 
-#: template-privacy-policy.php:41
 msgid "2. Consent"
 msgstr ""
 
-#: template-terms-conditions.php:40
 msgid "2. Intellectual Property Rights"
 msgstr ""
 
-#: template-disclaimer.php:40
 msgid "2. Professional Services & Consultation Disclaimer"
 msgstr ""
 
-#: functions.php:143
 msgid "200 Work Visas Processed in 60 Days"
 msgstr ""
 
-#: template-homepage-travel.php:185
 msgid "22 Tour Packages"
 msgstr ""
 
-#: template-homepage-travel.php:347
 msgid "24/7 Dedicated Concierge"
 msgstr ""
 
-#: inc/shortcodes.php:246
 msgid "24/7 Emergency Hotlines"
 msgstr ""
 
-#: template-homepage-it.php:59
 msgid "24/7 Managed NOC & SRE Support"
 msgstr ""
 
-#: template-homepage-it.php:263
 msgid "24/7 Monitoring & Direct Slack NOC"
 msgstr ""
 
-#: template-homepage-digital.php:281
 msgid "256-Bit SSL Encryption"
 msgstr ""
 
-#: template-homepage-visa.php:161
 msgid "3 - 6 Weeks"
 msgstr ""
 
-#: template-homepage-travel.php:514
 msgid "3-5 Travelers (Family)"
 msgstr ""
 
-#: template-disclaimer.php:47
 msgid "3. Advertising & Google AdSense Disclosure"
 msgstr ""
 
-#: template-privacy-policy.php:46
 msgid "3. Information We Collect"
 msgstr ""
 
-#: template-terms-conditions.php:45
 msgid "3. User Representations"
 msgstr ""
 
-#: inc/block-patterns.php:59
 msgid "4-Column Services Grid"
 msgstr ""
 
-#: template-homepage-it.php:245
 msgid "4-Hour Business SLA Response"
 msgstr ""
 
-#: functions.php:588
 msgid "4-Step Process"
 msgstr ""
 
-#: template-disclaimer.php:52
 msgid "4. External Links Disclaimer"
 msgstr ""
 
-#: template-privacy-policy.php:58
 msgid "4. Google DoubleClick DART Cookies & Google AdSense"
 msgstr ""
 
-#: template-terms-conditions.php:50
 msgid "4. Limitation of Liability"
 msgstr ""
 
-#: template-homepage-travel.php:381
 msgid "4.9 Star Rating"
 msgstr ""
 
-#: inc/breadcrumbs.php:74
 msgid "404 - Not Found"
 msgstr ""
 
-#: template-privacy-policy.php:63
 msgid "5. Advertising Partners Privacy Policies"
 msgstr ""
 
-#: template-terms-conditions.php:55
 msgid "5. Contact Inquiries"
 msgstr ""
 
-#: template-disclaimer.php:57
 msgid "5. Questions and Concerns"
 msgstr ""
 
-#: template-homepage-travel.php:382
 msgid "500+ Verified Reviews"
 msgstr ""
 
-#: template-homepage-visa.php:143
 msgid "6 - 8 Months"
 msgstr ""
 
-#: template-tour-packages.php:71
 msgid "6 Days / 5 Nights Honeymoon Special"
 msgstr ""
 
-#: template-homepage-travel.php:515
 msgid "6+ Travelers (Group)"
 msgstr ""
 
-#: template-privacy-policy.php:69
 msgid "6. GDPR Data Protection Rights"
 msgstr ""
 
-#: template-homepage-visa.php:180
 msgid "65+ Points Required"
 msgstr ""
 
-#: template-homepage-travel.php:237
 msgid "7 Days / 6 Nights"
 msgstr ""
 
-#: template-tour-packages.php:35
 msgid "7 Days / 6 Nights All-Inclusive"
 msgstr ""
 
-#: front-page.php:577
 msgid "7 Niche Demos Built for High-Growth Businesses"
 msgstr ""
 
-#: functions.php:1364
 msgid "7 Pre-Built Starter Demos"
 msgstr ""
 
-#: functions.php:1358
 msgid "7 Ready Demos"
 msgstr ""
 
-#: template-privacy-policy.php:80
 msgid "7. CCPA Privacy Rights (Do Not Sell My Personal Information)"
 msgstr ""
 
-#: template-homepage-visa.php:179
 msgid "8 - 10 Months"
 msgstr ""
 
-#: template-homepage-travel.php:297
 msgid "8 Days / 7 Nights"
 msgstr ""
 
-#: template-privacy-policy.php:85
 msgid "8. Contact Information"
 msgstr ""
 
-#: template-homepage-visa.php:69
 msgid "98% Client Satisfaction Rate"
 msgstr ""
 
-#: inc/shortcodes.php:260
 msgid "99.9% Uptime Engineering SLA"
 msgstr ""
 
-#: functions.php:60
 msgid "A Partner You Can Rely On"
 msgstr ""
 
-#: template-homepage-consulting.php:171
 msgid "A disciplined, milestone-driven roadmap engineered for measurable commercial impact."
 msgstr ""
 
-#: inc/block-patterns.php:61
 msgid "A modern four-column services showcase grid."
 msgstr ""
 
-#: template-homepage-corporate.php:65
 msgid "A multi-disciplinary corporate agency providing unified solutions in business strategy, enterprise technology, and international mobility."
 msgstr ""
 
-#: template-homepage-visa.php:213
 msgid "A transparent, step-by-step process to guide your application from start to finish."
 msgstr ""
 
-#: template-homepage-it.php:53
 msgid "AI & Machine Learning Systems"
 msgstr ""
 
-#: template-homepage-digital.php:324
 msgid "AK"
 msgstr ""
 
-#: template-homepage-visa.php:280
 msgid "AR"
 msgstr ""
 
-#: template-homepage-visa.php:64
 msgid "AU"
 msgstr ""
 
-#: template-homepage-it.php:36
 msgid "AWS, Azure, and Google Cloud architected with Terraform IaC, multi-region Kubernetes, auto-scaling, and CI/CD pipelines."
 msgstr ""
 
-#: footer.php:29
 msgid "About BizPro"
 msgstr ""
 
-#: inc/about-page.php:19
 msgid "About BizPro Agency"
 msgstr ""
 
-#: inc/customizer.php:405
+msgid "About BizPro Consulting"
+msgstr ""
+
+msgid "About BizPro Corporate"
+msgstr ""
+
+msgid "About BizPro Store"
+msgstr ""
+
+msgid "About BizPro Tech"
+msgstr ""
+
+msgid "About BizPro Travel"
+msgstr ""
+
+msgid "About BizPro Visa"
+msgstr ""
+
 msgid "About Section"
 msgstr ""
 
-#: footer.php:42
-#: functions.php:59
 msgid "About Us"
 msgstr ""
 
-#: functions.php:1101
 msgid "Above Footer Ad Banner"
 msgstr ""
 
-#: functions.php:189
 msgid "Absolutely. Every client engagement is bound by strict bilateral non-disclosure agreements (NDAs) and enterprise-grade data security protocols. Your IP, sensitive records, and documents remain 100% confidential."
 msgstr ""
 
-#: template-homepage-consulting.php:278
 msgid "Accelerate Your Company Performance Today"
 msgstr ""
 
-#: footer.php:114
 msgid "Accept &amp; Close"
 msgstr ""
 
-#: functions.php:342
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/customizer.php:118
 msgid "Address"
 msgstr ""
 
-#: header.php:68
 msgid "Address:"
 msgstr ""
 
-#: inc/customizer.php:110
 msgid "Adds an \"All Demos\" menu and floating demo bar. Leave off on a live client site."
 msgstr ""
 
-#: functions.php:1135
-#: functions.php:1152
 msgid "Advertisement"
 msgstr ""
 
-#: functions.php:661
 msgid "Advisory Practices"
 msgstr ""
 
-#: functions.php:673
 msgid "Advisory Tiers"
 msgstr ""
 
-#: template-homepage-digital.php:138
 msgid "Affiliate Ready Engine"
 msgstr ""
 
-#: functions.php:508
-#: header.php:21
 msgid "Agency"
 msgstr ""
 
-#: template-homepage-travel.php:536
-#: template-homepage-visa.php:345
 msgid "Agency Home"
 msgstr ""
 
-#: inc/white-label.php:47
 msgid "Agency White Label Settings"
 msgstr ""
 
-#: template-homepage-digital.php:326
 msgid "Alex K."
 msgstr ""
 
-#: template-visa-search.php:46
 msgid "All Countries"
 msgstr ""
 
-#: functions.php:779
-#: functions.php:1277
 msgid "All Demos"
 msgstr ""
 
-#: template-homepage-travel.php:90
 msgid "All Types"
 msgstr ""
 
-#: template-visa-search.php:59
 msgid "All Visa Types"
 msgstr ""
 
-#: template-homepage-digital.php:395
 msgid "All individual digital products come with a Commercial License allowing you to build end products for yourself or your paying clients. You may not resell or redistribute the raw template source files directly."
 msgstr ""
 
-#: template-homepage-digital.php:287
 msgid "All major debit & credit cards"
 msgstr ""
 
-#: template-homepage-digital.php:253
-#: inc/demo-import.php:83
 msgid "All-Access Pass"
 msgstr ""
 
-#: template-tour-packages.php:23
 msgid "All-inclusive premium vacation packages with certified guides, 5-star hotel accommodations, and private airport transfers."
 msgstr ""
 
-#: template-homepage-travel.php:228
 msgid "All-inclusive stays, airport transfers, curated meals and licensed English-speaking local guides."
 msgstr ""
 
-#: template-homepage-travel.php:77
 msgid "Any Month"
 msgstr ""
 
-#: template-homepage-visa.php:229
 msgid "Application Filing"
 msgstr ""
 
-#: template-visa-search.php:120
-#: template-visa-search.php:139
-#: template-visa-search.php:152
-#: template-visa-search.php:165
 msgid "Apply Now →"
 msgstr ""
 
-#: template-homepage-visa.php:183
 msgid "Apply for Australia →"
 msgstr ""
 
-#: template-homepage-visa.php:147
 msgid "Apply for Canada →"
 msgstr ""
 
-#: template-homepage-visa.php:165
 msgid "Apply for UK →"
 msgstr ""
 
-#: template-homepage-visa.php:201
 msgid "Apply for USA →"
 msgstr ""
 
-#: template-homepage-visa.php:268
 msgid "Approved Applicants Share Their Journey"
 msgstr ""
 
-#: template-homepage-digital.php:101
 msgid "Architected for Conversions"
 msgstr ""
 
-#: template-homepage-it.php:114
 msgid "Architecting Resilient Cloud Systems & High-Impact Software"
 msgstr ""
 
-#: inc/demo-import.php:56
 msgid "Architecture Review"
 msgstr ""
 
-#: functions.php:188
 msgid "Are my corporate data and intellectual property protected?"
 msgstr ""
 
-#: template-homepage-visa.php:282
 msgid "Arun & Priya Sharma"
 msgstr ""
 
-#: template-privacy-policy.php:36
 msgid "At %1$s, accessible from %2$s, one of our main priorities is the privacy of our visitors. This Privacy Policy document outlines the types of information that is collected and recorded by %1$s and how we use it."
 msgstr ""
 
-#: template-homepage-travel.php:169
-#: template-homepage-visa.php:89
-#: template-homepage-visa.php:171
-#: template-homepage-visa.php:171
-#: template-visa-search.php:49
 msgid "Australia"
 msgstr ""
 
-#: template-visa-search.php:161
 msgid "Australia General Skilled Migration"
 msgstr ""
 
-#: template-homepage-visa.php:173
 msgid "Australia Migration"
 msgstr ""
 
-#: template-homepage-visa.php:306
 msgid "Australia Subclass 500"
 msgstr ""
 
-#: template-homepage-digital.php:145
 msgid "Auto Dark Mode"
 msgstr ""
 
-#: template-homepage-it.php:261
 msgid "Automated CI/CD Pipeline Tuning"
 msgstr ""
 
-#: template-homepage-travel.php:80
 msgid "Autumn Foliage"
 msgstr ""
 
-#: template-homepage-visa.php:162
 msgid "Available"
 msgstr ""
 
-#: index.php:94
 msgid "Back to Home"
 msgstr ""
 
-#: 404.php:41
 msgid "Back to Homepage"
 msgstr ""
 
-#: inc/demo-import.php:153
 msgid "Back to demos"
 msgstr ""
 
-#: footer.php:100
 msgid "Back to top"
 msgstr ""
 
-#: inc/customizer.php:479
 msgid "Badge Highlight (e.g. 12+)"
 msgstr ""
 
-#: inc/customizer.php:494
 msgid "Badge Label"
 msgstr ""
 
-#: template-homepage-travel.php:63
 msgid "Bali & Lombok, Indonesia"
 msgstr ""
 
-#: template-tour-packages.php:34
 msgid "Bali Island Luxury Escape"
 msgstr ""
 
-#: template-homepage-travel.php:144
 msgid "Bali Island Paradise"
 msgstr ""
 
-#: template-homepage-digital.php:282
 msgid "Bank-grade checkout security"
 msgstr ""
 
-#: inc/customizer.php:914
 msgid "Bar Title"
 msgstr ""
 
-#: template-homepage-consulting.php:220
 msgid "Bespoke corporate engagements designed for high-conviction decision making."
 msgstr ""
 
-#: template-homepage-it.php:42
 msgid "Bespoke web applications, scalable microservices, and distributed systems built with Python, Go, Node.js, and React."
 msgstr ""
 
-#: template-homepage-travel.php:236
 msgid "Best Seller"
 msgstr ""
 
-#: template-homepage-consulting.php:248
 msgid "Bi-Weekly Executive Steering Committee"
 msgstr ""
 
-#: inc/about-page.php:20
-#: inc/block-patterns.php:22
 msgid "BizPro Agency"
 msgstr ""
 
-#: inc/customizer.php:41
 msgid "BizPro Agency Options"
 msgstr ""
 
-#: template-homepage-digital.php:40
 msgid "BizPro Agency — Digital Products & SaaS Demo"
 msgstr ""
 
-#: template-homepage-consulting.php:65
 msgid "Boardroom Governance & C-Suite Coaching"
 msgstr ""
 
-#: template-homepage-consulting.php:234
 msgid "Boardroom Presentation & Q&A Session"
 msgstr ""
 
-#: template-homepage-visa.php:325
 msgid "Book A Session"
 msgstr ""
 
-#: functions.php:497
 msgid "Book Advisory"
 msgstr ""
 
-#: template-tour-packages.php:45
 msgid "Book Bali Tour Now"
 msgstr ""
 
-#: template-tour-packages.php:81
 msgid "Book Maldives Tour Now"
 msgstr ""
 
-#: template-homepage-travel.php:257
-#: template-homepage-travel.php:287
-#: template-homepage-travel.php:317
 msgid "Book Now"
 msgstr ""
 
-#: template-tour-packages.php:63
 msgid "Book Swiss Tour Now"
 msgstr ""
 
-#: functions.php:31
-#: inc/demo-import.php:29
 msgid "Book a Free Consultation"
 msgstr ""
 
-#: functions.php:485
-#: inc/demo-import.php:47
 msgid "Book a Tour"
 msgstr ""
 
-#: template-homepage-consulting.php:279
 msgid "Book a strictly confidential 45-minute executive briefing with our senior management partners."
 msgstr ""
 
-#: template-homepage-travel.php:397
 msgid "Book your summer holiday package 60 days in advance and enjoy complimentary resort upgrades, free travel insurance, and zero cancellation fee."
 msgstr ""
 
-#: template-homepage-digital.php:354
 msgid "Bought the Ultimate Bundle and launched our client project two weeks ahead of schedule. Instant download worked immediately after Stripe checkout."
 msgstr ""
 
-#: inc/customizer.php:52
 msgid "Brand Colour"
 msgstr ""
 
-#: inc/breadcrumbs.php:20
-#: inc/shortcodes.php:35
+msgid "Brand Identity & Marketing Strategy"
+msgstr ""
+
 msgid "Breadcrumbs"
 msgstr ""
 
-#: template-homepage-digital.php:53
 msgid "Browse Digital Products"
 msgstr ""
 
-#: functions.php:473
 msgid "Browse Products"
 msgstr ""
 
-#: template-visa-search.php:68
 msgid "Browse available destination pathways below."
 msgstr ""
 
-#: template-homepage-digital.php:161
 msgid "Browse our handpicked collection of developer tools, UI templates, and production-ready starter kits."
 msgstr ""
 
-#: template-homepage-it.php:154
 msgid "Built with best-in-class open-source engines and cloud-native frameworks."
 msgstr ""
 
-#: template-homepage-digital.php:139
 msgid "Built-in tracking for affiliate partners with automated payout tracking and link generation."
 msgstr ""
 
-#: front-page.php:619
-#: inc/demo-import.php:60
 msgid "Business & Management Consulting"
 msgstr ""
 
-#: functions.php:45
-#: functions.php:551
-#: template-homepage-travel.php:539
-#: template-homepage-visa.php:348
 msgid "Business Consulting"
 msgstr ""
 
-#: functions.php:255
 msgid "Business Consulting Menu"
 msgstr ""
 
-#: functions.php:511
+msgid "Business, Investor & Startup Visa"
+msgstr ""
+
 msgid "Business, Tech & Immigration Solutions"
 msgstr ""
 
-#: inc/customizer.php:174
-#: inc/customizer.php:245
 msgid "Button Link"
 msgstr ""
 
-#: inc/customizer.php:158
-#: inc/customizer.php:230
 msgid "Button Text"
 msgstr ""
 
-#: template-homepage-digital.php:269
 msgid "Buy All-Access Bundle →"
 msgstr ""
 
-#: template-homepage-consulting.php:42
 msgid "Buy-side and sell-side mandate guidance, post-merger synergy realization, and cross-border commercial structuring."
 msgstr ""
 
-#: template-homepage-digital.php:374
 msgid "Buyer FAQ"
 msgstr ""
 
-#: functions.php:727
 msgid "Buyer FAQs"
 msgstr ""
 
-#: functions.php:723
 msgid "Buyer Reviews"
 msgstr ""
 
-#: single.php:29
 msgid "By"
 msgstr ""
 
-#: template-privacy-policy.php:42
 msgid "By using our website, you hereby consent to our Privacy Policy and agree to its terms."
 msgstr ""
 
-#: template-terms-conditions.php:46
 msgid "By using the Site, you represent and warrant that: (1) all registration and inquiry information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information; (3) you have the legal capacity and you agree to comply with these Terms and Conditions."
 msgstr ""
 
-#: inc/shortcodes.php:273
 msgid "C-Suite Executive Team Mandate"
 msgstr ""
 
-#: template-homepage-visa.php:62
 msgid "CA"
 msgstr ""
 
-#: template-homepage-visa.php:145
 msgid "CLB 7+ Recommended"
 msgstr ""
 
-#: template-contact.php:201
+msgid "Call Advisory Desk"
+msgstr ""
+
 msgid "Call Emergency Desk"
 msgstr ""
 
-#: inc/block-patterns.php:123
-#: inc/customizer.php:800
+msgid "Call Enterprise Desk"
+msgstr ""
+
+msgid "Call Immigration Desk"
+msgstr ""
+
+msgid "Call Incident Desk"
+msgstr ""
+
+msgid "Call Support Desk"
+msgstr ""
+
+msgid "Call Travel Desk"
+msgstr ""
+
 msgid "Call to Action Banner"
 msgstr ""
 
-#: functions.php:186
 msgid "Can we upgrade, downgrade, or pause our monthly retainers?"
 msgstr ""
 
-#: template-faq.php:53
 msgid "Can you build custom cloud software and mobile apps?"
 msgstr ""
 
-#: template-homepage-visa.php:87
-#: template-homepage-visa.php:135
-#: template-homepage-visa.php:135
-#: template-visa-search.php:47
 msgid "Canada"
 msgstr ""
 
-#: template-homepage-visa.php:276
 msgid "Canada Express Entry"
 msgstr ""
 
-#: template-homepage-visa.php:137
 msgid "Canada PR & Visas"
 msgstr ""
 
-#: template-visa-search.php:135
 msgid "Canada Permanent Residency"
 msgstr ""
 
-#: functions.php:688
 msgid "Capabilities"
 msgstr ""
 
-#: template-homepage-consulting.php:53
 msgid "Capital Restructuring & CFO Advisory"
 msgstr ""
 
-#: inc/customizer.php:1042
 msgid "Case %d: Description"
 msgstr ""
 
-#: inc/customizer.php:1050
 msgid "Case %d: Result Metric"
 msgstr ""
 
-#: inc/customizer.php:1026
 msgid "Case %d: Tag"
 msgstr ""
 
-#: inc/customizer.php:1034
 msgid "Case %d: Title"
 msgstr ""
 
-#: template-homepage-visa.php:199
 msgid "Case Evaluation:"
 msgstr ""
 
-#: functions.php:136
-#: functions.php:642
-#: functions.php:750
-#: inc/customizer.php:945
 msgid "Case Studies"
 msgstr ""
 
-#: template-about.php:81
 msgid "Cases Delivered"
 msgstr ""
 
-#: functions.php:64
 msgid "Certified and experienced professionals"
 msgstr ""
 
-#: template-homepage-visa.php:114
 msgid "Check My Eligibility Now →"
 msgstr ""
 
-#: template-homepage-visa.php:79
 msgid "Check Your Visa Eligibility"
 msgstr ""
 
-#: functions.php:108
 msgid "Chief Executive Officer"
 msgstr ""
 
-#: template-team.php:48
 msgid "Chief Technology Officer"
 msgstr ""
 
-#: template-homepage-travel.php:62
 msgid "Choose Destination"
 msgstr ""
 
-#: template-pricing.php:46
-#: inc/shortcodes.php:249
 msgid "Choose Standard"
 msgstr ""
 
-#: front-page.php:580
 msgid "Choose your industry below. Each starter site includes tailored typography, custom page layouts, responsive contact forms, and AdSense optimized areas."
 msgstr ""
 
-#: inc/customizer.php:696
 msgid "Client %d Designation/Role"
 msgstr ""
 
-#: inc/customizer.php:680
 msgid "Client %d Name"
 msgstr ""
 
-#: functions.php:669
 msgid "Client Impact"
 msgstr ""
 
-#: functions.php:180
 msgid "Client Inquiries"
 msgstr ""
 
-#: inc/customizer.php:883
 msgid "Client Logos Bar"
 msgstr ""
 
-#: template-about.php:89
-#: template-homepage-visa.php:250
 msgid "Client Satisfaction"
 msgstr ""
 
-#: template-case-studies.php:22
 msgid "Client Success Case Studies"
 msgstr ""
 
-#: template-homepage-visa.php:267
 msgid "Client Success Stories"
 msgstr ""
 
-#: header.php:115
 msgid "Close menu"
 msgstr ""
 
-#: functions.php:493
 msgid "Cloud & Software Engineering"
 msgstr ""
 
-#: template-homepage-digital.php:344
 msgid "Cloud Architect, StackBridge"
 msgstr ""
 
-#: template-homepage-digital.php:74
+msgid "Cloud Architecture & DevOps Migration"
+msgstr ""
+
 msgid "Cloud Delivery"
 msgstr ""
 
-#: template-case-studies.php:33
 msgid "Cloud Infrastructure"
 msgstr ""
 
-#: template-homepage-it.php:35
 msgid "Cloud Infrastructure & DevOps"
 msgstr ""
 
-#: template-homepage-digital.php:203
 msgid "Cloud Infrastructure & DevOps Pack"
 msgstr ""
 
-#: functions.php:139
 msgid "Cloud Migration for TechCorp"
 msgstr ""
 
-#: template-homepage-it.php:237
 msgid "Cloud Starter"
 msgstr ""
 
-#: comments.php:51
 msgid "Comments are closed."
 msgstr ""
 
-#: template-homepage-digital.php:296
 msgid "Commercial License Included"
 msgstr ""
 
-#: template-homepage-consulting.php:231
 msgid "Complete Commercial Due Diligence Audit"
 msgstr ""
 
-#: template-homepage-digital.php:231
 msgid "Complete Next.js starter kit with Stripe subscription billing, authentication, and multi-tenant database."
 msgstr ""
 
-#: functions.php:159
-msgid "Comprehensive Case Assessment\\nCustom Strategic Roadmap\\nDedicated Account Specialist\\nDirect Chat & Email Advisory\\nStandard 5-Day Delivery"
+msgid "Comprehensive Case Assessment\nCustom Strategic Roadmap\nDedicated Account Specialist\nDirect Chat & Email Advisory\nStandard 5-Day Delivery"
 msgstr ""
 
-#: template-services.php:68
 msgid "Comprehensive Commercial Capabilities"
 msgstr ""
 
-#: template-homepage-visa.php:198
 msgid "Comprehensive Support"
 msgstr ""
 
-#: template-homepage-visa.php:49
 msgid "Comprehensive legal immigration assistance, student visas, skilled worker pathways, and permanent residency solutions for Canada, UK, Australia, USA, and Europe."
 msgstr ""
 
-#: template-pricing.php:54
-#: inc/shortcodes.php:253
 msgid "Comprehensive mandate for expanding international businesses."
 msgstr ""
 
-#: template-homepage-travel.php:485
 msgid "Concierge Desk Email"
 msgstr ""
 
-#: template-homepage-corporate.php:102
 msgid "Connect with our corporate client engagement team for customized proposals."
 msgstr ""
 
-#: functions.php:146
-#: functions.php:496
 msgid "Consulting"
 msgstr ""
 
-#: inc/template-tags.php:93
 msgid "Consulting / Analytics"
 msgstr ""
 
-#: footer.php:46
-#: functions.php:704
-#: functions.php:762
 msgid "Contact"
 msgstr ""
 
-#: template-faq.php:76
 msgid "Contact Advisory Desk"
 msgstr ""
 
-#: functions.php:503
 msgid "Contact Corporate"
 msgstr ""
 
-#: template-homepage-corporate.php:68
 msgid "Contact Corporate Desk"
 msgstr ""
 
-#: template-disclaimer.php:58
 msgid "Contact Desk:"
 msgstr ""
 
-#: template-pricing.php:81
-#: inc/shortcodes.php:281
 msgid "Contact Executive Desk"
 msgstr ""
 
-#: footer.php:57
 msgid "Contact Info"
 msgstr ""
 
-#: template-privacy-policy.php:49
 msgid "Contact Information:"
 msgstr ""
 
-#: 404.php:44
 msgid "Contact Support"
 msgstr ""
 
-#: functions.php:731
 msgid "Contact Us"
 msgstr ""
 
-#: template-homepage-consulting.php:250
 msgid "Continuous Operational KPI Monitoring"
 msgstr ""
 
-#: template-privacy-policy.php:51
 msgid "Cookies and Web Beacons:"
 msgstr ""
 
-#: inc/customizer.php:870
 msgid "Copyright Text"
 msgstr ""
 
-#: template-homepage-it.php:128
 msgid "Core Capabilities"
 msgstr ""
 
-#: template-services.php:67
 msgid "Core Capabilities & Practices"
 msgstr ""
 
-#: functions.php:502
 msgid "Corporate"
 msgstr ""
 
-#: functions.php:557
-#: template-homepage-travel.php:540
-#: template-homepage-visa.php:349
-#: inc/demo-import.php:69
+msgid "Corporate & Group Tour Arrangements"
+msgstr ""
+
 msgid "Corporate Enterprise"
 msgstr ""
 
-#: front-page.php:627
 msgid "Corporate Enterprise & Finance"
 msgstr ""
 
-#: template-contact.php:163
-msgid "Corporate Enterprise Solutions"
+msgid "Corporate Escalations?"
 msgstr ""
 
-#: template-homepage-corporate.php:35
 msgid "Corporate Governance & Compliance"
 msgstr ""
 
-#: template-homepage-consulting.php:35
+msgid "Corporate Governance, Risk & ESG"
+msgstr ""
+
 msgid "Corporate Growth & Market Entry"
 msgstr ""
 
-#: inc/demo-import.php:74
 msgid "Corporate Inquiries"
 msgstr ""
 
-#: functions.php:256
 msgid "Corporate Menu"
 msgstr ""
 
-#: template-visa-search.php:34
 msgid "Country Pathways & Visa Program Finder"
 msgstr ""
 
-#: inc/about-page.php:74
 msgid "Create a Page"
 msgstr ""
 
-#: template-homepage-corporate.php:40
 msgid "Cross-Border Investment"
 msgstr ""
 
-#: inc/shortcodes.php:274
 msgid "Cross-Border M&A Support"
 msgstr ""
 
-#: template-homepage-travel.php:208
+msgid "Cross-Border Mergers & Joint Ventures"
+msgstr ""
+
 msgid "Cultural Choice"
 msgstr ""
 
-#: template-homepage-travel.php:110
 msgid "Curated Trips (Sample)"
 msgstr ""
 
-#: functions.php:171
-#: template-homepage-consulting.php:259
-#: template-homepage-it.php:271
 msgid "Custom"
 msgstr ""
 
-#: inc/white-label.php:68
 msgid "Custom Author / Agency Name"
 msgstr ""
 
-#: inc/white-label.php:72
 msgid "Custom Author URL"
 msgstr ""
 
-#: template-homepage-it.php:41
 msgid "Custom Enterprise Software"
 msgstr ""
 
-#: inc/white-label.php:64
+msgid "Custom Private Itinerary Planning"
+msgstr ""
+
+msgid "Custom Template & Feature Development"
+msgstr ""
+
 msgid "Custom Theme Description"
 msgstr ""
 
-#: inc/white-label.php:60
 msgid "Custom Theme Name"
 msgstr ""
 
-#: functions.php:42
+msgid "Custom Web & Mobile App Development"
+msgstr ""
+
 msgid "Custom software, cloud setup and managed IT support that keep your business running smoothly."
 msgstr ""
 
-#: template-homepage-digital.php:113
 msgid "Customers enjoy a frictionless checkout flow. Full WooCommerce compatibility allows automated coupon calculation, instant file fulfillment, and multiple gateway options."
 msgstr ""
 
-#: inc/about-page.php:48
 msgid "Customize Your Site"
 msgstr ""
 
-#: template-homepage-it.php:47
 msgid "Cybersecurity & Compliance"
 msgstr ""
 
-#: template-homepage-visa.php:295
+msgid "Cybersecurity Audits & Compliance"
+msgstr ""
+
 msgid "DA"
 msgstr ""
 
-#: template-homepage-it.php:244
 msgid "Daily Automated Backups & DR"
 msgstr ""
 
-#: template-homepage-it.php:65
 msgid "Data Engineering & Analytics"
 msgstr ""
 
-#: template-homepage-consulting.php:36
 msgid "Data-backed market expansion blueprints, customer segmentation, pricing optimization, and commercial due diligence."
 msgstr ""
 
-#: inc/shortcodes.php:240
 msgid "Dedicated Account Manager"
 msgstr ""
 
-#: template-homepage-it.php:231
 msgid "Dedicated Engineering Retainers"
 msgstr ""
 
-#: template-homepage-it.php:275
+msgid "Dedicated Engineering Team / Staffing"
+msgstr ""
+
 msgid "Dedicated Full-Stack Pod (3-5 Engineers)"
 msgstr ""
 
-#: inc/about-page.php:223
 msgid "Dedicated Priority Support & Regular Updates"
 msgstr ""
 
-#: template-homepage-it.php:259
 msgid "Dedicated Senior DevOps Lead"
 msgstr ""
 
-#: inc/shortcodes.php:276
 msgid "Dedicated VIP Phone & Slack Channel"
 msgstr ""
 
-#: template-homepage-consulting.php:251
 msgid "Dedicated WhatsApp / Private War Room"
 msgstr ""
 
-#: functions.php:66
 msgid "Dedicated support from start to finish"
 msgstr ""
 
-#: template-homepage-corporate.php:64
 msgid "Delivering Strategic Value Across Global Markets"
 msgstr ""
 
-#: template-homepage-travel.php:375
 msgid "Demo Data Only"
 msgstr ""
 
-#: template-homepage-consulting.php:191
 msgid "Demonstrated Impact"
 msgstr ""
 
-#: inc/customizer.php:464
 msgid "Description"
 msgstr ""
 
-#: template-homepage-travel.php:508
 msgid "Desired Destination"
 msgstr ""
 
-#: functions.php:607
 msgid "Destinations"
 msgstr ""
 
-#: template-homepage-travel.php:118
 msgid "Destinations (Sample)"
 msgstr ""
 
-#: functions.php:148
 msgid "Developed go-to-market strategy enabling entry into UAE, UK and Canada within one year."
 msgstr ""
 
-#: template-homepage-consulting.php:59
 msgid "Digital & Business Model Innovation"
 msgstr ""
 
-#: functions.php:472
 msgid "Digital & SaaS"
 msgstr ""
 
-#: template-homepage-digital.php:70
+msgid "Digital Asset & Software Licensing"
+msgstr ""
+
 msgid "Digital License Keys"
 msgstr ""
 
-#: front-page.php:587
-#: inc/demo-import.php:78
 msgid "Digital Products & SaaS Store"
 msgstr ""
 
-#: template-contact.php:158
-msgid "Digital Products, Software & SaaS"
-msgstr ""
-
-#: inc/demo-import.php:82
 msgid "Digital Software, UI Kits & SaaS Products"
 msgstr ""
 
-#: functions.php:715
 msgid "Digital Store"
 msgstr ""
 
-#: functions.php:563
 msgid "Digital Store & SaaS"
 msgstr ""
 
-#: functions.php:251
 msgid "Digital Store & SaaS Menu"
 msgstr ""
 
-#: template-homepage-digital.php:71
 msgid "Digital download links and license keys can be managed with WooCommerce or EDD."
 msgstr ""
 
-#: inc/demo-import.php:81
 msgid "Digital products and SaaS store. Requires the WooCommerce plugin for products, cart and checkout."
 msgstr ""
 
-#: template-homepage-visa.php:144
 msgid "Diploma / Degree"
 msgstr ""
 
-#: template-contact.php:53
 msgid "Direct Consultation & Inquiries"
 msgstr ""
 
-#: template-homepage-travel.php:478
 msgid "Direct Phone & WhatsApp"
 msgstr ""
 
-#: template-contact.php:71
 msgid "Direct Phone Lines"
 msgstr ""
 
-#: template-homepage-consulting.php:247
 msgid "Direct Senior Partner Access (Ex-McKinsey)"
 msgstr ""
 
-#: template-contact.php:189
 msgid "Direct Senior Partner Access:"
 msgstr ""
 
-#: template-homepage-digital.php:292
 msgid "Direct download link in 5s"
 msgstr ""
 
-#: template-homepage-travel.php:47
 msgid "Discover Your Next"
 msgstr ""
 
-#: functions.php:1103
 msgid "Displays an advertisement banner above the website footer."
 msgstr ""
 
-#: functions.php:1079
 msgid "Displays an advertisement banner below the top navigation."
 msgstr ""
 
-#: functions.php:1091
 msgid "Displays an advertisement inside single post articles."
 msgstr ""
 
-#: template-homepage-digital.php:401
+msgid "Displays the 7-demo grid with live preview links on the main flagship homepage."
+msgstr ""
+
 msgid "Do you offer a refund policy on digital products?"
 msgstr ""
 
-#: functions.php:190
 msgid "Do you provide ongoing maintenance and post-project support?"
 msgstr ""
 
-#: template-homepage-visa.php:224
 msgid "Document Preparation"
 msgstr ""
 
-#: functions.php:50
 msgid "Document checks, application filing and interview preparation for study, work and visit visas."
 msgstr ""
 
-#: template-homepage-visa.php:297
 msgid "Dr. Daniel Adebayo"
 msgstr ""
 
-#: template-homepage-travel.php:442
 msgid "Dr. Marcus Sterling"
 msgstr ""
 
-#: template-homepage-travel.php:68
 msgid "Dubai & Abu Dhabi, UAE"
 msgstr ""
 
-#: template-homepage-travel.php:183
 msgid "Dubai Luxury Oasis"
 msgstr ""
 
-#: template-homepage-visa.php:192
 msgid "EB-1, EB-2 & F-1"
 msgstr ""
 
-#: template-homepage-travel.php:426
 msgid "EK"
 msgstr ""
 
-#: template-team.php:39
 msgid "ER"
 msgstr ""
 
-#: inc/about-page.php:57
 msgid "Each demo imports its own homepage, inner pages (About, Services, Pricing, FAQ, Contact, Privacy, Terms), menus and sample posts."
 msgstr ""
 
-#: page.php:83
-#: single.php:73
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/about-page.php:68
 msgid "Edit your logo, colors, hero banner, services, stats and testimonials in real time."
 msgstr ""
 
-#: template-homepage-visa.php:144
 msgid "Education Required:"
 msgstr ""
 
-#: template-terms-conditions.php:27
 msgid "Effective Date:"
 msgstr ""
 
-#: template-team.php:40
 msgid "Elena Rostova, LL.M."
 msgstr ""
 
-#: functions.php:584
 msgid "Eligibility Check"
 msgstr ""
 
-#: inc/customizer.php:117
-#: inc/lead-handler.php:71
 msgid "Email"
 msgstr ""
 
-#: template-contact.php:80
 msgid "Email & Advisory Desk"
 msgstr ""
 
-#: template-contact.php:136
-#: template-homepage-travel.php:504
 msgid "Email Address *"
 msgstr ""
 
-#: template-homepage-it.php:298
 msgid "Email Engineering Team"
 msgstr ""
 
-#: template-homepage-visa.php:334
 msgid "Email Our Team →"
 msgstr ""
 
-#: template-homepage-digital.php:416
 msgid "Email Sales Desk"
 msgstr ""
 
-#: template-homepage-consulting.php:286
 msgid "Email Senior Partners"
 msgstr ""
 
-#: front-page.php:455
-#: template-homepage-corporate.php:109
-#: template-homepage-default.php:421
 msgid "Email Us"
 msgstr ""
 
-#: header.php:62
-#: template-terms-conditions.php:57
 msgid "Email:"
 msgstr ""
 
-#: template-homepage-consulting.php:263
 msgid "Embedded Advisory Pod (3-4 Specialists)"
 msgstr ""
 
-#: template-contact.php:199
 msgid "Emergency Escalations?"
 msgstr ""
 
-#: template-homepage-travel.php:428
+msgid "Emergency Outages?"
+msgstr ""
+
 msgid "Emma & Kevin Vance"
 msgstr ""
 
-#: template-about.php:52
 msgid "Empowering Global Success Through Integrated Advisory"
 msgstr ""
 
-#: template-homepage-consulting.php:66
 msgid "Empowering founders, board directors, and executive leadership teams with high-leverage strategic decision frameworks."
 msgstr ""
 
-#: template-homepage-consulting.php:264
 msgid "End-to-End Change Management Leadership"
 msgstr ""
 
-#: template-homepage-consulting.php:218
 msgid "Engagement Options"
 msgstr ""
 
-#: template-homepage-it.php:130
 msgid "Engineered for velocity, military-grade security, and measurable ROI."
 msgstr ""
 
-#: template-coming-soon.php:60
 msgid "Enter your business email..."
 msgstr ""
 
-#: template-homepage-corporate.php:67
+msgid "Enterprise / Commercial Multi-Seat License"
+msgstr ""
+
+msgid "Enterprise 24/7 Managed IT Support"
+msgstr ""
+
+msgid "Enterprise Advisory Retainers"
+msgstr ""
+
 msgid "Enterprise Capabilities"
 msgstr ""
 
-#: template-homepage-it.php:112
 msgid "Enterprise Cloud & Custom Software Engineering"
 msgstr ""
 
-#: inc/demo-import.php:55
 msgid "Enterprise Cloud Architecture, DevOps & Custom Software"
 msgstr ""
 
-#: template-homepage-it.php:269
 msgid "Enterprise Dedicated"
 msgstr ""
 
-#: functions.php:170
+msgid "Enterprise Digital Transformation"
+msgstr ""
+
 msgid "Enterprise Elite"
 msgstr ""
 
-#: template-homepage-it.php:54
 msgid "Enterprise LLM fine-tuning, RAG semantic pipelines, real-time computer vision, and predictive business intelligence."
 msgstr ""
 
-#: template-homepage-corporate.php:78
 msgid "Enterprise Solutions"
 msgstr ""
 
-#: template-homepage-it.php:153
 msgid "Enterprise Technology Matrix"
 msgstr ""
 
-#: template-homepage-corporate.php:50
 msgid "Enterprise Technology Modernization"
 msgstr ""
 
-#: front-page.php:614
 msgid "Enterprise tech stack matrix, DevOps architecture, SLA guarantees, and recurring retainers."
 msgstr ""
 
-#: template-homepage-digital.php:204
 msgid "Enterprise-grade AWS & Azure Terraform blueprints with automated GitHub Actions CI/CD deployment pipelines."
 msgstr ""
 
-#: template-pricing.php:36
-#: inc/shortcodes.php:236
 msgid "Essential advisory & technical support for single startups."
 msgstr ""
 
-#: template-about.php:65
 msgid "Every mandate we take on is backed by bilateral non-disclosure agreements, clear milestone deliverables, and seasoned senior partner involvement from inception to completion."
 msgstr ""
 
-#: template-homepage-digital.php:102
 msgid "Everything You Need to Scale Digital Sales"
 msgstr ""
 
-#: template-homepage-consulting.php:219
 msgid "Executive Advisory Mandate Models"
 msgstr ""
 
-#: functions.php:677
-#: inc/demo-import.php:65
 msgid "Executive Briefing"
 msgstr ""
 
-#: template-about.php:98
+msgid "Executive Coaching & Change Management"
+msgstr ""
+
+msgid "Executive Escalations?"
+msgstr ""
+
 msgid "Executive Leadership"
 msgstr ""
 
-#: template-pricing.php:70
-#: inc/shortcodes.php:268
 msgid "Executive Mandate"
 msgstr ""
 
-#: template-homepage-consulting.php:233
 msgid "Executive Strategic Recommendation Dossier"
 msgstr ""
 
-#: template-homepage-corporate.php:46
 msgid "Executive search, expatriate immigration compliance, and global workforce mobilization."
 msgstr ""
 
-#: front-page.php:622
 msgid "Executive strategic practices, post-merger integration framework, and client value metric cards."
 msgstr ""
 
-#: functions.php:84
 msgid "Expert Team Members"
 msgstr ""
 
-#: template-homepage-visa.php:57
 msgid "Explore Countries"
 msgstr ""
 
-#: template-services.php:91
 msgid "Explore Dedicated Demo"
 msgstr ""
 
-#: template-homepage-travel.php:534
-#: template-homepage-visa.php:343
 msgid "Explore Other Demos:"
 msgstr ""
 
-#: template-about.php:69
 msgid "Explore Services"
 msgstr ""
 
-#: template-homepage-it.php:117
 msgid "Explore Solutions"
 msgstr ""
 
-#: template-homepage-travel.php:44
 msgid "Explore The World Beyond Boundaries"
 msgstr ""
 
-#: template-homepage-visa.php:128
 msgid "Explore pathways tailored for professionals, students, families and investors."
 msgstr ""
 
-#: template-visa-search.php:133
 msgid "Express Entry & PNP"
 msgstr ""
 
-#: template-homepage-visa.php:141
 msgid "Express Entry (FSW/CEC), Provincial Nominee Programs (PNP), and Post-Grad Work Permits."
 msgstr ""
 
-#: template-homepage-visa.php:138
 msgid "Express Entry Active"
 msgstr ""
 
-#: inc/customizer.php:304
-#: inc/customizer.php:434
-#: inc/customizer.php:631
-#: inc/customizer.php:738
 msgid "Eyebrow"
 msgstr ""
 
-#: inc/customizer.php:974
-#: inc/customizer.php:1092
-#: inc/customizer.php:1200
 msgid "Eyebrow Text"
 msgstr ""
 
-#: functions.php:758
 msgid "FAQ"
 msgstr ""
 
-#: inc/customizer.php:1246
 msgid "FAQ %d: Answer"
 msgstr ""
 
-#: inc/customizer.php:1238
 msgid "FAQ %d: Question"
 msgstr ""
 
-#: inc/customizer.php:1171
 msgid "FAQ Section"
 msgstr ""
 
-#: footer.php:45
-#: functions.php:596
 msgid "FAQs"
 msgstr ""
 
-#: template-homepage-digital.php:89
 msgid "FAST CDN DELIVERY"
 msgstr ""
 
-#: template-homepage-corporate.php:41
 msgid "Facilitating international trade alliances, foreign direct investments, and cross-border transactions."
 msgstr ""
 
-#: template-homepage-travel.php:94
 msgid "Family & Cultural"
 msgstr ""
 
-#: template-homepage-travel.php:457
 msgid "Family Trip to Japan"
 msgstr ""
 
-#: inc/about-page.php:193
 msgid "Fast & Lightweight Core (Pure CSS/JS)"
 msgstr ""
 
-#: template-homepage-digital.php:64
 msgid "Fast Fulfillment"
 msgstr ""
 
-#: inc/about-page.php:186
 msgid "Feature"
 msgstr ""
 
-#: template-tour-packages.php:22
 msgid "Featured International Tour Packages"
 msgstr ""
 
-#: template-visa-search.php:136
 msgid "Federal Skilled Worker, Canadian Experience Class and Provincial Nominee streams with complete CRS audits."
 msgstr ""
 
-#: template-homepage-digital.php:172
 msgid "Figma & Tailwind CSS"
 msgstr ""
 
-#: template-contact.php:94
 msgid "Fill out the form below and an assigned specialist will get back to you promptly."
 msgstr ""
 
-#: template-visa-search.php:35
 msgid "Filter verified immigration, work permit, student visa and residency programs across tier-1 destinations."
 msgstr ""
 
-#: template-case-studies.php:35
 msgid "FinTech Enterprise Microservices Migration"
 msgstr ""
 
-#: inc/template-tags.php:98
 msgid "Finance / Investment"
 msgstr ""
 
-#: template-faq.php:23
+msgid "Financial Modeling & M&A Advisory"
+msgstr ""
+
 msgid "Find fast answers to common questions about our consultancy, visa pathways, IT development, and billing policies."
 msgstr ""
 
-#: inc/demo-import.php:27
 msgid "Flagship multi-purpose agency: services, case studies, team, pricing, FAQ and contact pages."
 msgstr ""
 
-#: functions.php:154
 msgid "Flexible Plans Built for Growth"
 msgstr ""
 
-#: functions.php:54
+msgid "Flights, Hotels & Resort Bookings"
+msgstr ""
+
 msgid "Flights, hotels and tailor-made itineraries for business trips and holidays, handled end to end."
 msgstr ""
 
-#: front-page.php:606
 msgid "Floating search bar, curated destination packages, seasonal deals, and verified guest reviews."
 msgstr ""
 
-#: inc/customizer.php:856
 msgid "Footer"
 msgstr ""
 
-#: functions.php:340
 msgid "Footer Column %d"
 msgstr ""
 
-#: footer.php:88
-#: functions.php:257
 msgid "Footer Menu"
 msgstr ""
 
-#: template-contact.php:200
-msgid "For critical enterprise IT incidents or urgent visa submission deadlines, reach our 24/7 dedicated escalation desk."
+msgid "For critical business inquiries or urgent project submission deadlines, reach our 24/7 dedicated escalation desk."
 msgstr ""
 
-#: functions.php:61
+msgid "For critical enterprise IT incidents, cloud infrastructure outages or server downtime, reach our 24/7 dedicated DevOps desk."
+msgstr ""
+
+msgid "For enterprise compliance matters, regulatory filings or urgent cross-border institutional inquiries, reach our dedicated client liaison."
+msgstr ""
+
+msgid "For flight schedule disruptions, same-day hotel issues or immediate itinerary assistance, reach our 24/7 dedicated travel desk."
+msgstr ""
+
 msgid "For over a decade we have helped businesses and individuals reach their goals with honest advice, fast delivery and a personal touch. Our multidisciplinary team combines technical skill with real-world experience."
 msgstr ""
 
-#: template-about.php:53
 msgid "For over a decade, BizPro Agency has served as a single trusted bridge connecting enterprises and individuals to world-class business consulting, legal immigration, and advanced technology solutions."
 msgstr ""
 
-#: template-team.php:49
+msgid "For time-critical boardroom decisions, crisis management or urgent transaction advisory, contact our senior practice lead."
+msgstr ""
+
+msgid "For urgent consular submission deadlines, interview clearances, or time-sensitive appeals, reach our 24/7 legal immigration desk."
+msgstr ""
+
+msgid "For urgent digital license activations, enterprise deployment issues or technical assistance, reach our dedicated product desk."
+msgstr ""
+
 msgid "Former AWS Solutions Architect leading cloud infrastructure, microservices and automated deployment pipelines."
 msgstr ""
 
-#: template-team.php:23
 msgid "Former enterprise executives, licensed immigration barristers, and lead cloud engineers dedicated to your mission."
 msgstr ""
 
-#: template-about.php:63
 msgid "Founded on Transparency, Driven by Measurable Client Impact"
 msgstr ""
 
-#: template-team.php:34
 msgid "Founder & Managing Principal"
 msgstr ""
 
-#: functions.php:101
 msgid "Founder, Startup Co."
 msgstr ""
 
-#: template-homepage-it.php:276
 msgid "Fractional CTO / Principal Architect"
 msgstr ""
 
-#: template-homepage-travel.php:156
 msgid "France"
 msgstr ""
 
-#: inc/about-page.php:187
 msgid "Free (Lite)"
 msgstr ""
 
-#: template-homepage-visa.php:78
 msgid "Free 2-Minute Check"
 msgstr ""
 
-#: functions.php:479
-#: inc/demo-import.php:38
 msgid "Free Assessment"
 msgstr ""
 
-#: functions.php:491
 msgid "Free Tech Audit"
 msgstr ""
 
-#: inc/about-page.php:182
 msgid "Free vs Pro Comparison"
 msgstr ""
 
-#: functions.php:181
-#: template-faq.php:22
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: template-homepage-digital.php:375
 msgid "Frequently Asked Questions by Digital Buyers"
 msgstr ""
 
-#: template-homepage-travel.php:160
 msgid "From $1,190"
 msgstr ""
 
-#: template-homepage-travel.php:173
 msgid "From $1,450"
 msgstr ""
 
-#: template-homepage-travel.php:214
 msgid "From $1,590"
 msgstr ""
 
-#: template-homepage-travel.php:200
 msgid "From $1,680"
 msgstr ""
 
-#: template-homepage-travel.php:147
 msgid "From $749"
 msgstr ""
 
-#: template-homepage-travel.php:186
 msgid "From $890"
 msgstr ""
 
-#: inc/shortcodes.php:242
 msgid "Full Document & Visa Audits"
 msgstr ""
 
-#: template-homepage-consulting.php:257
 msgid "Full Mandate Execution"
 msgstr ""
 
-#: template-homepage-visa.php:109
 msgid "Full Name"
 msgstr ""
 
-#: template-homepage-travel.php:503
-#: template-homepage-visa.php:109
 msgid "Full Name *"
 msgstr ""
 
-#: functions.php:166
-msgid "Full Strategic Advisory & Execution\\nPriority Dedicated Project Lead\\nEnd-to-End Filing & Documentation\\nBi-Weekly Strategic Syncs\\n24/7 SLA Priority Support\\nDirect WhatsApp / Slack Access"
+msgid "Full Strategic Advisory & Execution\nPriority Dedicated Project Lead\nEnd-to-End Filing & Documentation\nBi-Weekly Strategic Syncs\n24/7 SLA Priority Support\nDirect WhatsApp / Slack Access"
 msgstr ""
 
-#: template-pricing.php:71
-#: inc/shortcodes.php:269
 msgid "Full corporate governance, ESG & boardroom consulting."
 msgstr ""
 
-#: template-homepage-digital.php:230
 msgid "Full-Stack Microservice SaaS Boilerplate"
 msgstr ""
 
-#: inc/block-patterns.php:125
 msgid "Full-width banner with title, description, and contact button."
 msgstr ""
 
-#: inc/about-page.php:78
 msgid "Fully compatible with WooCommerce. Sell physical products or digital services seamlessly."
 msgstr ""
 
-#: template-homepage-visa.php:177
+msgid "General Inquiries"
+msgstr ""
+
 msgid "General Skilled Migration (GSM), Employer Nomination, and Student Subclass 500 visas."
 msgstr ""
 
-#: template-homepage-visa.php:91
-#: template-visa-search.php:51
+msgid "General Store Inquiry"
+msgstr ""
+
+msgid "General Travel Inquiries"
+msgstr ""
+
 msgid "Germany"
 msgstr ""
 
-#: template-homepage-digital.php:188
-#: template-homepage-digital.php:215
-#: template-homepage-digital.php:242
 msgid "Get Instant Access →"
 msgstr ""
 
-#: template-homepage-travel.php:524
 msgid "Get My Custom Plan & Quotes →"
 msgstr ""
 
-#: functions.php:160
-#: template-homepage-it.php:248
 msgid "Get Started"
 msgstr ""
 
-#: template-pricing.php:64
-#: inc/shortcodes.php:265
 msgid "Get Started with Growth"
 msgstr ""
 
-#: functions.php:27
-#: functions.php:509
-#: header.php:19
 msgid "Get a Quote"
 msgstr ""
 
-#: template-homepage-visa.php:80
 msgid "Get an instant evaluation from our licensed immigration attorneys."
 msgstr ""
 
-#: template-homepage-digital.php:258
 msgid "Get every current and future UI kit, starter repo, and code pack with unlimited commercial client licenses."
 msgstr ""
 
-#: template-contact.php:54
 msgid "Get in Touch with Our Global Advisors"
 msgstr ""
 
-#: template-homepage-visa.php:254
 msgid "Global Destinations"
 msgstr ""
 
-#: template-contact.php:65
 msgid "Global Headquarters"
 msgstr ""
 
-#: template-homepage-visa.php:46
 msgid "Global Living & Working"
 msgstr ""
 
-#: template-visa-search.php:33
+msgid "Global Market Entry & Feasibility"
+msgstr ""
+
 msgid "Global Mobility Directory"
 msgstr ""
 
-#: functions.php:692
 msgid "Global Reach"
 msgstr ""
 
-#: inc/shortcodes.php:275
 msgid "Global Regulatory Compliance"
 msgstr ""
 
-#: template-case-studies.php:48
 msgid "Global Talent Visa UK Fast-Track Filings"
 msgstr ""
 
-#: template-privacy-policy.php:59
 msgid "Google is one of our third-party vendors on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to our site and other sites on the internet."
 msgstr ""
 
-#: functions.php:700
 msgid "Governance"
 msgstr ""
 
-#: template-homepage-travel.php:47
 msgid "Great Adventure"
 msgstr ""
 
-#: template-homepage-travel.php:305
 msgid "Greek Island Hopping: Athens, Mykonos & Santorini"
 msgstr ""
 
-#: template-pricing.php:53
-#: inc/shortcodes.php:252
 msgid "Growth Partner"
 msgstr ""
 
-#: template-contact.php:83
 msgid "Guaranteed 24-Hour Response SLA"
 msgstr ""
 
-#: template-homepage-it.php:278
 msgid "Guaranteed 99.99% Application Uptime"
 msgstr ""
 
-#: template-homepage-consulting.php:265
 msgid "Guaranteed EBITDA Milestones & Gain-Share"
 msgstr ""
 
-#: template-homepage-visa.php:198
 msgid "Guidance:"
 msgstr ""
 
-#: inc/about-page.php:208
 msgid "Gutenberg Block Patterns"
 msgstr ""
 
-#: template-homepage-travel.php:134
 msgid "Hand-picked iconic getaways with exclusive local guides and private transport."
 msgstr ""
 
-#: template-tour-packages.php:21
 msgid "Handcrafted Holiday Itineraries"
 msgstr ""
 
-#: template-homepage-travel.php:354
 msgid "Handcrafted Private Itineraries"
 msgstr ""
 
-#: template-homepage-travel.php:50
 msgid "Handcrafted tour packages, private expeditions, and luxury getaways across 120+ destinations worldwide with 24/7 personal travel concierge."
 msgstr ""
 
-#: template-homepage-travel.php:226
 msgid "Handpicked Packages"
 msgstr ""
 
-#: functions.php:76
 msgid "Happy Clients"
 msgstr ""
 
-#: template-homepage-travel.php:370
 msgid "Happy couple traveling"
 msgstr ""
 
-#: template-homepage-digital.php:412
 msgid "Have a question before buying?"
 msgstr ""
 
-#: template-contact.php:55
 msgid "Have a question or ready to launch your next project? Reach out to our senior team for a swift, confidential response within 24 hours."
 msgstr ""
 
-#: template-homepage-visa.php:327
 msgid "Have complex questions or prior refusals? Get a free initial consultation to review your options."
 msgstr ""
 
-#: template-team.php:41
 msgid "Head of Legal & Immigration"
 msgstr ""
 
-#: functions.php:110
 msgid "Head of Visa & Travel"
 msgstr ""
 
-#: functions.php:1077
 msgid "Header Ad Banner (728x90 / Responsive)"
 msgstr ""
 
-#: inc/customizer.php:144
 msgid "Header Button"
 msgstr ""
 
-#: template-homepage-travel.php:492
 msgid "Headquarters"
 msgstr ""
 
-#: template-faq.php:21
 msgid "Help & Knowledge Base"
 msgstr ""
 
-#: inc/block-patterns.php:29
 msgid "Hero Banner with CTA"
 msgstr ""
 
-#: inc/customizer.php:262
 msgid "Hero Image"
 msgstr ""
 
-#: inc/customizer.php:186
 msgid "Hero Section"
 msgstr ""
 
-#: inc/white-label.php:76
 msgid "Hide Pro Upgrade Notices"
 msgstr ""
 
-#: inc/white-label.php:80
 msgid "Hide all upgrade links and banners from WordPress admin dashboard"
 msgstr ""
 
-#: inc/block-patterns.php:31
 msgid "High converting hero section with headings and call to action buttons."
 msgstr ""
 
-#: template-homepage-it.php:129
 msgid "High-Impact Technology Engineering"
 msgstr ""
 
-#: template-homepage-consulting.php:146
 msgid "High-Leverage Advisory Practices"
 msgstr ""
 
-#: template-homepage-digital.php:123
 msgid "High-Performance Core"
 msgstr ""
 
-#: template-services.php:69
 msgid "High-impact solutions tailored to high-conviction decision makers, delivered with speed, transparency, and guaranteed senior partner accountability."
 msgstr ""
 
-#: template-homepage-it.php:66
 msgid "High-throughput event streaming with Apache Kafka, Snowflake modern data warehouse architectures, and real-time ETL pipelines."
 msgstr ""
 
-#: functions.php:576
-#: functions.php:603
-#: functions.php:630
-#: functions.php:657
-#: functions.php:684
+msgid "Holiday & Tour Packages"
+msgstr ""
+
 msgid "Home"
 msgstr ""
 
-#: functions.php:535
 msgid "Hot"
 msgstr ""
 
-#: functions.php:619
 msgid "Hot Deals"
 msgstr ""
 
-#: template-homepage-visa.php:211
 msgid "How It Works"
 msgstr ""
 
-#: template-homepage-consulting.php:169
 msgid "How We Deliver"
 msgstr ""
 
-#: template-homepage-digital.php:381
 msgid "How do I receive the software/files after purchase?"
 msgstr ""
 
-#: functions.php:192
 msgid "How do you handle custom enterprise or international requirements?"
 msgstr ""
 
-#: template-faq.php:33
 msgid "How fast do your client advisory consultations begin?"
 msgstr ""
 
-#: functions.php:184
 msgid "How quickly can we begin onboarding our project?"
 msgstr ""
 
-#: functions.php:490
 msgid "IT & Cloud"
 msgstr ""
 
-#: functions.php:112
 msgid "IT & Cloud Architect"
 msgstr ""
 
-#: inc/template-tags.php:92
 msgid "IT / Technology"
 msgstr ""
 
-#: functions.php:41
-#: functions.php:138
-#: functions.php:634
-#: template-homepage-travel.php:538
-#: template-homepage-visa.php:347
 msgid "IT Solutions"
 msgstr ""
 
-#: functions.php:545
 msgid "IT Solutions & Cloud"
 msgstr ""
 
-#: front-page.php:611
-#: inc/demo-import.php:51
 msgid "IT Solutions & Cloud Services"
 msgstr ""
 
-#: functions.php:254
 msgid "IT Solutions Menu"
 msgstr ""
 
-#: template-contact.php:160
-msgid "IT Solutions, Cloud & Software"
-msgstr ""
-
-#: inc/demo-import.php:54
 msgid "IT and cloud services agency: tech stack, production case studies, SLA and retainers."
 msgstr ""
 
-#: template-privacy-policy.php:37
 msgid "If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact our Data Protection team."
 msgstr ""
 
-#: template-privacy-policy.php:86
 msgid "If you have any questions or suggestions about our Privacy Policy, do not hesitate to reach out:"
 msgstr ""
 
-#: template-homepage-digital.php:385
 msgid "Immediately after completing your payment via Stripe or PayPal, you will see an instant download button on the receipt page. A secure, time-stamped download link will also be dispatched to your registered email address within 5 seconds."
 msgstr ""
 
-#: functions.php:478
 msgid "Immigration"
 msgstr ""
 
-#: template-homepage-visa.php:126
 msgid "Immigration Destinations"
 msgstr ""
 
-#: template-terms-conditions.php:51
 msgid "In no event will we or our directors, employees, or agents be liable to you or any third party for any direct, indirect, consequential, exemplary, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the site or consulting advisory services."
 msgstr ""
 
-#: template-terms-conditions.php:56
 msgid "In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:"
 msgstr ""
 
-#: functions.php:1089
 msgid "In-Content Single Post Ad"
 msgstr ""
 
-#: template-homepage-it.php:212
 msgid "Incident Response SLA"
 msgstr ""
 
-#: template-homepage-digital.php:361
 msgid "Independent SaaS Creator"
 msgstr ""
 
-#: template-homepage-travel.php:143
 msgid "Indonesia"
 msgstr ""
 
-#: template-homepage-consulting.php:236
 msgid "Initiate Sprint"
 msgstr ""
 
-#: inc/lead-handler.php:125
 msgid "Inquiry received"
 msgstr ""
 
-#: inc/about-page.php:73
 msgid "Insert beautiful pre-designed Hero, Services, and CTA blocks into any post or page."
 msgstr ""
 
-#: inc/about-page.php:79
-#: inc/demo-import.php:151
 msgid "Install WooCommerce"
 msgstr ""
 
-#: template-homepage-digital.php:159
 msgid "Instant Delivery Store"
 msgstr ""
 
-#: functions.php:475
 msgid "Instant Digital Delivery"
 msgstr ""
 
-#: template-homepage-digital.php:291
 msgid "Instant File Download"
 msgstr ""
 
-#: inc/about-page.php:92
 msgid "Instantly preview or import any of the 7 pre-built niche starter sites with 1 click."
 msgstr ""
 
-#: functions.php:505
+msgid "Institutional Boardroom Inquiries"
+msgstr ""
+
 msgid "Institutional Corporate Advisory"
 msgstr ""
 
-#: inc/demo-import.php:73
 msgid "Institutional Corporate Solutions & Governance"
 msgstr ""
 
-#: template-homepage-corporate.php:63
 msgid "Institutional Excellence & Global Mobility"
 msgstr ""
 
-#: template-about.php:51
 msgid "Institutional Excellence & Integrity"
 msgstr ""
 
-#: front-page.php:630
 msgid "Institutional boardroom governance, global footprint map, and Fortune 500 compliance."
 msgstr ""
 
-#: inc/demo-import.php:72
 msgid "Institutional corporate agency: capabilities, global footprint, governance and leadership."
 msgstr ""
 
-#: template-homepage-corporate.php:36
 msgid "Institutional-grade regulatory oversight, risk mitigation, and corporate governance architectures."
 msgstr ""
 
-#: template-homepage-corporate.php:79
 msgid "Integrated Corporate Capabilities"
 msgstr ""
 
-#: template-contact.php:122
 msgid "Interactive Demo Form:"
 msgstr ""
 
-#: template-privacy-policy.php:50
 msgid "Internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamps, referring/exit pages, and number of clicks for analytical and security purposes."
 msgstr ""
 
-#: template-visa-search.php:64
 msgid "Investor & Business"
 msgstr ""
 
-#: template-homepage-visa.php:101
 msgid "Investor & Business Setup"
 msgstr ""
 
-#: template-homepage-digital.php:132
 msgid "Issue license keys, manage domain activations, and control updates directly from your dashboard."
 msgstr ""
 
-#: template-homepage-travel.php:210
 msgid "Japan"
 msgstr ""
 
-#: template-homepage-travel.php:275
 msgid "Japan Golden Route: Tokyo, Kyoto & Mt. Fuji Bullet Train"
 msgstr ""
 
-#: template-contact.php:133
 msgid "John Doe"
 msgstr ""
 
-#: template-team.php:32
 msgid "KH"
 msgstr ""
 
-#: template-homepage-visa.php:310
 msgid "KL"
 msgstr ""
 
-#: template-team.php:33
 msgid "Kamrul Hasan"
 msgstr ""
 
-#: template-homepage-visa.php:312
 msgid "Kelly Lin"
 msgstr ""
 
-#: inc/customizer.php:512
 msgid "Key Point %d"
 msgstr ""
 
-#: template-homepage-it.php:193
 msgid "Key Result:"
 msgstr ""
 
-#: template-homepage-it.php:260
 msgid "Kubernetes / Container Orchestration"
 msgstr ""
 
-#: template-homepage-travel.php:211
 msgid "Kyoto & Tokyo Blossom"
 msgstr ""
 
-#: template-homepage-travel.php:67
 msgid "Kyoto & Tokyo, Japan"
 msgstr ""
 
-#: template-homepage-visa.php:145
 msgid "Language Benchmark:"
 msgstr ""
 
-#: template-privacy-policy.php:27
 msgid "Last Updated:"
 msgstr ""
 
-#: index.php:34
 msgid "Latest News"
 msgstr ""
 
-#: template-homepage-digital.php:327
 msgid "Lead Frontend Engineer, DevPulse"
 msgstr ""
 
-#: functions.php:696
 msgid "Leadership"
 msgstr ""
 
-#: template-team.php:22
 msgid "Leadership & Senior Advisory Council"
 msgstr ""
 
-#: inc/customizer.php:159
 msgid "Leave empty to hide the button."
 msgstr ""
 
-#: template-homepage-corporate.php:51
 msgid "Legacy system modernization, secure enterprise cloud migration, and data governance."
 msgstr ""
 
-#: template-privacy-policy.php:25
 msgid "Legal & Compliance"
 msgstr ""
 
-#: template-terms-conditions.php:25
 msgid "Legal & Terms"
 msgstr ""
 
-#: template-disclaimer.php:25
 msgid "Legal Disclaimers"
 msgstr ""
 
-#: template-case-studies.php:46
 msgid "Legal Immigration"
 msgstr ""
 
-#: template-homepage-travel.php:470
 msgid "Let's Plan Your Trip"
 msgstr ""
 
-#: template-homepage-digital.php:69
 msgid "License Keys"
 msgstr ""
 
-#: template-homepage-digital.php:131
 msgid "License Management"
 msgstr ""
 
-#: template-homepage-visa.php:43
 msgid "Licensed & Regulated Immigration Advisors"
 msgstr ""
 
-#: functions.php:481
 msgid "Licensed Immigration Specialists"
 msgstr ""
 
-#: template-team.php:42
 msgid "Licensed immigration legal specialist overseeing residency by investment and high-skilled migration filings."
 msgstr ""
 
-#: template-homepage-travel.php:395
 msgid "Limited Time Seasonal Deal"
 msgstr ""
 
-#: inc/about-page.php:198
 msgid "Live Customizer Controls (Hero, Services, Stats)"
 msgstr ""
 
-#: front-page.php:671
 msgid "Live Preview Demo"
 msgstr ""
 
-#: template-privacy-policy.php:50
 msgid "Log Files:"
 msgstr ""
 
-#: inc/customizer.php:932
 msgid "Logo %d Name"
 msgstr ""
 
-#: template-homepage-digital.php:309
 msgid "Loved by 2,500+ Developers & Designers"
 msgstr ""
 
-#: template-homepage-travel.php:91
 msgid "Luxury & Honeymoon"
 msgstr ""
 
-#: template-homepage-consulting.php:41
 msgid "M&A Due Diligence & Integration"
 msgstr ""
 
-#: template-team.php:46
 msgid "MC"
 msgstr ""
 
-#: template-homepage-digital.php:341
 msgid "MR"
 msgstr ""
 
-#: template-homepage-travel.php:440
 msgid "MS"
 msgstr ""
 
-#: front-page.php:635
 msgid "Main Agency (Flagship Multi-Purpose)"
 msgstr ""
 
-#: functions.php:527
-#: inc/demo-import.php:24
 msgid "Main Agency (Multi-Purpose)"
 msgstr ""
 
-#: template-homepage-travel.php:66
 msgid "Maldives Islands"
 msgstr ""
 
-#: template-tour-packages.php:70
 msgid "Maldives Ocean Overwater Villa"
 msgstr ""
 
-#: template-homepage-travel.php:235
 msgid "Maldives Overwater Bungalow"
 msgstr ""
 
-#: template-homepage-travel.php:245
 msgid "Maldives Private Lagoon & Luxury Overwater Escape"
 msgstr ""
 
-#: template-homepage-it.php:243
 msgid "Managed Cloud Server (AWS / Azure)"
 msgstr ""
 
-#: functions.php:144
 msgid "Managed a bulk visa program for a multinational with 98% approval rate."
 msgstr ""
 
-#: inc/demo-import.php:63
 msgid "Management consulting: advisory practices, methodology, client impact and retainers."
 msgstr ""
 
-#: template-team.php:47
 msgid "Marcus Chen"
 msgstr ""
 
-#: functions.php:147
 msgid "Market Expansion to 3 Countries"
 msgstr ""
 
-#: inc/template-tags.php:97
 msgid "Marketing / Growth"
 msgstr ""
 
-#: template-homepage-visa.php:313
 msgid "Master of Data Science, Melbourne"
 msgstr ""
 
-#: template-homepage-it.php:178
 msgid "Measurable outcomes delivered for fast-growing scaleups and multinational enterprises."
 msgstr ""
 
-#: functions.php:106
 msgid "Meet Our Experienced Leaders"
 msgstr ""
 
-#: template-about.php:99
 msgid "Meet Our Senior Practice Directors"
 msgstr ""
 
-#: inc/customizer.php:771
 msgid "Member %d Name"
 msgstr ""
 
-#: inc/customizer.php:787
 msgid "Member %d Role"
 msgstr ""
 
-#: header.php:109
 msgid "Menu"
 msgstr ""
 
-#: functions.php:665
 msgid "Methodology"
 msgstr ""
 
-#: template-homepage-digital.php:343
 msgid "Michael R."
 msgstr ""
 
-#: template-case-studies.php:39
 msgid "Migrated 120 legacy VMs into automated Docker clusters with Terraform, achieving zero downtime and cutting monthly server costs by $180,000."
 msgstr ""
 
-#: functions.php:140
 msgid "Migrated 50+ servers to AWS with zero downtime, cutting infrastructure costs by 40%."
 msgstr ""
 
-#: template-homepage-digital.php:112
 msgid "Modern Cart & Checkout Layout"
 msgstr ""
 
-#: template-homepage-it.php:152
 msgid "Modern Tooling"
 msgstr ""
 
-#: template-homepage-consulting.php:60
 msgid "Modernizing legacy operating frameworks, transitioning to high-margin recurring SaaS revenue models."
 msgstr ""
 
-#: template-contact.php:74
 msgid "Mon – Fri: 9:00 AM – 6:00 PM EST"
 msgstr ""
 
-#: template-homepage-it.php:246
 msgid "Monthly Security & Patch Audit"
 msgstr ""
 
-#: front-page.php:496
-#: template-homepage-consulting.php:240
-#: template-homepage-default.php:462
-#: template-homepage-it.php:252
 msgid "Most Popular"
 msgstr ""
 
-#: template-pricing.php:51
-#: inc/shortcodes.php:291
 msgid "Most Popular Choice"
 msgstr ""
 
-#: template-homepage-travel.php:227
 msgid "Most Popular Tour Experiences"
 msgstr ""
 
-#: template-homepage-travel.php:92
 msgid "Mountain & Trekking"
 msgstr ""
 
-#: functions.php:173
-msgid "Multi-Jurisdiction Advisory Scope\\nExecutive Boardroom Advisory\\nBespoke Architecture / Legal Roadmap\\nEmergency Escalation SLA (<1 hr)\\nFull NDA & IP Confidentiality\\nDedicated Senior Partner Assigned"
+msgid "Multi-Jurisdiction Advisory Scope\nExecutive Boardroom Advisory\nBespoke Architecture / Legal Roadmap\nEmergency Escalation SLA (<1 hr)\nFull NDA & IP Confidentiality\nDedicated Senior Partner Assigned"
 msgstr ""
 
-#: template-homepage-consulting.php:266
 msgid "Multi-Jurisdiction Entity Governance"
 msgstr ""
 
-#: inc/shortcodes.php:261
 msgid "Multi-Jurisdiction Legal Review"
 msgstr ""
 
-#: template-case-studies.php:38
 msgid "Multi-Region AWS Kubernetes Modernization"
 msgstr ""
 
-#: inc/about-page.php:218
 msgid "Multiple Header & Footer Layout Variations"
 msgstr ""
 
-#: inc/lead-handler.php:69
 msgid "Name"
 msgstr ""
 
-#: template-privacy-policy.php:49
 msgid "Name, email address, phone number, and message contents when submitting our contact or inquiry forms."
 msgstr ""
 
-#: template-homepage-visa.php:195
 msgid "National Interest Waiver (NIW), Employment-Based Green Cards, L-1 Intra-Company, and F-1 Students."
 msgstr ""
 
-#: header.php:114
 msgid "Navigation Menu"
 msgstr ""
 
-#: template-services.php:101
 msgid "Need a Custom Multi-Disciplinary Scope?"
 msgstr ""
 
-#: functions.php:541
 msgid "New"
 msgstr ""
 
-#: inc/lead-handler.php:33
 msgid "New Website Inquiry"
 msgstr ""
 
-#: template-visa-search.php:52
 msgid "New Zealand"
 msgstr ""
 
-#: index.php:76
-#: single.php:90
 msgid "Next"
 msgstr ""
 
-#: template-homepage-digital.php:226
 msgid "Next.js 14 & Supabase"
 msgstr ""
 
-#: template-homepage-travel.php:341
 msgid "No hidden charges, guaranteed verified accommodations, and price-match protection."
 msgstr ""
 
-#: template-pricing.php:23
 msgid "No hidden fees. No setup charges. Switch plans or cancel anytime with our 30-day money-back guarantee."
 msgstr ""
 
-#: template-contact.php:189
 msgid "No junior intermediaries—work directly with seasoned practice leads."
 msgstr ""
 
-#: template-privacy-policy.php:65
 msgid "Note that we have no access to or control over these cookies that are used by third-party advertisers."
 msgstr ""
 
-#: search.php:69
 msgid "Nothing Found"
 msgstr ""
 
-#: index.php:89
 msgid "Nothing was found here. Try searching, or return to the home page."
 msgstr ""
 
-#: template-homepage-visa.php:283
 msgid "Now living in Toronto, Ontario"
 msgstr ""
 
-#: template-homepage-visa.php:298
 msgid "Now working in Manchester, UK"
 msgstr ""
 
-#: template-privacy-policy.php:87
 msgid "Official Email:"
 msgstr ""
 
-#: template-homepage-consulting.php:249
 msgid "On-Demand Deal / M&A Review Advisory"
 msgstr ""
 
-#: inc/shortcodes.php:277
 msgid "On-Site Advisory Visits Included"
 msgstr ""
 
-#: template-homepage-travel.php:122
 msgid "On-Trip Assistance"
 msgstr ""
 
-#: functions.php:185
 msgid "Once you select your plan or finalize an agreement, onboarding begins within 24 to 48 hours. You are assigned a dedicated project manager and direct channel access to start execution immediately."
 msgstr ""
 
-#: template-faq.php:37
 msgid "Once you submit an inquiry through our contact form, an assigned senior partner reviews your requirements and responds within 24 business hours to schedule your preliminary diagnostic briefing."
 msgstr ""
 
-#: functions.php:39
 msgid "One trusted partner for technology, business growth, visas and travel."
 msgstr ""
 
-#: inc/about-page.php:213
 msgid "One-Click Multi-Niche Demos (IT, Visa, Agency, Law)"
 msgstr ""
 
-#: 404.php:23
 msgid "Oops! That Page Cannot Be Found"
 msgstr ""
 
-#: inc/about-page.php:69
 msgid "Open Customizer"
 msgstr ""
 
-#: inc/about-page.php:60
-#: inc/about-page.php:96
 msgid "Open Demo Importer"
 msgstr ""
 
-#: template-about.php:85
 msgid "Operating Countries"
 msgstr ""
 
-#: template-homepage-consulting.php:47
+msgid "Operational Restructuring & Efficiency"
+msgstr ""
+
 msgid "Operational Transformation & Lean"
 msgstr ""
 
-#: functions.php:97
 msgid "Operations Director"
 msgstr ""
 
-#: template-homepage-digital.php:125
 msgid "Optimized"
 msgstr ""
 
-#: template-homepage-digital.php:115
 msgid "Optimized Checkout Flow"
 msgstr ""
 
-#: template-homepage-digital.php:66
 msgid "Optimized for Stripe, PayPal, and Apple Pay with 1-click digital product fulfillment."
 msgstr ""
 
-#: template-homepage-consulting.php:170
 msgid "Our 4-Phase Transformation Framework"
 msgstr ""
 
-#: template-homepage-consulting.php:134
 msgid "Our Advisory Practices"
 msgstr ""
 
-#: functions.php:193
 msgid "Our Enterprise tier offers bespoke scopes tailored to multi-jurisdiction compliance, cross-border immigration, and large-scale digital architectures. Contact our advisory team for a customized blueprint."
 msgstr ""
 
-#: functions.php:105
 msgid "Our Experts"
 msgstr ""
 
-#: template-about.php:62
 msgid "Our Origin & Vision"
 msgstr ""
 
-#: template-team.php:21
 msgid "Our People"
 msgstr ""
 
-#: front-page.php:147
-#: template-homepage-default.php:113
 msgid "Our Services"
 msgstr ""
 
-#: template-contact.php:101
 msgid "Our client advisory team has received your inquiry and will follow up within 24 hours."
 msgstr ""
 
-#: template-faq.php:47
 msgid "Our documentation advisors review and structure applications thoroughly according to official embassy guidelines, ensuring comprehensive compliance for Canada, UK, Australia, and European programs."
 msgstr ""
 
-#: template-homepage-visa.php:225
 msgid "Our expert team collects, verifies, and formats your documents to meet official requirements."
 msgstr ""
 
-#: template-homepage-travel.php:362
 msgid "Our in-house visa division prepares and expedites visa applications for smooth transit."
 msgstr ""
 
-#: template-homepage-digital.php:413
 msgid "Our sales and technical support team is available 24/7 to assist with compatibility inquiries."
 msgstr ""
 
-#: template-services.php:102
 msgid "Our senior partners can assemble an integrated advisory pod spanning business strategy, legal visas, and enterprise engineering."
 msgstr ""
 
-#: template-coming-soon.php:35
 msgid "Our updated enterprise portal is undergoing final testing. Leave your email to receive early access and an exclusive launch invitation."
 msgstr ""
 
-#: front-page.php:638
 msgid "Our versatile flagship layout with animated statistics, service pillars, portfolio case studies, and reviews."
 msgstr ""
 
-#: template-team.php:35
 msgid "Over 12 years directing enterprise business transformation, digital architecture and corporate governance."
 msgstr ""
 
-#: template-homepage-digital.php:177
 msgid "Over 300+ pixel-perfect Figma components, 40+ pre-built dashboards, and copy-paste Tailwind code snippets."
 msgstr ""
 
-#: template-homepage-digital.php:86
-#: template-homepage-digital.php:92
 msgid "PAYMENT READY"
 msgstr ""
 
-#: template-homepage-digital.php:90
 msgid "PAYPAL COMMERCE"
 msgstr ""
 
-#: page.php:69
-#: single.php:55
 msgid "Page"
 msgstr ""
 
-#: index.php:32
 msgid "Page Not Found"
 msgstr ""
 
-#: page.php:69
-#: single.php:55
 msgid "Pages:"
 msgstr ""
 
-#: template-homepage-travel.php:157
 msgid "Paris & French Riviera"
 msgstr ""
 
-#: template-homepage-corporate.php:101
 msgid "Partner with an Industry Leader"
 msgstr ""
 
-#: template-homepage-visa.php:181
 msgid "Pathway:"
 msgstr ""
 
-#: template-homepage-visa.php:181
-#: template-visa-search.php:60
 msgid "Permanent Residency"
 msgstr ""
 
-#: template-homepage-visa.php:98
 msgid "Permanent Residency (PR)"
 msgstr ""
 
-#: inc/customizer.php:116
+msgid "Permanent Residency (PR) Pathway"
+msgstr ""
+
 msgid "Phone"
 msgstr ""
 
-#: template-homepage-travel.php:507
-#: template-homepage-visa.php:110
-#: inc/lead-handler.php:74
 msgid "Phone / WhatsApp"
 msgstr ""
 
-#: template-contact.php:143
-#: template-homepage-visa.php:110
 msgid "Phone / WhatsApp *"
 msgstr ""
 
-#: header.php:56
 msgid "Phone:"
 msgstr ""
 
-#: inc/customizer.php:1142
 msgid "Plan %1$d: %2$s"
 msgstr ""
 
-#: inc/customizer.php:1158
 msgid "Plan %d: Mark as Popular"
 msgstr ""
 
-#: template-homepage-travel.php:333
 msgid "Planning international travel shouldn't be stressful. We handle flight bookings, visa documents, hotel upgrades, local private drivers, and customized itineraries so you can simply relax and immerse yourself."
 msgstr ""
 
-#: inc/lead-handler.php:47
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: template-contact.php:170
 msgid "Please provide a brief summary of your inquiry, goals, or requirements..."
 msgstr ""
 
-#: inc/lead-handler.php:44
 msgid "Please provide an email address or phone number so we can reply."
 msgstr ""
 
-#: inc/lead-handler.php:41
 msgid "Please provide your full name."
 msgstr ""
 
-#: template-homepage-visa.php:180
 msgid "Points Assessment:"
 msgstr ""
 
-#: functions.php:529
 msgid "Popular"
 msgstr ""
 
-#: template-homepage-visa.php:127
 msgid "Popular Countries with High Approval Rates"
 msgstr ""
 
-#: template-case-studies.php:61
 msgid "Post-Merger Commercial Restructuring"
 msgstr ""
 
-#: functions.php:46
 msgid "Practical strategy, market research and growth planning from experienced consultants."
 msgstr ""
 
-#: template-homepage-consulting.php:147
 msgid "Pragmatic solutions tailored to high-stakes commercial environments."
 msgstr ""
 
-#: template-homepage-visa.php:199
 msgid "Pre-Assessment Included"
 msgstr ""
 
-#: template-homepage-it.php:230
 msgid "Predictable Investment"
 msgstr ""
 
-#: template-privacy-policy.php:51
 msgid "Preferences, user sessions, and pages visited to optimize user experience."
 msgstr ""
 
-#: inc/demo-import.php:28
 msgid "Premier Business, Visa & Tech Consulting"
 msgstr ""
 
-#: inc/demo-import.php:37
 msgid "Premier Legal Visa & Immigration Consultancy"
 msgstr ""
 
-#: template-homepage-consulting.php:129
 msgid "Premier Strategic Management Consultants"
 msgstr ""
 
-#: template-homepage-travel.php:519
 msgid "Premium Comfort ($2,500 - $5,000)"
 msgstr ""
 
-#: template-case-studies.php:52
 msgid "Prepared comprehensive peer review portfolios for a Series-B AI company founding team, securing unconditional stage-1 endorsement within two weeks."
 msgstr ""
 
-#: inc/shortcodes.php:209
 msgid "Preview Demo →"
 msgstr ""
 
-#: index.php:75
-#: single.php:89
 msgid "Previous"
 msgstr ""
 
-#: footer.php:44
-#: functions.php:754
 msgid "Pricing"
 msgstr ""
 
-#: inc/customizer.php:1063
 msgid "Pricing Tables"
 msgstr ""
 
-#: template-contact.php:147
 msgid "Primary Area of Interest"
 msgstr ""
 
-#: inc/customizer.php:68
 msgid "Primary Brand Colour"
 msgstr ""
 
-#: functions.php:768
-#: header.php:128
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:250
 msgid "Primary Menu (Main Agency)"
 msgstr ""
 
-#: inc/shortcodes.php:259
+msgid "Priority Product Support?"
+msgstr ""
+
 msgid "Priority Visa & Travel Concierge"
 msgstr ""
 
-#: footer.php:113
-#: template-privacy-policy.php:26
 msgid "Privacy Policy"
 msgstr ""
 
-#: inc/about-page.php:188
 msgid "Pro (Premium)"
 msgstr ""
 
-#: template-homepage-it.php:60
 msgid "Proactive infrastructure monitoring, automated disaster recovery backups, and guaranteed sub-15-minute incident SLA."
 msgstr ""
 
-#: template-homepage-consulting.php:48
 msgid "Process re-engineering, supply chain modernization, SG&A cost rationalization, and automated business workflows."
 msgstr ""
 
-#: template-homepage-visa.php:143
-#: template-homepage-visa.php:161
-#: template-homepage-visa.php:179
-#: template-homepage-visa.php:197
 msgid "Processing Time:"
 msgstr ""
 
-#: template-visa-search.php:117
 msgid "Processing time varies"
 msgstr ""
 
-#: template-homepage-it.php:216
 msgid "Production Deployments"
 msgstr ""
 
-#: functions.php:163
 msgid "Professional Scale"
 msgstr ""
 
-#: template-homepage-visa.php:219
 msgid "Profile Assessment"
 msgstr ""
 
-#: template-contact.php:169
 msgid "Project Scope / Message *"
 msgstr ""
 
-#: template-case-studies.php:21
-#: template-homepage-it.php:176
 msgid "Proven Track Record"
 msgstr ""
 
-#: template-homepage-consulting.php:192
 msgid "Proven Value Creation for Clients"
 msgstr ""
 
-#: template-homepage-consulting.php:205
 msgid "Quantified Value:"
 msgstr ""
 
-#: footer.php:40
 msgid "Quick Links"
 msgstr ""
 
-#: inc/about-page.php:203
 msgid "RTL & Translation Ready"
 msgstr ""
 
-#: index.php:63
-#: search.php:57
 msgid "Read More"
 msgstr ""
 
-#: functions.php:118
 msgid "Ready to Get Started?"
 msgstr ""
 
-#: template-homepage-it.php:290
 msgid "Ready to Modernize Your Technology Architecture?"
 msgstr ""
 
-#: functions.php:137
 msgid "Real Results for Real Clients"
 msgstr ""
 
-#: template-homepage-travel.php:414
 msgid "Real Stories"
 msgstr ""
 
-#: template-homepage-consulting.php:193
 msgid "Real engagements that drove institutional profitability and market expansion."
 msgstr ""
 
-#: template-homepage-visa.php:269
 msgid "Real stories from people who successfully relocated with our team."
 msgstr ""
 
-#: template-case-studies.php:23
 msgid "Real world outcomes delivered for global enterprises, tech unicorns, and private equity portfolio companies."
 msgstr ""
 
-#: template-homepage-it.php:177
 msgid "Real-World Architectural Deliveries"
 msgstr ""
 
-#: inc/white-label.php:50
 msgid "Rebrand BizPro Agency with your company credentials. When delivering client websites, your brand will appear as the theme developer."
 msgstr ""
 
-#: template-homepage-visa.php:235
 msgid "Receive your official visa approval, pre-departure briefing, health insurance, and arrival support."
 msgstr ""
 
-#: inc/customizer.php:263
 msgid "Recommended size: 1920 x 900 px."
 msgstr ""
 
-#: template-case-studies.php:65
 msgid "Redesigned cross-border supplier contracts across 7 distribution hubs, unlocking $4.2M in annual recurring operational savings."
 msgstr ""
 
-#: template-homepage-travel.php:500
 msgid "Request A Free Custom Itinerary"
 msgstr ""
 
-#: template-homepage-it.php:280
 msgid "Request Consultation"
 msgstr ""
 
-#: template-homepage-travel.php:404
 msgid "Request Custom Quote →"
 msgstr ""
 
-#: template-homepage-consulting.php:135
 msgid "Request Executive Briefing"
 msgstr ""
 
-#: template-homepage-it.php:118
 msgid "Request Tech Audit"
 msgstr ""
 
-#: inc/demo-import.php:155
 msgid "Required plugin missing"
 msgstr ""
 
-#: template-homepage-consulting.php:253
 msgid "Retain Our Partners"
 msgstr ""
 
-#: template-homepage-consulting.php:241
 msgid "Retained Advisory Partner"
 msgstr ""
 
-#: functions.php:650
 msgid "Retainers"
 msgstr ""
 
-#: functions.php:623
 msgid "Reviews"
 msgstr ""
 
-#: template-homepage-digital.php:91
 msgid "SECURE LICENSING"
 msgstr ""
 
-#: template-homepage-digital.php:358
 msgid "SL"
 msgstr ""
 
-#: functions.php:646
 msgid "SLA & Uptime"
 msgstr ""
 
-#: inc/shortcodes.php:243
 msgid "SLA Guaranteed 24-hr Response"
 msgstr ""
 
-#: template-homepage-it.php:277
 msgid "SOC2 / HIPAA / ISO Compliance Attestation"
 msgstr ""
 
-#: template-homepage-travel.php:454
 msgid "ST"
 msgstr ""
 
-#: template-homepage-digital.php:176
 msgid "SaaS Dashboard UI Kit & Design System"
 msgstr ""
 
-#: template-homepage-travel.php:374
 msgid "Sample Travel Agency"
 msgstr ""
 
-#: template-homepage-travel.php:295
 msgid "Santorini Sunset"
 msgstr ""
 
-#: template-homepage-travel.php:65
 msgid "Santorini, Greece"
 msgstr ""
 
-#: template-homepage-digital.php:360
 msgid "Sarah L."
 msgstr ""
 
-#: template-homepage-travel.php:456
 msgid "Sarah Takahashi"
 msgstr ""
 
-#: template-homepage-travel.php:114
 msgid "Satisfied Guests (Sample)"
 msgstr ""
 
-#: template-homepage-travel.php:396
 msgid "Save Up To 30% On Early Summer Bookings"
 msgstr ""
 
-#: inc/white-label.php:86
 msgid "Save White Label Credentials"
 msgstr ""
 
-#: template-homepage-digital.php:103
 msgid "Say goodbye to bloated setups. Our modular digital engine provides maximum performance right out of the box."
 msgstr ""
 
-#: template-homepage-it.php:253
 msgid "Scale DevOps & SRE"
 msgstr ""
 
-#: functions.php:174
 msgid "Schedule Consultation"
 msgstr ""
 
-#: template-about.php:68
 msgid "Schedule Executive Consultation"
 msgstr ""
 
-#: template-services.php:103
 msgid "Schedule Executive Discovery Call"
 msgstr ""
 
-#: template-homepage-consulting.php:268
 msgid "Schedule Mandate Discussion"
 msgstr ""
 
-#: template-homepage-it.php:291
 msgid "Schedule a zero-obligation 30-minute architectural audit with our principal cloud engineers today."
 msgstr ""
 
-#: template-homepage-travel.php:361
 msgid "Seamless Visa & Flight Assistance"
 msgstr ""
 
-#: 404.php:34
-#: inc/shortcodes.php:79
 msgid "Search"
 msgstr ""
 
-#: template-visa-search.php:67
 msgid "Search Pathways"
 msgstr ""
 
-#: search.php:19
 msgid "Search Results"
 msgstr ""
 
-#: template-homepage-travel.php:100
 msgid "Search Trips"
 msgstr ""
 
-#: inc/shortcodes.php:52
 msgid "Search anything..."
 msgstr ""
 
-#: inc/shortcodes.php:65
 msgid "Search for:"
 msgstr ""
 
-#: search.php:23
 msgid "Search for: \"%s\""
 msgstr ""
 
-#: 404.php:32
 msgid "Search our entire site..."
 msgstr ""
 
-#: index.php:23
 msgid "Search results for: %s"
 msgstr ""
 
-#: inc/breadcrumbs.php:69
 msgid "Search: %s"
 msgstr ""
 
-#: inc/customizer.php:334
-#: inc/customizer.php:1122
 msgid "Section Subtitle"
 msgstr ""
 
-#: inc/customizer.php:319
-#: inc/customizer.php:646
-#: inc/customizer.php:753
-#: inc/customizer.php:989
-#: inc/customizer.php:1107
 msgid "Section Title"
 msgstr ""
 
-#: template-homepage-digital.php:75
 msgid "Secure Download Links"
 msgstr ""
 
-#: template-homepage-digital.php:116
 msgid "Secure Gateway Compatible"
 msgstr ""
 
-#: inc/template-tags.php:99
 msgid "Security / Trust"
 msgstr ""
 
-#: template-homepage-digital.php:310
 msgid "See what real buyers are saying about our production-ready UI kits, starter packs, and scripts."
 msgstr ""
 
-#: template-visa-search.php:44
 msgid "Select Country"
 msgstr ""
 
-#: template-homepage-digital.php:44
 msgid "Sell Your Digital Products & Software with Ultimate Speed"
 msgstr ""
 
-#: front-page.php:590
 msgid "Sell software, plugins, templates, and digital assets with instant downloads and Bento grid."
 msgstr ""
 
-#: template-contact.php:173
 msgid "Send Consultation Request"
 msgstr ""
 
-#: template-contact.php:93
 msgid "Send Us an Official Message"
 msgstr ""
 
-#: inc/lead-handler.php:124
 msgid "Sending..."
 msgstr ""
 
-#: functions.php:114
 msgid "Senior Business Consultant"
 msgstr ""
 
-#: inc/shortcodes.php:257
 msgid "Senior Principal Advisor"
 msgstr ""
 
-#: single.php:119
 msgid "Senior industry advisor and lead contributor at BizPro Agency."
 msgstr ""
 
-#: inc/customizer.php:373
 msgid "Service %d Description"
 msgstr ""
 
-#: inc/customizer.php:391
 msgid "Service %d Icon"
 msgstr ""
 
-#: inc/customizer.php:355
 msgid "Service %d Title"
 msgstr ""
 
-#: footer.php:43
-#: functions.php:742
 msgid "Services"
 msgstr ""
 
-#: functions.php:38
 msgid "Services Built Around Your Goals"
 msgstr ""
 
-#: inc/customizer.php:275
 msgid "Services Section"
 msgstr ""
 
-#: inc/customizer.php:419
+msgid "Show 7 Niche Demos Showcase on Homepage"
+msgstr ""
+
 msgid "Show About Section"
 msgstr ""
 
-#: inc/customizer.php:814
 msgid "Show CTA Banner"
 msgstr ""
 
-#: inc/customizer.php:959
 msgid "Show Case Studies Section"
 msgstr ""
 
-#: inc/customizer.php:898
 msgid "Show Client Logos Bar"
 msgstr ""
 
-#: inc/customizer.php:1185
 msgid "Show FAQ Section"
 msgstr ""
 
-#: inc/customizer.php:1077
 msgid "Show Pricing Section"
 msgstr ""
 
-#: inc/customizer.php:289
 msgid "Show Services Section"
 msgstr ""
 
-#: inc/customizer.php:539
 msgid "Show Stats Section"
 msgstr ""
 
-#: inc/customizer.php:723
 msgid "Show Team Section"
 msgstr ""
 
-#: inc/customizer.php:616
 msgid "Show Testimonials Section"
 msgstr ""
 
-#: inc/customizer.php:109
 msgid "Show demo switcher (showcase sites only)"
 msgstr ""
 
-#: inc/customizer.php:94
 msgid "Show top bar"
 msgstr ""
 
-#: template-pricing.php:22
 msgid "Simple, Flexible Pricing Built for Growth"
 msgstr ""
 
-#: inc/shortcodes.php:63
 msgid "Site search"
 msgstr ""
 
-#: template-visa-search.php:146
+msgid "Skilled Worker & Employment Permit"
+msgstr ""
+
 msgid "Skilled Worker & Tech"
 msgstr ""
 
-#: template-homepage-visa.php:163
 msgid "Skilled Worker / Tier 2"
 msgstr ""
 
-#: template-homepage-visa.php:156
 msgid "Skilled Worker Route"
 msgstr ""
 
-#: template-homepage-visa.php:159
 msgid "Skilled Worker Visa, Global Talent Route, Innovator Founder, and UK University Admissions."
 msgstr ""
 
-#: template-visa-search.php:162
 msgid "Skills assessment verification, Expression of Interest (EOI) filing and regional nomination support."
 msgstr ""
 
-#: header.php:46
 msgid "Skip to content"
 msgstr ""
 
-#: functions.php:29
 msgid "Smart Solutions to Grow Your Business"
 msgstr ""
 
-#: template-coming-soon.php:19
 msgid "Something Amazing Is Coming Soon"
 msgstr ""
 
-#: inc/lead-handler.php:126
 msgid "Something went wrong. Please check your connection and try again."
 msgstr ""
 
-#: search.php:70
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: index.php:87
 msgid "Sorry, nothing matched your search. Please try again with different keywords."
 msgstr ""
 
-#: template-homepage-visa.php:326
 msgid "Speak With Our Immigration Advisors Today"
 msgstr ""
 
-#: template-homepage-travel.php:471
 msgid "Speak With Our Specialist Travel Designers"
 msgstr ""
 
-#: template-faq.php:75
 msgid "Speak directly with our advisory coordinators today."
 msgstr ""
 
-#: template-homepage-digital.php:122
 msgid "Speed Standard"
 msgstr ""
 
-#: template-homepage-visa.php:162
 msgid "Sponsorship Support:"
 msgstr ""
 
-#: template-visa-search.php:149
 msgid "Sponsorship license matching, Global Talent endorsement and Indefinite Leave to Remain (ILR) pathways."
 msgstr ""
 
-#: template-homepage-travel.php:78
 msgid "Spring 2027"
 msgstr ""
 
-#: template-pricing.php:35
-#: inc/shortcodes.php:235
 msgid "Standard Advisory"
 msgstr ""
 
-#: template-homepage-travel.php:518
 msgid "Standard Package ($1,000 - $2,500)"
 msgstr ""
 
-#: functions.php:167
-#: template-homepage-it.php:265
 msgid "Start 14-Day Trial"
 msgstr ""
 
-#: template-homepage-visa.php:54
 msgid "Start Free Assessment"
 msgstr ""
 
-#: inc/about-page.php:56
 msgid "Start with a ready-made demo"
 msgstr ""
 
-#: functions.php:156
 msgid "Starter Growth"
 msgstr ""
 
-#: template-homepage-travel.php:253
-#: template-homepage-travel.php:283
-#: template-homepage-travel.php:313
 msgid "Starting from"
 msgstr ""
 
-#: inc/customizer.php:589
 msgid "Stat %d Label"
 msgstr ""
 
-#: inc/customizer.php:557
 msgid "Stat %d Number"
 msgstr ""
 
-#: inc/customizer.php:573
 msgid "Stat %d Suffix (e.g. + or %%)"
 msgstr ""
 
-#: inc/customizer.php:525
 msgid "Stats Counters"
 msgstr ""
 
-#: template-faq.php:74
 msgid "Still have questions? We are here to help."
 msgstr ""
 
-#: functions.php:719
 msgid "Store Features"
 msgstr ""
 
-#: template-homepage-digital.php:56
 msgid "Store Guarantee & Features"
 msgstr ""
 
-#: template-case-studies.php:59
 msgid "Strategic Advisory"
 msgstr ""
 
-#: template-contact.php:162
-msgid "Strategic Business Consulting"
+msgid "Strategic Business Advisory"
 msgstr ""
 
-#: template-homepage-consulting.php:225
+msgid "Strategic Business Growth & Scaling"
+msgstr ""
+
 msgid "Strategic Diagnostic Sprint"
 msgstr ""
 
-#: template-homepage-consulting.php:145
 msgid "Strategic Focus"
 msgstr ""
 
-#: inc/demo-import.php:64
 msgid "Strategic Management & Corporate Advisory"
 msgstr ""
 
-#: functions.php:499
 msgid "Strategic Management Consultants"
 msgstr ""
 
-#: template-contact.php:185
 msgid "Strict NDA & IP Confidentiality:"
 msgstr ""
 
-#: template-homepage-digital.php:286
 msgid "Stripe & PayPal Verified"
 msgstr ""
 
-#: template-homepage-visa.php:100
+msgid "Student & University Study Visa"
+msgstr ""
+
 msgid "Student Visa & University Admission"
 msgstr ""
 
-#: functions.php:93
 msgid "Student Visa Client"
 msgstr ""
 
-#: template-visa-search.php:62
 msgid "Study & Academic"
 msgstr ""
 
-#: template-homepage-it.php:262
 msgid "Sub-15m Critical Incident SLA"
 msgstr ""
 
-#: template-homepage-visa.php:174
-#: template-visa-search.php:159
 msgid "Subclass 189 / 190"
 msgstr ""
 
-#: template-contact.php:123
 msgid "Submissions deliver live AJAX confirmation and notify the admin email. Fully compatible with WPForms and Contact Form 7 shortcodes."
 msgstr ""
 
-#: template-homepage-digital.php:419
 msgid "Submit Support Ticket"
 msgstr ""
 
-#: inc/shortcodes.php:75
 msgid "Submit search"
 msgstr ""
 
-#: inc/lead-handler.php:79
 msgid "Submitted on"
 msgstr ""
 
-#: inc/customizer.php:215
-#: inc/customizer.php:844
 msgid "Subtitle"
 msgstr ""
 
-#: functions.php:80
 msgid "Success Rate"
 msgstr ""
 
-#: functions.php:592
 msgid "Success Stories"
 msgstr ""
 
-#: template-homepage-travel.php:79
 msgid "Summer Peak Season"
 msgstr ""
 
-#: template-homepage-travel.php:296
 msgid "Summer Special"
 msgstr ""
 
-#: template-case-studies.php:64
 msgid "Supply Chain & Procurement Rationalization"
 msgstr ""
 
-#: inc/template-tags.php:96
+msgid "Supply Chain Resilience & Procurement"
+msgstr ""
+
 msgid "Support / Helpdesk"
 msgstr ""
 
-#: template-homepage-travel.php:197
 msgid "Swiss Alps & Glacier Express"
 msgstr ""
 
-#: template-tour-packages.php:52
 msgid "Swiss Alps Scenic Adventure"
 msgstr ""
 
-#: template-homepage-travel.php:64
 msgid "Swiss Alps, Switzerland"
 msgstr ""
 
-#: template-homepage-travel.php:196
 msgid "Switzerland"
 msgstr ""
 
-#: template-homepage-travel.php:170
 msgid "Sydney & Great Barrier"
 msgstr ""
 
-#: template-homepage-digital.php:146
 msgid "System theme aware mode detection plus interactive toggle switcher for nighttime buyers."
 msgstr ""
 
-#: single.php:65
 msgid "Tags:"
 msgstr ""
 
-#: template-homepage-corporate.php:45
 msgid "Talent Acquisition & Global Mobility"
 msgstr ""
 
-#: functions.php:119
 msgid "Talk to our experts today and get a free, no-obligation consultation."
 msgstr ""
 
-#: template-homepage-visa.php:85
 msgid "Target Destination"
 msgstr ""
 
-#: inc/customizer.php:709
 msgid "Team Section"
 msgstr ""
 
-#: functions.php:547
 msgid "Tech"
 msgstr ""
 
-#: template-case-studies.php:51
 msgid "Tech Founder UK Endorsement & Family PR"
 msgstr ""
 
-#: functions.php:638
 msgid "Tech Stack"
 msgstr ""
 
-#: template-homepage-travel.php:523
+msgid "Technical Support & Troubleshooting"
+msgstr ""
+
+msgid "Technology & Digital Transformation"
+msgstr ""
+
 msgid "Tell us about your interests, dream activities, or specific travel dates..."
 msgstr ""
 
-#: template-homepage-travel.php:472
 msgid "Tell us your preferred destination, travel dates, and guest count. Our expert travel designers will curate a custom day-by-day itinerary with exact pricing in 24 hours."
 msgstr ""
 
-#: template-terms-conditions.php:26
 msgid "Terms & Conditions"
 msgstr ""
 
-#: template-homepage-digital.php:199
 msgid "Terraform & Docker"
 msgstr ""
 
-#: inc/customizer.php:664
 msgid "Testimonial %d Quote"
 msgstr ""
 
-#: functions.php:88
 msgid "Testimonials"
 msgstr ""
 
-#: inc/customizer.php:602
 msgid "Testimonials Section"
 msgstr ""
 
-#: template-contact.php:100
 msgid "Thank You! Message Received."
 msgstr ""
 
-#: inc/about-page.php:44
 msgid "Thank you for choosing BizPro Agency by Kamrul Hasan! Your website is ready to shine."
 msgstr ""
 
-#: inc/lead-handler.php:37
 msgid "Thank you! Your inquiry has been received."
 msgstr ""
 
-#: inc/lead-handler.php:108
 msgid "Thank you! Your inquiry has been received. Our team will contact you shortly."
 msgstr ""
 
-#: template-homepage-digital.php:337
 msgid "The Cloud DevOps Pack was totally worth every penny. Terraform templates deployed cleanly to AWS on day one with zero configuration errors."
 msgstr ""
 
-#: template-homepage-digital.php:320
 msgid "The SaaS Dashboard UI kit saved our agency over 120 hours of frontend development. Clean Figma tokens and pixel-perfect HTML/CSS out of the box!"
 msgstr ""
 
-#: template-disclaimer.php:41
 msgid "The Site cannot and does not contain legal, immigration, financial, or engineering advice. The information is provided for general informational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate licensed professionals."
 msgstr ""
 
-#: template-disclaimer.php:53
 msgid "The Site may contain (or you may be sent through the Site to) links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us."
 msgstr ""
 
-#: functions.php:99
 msgid "The consultancy advice helped us enter two new markets within a year. I recommend them without hesitation."
 msgstr ""
 
-#: template-homepage-digital.php:48
 msgid "The enterprise-grade eCommerce solution designed for creators, developers, and SaaS founders. Built with zero-bloat code, instant downloads, and automated license distribution."
 msgstr ""
 
-#: template-disclaimer.php:36
 msgid "The information provided by %1$s on %2$s is for general informational and educational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site."
 msgstr ""
 
-#: 404.php:27
 msgid "The page you are looking for might have been moved, renamed, or is temporarily unavailable. Try searching below or return to our homepage."
 msgstr ""
 
-#: template-privacy-policy.php:47
 msgid "The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information."
 msgstr ""
 
-#: template-privacy-policy.php:72
 msgid "The right to access:"
 msgstr ""
 
-#: template-privacy-policy.php:75
 msgid "The right to data portability:"
 msgstr ""
 
-#: template-privacy-policy.php:74
 msgid "The right to erasure:"
 msgstr ""
 
-#: template-privacy-policy.php:73
 msgid "The right to rectification:"
 msgstr ""
 
-#: functions.php:91
 msgid "The team handled my visa application from start to finish. Clear communication and approval in record time."
 msgstr ""
 
-#: functions.php:95
 msgid "Their IT experts modernised our systems with zero downtime. Professional, responsive and great value."
 msgstr ""
 
-#: template-homepage-travel.php:533
-#: template-homepage-visa.php:342
 msgid "Theme demo switcher"
 msgstr ""
 
-#: template-terms-conditions.php:36
 msgid "These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (\"you\") and %1$s (\"we\", \"us\", or \"our\"), concerning your access to and use of the %2$s website as well as any other media form, channel, or mobile website related, linked, or otherwise connected thereto."
 msgstr ""
 
-#: template-privacy-policy.php:64
 msgid "Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on this website, which are sent directly to users browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit."
 msgstr ""
 
-#: template-disclaimer.php:49
 msgid "Third-party vendors, including Google, use cookies to serve ads based on a users prior visits to our website or other websites. We do not endorse any product or service advertised in these third-party ad blocks."
 msgstr ""
 
-#: inc/demo-import.php:149
 msgid "This demo sells digital products, so WooCommerce must be installed and active before it is imported."
 msgstr ""
 
-#: template-disclaimer.php:48
 msgid "This site may display advertisements served by Google AdSense and other third-party advertising networks. These advertisements help support the maintenance and free resources available on this website."
 msgstr ""
 
-#: template-homepage-travel.php:416
 msgid "Thousands of travelers have booked their adventures with us. (Sample testimonials for demo purposes.) Here are their experiences."
 msgstr ""
 
-#: template-homepage-digital.php:76
 msgid "Time-limited download links protect assets and prevent unauthorized sharing."
 msgstr ""
 
-#: inc/customizer.php:200
-#: inc/customizer.php:449
-#: inc/customizer.php:829
 msgid "Title"
 msgstr ""
 
-#: template-homepage-travel.php:265
 msgid "Tokyo & Kyoto Japan"
 msgstr ""
 
-#: inc/lead-handler.php:55
 msgid "Too many submissions. Please try again in a few minutes."
 msgstr ""
 
-#: inc/customizer.php:80
 msgid "Top Bar"
 msgstr ""
 
-#: template-homepage-travel.php:141
 msgid "Top Choice"
 msgstr ""
 
-#: template-homepage-travel.php:132
 msgid "Top Destinations"
 msgstr ""
 
-#: functions.php:611
 msgid "Tour Packages"
 msgstr ""
 
-#: template-homepage-travel.php:87
 msgid "Tour Style"
 msgstr ""
 
-#: template-homepage-visa.php:102
 msgid "Tourist & Family Visit Visa"
 msgstr ""
 
-#: template-homepage-consulting.php:131
+msgid "Tourist & Family Visitor Visa"
+msgstr ""
+
 msgid "Transforming Business Ambition into Sustainable Market Leadership"
 msgstr ""
 
-#: template-disclaimer.php:27
 msgid "Transparency & Policies"
 msgstr ""
 
-#: template-pricing.php:21
 msgid "Transparent Investment"
 msgstr ""
 
-#: functions.php:153
 msgid "Transparent Pricing"
 msgstr ""
 
-#: functions.php:155
 msgid "Transparent investment options with zero hidden fees. Scale services seamlessly as your business expands."
 msgstr ""
 
-#: template-homepage-it.php:232
 msgid "Transparent monthly plans with guaranteed SLAs and direct Senior Architect access."
 msgstr ""
 
-#: functions.php:65
 msgid "Transparent pricing with no hidden fees"
 msgstr ""
 
-#: template-contact.php:193
 msgid "Transparent retainers and milestone-based commercial arrangements."
 msgstr ""
 
-#: functions.php:539
-#: inc/demo-import.php:42
 msgid "Travel & Tour Agency"
 msgstr ""
 
-#: front-page.php:603
 msgid "Travel & Tour Operator"
 msgstr ""
 
-#: functions.php:484
 msgid "Travel & Tours"
 msgstr ""
 
-#: inc/template-tags.php:95
 msgid "Travel / Global"
 msgstr ""
 
-#: template-homepage-visa.php:346
 msgid "Travel Agency"
 msgstr ""
 
-#: functions.php:253
 msgid "Travel Agency Menu"
 msgstr ""
 
-#: functions.php:53
 msgid "Travel Planning"
 msgstr ""
 
-#: template-contact.php:161
-msgid "Travel Planning & Holiday Tours"
-msgstr ""
-
-#: inc/demo-import.php:45
 msgid "Travel and tour operator: destinations, tour packages, reviews and booking enquiries."
 msgstr ""
 
-#: template-homepage-travel.php:429
 msgid "Traveled to Bali, Indonesia"
 msgstr ""
 
-#: template-homepage-travel.php:443
 msgid "Traveled to Zurich & Zermatt"
 msgstr ""
 
-#: template-homepage-travel.php:266
 msgid "Trending"
 msgstr ""
 
-#: template-homepage-digital.php:160
 msgid "Trending Digital Assets & Software Downloads"
 msgstr ""
 
-#: template-homepage-travel.php:133
 msgid "Trending Places Loved by Travelers"
 msgstr ""
 
-#: template-homepage-travel.php:93
 msgid "Tropical Island & Beach"
 msgstr ""
 
-#: functions.php:126
 msgid "Trusted by Leading Organizations"
 msgstr ""
 
-#: template-homepage-corporate.php:80
 msgid "Trusted by public and private organizations across four continents."
 msgstr ""
 
-#: template-homepage-visa.php:63
 msgid "UK"
 msgstr ""
 
-#: template-homepage-visa.php:291
 msgid "UK Skilled Worker"
 msgstr ""
 
-#: template-homepage-visa.php:65
 msgid "US"
 msgstr ""
 
-#: template-homepage-digital.php:257
 msgid "Ultimate Digital Creator & Developer Bundle"
 msgstr ""
 
-#: template-homepage-travel.php:520
 msgid "Ultra Luxury ($5,000+)"
 msgstr ""
 
-#: template-homepage-digital.php:65
 msgid "Ultra-Fast Delivery"
 msgstr ""
 
-#: template-privacy-policy.php:81
 msgid "Under the CCPA, among other rights, California consumers have the right to request that a business disclose the categories and specific pieces of personal data that a business has collected about consumers, and request that a business not sell the consumers personal data. If you make a request, we have one month to respond to you."
 msgstr ""
 
-#: template-homepage-consulting.php:232
 msgid "Unit Economics & Bottleneck Analysis"
 msgstr ""
 
-#: template-homepage-travel.php:182
-#: template-visa-search.php:53
 msgid "United Arab Emirates"
 msgstr ""
 
-#: template-homepage-visa.php:88
-#: template-homepage-visa.php:153
-#: template-homepage-visa.php:153
-#: template-homepage-visa.php:155
-#: template-visa-search.php:48
 msgid "United Kingdom"
 msgstr ""
 
-#: template-visa-search.php:148
 msgid "United Kingdom Work Visa"
 msgstr ""
 
-#: template-homepage-visa.php:90
-#: template-homepage-visa.php:189
-#: template-homepage-visa.php:189
-#: template-homepage-visa.php:191
-#: template-visa-search.php:50
 msgid "United States"
 msgstr ""
 
-#: template-terms-conditions.php:41
 msgid "Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site and the trademarks, service marks, and logos contained therein are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws."
 msgstr ""
 
-#: inc/shortcodes.php:258
 msgid "Unlimited Strategy & DevOps Calls"
 msgstr ""
 
-#: template-homepage-digital.php:297
 msgid "Unlimited client project usage"
 msgstr ""
 
-#: inc/shortcodes.php:241
 msgid "Up to 10 Monthly Strategy Hours"
 msgstr ""
 
-#: template-homepage-it.php:208
 msgid "Uptime SLA Guaranteed"
 msgstr ""
 
-#: inc/customizer.php:871
+msgid "Urgent Traveler Assistance?"
+msgstr ""
+
+msgid "Urgent Visa Deadlines?"
+msgstr ""
+
 msgid "Use {year} to print the current year automatically."
 msgstr ""
 
-#: template-homepage-digital.php:88
 msgid "VERSION CONTROL"
 msgstr ""
 
-#: template-homepage-digital.php:124
 msgid "Vanilla JavaScript and pure CSS styling means zero jQuery and ultra-fast mobile rendering."
 msgstr ""
 
-#: template-homepage-visa.php:197
 msgid "Varies by Route"
 msgstr ""
 
-#: template-contact.php:108
 msgid "Verification failed. Please refresh and try submitting again."
 msgstr ""
 
-#: template-homepage-digital.php:308
 msgid "Verified Buyer Feedback"
 msgstr ""
 
-#: functions.php:487
 msgid "Verified Global Tour Operator"
 msgstr ""
 
-#: inc/demo-import.php:46
 msgid "Verified Global Tours & Holiday Itineraries"
 msgstr ""
 
-#: template-about.php:100
 msgid "Veteran executives bringing decades of collective domain expertise."
 msgstr ""
 
-#: functions.php:1355
 msgid "View All 7 Ready Demos"
 msgstr ""
 
-#: inc/about-page.php:172
 msgid "View Live Demo ↗"
 msgstr ""
 
-#: template-case-studies.php:40
-#: template-case-studies.php:53
-#: template-case-studies.php:66
 msgid "View Project Breakdown →"
 msgstr ""
 
-#: functions.php:533
-#: template-homepage-travel.php:537
 msgid "Visa & Immigration"
 msgstr ""
 
-#: front-page.php:595
-#: template-contact.php:159
-#: inc/demo-import.php:33
 msgid "Visa & Immigration Consultancy"
 msgstr ""
 
-#: functions.php:252
 msgid "Visa & Immigration Menu"
 msgstr ""
 
-#: inc/template-tags.php:94
 msgid "Visa / Document"
 msgstr ""
 
-#: functions.php:49
 msgid "Visa Assistance"
 msgstr ""
 
-#: template-homepage-visa.php:96
 msgid "Visa Category"
 msgstr ""
 
-#: template-homepage-visa.php:163
 msgid "Visa Category:"
 msgstr ""
 
-#: template-homepage-visa.php:234
 msgid "Visa Granted & Relocation"
 msgstr ""
 
-#: functions.php:580
 msgid "Visa Pathways"
 msgstr ""
 
-#: functions.php:142
 msgid "Visa Services"
 msgstr ""
 
-#: template-visa-search.php:57
 msgid "Visa Type"
 msgstr ""
 
-#: inc/demo-import.php:36
 msgid "Visa and immigration consultancy: eligibility checker, country pathways, case studies and FAQ."
 msgstr ""
 
-#: template-visa-search.php:71
 msgid "Visa eligibility and processing times depend on individual circumstances and current government rules. Contact our registered specialists for an assessment."
 msgstr ""
 
-#: template-homepage-visa.php:246
 msgid "Visas Consulted"
 msgstr ""
 
-#: template-visa-search.php:63
 msgid "Visitor / Tourist"
 msgstr ""
 
-#: template-privacy-policy.php:60
 msgid "Visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL:"
 msgstr ""
 
-#: template-homepage-it.php:48
 msgid "Vulnerability assessment, penetration testing, data encryption, SOC2 Type II, ISO 27001, and HIPAA compliance audits."
 msgstr ""
 
-#: template-homepage-digital.php:87
-#: template-homepage-digital.php:93
 msgid "WOOCOMMERCE OPTIMIZED"
 msgstr ""
 
-#: template-coming-soon.php:31
 msgid "We Are Preparing Something Extraordinary"
 msgstr ""
 
-#: template-homepage-travel.php:331
 msgid "We Turn Dreams Into Flawless Memories"
 msgstr ""
 
-#: footer.php:30
+msgid "We are a curated digital marketplace delivering high-performance UI kits, software tools, templates, and digital assets for creators."
+msgstr ""
+
+msgid "We are a global institutional enterprise delivering boardroom advisory, regulatory compliance, and cross-border commercial solutions."
+msgstr ""
+
+msgid "We are a licensed immigration consultancy providing legal pathway guidance, document clearance, and seamless relocation support worldwide."
+msgstr ""
+
+msgid "We are a premier travel and tour operator curating unforgettable journeys, customized holiday packages, and seamless flights worldwide."
+msgstr ""
+
+msgid "We are a strategic management consulting firm driving operational excellence, corporate growth, and long-term enterprise value."
+msgstr ""
+
 msgid "We are a trusted agency delivering professional consulting, technology, visa and travel services to clients worldwide."
 msgstr ""
 
-#: template-homepage-it.php:115
+msgid "We are an enterprise technology agency engineering scalable cloud infrastructure, custom software, and reliable DevOps solutions."
+msgstr ""
+
 msgid "We design, build, and scale mission-critical cloud infrastructure, distributed microservices, and AI-powered enterprise platforms that accelerate velocity and withstand peak global traffic."
 msgstr ""
 
-#: functions.php:30
 msgid "We help companies and individuals succeed with trusted IT, consultancy, visa and travel services delivered by experienced professionals."
 msgstr ""
 
-#: functions.php:183
 msgid "We integrate cross-functional expertise across Business Strategy, Global Immigration & Visas, Technology Solutions, and Corporate Advisory under one roof. You get dedicated senior specialists without the overhead of juggling multiple disjointed vendors."
 msgstr ""
 
-#: template-homepage-consulting.php:132
 msgid "We partner with enterprise executives, private equity boards, and visionary founders to unlock hidden enterprise value, navigate complex cross-border transactions, and scale market share."
 msgstr ""
 
-#: template-about.php:64
 msgid "We recognized early on that ambitious businesses and professionals waste critical time and resources juggling fragmented agencies. Our multidisciplinary firm bridges the gap: combining elite strategic consulting, licensed global immigration counsel, and scalable enterprise cloud engineering under one unified roof."
 msgstr ""
 
-#: template-homepage-visa.php:220
 msgid "We review your education, work experience, language scores, and match you with the highest-probability visa program."
 msgstr ""
 
-#: template-homepage-visa.php:230
 msgid "We submit your complete application file through official immigration portals and track its progress."
 msgstr ""
 
-#: template-faq.php:67
 msgid "We support international bank wire transfers, major credit cards (Visa, MasterCard, Amex) via Stripe, PayPal, and Apple Pay across USD, EUR, GBP, and CAD currencies."
 msgstr ""
 
-#: footer.php:113
 msgid "We use cookies to improve your experience. By continuing you accept our"
 msgstr ""
 
-#: template-privacy-policy.php:70
 msgid "We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:"
 msgstr ""
 
-#: template-disclaimer.php:26
 msgid "Website & Advisory Disclaimer"
 msgstr ""
 
-#: inc/about-page.php:40
 msgid "Welcome to BizPro Agency %s"
 msgstr ""
 
-#: functions.php:89
 msgid "What Our Clients Say"
 msgstr ""
 
-#: template-homepage-travel.php:415
 msgid "What Our Travelers Say"
 msgstr ""
 
-#: functions.php:37
 msgid "What We Do"
 msgstr ""
 
-#: template-homepage-digital.php:391
 msgid "What commercial usage rights and licenses are included?"
 msgstr ""
 
-#: template-faq.php:43
 msgid "What is your visa approval track record?"
 msgstr ""
 
-#: functions.php:182
 msgid "What makes BizPro Agency different from other consulting firms?"
 msgstr ""
 
-#: template-faq.php:63
 msgid "What payment methods and currencies do you accept?"
 msgstr ""
 
-#: template-homepage-travel.php:74
 msgid "When?"
 msgstr ""
 
-#: template-homepage-travel.php:59
 msgid "Where To?"
 msgstr ""
 
-#: inc/white-label.php:20
 msgid "White Label"
 msgstr ""
 
-#: inc/white-label.php:19
 msgid "White Label Settings"
 msgstr ""
 
-#: template-homepage-travel.php:330
+msgid "Why Book With BizPro Travel?"
+msgstr ""
+
+msgid "Why Buy From BizPro Store?"
+msgstr ""
+
+msgid "Why Choose BizPro Visa?"
+msgstr ""
+
+msgid "Why Consult With BizPro?"
+msgstr ""
+
+msgid "Why Partner With BizPro Enterprise?"
+msgstr ""
+
+msgid "Why Partner With BizPro Tech?"
+msgstr ""
+
 msgid "Why Travelers Love Us"
 msgstr ""
 
-#: functions.php:615
-#: functions.php:746
 msgid "Why Us"
 msgstr ""
 
-#: template-contact.php:181
 msgid "Why Work With BizPro Agency?"
 msgstr ""
 
-#: template-homepage-travel.php:194
 msgid "Winter & Summer"
 msgstr ""
 
-#: template-homepage-travel.php:81
 msgid "Winter Holiday Escapes"
 msgstr ""
 
-#: inc/demo-import.php:101
 msgid "WooCommerce is not active yet: install and activate it before importing."
 msgstr ""
 
-#: inc/demo-import.php:148
 msgid "WooCommerce is required"
 msgstr ""
 
-#: template-visa-search.php:61
 msgid "Work & Skilled"
 msgstr ""
 
-#: template-homepage-visa.php:99
 msgid "Work Permit & Employment Visa"
 msgstr ""
 
-#: template-homepage-consulting.php:54
 msgid "Working capital optimization, liquidity resilience, debt refinancing advisory, and predictive financial modeling."
 msgstr ""
 
-#: single.php:112
 msgid "Written By"
 msgstr ""
 
-#: template-about.php:77
 msgid "Years Established"
 msgstr ""
 
-#: template-homepage-visa.php:258
 msgid "Years in Business"
 msgstr ""
 
-#: functions.php:72
 msgid "Years of Experience"
 msgstr ""
 
-#: functions.php:63
 msgid "Years of Trusted Service"
 msgstr ""
 
-#: functions.php:187
 msgid "Yes, all monthly retainers are fully flexible. You can adjust your tier or pause services at any billing cycle with a 14-day notice, giving you complete financial agility."
 msgstr ""
 
-#: functions.php:191
 msgid "Yes. Beyond delivery, we offer proactive ongoing monitoring, continuous performance reviews, and dedicated advisory hours to ensure sustainable long-term success."
 msgstr ""
 
-#: template-homepage-digital.php:405
 msgid "Yes. If a downloaded file is demonstrably corrupted, missing documented features, or our technical support team cannot resolve a reported issue within 48 hours, you are entitled to a full 14-day refund."
 msgstr ""
 
-#: template-faq.php:57
 msgid "Yes. Our engineering division specializes in modern tech stacks including React, Next.js, Python, AWS cloud architecture, and microservice infrastructure with enterprise SLA support."
 msgstr ""
 
-#: template-privacy-policy.php:72
 msgid "You have the right to request copies of your personal data."
 msgstr ""
 
-#: template-privacy-policy.php:73
 msgid "You have the right to request that we correct any information you believe is inaccurate."
 msgstr ""
 
-#: template-privacy-policy.php:74
 msgid "You have the right to request that we erase your personal data, under certain conditions."
 msgstr ""
 
-#: template-privacy-policy.php:75
 msgid "You have the right to request that we transfer the data that we have collected to another organization, or directly to you."
 msgstr ""
 
-#: inc/lead-handler.php:68
 msgid "You received a new inquiry from your website:"
 msgstr ""
 
-#: template-homepage-visa.php:212
 msgid "Your 4-Step Journey to a Visa Approval"
 msgstr ""
 
-#: template-homepage-visa.php:107
 msgid "Your Contact Details"
 msgstr ""
 
-#: template-contact.php:132
 msgid "Your Full Name *"
 msgstr ""
 
-#: template-homepage-visa.php:46
 msgid "Your Gateway to"
 msgstr ""
 
-#: template-homepage-travel.php:348
 msgid "Your personal travel manager is on WhatsApp or phone throughout your journey."
 msgstr ""
 
-#: template-contact.php:185
 msgid "Your trade secrets and personal data are protected by bilateral legal agreements."
 msgstr ""
 
-#: template-contact.php:193
 msgid "Zero Hidden Costs:"
 msgstr ""
 
-#: template-homepage-it.php:220
 msgid "Zero-Trust Data Protection"
 msgstr ""
 
-#: functions.php:565
 msgid "eCom"
 msgstr ""
 
-#: template-homepage-digital.php:111
 msgid "eCommerce Core"
 msgstr ""
 
-#: template-privacy-policy.php:60
 msgid "https://policies.google.com/technologies/ads"
 msgstr ""
 
-#: template-contact.php:137
 msgid "john@company.com"
 msgstr ""
 
-#: template-services.php:92
 msgid "→"
 msgstr ""
 
-#: template-visa-search.php:151
 msgid "⏱️ 3 - 6 Weeks"
 msgstr ""
 
-#: template-visa-search.php:138
 msgid "⏱️ 6 - 8 Months"
 msgstr ""
 
-#: template-visa-search.php:164
 msgid "⏱️ 7 - 9 Months"
 msgstr ""
 
-#: template-homepage-digital.php:170
-#: template-homepage-digital.php:197
-#: template-homepage-digital.php:224
 msgid "⚡ Instant Download"
 msgstr ""
 
-#: template-tour-packages.php:40
 msgid "✅ 5-Star Private Pool Villa"
 msgstr ""
 
-#: template-tour-packages.php:79
 msgid "✅ Candlelight Beach Dining Experience"
 msgstr ""
 
-#: template-tour-packages.php:41
 msgid "✅ Daily Gourmet Breakfast & Dinners"
 msgstr ""
 
-#: template-tour-packages.php:78
 msgid "✅ Dolphin Cruise & Coral Snorkeling"
 msgstr ""
 
-#: template-tour-packages.php:61
 msgid "✅ English Certified Mountain Guide"
 msgstr ""
 
-#: template-tour-packages.php:58
 msgid "✅ Glacier Express 1st Class Pass"
 msgstr ""
 
-#: template-tour-packages.php:60
 msgid "✅ Luxury Boutique Alpine Chalets"
 msgstr ""
 
-#: template-tour-packages.php:42
 msgid "✅ Nusa Penida Yacht Excursion"
 msgstr ""
 
-#: template-tour-packages.php:77
 msgid "✅ Seaplane Roundtrip Included"
 msgstr ""
 
-#: template-tour-packages.php:76
 msgid "✅ Sunset Water Villa with Slide"
 msgstr ""
 
-#: template-tour-packages.php:43
 msgid "✅ VIP Airport Fast-Track Transfer"
 msgstr ""
 
-#: template-tour-packages.php:59
 msgid "✅ Zermatt & Matterhorn Glacier Ride"
 msgstr ""
 
-#: template-homepage-visa.php:275
 msgid "✓ PR APPROVED"
 msgstr ""
 
-#: template-homepage-visa.php:305
 msgid "✓ STUDENT VISA"
 msgstr ""
 
-#: template-homepage-visa.php:290
 msgid "✓ VISA GRANTED"
 msgstr ""
 
-#: inc/about-page.php:67
 msgid "🎨 Live Customizer"
 msgstr ""
 
-#: inc/about-page.php:89
 msgid "📊 7 Ready-Made Pre-Built Niche Demos"
 msgstr ""
 
-#: inc/about-page.php:72
 msgid "📦 Block Patterns"
 msgstr ""
 
-#: template-homepage-visa.php:115
 msgid "🔒 100% Confidential. No commitment required."
 msgstr ""
 
-#: template-homepage-digital.php:251
 msgid "🔥 Best Value Bundle"
 msgstr ""
 
-#: inc/about-page.php:77
 msgid "🛒 WooCommerce Ready"
 msgstr ""
 

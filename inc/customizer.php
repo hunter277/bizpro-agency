@@ -112,6 +112,22 @@ function bizpro_agency_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 		)
 	);
+	$wp_customize->add_setting(
+		'show_demos_showcase',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'bizpro_agency_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'show_demos_showcase',
+		array(
+			'label'       => esc_html__( 'Show 7 Niche Demos Showcase on Homepage', 'bizpro-agency' ),
+			'description' => esc_html__( 'Displays the 7-demo grid with live preview links on the main flagship homepage.', 'bizpro-agency' ),
+			'section'     => 'bizpro_agency_topbar',
+			'type'        => 'checkbox',
+		)
+	);
 	$text_fields = array(
 		'topbar_phone'   => esc_html__( 'Phone', 'bizpro-agency' ),
 		'topbar_email'   => esc_html__( 'Email', 'bizpro-agency' ),

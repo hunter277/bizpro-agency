@@ -358,6 +358,11 @@ add_action( 'widgets_init', 'bizpro_agency_widgets_init' );
 function bizpro_agency_get_demo_context() {
 	$valid = array( 'visa', 'travel', 'it', 'consulting', 'corporate', 'digital' );
 
+	// 1. Explicit query parameter.
+	if ( isset( $_GET['demo'] ) && in_array( sanitize_key( wp_unslash( $_GET['demo'] ) ), $valid, true ) ) {
+		return sanitize_key( wp_unslash( $_GET['demo'] ) );
+	}
+
 	if ( is_singular() ) {
 		$id       = get_queried_object_id();
 		$template = $id ? get_page_template_slug( $id ) : '';
@@ -371,11 +376,115 @@ function bizpro_agency_get_demo_context() {
 		if ( $key && in_array( $key, $valid, true ) ) {
 			return $key;
 		}
+
+		// Check post slug for demo prefix/suffix (e.g. travel-contact, visa-about).
+		$slug = $id ? get_post_field( 'post_name', $id ) : '';
+		if ( $slug ) {
+			foreach ( $valid as $demo_key ) {
+				if ( false !== strpos( $slug, $demo_key ) ) {
+					return $demo_key;
+				}
+			}
+		}
 	}
 
-	// Site-wide niche chosen by the demo importer (inner pages, blog, archives).
+	// 2. Site-wide niche chosen by the demo importer (inner pages, blog, archives).
 	$key = get_option( 'bizpro_agency_active_demo', '' );
-	return in_array( $key, $valid, true ) ? $key : 'default';
+	if ( in_array( $key, $valid, true ) ) {
+		return $key;
+	}
+
+	// 3. Fallback: check if the front page was set to a specific niche demo template.
+	$front_id = get_option( 'page_on_front' );
+	if ( $front_id ) {
+		$front_tpl = get_page_template_slug( $front_id );
+		if ( $front_tpl && 0 === strpos( $front_tpl, 'template-homepage-' ) ) {
+			$key = str_replace( array( 'template-homepage-', '.php' ), '', $front_tpl );
+			if ( in_array( $key, $valid, true ) ) {
+				return $key;
+			}
+		}
+		$front_meta = get_post_meta( $front_id, '_bizpro_demo', true );
+		if ( $front_meta && in_array( $front_meta, $valid, true ) ) {
+			return $front_meta;
+		}
+		$front_slug = get_post_field( 'post_name', $front_id );
+		if ( $front_slug ) {
+			foreach ( $valid as $demo_key ) {
+				if ( false !== strpos( $front_slug, $demo_key ) ) {
+					return $demo_key;
+				}
+			}
+		}
+	}
+
+	return 'default';
+}
+
+/**
+ * Get tailored services/areas of interest for a given demo context.
+ *
+ * @param string|null $demo Demo context key (visa, travel, it, consulting, corporate, digital, default).
+ * @return array Key => Label pairs.
+ */
+function bizpro_agency_get_demo_services( $demo = null ) {
+	if ( ! $demo ) {
+		$demo = bizpro_agency_get_demo_context();
+	}
+
+	$services = array(
+		'travel'     => array(
+			'packages'   => __( 'Holiday & Tour Packages', 'bizpro-agency' ),
+			'custom'     => __( 'Custom Private Itinerary Planning', 'bizpro-agency' ),
+			'flights'    => __( 'Flights, Hotels & Resort Bookings', 'bizpro-agency' ),
+			'group'      => __( 'Corporate & Group Tour Arrangements', 'bizpro-agency' ),
+			'general'    => __( 'General Travel Inquiries', 'bizpro-agency' ),
+		),
+		'visa'       => array(
+			'study'      => __( 'Student & University Study Visa', 'bizpro-agency' ),
+			'work'       => __( 'Skilled Worker & Employment Permit', 'bizpro-agency' ),
+			'pr'         => __( 'Permanent Residency (PR) Pathway', 'bizpro-agency' ),
+			'business'   => __( 'Business, Investor & Startup Visa', 'bizpro-agency' ),
+			'visitor'    => __( 'Tourist & Family Visitor Visa', 'bizpro-agency' ),
+		),
+		'it'         => array(
+			'cloud'      => __( 'Cloud Architecture & DevOps Migration', 'bizpro-agency' ),
+			'software'   => __( 'Custom Web & Mobile App Development', 'bizpro-agency' ),
+			'security'   => __( 'Cybersecurity Audits & Compliance', 'bizpro-agency' ),
+			'staffing'   => __( 'Dedicated Engineering Team / Staffing', 'bizpro-agency' ),
+			'sla'        => __( 'Enterprise 24/7 Managed IT Support', 'bizpro-agency' ),
+		),
+		'digital'    => array(
+			'license'    => __( 'Digital Asset & Software Licensing', 'bizpro-agency' ),
+			'custom'     => __( 'Custom Template & Feature Development', 'bizpro-agency' ),
+			'support'    => __( 'Technical Support & Troubleshooting', 'bizpro-agency' ),
+			'commercial' => __( 'Enterprise / Commercial Multi-Seat License', 'bizpro-agency' ),
+			'general'    => __( 'General Store Inquiry', 'bizpro-agency' ),
+		),
+		'consulting' => array(
+			'strategy'   => __( 'Strategic Business Growth & Scaling', 'bizpro-agency' ),
+			'operations' => __( 'Operational Restructuring & Efficiency', 'bizpro-agency' ),
+			'm-and-a'    => __( 'Financial Modeling & M&A Advisory', 'bizpro-agency' ),
+			'leadership' => __( 'Executive Coaching & Change Management', 'bizpro-agency' ),
+			'market'     => __( 'Global Market Entry & Feasibility', 'bizpro-agency' ),
+		),
+		'corporate'  => array(
+			'enterprise' => __( 'Enterprise Digital Transformation', 'bizpro-agency' ),
+			'governance' => __( 'Corporate Governance, Risk & ESG', 'bizpro-agency' ),
+			'expansion'  => __( 'Cross-Border Mergers & Joint Ventures', 'bizpro-agency' ),
+			'procure'    => __( 'Supply Chain Resilience & Procurement', 'bizpro-agency' ),
+			'inquiry'    => __( 'Institutional Boardroom Inquiries', 'bizpro-agency' ),
+		),
+		'default'    => array(
+			'business'   => __( 'Strategic Business Advisory', 'bizpro-agency' ),
+			'technology' => __( 'Technology & Digital Transformation', 'bizpro-agency' ),
+			'branding'   => __( 'Brand Identity & Marketing Strategy', 'bizpro-agency' ),
+			'retainer'   => __( 'Enterprise Advisory Retainers', 'bizpro-agency' ),
+			'general'    => __( 'General Inquiries', 'bizpro-agency' ),
+		),
+	);
+
+	return isset( $services[ $demo ] ) ? $services[ $demo ] : $services['default'];
 }
 
 /**
@@ -426,7 +535,30 @@ function bizpro_agency_page_url( $key, $demo = null ) {
 		return get_permalink( $id );
 	}
 
-	$page = 'home' !== $key ? get_page_by_path( $key ) : null;
+	// Home page resolution per demo niche.
+	if ( 'home' === $key ) {
+		if ( ! $demo || 'default' === $demo ) {
+			return home_url( '/' );
+		}
+		$demo_slugs = array(
+			'visa'       => 'visa-immigration',
+			'travel'     => 'travel-agency',
+			'it'         => 'it-solutions',
+			'consulting' => 'business-consulting',
+			'corporate'  => 'corporate',
+			'digital'    => 'digital-store',
+		);
+		if ( isset( $demo_slugs[ $demo ] ) ) {
+			$demo_page = get_page_by_path( $demo_slugs[ $demo ] );
+			if ( $demo_page ) {
+				return get_permalink( $demo_page );
+			}
+			return home_url( '/' . $demo_slugs[ $demo ] . '/' );
+		}
+		return home_url( '/' );
+	}
+
+	$page = get_page_by_path( $key );
 	if ( $page ) {
 		return get_permalink( $page );
 	}
