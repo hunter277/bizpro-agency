@@ -50,6 +50,11 @@ function bizpro_agency_about_page_render() {
 			</div>
 
 			
+			<!-- Theme Hero Preview Banner -->
+			<div style="margin-bottom: 30px; border-radius: 12px; overflow: hidden; border: 1px solid #ccd0d4; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/preview-main.jpg' ); ?>" alt="BizPro Agency" style="width: 100%; height: auto; display: block;">
+			</div>
+
 			<!-- Demo importer banner -->
 			<div style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 12px; padding: 24px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between;">
 				<div>
@@ -105,49 +110,49 @@ function bizpro_agency_about_page_render() {
 						'niche' => 'eCommerce',
 						'badge' => 'eCom',
 						'url'   => bizpro_agency_page_url( 'home', 'digital' ),
-						'img'   => $img_uri . 'demo-digital.png',
+						'img'   => $img_uri . 'demo-digital.jpg',
 					),
 					array(
 						'title' => 'Visa & Immigration Consultancy',
 						'niche' => 'Immigration',
 						'badge' => 'Hot',
 						'url'   => bizpro_agency_page_url( 'home', 'visa' ),
-						'img'   => $img_uri . 'demo-visa.png',
+						'img'   => $img_uri . 'demo-visa.jpg',
 					),
 					array(
 						'title' => 'Travel & Tour Operator',
 						'niche' => 'Tourism',
 						'badge' => 'New',
 						'url'   => bizpro_agency_page_url( 'home', 'travel' ),
-						'img'   => $img_uri . 'demo-travel.png',
+						'img'   => $img_uri . 'demo-travel.jpg',
 					),
 					array(
 						'title' => 'IT Solutions & Cloud Services',
 						'niche' => 'Technology',
 						'badge' => 'Tech',
 						'url'   => bizpro_agency_page_url( 'home', 'it' ),
-						'img'   => $img_uri . 'demo-it.png',
+						'img'   => $img_uri . 'demo-it.jpg',
 					),
 					array(
 						'title' => 'Business & Management Consulting',
 						'niche' => 'Consulting',
 						'badge' => 'Pro',
 						'url'   => bizpro_agency_page_url( 'home', 'consulting' ),
-						'img'   => $img_uri . 'demo-consulting.png',
+						'img'   => $img_uri . 'demo-consulting.jpg',
 					),
 					array(
 						'title' => 'Corporate Enterprise & Governance',
 						'niche' => 'Enterprise',
 						'badge' => 'Elite',
 						'url'   => bizpro_agency_page_url( 'home', 'corporate' ),
-						'img'   => $img_uri . 'demo-corporate.png',
+						'img'   => $img_uri . 'demo-corporate.jpg',
 					),
 					array(
 						'title' => 'Main Agency (Flagship Multi-Purpose)',
 						'niche' => 'All-in-One',
 						'badge' => 'Popular',
 						'url'   => home_url( '/' ),
-						'img'   => $img_uri . 'demo-main.png',
+						'img'   => $img_uri . 'demo-main.jpg',
 					),
 				);
 				?>
