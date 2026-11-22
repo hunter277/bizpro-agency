@@ -488,6 +488,316 @@ function bizpro_agency_get_demo_services( $demo = null ) {
 }
 
 /**
+ * Get pricing matrix and hero copy for a specific demo context.
+ *
+ * @param string|null $demo Demo context key (digital, visa, travel, it, consulting, corporate, default).
+ * @return array
+ */
+function bizpro_agency_get_demo_pricing( $demo = null ) {
+	if ( ! $demo ) {
+		$demo = bizpro_agency_get_demo_context();
+	}
+
+	$matrix = array(
+		'digital'    => array(
+			'eyebrow' => __( 'Digital Licensing & Memberships', 'bizpro-agency' ),
+			'title'   => __( 'Simple, Transparent Software & Asset Licensing', 'bizpro-agency' ),
+			'desc'    => __( 'Choose the plan that fits your development workflow. All plans include instant downloads, license keys, and regular updates.', 'bizpro-agency' ),
+			'plans'   => array(
+				array(
+					'name'     => __( 'Starter License', 'bizpro-agency' ),
+					'desc'     => __( 'Perfect for single website owners and creators starting out.', 'bizpro-agency' ),
+					'price'    => '$39',
+					'period'   => __( '/ year', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( '1 Domain License Activation', 'bizpro-agency' ),
+						'✅ ' . __( 'Instant Digital File Download', 'bizpro-agency' ),
+						'✅ ' . __( '1 Year Regular Product Updates', 'bizpro-agency' ),
+						'✅ ' . __( 'Standard Email Technical Support', 'bizpro-agency' ),
+						'❌ ' . __( 'White-Label Agency Mode', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Buy Starter Pass', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'home', 'digital' ) . '#products',
+				),
+				array(
+					'name'     => __( 'Pro Developer', 'bizpro-agency' ),
+					'desc'     => __( 'Best for freelancers building client websites regularly.', 'bizpro-agency' ),
+					'price'    => '$79',
+					'period'   => __( '/ year', 'bizpro-agency' ),
+					'featured' => true,
+					'badge'    => __( 'Most Popular Choice', 'bizpro-agency' ),
+					'features' => array(
+						'✅ ' . __( 'Up to 5 Domain Activations', 'bizpro-agency' ),
+						'✅ ' . __( 'Instant File Download & API Sync', 'bizpro-agency' ),
+						'✅ ' . __( 'All 7 Niche Starter Kits Included', 'bizpro-agency' ),
+						'✅ ' . __( 'Priority 24/7 Developer Support', 'bizpro-agency' ),
+						'✅ ' . __( 'WooCommerce Flyout Cart Extension', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Upgrade to Pro Now', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'home', 'digital' ) . '#products',
+				),
+				array(
+					'name'     => __( 'Agency Lifetime', 'bizpro-agency' ),
+					'desc'     => __( 'Unlimited sites, lifetime updates, and full white-label rights.', 'bizpro-agency' ),
+					'price'    => '$199',
+					'period'   => __( 'one-time', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( 'Unlimited Domain Licenses', 'bizpro-agency' ),
+						'✅ ' . __( 'Lifetime Updates Guarantee', 'bizpro-agency' ),
+						'✅ ' . __( 'Full White-Label Rebranding Rights', 'bizpro-agency' ),
+						'✅ ' . __( 'Dedicated VIP Support Channel', 'bizpro-agency' ),
+						'✅ ' . __( '1-on-1 Setup Consultation', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Get Lifetime Pass', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'digital' ),
+				),
+			),
+		),
+		'visa'       => array(
+			'eyebrow' => __( 'Legal Retainers & Retainer Plans', 'bizpro-agency' ),
+			'title'   => __( 'Transparent Immigration & Legal Retainers', 'bizpro-agency' ),
+			'desc'    => __( 'Fixed-fee immigration consultation packages with no hidden consular processing retainers.', 'bizpro-agency' ),
+			'plans'   => array(
+				array(
+					'name'     => __( 'Initial Consultation', 'bizpro-agency' ),
+					'desc'     => __( 'Comprehensive eligibility assessment and immigration pathway evaluation.', 'bizpro-agency' ),
+					'price'    => '$99',
+					'period'   => __( 'one-time', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( '60-Min 1-on-1 Licensed Counsel Session', 'bizpro-agency' ),
+						'✅ ' . __( 'Detailed Points & Eligibility Scorecard', 'bizpro-agency' ),
+						'✅ ' . __( 'Document Checklist & Strategy Roadmap', 'bizpro-agency' ),
+						'✅ ' . __( '14-Day Priority Email Follow-Up', 'bizpro-agency' ),
+						'❌ ' . __( 'Full Government Dossier Filing', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Book Assessment', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'visa' ),
+				),
+				array(
+					'name'     => __( 'Full Visa Mandate', 'bizpro-agency' ),
+					'desc'     => __( 'End-to-end legal representation from submission to visa approval.', 'bizpro-agency' ),
+					'price'    => '$1,450',
+					'period'   => __( 'fixed fee', 'bizpro-agency' ),
+					'featured' => true,
+					'badge'    => __( 'Most Popular Choice', 'bizpro-agency' ),
+					'features' => array(
+						'✅ ' . __( 'Full Case Preparation & Legal Audit', 'bizpro-agency' ),
+						'✅ ' . __( 'Government Portal Submission by Attorney', 'bizpro-agency' ),
+						'✅ ' . __( 'Biometrics & Medical Exam Guidance', 'bizpro-agency' ),
+						'✅ ' . __( 'Consular Interview Mock Prep & Coaching', 'bizpro-agency' ),
+						'✅ ' . __( 'Dedicated Case Manager & Real-Time Status', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Start Visa Mandate', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'visa' ),
+				),
+				array(
+					'name'     => __( 'Investor & Business PR', 'bizpro-agency' ),
+					'desc'     => __( 'High-net-worth investor, startup, and business founder immigration.', 'bizpro-agency' ),
+					'price'    => '$3,800',
+					'period'   => __( 'fixed fee', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( 'Comprehensive Business Plan & Validation', 'bizpro-agency' ),
+						'✅ ' . __( 'Government Investor Fast-Track Filing', 'bizpro-agency' ),
+						'✅ ' . __( 'Family Sponsorship & Dependent Inclusions', 'bizpro-agency' ),
+						'✅ ' . __( 'Post-Landing Relocation & Banking Setup', 'bizpro-agency' ),
+						'✅ ' . __( 'Direct Senior Partner Access', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Inquire Investor Stream', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'visa' ),
+				),
+			),
+		),
+		'travel'     => array(
+			'eyebrow' => __( 'Tour Packages & Travel Plans', 'bizpro-agency' ),
+			'title'   => __( 'Curated Travel Tiers for Every Wanderlust', 'bizpro-agency' ),
+			'desc'    => __( 'Transparent travel pricing with verified resort accommodations, guided excursions, and airport transfers.', 'bizpro-agency' ),
+			'plans'   => array(
+				array(
+					'name'     => __( 'Explorer Package', 'bizpro-agency' ),
+					'desc'     => __( 'Self-guided travel with pre-booked stays and essential transfers.', 'bizpro-agency' ),
+					'price'    => '$499',
+					'period'   => __( '/ traveler', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( '3-Star Boutique Hotel Accommodations', 'bizpro-agency' ),
+						'✅ ' . __( 'Daily Breakfast & Airport Pickups', 'bizpro-agency' ),
+						'✅ ' . __( 'Self-Guided City Pass & Digital Guide', 'bizpro-agency' ),
+						'✅ ' . __( '24/7 Traveler Help Desk Support', 'bizpro-agency' ),
+						'❌ ' . __( 'Private Chauffeur & Fine Dining', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Book Explorer', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'home', 'travel' ) . '#tours',
+				),
+				array(
+					'name'     => __( 'Signature Tour', 'bizpro-agency' ),
+					'desc'     => __( 'Our most popular guided experience with premium accommodations.', 'bizpro-agency' ),
+					'price'    => '$1,199',
+					'period'   => __( '/ traveler', 'bizpro-agency' ),
+					'featured' => true,
+					'badge'    => __( 'Most Popular Choice', 'bizpro-agency' ),
+					'features' => array(
+						'✅ ' . __( '4-Star Premium Resorts & Boutique Lodges', 'bizpro-agency' ),
+						'✅ ' . __( 'Expert English-Speaking Local Tour Guide', 'bizpro-agency' ),
+						'✅ ' . __( 'All Inter-City Trains & Domestic Transfers', 'bizpro-agency' ),
+						'✅ ' . __( 'Curated Cultural Excursions & Entry Tickets', 'bizpro-agency' ),
+						'✅ ' . __( '3 Dinners at Top-Rated Local Restaurants', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Book Signature', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'home', 'travel' ) . '#tours',
+				),
+				array(
+					'name'     => __( 'Luxury Private Escape', 'bizpro-agency' ),
+					'desc'     => __( 'Ultra-luxury private villas, bespoke itineraries, and 5-star concierge.', 'bizpro-agency' ),
+					'price'    => '$2,499',
+					'period'   => __( '/ traveler', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( '5-Star Luxury Resorts or Private Villas', 'bizpro-agency' ),
+						'✅ ' . __( 'Private Luxury SUV & Dedicated Chauffeur', 'bizpro-agency' ),
+						'✅ ' . __( 'VIP Airport Fast-Track & Lounge Access', 'bizpro-agency' ),
+						'✅ ' . __( 'Exclusive Private Yacht / Air Charters', 'bizpro-agency' ),
+						'✅ ' . __( '24/7 Dedicated Concierge & Personal Host', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Request Private Tour', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'travel' ),
+				),
+			),
+		),
+		'it'         => array(
+			'eyebrow' => __( 'Engineering & Cloud Retainers', 'bizpro-agency' ),
+			'title'   => __( 'Predictable DevOps & Managed IT Retainers', 'bizpro-agency' ),
+			'desc'    => __( 'Scalable engineering capacity with ironclad SLA guarantees and transparent monthly billing.', 'bizpro-agency' ),
+			'plans'   => array(
+				array(
+					'name'     => __( 'Starter DevOps', 'bizpro-agency' ),
+					'desc'     => __( 'Essential server management and continuous cloud monitoring.', 'bizpro-agency' ),
+					'price'    => '$699',
+					'period'   => __( '/ month', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( 'Up to 5 Cloud Instances / Containers', 'bizpro-agency' ),
+						'✅ ' . __( '99.5% Uptime SLA Guarantee', 'bizpro-agency' ),
+						'✅ ' . __( 'Weekly Automated Backups & Patching', 'bizpro-agency' ),
+						'✅ ' . __( 'CI/CD Deployment Pipeline Maintenance', 'bizpro-agency' ),
+						'❌ ' . __( '24/7 15-Minute Emergency Response', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Choose DevOps', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'it' ),
+				),
+				array(
+					'name'     => __( 'Cloud Scale', 'bizpro-agency' ),
+					'desc'     => __( 'Dedicated cloud architecture, Kubernetes, and 24/7 incident response.', 'bizpro-agency' ),
+					'price'    => '$1,850',
+					'period'   => __( '/ month', 'bizpro-agency' ),
+					'featured' => true,
+					'badge'    => __( 'Most Popular Choice', 'bizpro-agency' ),
+					'features' => array(
+						'✅ ' . __( 'Unlimited Cloud Infrastructure Management', 'bizpro-agency' ),
+						'✅ ' . __( '99.95% High-Availability SLA', 'bizpro-agency' ),
+						'✅ ' . __( '24/7 Automated Monitoring & Rapid Response', 'bizpro-agency' ),
+						'✅ ' . __( 'Dedicated DevOps Engineer & Slack Channel', 'bizpro-agency' ),
+						'✅ ' . __( 'SOC2 & ISO 27001 Security Hardening', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Deploy Cloud Scale', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'it' ),
+				),
+				array(
+					'name'     => __( 'Enterprise Architecture', 'bizpro-agency' ),
+					'desc'     => __( 'Full-spectrum custom software, security audits, and dedicated team.', 'bizpro-agency' ),
+					'price'    => '$4,500',
+					'period'   => __( '/ month', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( 'Embedded Senior Tech Lead & Team', 'bizpro-agency' ),
+						'✅ ' . __( 'Custom Microservices & API Development', 'bizpro-agency' ),
+						'✅ ' . __( 'Zero-Downtime Multi-Region Failover', 'bizpro-agency' ),
+						'✅ ' . __( '15-Minute Critical Incident SLA', 'bizpro-agency' ),
+						'✅ ' . __( 'Quarterly Penetration Testing & Audits', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Contact Engineering', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact', 'it' ),
+				),
+			),
+		),
+		'default'    => array(
+			'eyebrow' => __( 'Transparent Investment', 'bizpro-agency' ),
+			'title'   => __( 'Simple, Flexible Pricing Built for Growth', 'bizpro-agency' ),
+			'desc'    => __( 'No hidden fees. No setup charges. Switch plans or cancel anytime with our 30-day money-back guarantee.', 'bizpro-agency' ),
+			'plans'   => array(
+				array(
+					'name'     => __( 'Standard Advisory', 'bizpro-agency' ),
+					'desc'     => __( 'Essential advisory & technical support for single startups.', 'bizpro-agency' ),
+					'price'    => '$49',
+					'period'   => __( '/ month', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( 'Dedicated Account Manager', 'bizpro-agency' ),
+						'✅ ' . __( 'Up to 10 Monthly Strategy Hours', 'bizpro-agency' ),
+						'✅ ' . __( 'Digital & Business Performance Audits', 'bizpro-agency' ),
+						'✅ ' . __( 'SLA Guaranteed 24-hr Response', 'bizpro-agency' ),
+						'❌ ' . __( '24/7 Emergency Hotlines', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Choose Standard', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact' ),
+				),
+				array(
+					'name'     => __( 'Growth Partner', 'bizpro-agency' ),
+					'desc'     => __( 'Comprehensive mandate for expanding international businesses.', 'bizpro-agency' ),
+					'price'    => '$129',
+					'period'   => __( '/ month', 'bizpro-agency' ),
+					'featured' => true,
+					'badge'    => __( 'Most Popular Choice', 'bizpro-agency' ),
+					'features' => array(
+						'✅ ' . __( 'Senior Principal Advisor', 'bizpro-agency' ),
+						'✅ ' . __( 'Unlimited Strategy & Technology Calls', 'bizpro-agency' ),
+						'✅ ' . __( 'Priority Executive Concierge', 'bizpro-agency' ),
+						'✅ ' . __( '99.9% Uptime Engineering SLA', 'bizpro-agency' ),
+						'✅ ' . __( 'Multi-Jurisdiction Advisory Review', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Get Started with Growth', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact' ),
+				),
+				array(
+					'name'     => __( 'Executive Mandate', 'bizpro-agency' ),
+					'desc'     => __( 'Full corporate governance, ESG & boardroom consulting.', 'bizpro-agency' ),
+					'price'    => '$299',
+					'period'   => __( '/ month', 'bizpro-agency' ),
+					'featured' => false,
+					'badge'    => '',
+					'features' => array(
+						'✅ ' . __( 'C-Suite Executive Team Mandate', 'bizpro-agency' ),
+						'✅ ' . __( 'Cross-Border Strategic Support', 'bizpro-agency' ),
+						'✅ ' . __( 'Global Regulatory Compliance', 'bizpro-agency' ),
+						'✅ ' . __( 'Dedicated VIP Phone & Slack Channel', 'bizpro-agency' ),
+						'✅ ' . __( 'On-Site Advisory Visits Included', 'bizpro-agency' ),
+					),
+					'btn_text' => __( 'Contact Executive Desk', 'bizpro-agency' ),
+					'btn_url'  => bizpro_agency_page_url( 'contact' ),
+				),
+			),
+		),
+	);
+
+	$matrix['consulting'] = $matrix['default'];
+	$matrix['corporate']  = $matrix['default'];
+
+	return isset( $matrix[ $demo ] ) ? $matrix[ $demo ] : $matrix['default'];
+}
+
+/**
  * Resolve the URL of a logical demo page (contact, about, services ...).
  *
  * Pages are looked up by the `_bizpro_page_key` meta written by the demo importer, so

@@ -69,10 +69,25 @@ msgstr ""
 msgid "/ tailored scope"
 msgstr ""
 
+msgid "/ traveler"
+msgstr ""
+
+msgid "/ year"
+msgstr ""
+
+msgid "1 Domain License Activation"
+msgstr ""
+
 msgid "1 Traveler (Solo)"
 msgstr ""
 
+msgid "1 Year Regular Product Updates"
+msgstr ""
+
 msgid "1-Click import ready with complete pages & layouts"
+msgstr ""
+
+msgid "1-on-1 Setup Consultation"
 msgstr ""
 
 msgid "1. Agreement to Terms"
@@ -108,6 +123,12 @@ msgstr ""
 msgid "14 Tour Packages"
 msgstr ""
 
+msgid "14-Day Priority Email Follow-Up"
+msgstr ""
+
+msgid "15-Minute Critical Incident SLA"
+msgstr ""
+
 msgid "16 Tour Packages"
 msgstr ""
 
@@ -141,7 +162,16 @@ msgstr ""
 msgid "22 Tour Packages"
 msgstr ""
 
+msgid "24/7 15-Minute Emergency Response"
+msgstr ""
+
+msgid "24/7 Automated Monitoring & Rapid Response"
+msgstr ""
+
 msgid "24/7 Dedicated Concierge"
+msgstr ""
+
+msgid "24/7 Dedicated Concierge & Personal Host"
 msgstr ""
 
 msgid "24/7 Emergency Hotlines"
@@ -153,13 +183,22 @@ msgstr ""
 msgid "24/7 Monitoring & Direct Slack NOC"
 msgstr ""
 
+msgid "24/7 Traveler Help Desk Support"
+msgstr ""
+
 msgid "256-Bit SSL Encryption"
 msgstr ""
 
 msgid "3 - 6 Weeks"
 msgstr ""
 
+msgid "3 Dinners at Top-Rated Local Restaurants"
+msgstr ""
+
 msgid "3-5 Travelers (Family)"
+msgstr ""
+
+msgid "3-Star Boutique Hotel Accommodations"
 msgstr ""
 
 msgid "3. Advertising & Google AdSense Disclosure"
@@ -175,6 +214,9 @@ msgid "4-Column Services Grid"
 msgstr ""
 
 msgid "4-Hour Business SLA Response"
+msgstr ""
+
+msgid "4-Star Premium Resorts & Boutique Lodges"
 msgstr ""
 
 msgid "4-Step Process"
@@ -193,6 +235,9 @@ msgid "4.9 Star Rating"
 msgstr ""
 
 msgid "404 - Not Found"
+msgstr ""
+
+msgid "5-Star Luxury Resorts or Private Villas"
 msgstr ""
 
 msgid "5. Advertising Partners Privacy Policies"
@@ -217,6 +262,9 @@ msgid "6+ Travelers (Group)"
 msgstr ""
 
 msgid "6. GDPR Data Protection Rights"
+msgstr ""
+
+msgid "60-Min 1-on-1 Licensed Counsel Session"
 msgstr ""
 
 msgid "65+ Points Required"
@@ -252,7 +300,13 @@ msgstr ""
 msgid "98% Client Satisfaction Rate"
 msgstr ""
 
+msgid "99.5% Uptime SLA Guarantee"
+msgstr ""
+
 msgid "99.9% Uptime Engineering SLA"
+msgstr ""
+
+msgid "99.95% High-Availability SLA"
 msgstr ""
 
 msgid "A Partner You Can Rely On"
@@ -357,16 +411,25 @@ msgstr ""
 msgid "Agency Home"
 msgstr ""
 
+msgid "Agency Lifetime"
+msgstr ""
+
 msgid "Agency White Label Settings"
 msgstr ""
 
 msgid "Alex K."
 msgstr ""
 
+msgid "All 7 Niche Starter Kits Included"
+msgstr ""
+
 msgid "All Countries"
 msgstr ""
 
 msgid "All Demos"
+msgstr ""
+
+msgid "All Inter-City Trains & Domestic Transfers"
 msgstr ""
 
 msgid "All Types"
@@ -498,7 +561,13 @@ msgstr ""
 msgid "Best Seller"
 msgstr ""
 
+msgid "Best for freelancers building client websites regularly."
+msgstr ""
+
 msgid "Bi-Weekly Executive Steering Committee"
+msgstr ""
+
+msgid "Biometrics & Medical Exam Guidance"
 msgstr ""
 
 msgid "BizPro Agency"
@@ -522,13 +591,22 @@ msgstr ""
 msgid "Book Advisory"
 msgstr ""
 
+msgid "Book Assessment"
+msgstr ""
+
 msgid "Book Bali Tour Now"
+msgstr ""
+
+msgid "Book Explorer"
 msgstr ""
 
 msgid "Book Maldives Tour Now"
 msgstr ""
 
 msgid "Book Now"
+msgstr ""
+
+msgid "Book Signature"
 msgstr ""
 
 msgid "Book Swiss Tour Now"
@@ -600,6 +678,9 @@ msgstr ""
 msgid "Buy All-Access Bundle →"
 msgstr ""
 
+msgid "Buy Starter Pass"
+msgstr ""
+
 msgid "Buy-side and sell-side mandate guidance, post-merger synergy realization, and cross-border commercial structuring."
 msgstr ""
 
@@ -625,6 +706,9 @@ msgid "C-Suite Executive Team Mandate"
 msgstr ""
 
 msgid "CA"
+msgstr ""
+
+msgid "CI/CD Deployment Pipeline Maintenance"
 msgstr ""
 
 msgid "CLB 7+ Recommended"
@@ -717,7 +801,13 @@ msgstr ""
 msgid "Choose Destination"
 msgstr ""
 
+msgid "Choose DevOps"
+msgstr ""
+
 msgid "Choose Standard"
+msgstr ""
+
+msgid "Choose the plan that fits your development workflow. All plans include instant downloads, license keys, and regular updates."
 msgstr ""
 
 msgid "Choose your industry below. Each starter site includes tailored typography, custom page layouts, responsive contact forms, and AdSense optimized areas."
@@ -774,6 +864,9 @@ msgstr ""
 msgid "Cloud Migration for TechCorp"
 msgstr ""
 
+msgid "Cloud Scale"
+msgstr ""
+
 msgid "Cloud Starter"
 msgstr ""
 
@@ -789,6 +882,9 @@ msgstr ""
 msgid "Complete Next.js starter kit with Stripe subscription billing, authentication, and multi-tenant database."
 msgstr ""
 
+msgid "Comprehensive Business Plan & Validation"
+msgstr ""
+
 msgid "Comprehensive Case Assessment\nCustom Strategic Roadmap\nDedicated Account Specialist\nDirect Chat & Email Advisory\nStandard 5-Day Delivery"
 msgstr ""
 
@@ -796,6 +892,9 @@ msgid "Comprehensive Commercial Capabilities"
 msgstr ""
 
 msgid "Comprehensive Support"
+msgstr ""
+
+msgid "Comprehensive eligibility assessment and immigration pathway evaluation."
 msgstr ""
 
 msgid "Comprehensive legal immigration assistance, student visas, skilled worker pathways, and permanent residency solutions for Canada, UK, Australia, USA, and Europe."
@@ -808,6 +907,9 @@ msgid "Concierge Desk Email"
 msgstr ""
 
 msgid "Connect with our corporate client engagement team for customized proposals."
+msgstr ""
+
+msgid "Consular Interview Mock Prep & Coaching"
 msgstr ""
 
 msgid "Consulting"
@@ -829,6 +931,9 @@ msgid "Contact Corporate Desk"
 msgstr ""
 
 msgid "Contact Desk:"
+msgstr ""
+
+msgid "Contact Engineering"
 msgstr ""
 
 msgid "Contact Executive Desk"
@@ -906,7 +1011,16 @@ msgstr ""
 msgid "Cross-Border Mergers & Joint Ventures"
 msgstr ""
 
+msgid "Cross-Border Strategic Support"
+msgstr ""
+
 msgid "Cultural Choice"
+msgstr ""
+
+msgid "Curated Cultural Excursions & Entry Tickets"
+msgstr ""
+
+msgid "Curated Travel Tiers for Every Wanderlust"
 msgstr ""
 
 msgid "Curated Trips (Sample)"
@@ -922,6 +1036,9 @@ msgid "Custom Author URL"
 msgstr ""
 
 msgid "Custom Enterprise Software"
+msgstr ""
+
+msgid "Custom Microservices & API Development"
 msgstr ""
 
 msgid "Custom Private Itinerary Planning"
@@ -960,6 +1077,9 @@ msgstr ""
 msgid "Daily Automated Backups & DR"
 msgstr ""
 
+msgid "Daily Breakfast & Airport Pickups"
+msgstr ""
+
 msgid "Data Engineering & Analytics"
 msgstr ""
 
@@ -967,6 +1087,12 @@ msgid "Data-backed market expansion blueprints, customer segmentation, pricing o
 msgstr ""
 
 msgid "Dedicated Account Manager"
+msgstr ""
+
+msgid "Dedicated Case Manager & Real-Time Status"
+msgstr ""
+
+msgid "Dedicated DevOps Engineer & Slack Channel"
 msgstr ""
 
 msgid "Dedicated Engineering Retainers"
@@ -987,7 +1113,13 @@ msgstr ""
 msgid "Dedicated VIP Phone & Slack Channel"
 msgstr ""
 
+msgid "Dedicated VIP Support Channel"
+msgstr ""
+
 msgid "Dedicated WhatsApp / Private War Room"
+msgstr ""
+
+msgid "Dedicated cloud architecture, Kubernetes, and 24/7 incident response."
 msgstr ""
 
 msgid "Dedicated support from start to finish"
@@ -1002,6 +1134,9 @@ msgstr ""
 msgid "Demonstrated Impact"
 msgstr ""
 
+msgid "Deploy Cloud Scale"
+msgstr ""
+
 msgid "Description"
 msgstr ""
 
@@ -1014,10 +1149,16 @@ msgstr ""
 msgid "Destinations (Sample)"
 msgstr ""
 
+msgid "Detailed Points & Eligibility Scorecard"
+msgstr ""
+
 msgid "Developed go-to-market strategy enabling entry into UAE, UK and Canada within one year."
 msgstr ""
 
 msgid "Digital & Business Model Innovation"
+msgstr ""
+
+msgid "Digital & Business Performance Audits"
 msgstr ""
 
 msgid "Digital & SaaS"
@@ -1027,6 +1168,9 @@ msgid "Digital Asset & Software Licensing"
 msgstr ""
 
 msgid "Digital License Keys"
+msgstr ""
+
+msgid "Digital Licensing & Memberships"
 msgstr ""
 
 msgid "Digital Products & SaaS Store"
@@ -1062,6 +1206,9 @@ msgstr ""
 msgid "Direct Phone Lines"
 msgstr ""
 
+msgid "Direct Senior Partner Access"
+msgstr ""
+
 msgid "Direct Senior Partner Access (Ex-McKinsey)"
 msgstr ""
 
@@ -1090,6 +1237,9 @@ msgid "Do you offer a refund policy on digital products?"
 msgstr ""
 
 msgid "Do you provide ongoing maintenance and post-project support?"
+msgstr ""
+
+msgid "Document Checklist & Strategy Roadmap"
 msgstr ""
 
 msgid "Document Preparation"
@@ -1170,6 +1320,9 @@ msgstr ""
 msgid "Embedded Advisory Pod (3-4 Specialists)"
 msgstr ""
 
+msgid "Embedded Senior Tech Lead & Team"
+msgstr ""
+
 msgid "Emergency Escalations?"
 msgstr ""
 
@@ -1188,10 +1341,16 @@ msgstr ""
 msgid "End-to-End Change Management Leadership"
 msgstr ""
 
+msgid "End-to-end legal representation from submission to visa approval."
+msgstr ""
+
 msgid "Engagement Options"
 msgstr ""
 
 msgid "Engineered for velocity, military-grade security, and measurable ROI."
+msgstr ""
+
+msgid "Engineering & Cloud Retainers"
 msgstr ""
 
 msgid "Enter your business email..."
@@ -1204,6 +1363,9 @@ msgid "Enterprise 24/7 Managed IT Support"
 msgstr ""
 
 msgid "Enterprise Advisory Retainers"
+msgstr ""
+
+msgid "Enterprise Architecture"
 msgstr ""
 
 msgid "Enterprise Capabilities"
@@ -1245,10 +1407,16 @@ msgstr ""
 msgid "Essential advisory & technical support for single startups."
 msgstr ""
 
+msgid "Essential server management and continuous cloud monitoring."
+msgstr ""
+
 msgid "Every mandate we take on is backed by bilateral non-disclosure agreements, clear milestone deliverables, and seasoned senior partner involvement from inception to completion."
 msgstr ""
 
 msgid "Everything You Need to Scale Digital Sales"
+msgstr ""
+
+msgid "Exclusive Private Yacht / Air Charters"
 msgstr ""
 
 msgid "Executive Advisory Mandate Models"
@@ -1278,6 +1446,9 @@ msgstr ""
 msgid "Executive strategic practices, post-merger integration framework, and client value metric cards."
 msgstr ""
 
+msgid "Expert English-Speaking Local Tour Guide"
+msgstr ""
+
 msgid "Expert Team Members"
 msgstr ""
 
@@ -1300,6 +1471,9 @@ msgid "Explore The World Beyond Boundaries"
 msgstr ""
 
 msgid "Explore pathways tailored for professionals, students, families and investors."
+msgstr ""
+
+msgid "Explorer Package"
 msgstr ""
 
 msgid "Express Entry & PNP"
@@ -1341,6 +1515,9 @@ msgstr ""
 msgid "Family & Cultural"
 msgstr ""
 
+msgid "Family Sponsorship & Dependent Inclusions"
+msgstr ""
+
 msgid "Family Trip to Japan"
 msgstr ""
 
@@ -1378,6 +1555,9 @@ msgid "Financial Modeling & M&A Advisory"
 msgstr ""
 
 msgid "Find fast answers to common questions about our consultancy, visa pathways, IT development, and billing policies."
+msgstr ""
+
+msgid "Fixed-fee immigration consultation packages with no hidden consular processing retainers."
 msgstr ""
 
 msgid "Flagship multi-purpose agency: services, case studies, team, pricing, FAQ and contact pages."
@@ -1491,7 +1671,13 @@ msgstr ""
 msgid "From $890"
 msgstr ""
 
+msgid "Full Case Preparation & Legal Audit"
+msgstr ""
+
 msgid "Full Document & Visa Audits"
+msgstr ""
+
+msgid "Full Government Dossier Filing"
 msgstr ""
 
 msgid "Full Mandate Execution"
@@ -1506,10 +1692,19 @@ msgstr ""
 msgid "Full Strategic Advisory & Execution\nPriority Dedicated Project Lead\nEnd-to-End Filing & Documentation\nBi-Weekly Strategic Syncs\n24/7 SLA Priority Support\nDirect WhatsApp / Slack Access"
 msgstr ""
 
+msgid "Full Visa Mandate"
+msgstr ""
+
+msgid "Full White-Label Rebranding Rights"
+msgstr ""
+
 msgid "Full corporate governance, ESG & boardroom consulting."
 msgstr ""
 
 msgid "Full-Stack Microservice SaaS Boilerplate"
+msgstr ""
+
+msgid "Full-spectrum custom software, security audits, and dedicated team."
 msgstr ""
 
 msgid "Full-width banner with title, description, and contact button."
@@ -1534,6 +1729,9 @@ msgid "Germany"
 msgstr ""
 
 msgid "Get Instant Access →"
+msgstr ""
+
+msgid "Get Lifetime Pass"
 msgstr ""
 
 msgid "Get My Custom Plan & Quotes →"
@@ -1585,6 +1783,12 @@ msgid "Google is one of our third-party vendors on our site. It also uses cookie
 msgstr ""
 
 msgid "Governance"
+msgstr ""
+
+msgid "Government Investor Fast-Track Filing"
+msgstr ""
+
+msgid "Government Portal Submission by Attorney"
 msgstr ""
 
 msgid "Great Adventure"
@@ -1689,6 +1893,9 @@ msgstr ""
 msgid "High-impact solutions tailored to high-conviction decision makers, delivered with speed, transparency, and guaranteed senior partner accountability."
 msgstr ""
 
+msgid "High-net-worth investor, startup, and business founder immigration."
+msgstr ""
+
 msgid "High-throughput event streaming with Apache Kafka, Snowflake modern data warehouse architectures, and real-time ETL pipelines."
 msgstr ""
 
@@ -1779,7 +1986,13 @@ msgstr ""
 msgid "Indonesia"
 msgstr ""
 
+msgid "Initial Consultation"
+msgstr ""
+
 msgid "Initiate Sprint"
+msgstr ""
+
+msgid "Inquire Investor Stream"
 msgstr ""
 
 msgid "Inquiry received"
@@ -1797,7 +2010,13 @@ msgstr ""
 msgid "Instant Digital Delivery"
 msgstr ""
 
+msgid "Instant Digital File Download"
+msgstr ""
+
 msgid "Instant File Download"
+msgstr ""
+
+msgid "Instant File Download & API Sync"
 msgstr ""
 
 msgid "Instantly preview or import any of the 7 pre-built niche starter sites with 1 click."
@@ -1837,6 +2056,9 @@ msgid "Internet protocol (IP) addresses, browser type, Internet Service Provider
 msgstr ""
 
 msgid "Investor & Business"
+msgstr ""
+
+msgid "Investor & Business PR"
 msgstr ""
 
 msgid "Investor & Business Setup"
@@ -1917,6 +2139,9 @@ msgstr ""
 msgid "Legal Immigration"
 msgstr ""
 
+msgid "Legal Retainers & Retainer Plans"
+msgstr ""
+
 msgid "Let's Plan Your Trip"
 msgstr ""
 
@@ -1933,6 +2158,9 @@ msgid "Licensed Immigration Specialists"
 msgstr ""
 
 msgid "Licensed immigration legal specialist overseeing residency by investment and high-skilled migration filings."
+msgstr ""
+
+msgid "Lifetime Updates Guarantee"
 msgstr ""
 
 msgid "Limited Time Seasonal Deal"
@@ -1954,6 +2182,9 @@ msgid "Loved by 2,500+ Developers & Designers"
 msgstr ""
 
 msgid "Luxury & Honeymoon"
+msgstr ""
+
+msgid "Luxury Private Escape"
 msgstr ""
 
 msgid "M&A Due Diligence & Integration"
@@ -2062,6 +2293,9 @@ msgid "Most Popular Tour Experiences"
 msgstr ""
 
 msgid "Mountain & Trekking"
+msgstr ""
+
+msgid "Multi-Jurisdiction Advisory Review"
 msgstr ""
 
 msgid "Multi-Jurisdiction Advisory Scope\nExecutive Boardroom Advisory\nBespoke Architecture / Legal Roadmap\nEmergency Escalation SLA (<1 hr)\nFull NDA & IP Confidentiality\nDedicated Senior Partner Assigned"
@@ -2220,6 +2454,9 @@ msgstr ""
 msgid "Our in-house visa division prepares and expedites visa applications for smooth transit."
 msgstr ""
 
+msgid "Our most popular guided experience with premium accommodations."
+msgstr ""
+
 msgid "Our sales and technical support team is available 24/7 to assist with compatibility inquiries."
 msgstr ""
 
@@ -2260,6 +2497,9 @@ msgid "Partner with an Industry Leader"
 msgstr ""
 
 msgid "Pathway:"
+msgstr ""
+
+msgid "Perfect for single website owners and creators starting out."
 msgstr ""
 
 msgid "Permanent Residency"
@@ -2313,6 +2553,9 @@ msgstr ""
 msgid "Popular Countries with High Approval Rates"
 msgstr ""
 
+msgid "Post-Landing Relocation & Banking Setup"
+msgstr ""
+
 msgid "Post-Merger Commercial Restructuring"
 msgstr ""
 
@@ -2323,6 +2566,9 @@ msgid "Pragmatic solutions tailored to high-stakes commercial environments."
 msgstr ""
 
 msgid "Pre-Assessment Included"
+msgstr ""
+
+msgid "Predictable DevOps & Managed IT Retainers"
 msgstr ""
 
 msgid "Predictable Investment"
@@ -2370,6 +2616,12 @@ msgstr ""
 msgid "Primary Menu (Main Agency)"
 msgstr ""
 
+msgid "Priority 24/7 Developer Support"
+msgstr ""
+
+msgid "Priority Executive Concierge"
+msgstr ""
+
 msgid "Priority Product Support?"
 msgstr ""
 
@@ -2379,7 +2631,16 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
+msgid "Private Chauffeur & Fine Dining"
+msgstr ""
+
+msgid "Private Luxury SUV & Dedicated Chauffeur"
+msgstr ""
+
 msgid "Pro (Premium)"
+msgstr ""
+
+msgid "Pro Developer"
 msgstr ""
 
 msgid "Proactive infrastructure monitoring, automated disaster recovery backups, and guaranteed sub-15-minute incident SLA."
@@ -2413,6 +2674,9 @@ msgid "Proven Value Creation for Clients"
 msgstr ""
 
 msgid "Quantified Value:"
+msgstr ""
+
+msgid "Quarterly Penetration Testing & Audits"
 msgstr ""
 
 msgid "Quick Links"
@@ -2472,6 +2736,9 @@ msgstr ""
 msgid "Request Executive Briefing"
 msgstr ""
 
+msgid "Request Private Tour"
+msgstr ""
+
 msgid "Request Tech Audit"
 msgstr ""
 
@@ -2500,6 +2767,9 @@ msgid "SLA & Uptime"
 msgstr ""
 
 msgid "SLA Guaranteed 24-hr Response"
+msgstr ""
+
+msgid "SOC2 & ISO 27001 Security Hardening"
 msgstr ""
 
 msgid "SOC2 / HIPAA / ISO Compliance Attestation"
@@ -2536,6 +2806,9 @@ msgid "Save White Label Credentials"
 msgstr ""
 
 msgid "Say goodbye to bloated setups. Our modular digital engine provides maximum performance right out of the box."
+msgstr ""
+
+msgid "Scalable engineering capacity with ironclad SLA guarantees and transparent monthly billing."
 msgstr ""
 
 msgid "Scale DevOps & SRE"
@@ -2608,6 +2881,12 @@ msgid "See what real buyers are saying about our production-ready UI kits, start
 msgstr ""
 
 msgid "Select Country"
+msgstr ""
+
+msgid "Self-Guided City Pass & Digital Guide"
+msgstr ""
+
+msgid "Self-guided travel with pre-booked stays and essential transfers."
 msgstr ""
 
 msgid "Sell Your Digital Products & Software with Ultimate Speed"
@@ -2691,7 +2970,13 @@ msgstr ""
 msgid "Show top bar"
 msgstr ""
 
+msgid "Signature Tour"
+msgstr ""
+
 msgid "Simple, Flexible Pricing Built for Growth"
+msgstr ""
+
+msgid "Simple, Transparent Software & Asset Licensing"
 msgstr ""
 
 msgid "Site search"
@@ -2757,6 +3042,9 @@ msgstr ""
 msgid "Standard Advisory"
 msgstr ""
 
+msgid "Standard Email Technical Support"
+msgstr ""
+
 msgid "Standard Package ($1,000 - $2,500)"
 msgstr ""
 
@@ -2766,10 +3054,19 @@ msgstr ""
 msgid "Start Free Assessment"
 msgstr ""
 
+msgid "Start Visa Mandate"
+msgstr ""
+
 msgid "Start with a ready-made demo"
 msgstr ""
 
+msgid "Starter DevOps"
+msgstr ""
+
 msgid "Starter Growth"
+msgstr ""
+
+msgid "Starter License"
 msgstr ""
 
 msgid "Starting from"
@@ -3048,6 +3345,9 @@ msgstr ""
 msgid "Tour Packages"
 msgstr ""
 
+msgid "Tour Packages & Travel Plans"
+msgstr ""
+
 msgid "Tour Style"
 msgstr ""
 
@@ -3061,6 +3361,9 @@ msgid "Transforming Business Ambition into Sustainable Market Leadership"
 msgstr ""
 
 msgid "Transparency & Policies"
+msgstr ""
+
+msgid "Transparent Immigration & Legal Retainers"
 msgstr ""
 
 msgid "Transparent Investment"
@@ -3079,6 +3382,9 @@ msgid "Transparent pricing with no hidden fees"
 msgstr ""
 
 msgid "Transparent retainers and milestone-based commercial arrangements."
+msgstr ""
+
+msgid "Transparent travel pricing with verified resort accommodations, guided excursions, and airport transfers."
 msgstr ""
 
 msgid "Travel & Tour Agency"
@@ -3147,6 +3453,9 @@ msgstr ""
 msgid "Ultra-Fast Delivery"
 msgstr ""
 
+msgid "Ultra-luxury private villas, bespoke itineraries, and 5-star concierge."
+msgstr ""
+
 msgid "Under the CCPA, among other rights, California consumers have the right to request that a business disclose the categories and specific pieces of personal data that a business has collected about consumers, and request that a business not sell the consumers personal data. If you make a request, we have one month to respond to you."
 msgstr ""
 
@@ -3168,13 +3477,34 @@ msgstr ""
 msgid "Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site and the trademarks, service marks, and logos contained therein are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws."
 msgstr ""
 
+msgid "Unlimited Cloud Infrastructure Management"
+msgstr ""
+
+msgid "Unlimited Domain Licenses"
+msgstr ""
+
 msgid "Unlimited Strategy & DevOps Calls"
+msgstr ""
+
+msgid "Unlimited Strategy & Technology Calls"
 msgstr ""
 
 msgid "Unlimited client project usage"
 msgstr ""
 
+msgid "Unlimited sites, lifetime updates, and full white-label rights."
+msgstr ""
+
 msgid "Up to 10 Monthly Strategy Hours"
+msgstr ""
+
+msgid "Up to 5 Cloud Instances / Containers"
+msgstr ""
+
+msgid "Up to 5 Domain Activations"
+msgstr ""
+
+msgid "Upgrade to Pro Now"
 msgstr ""
 
 msgid "Uptime SLA Guaranteed"
@@ -3190,6 +3520,9 @@ msgid "Use {year} to print the current year automatically."
 msgstr ""
 
 msgid "VERSION CONTROL"
+msgstr ""
+
+msgid "VIP Airport Fast-Track & Lounge Access"
 msgstr ""
 
 msgid "Vanilla JavaScript and pure CSS styling means zero jQuery and ultra-fast mobile rendering."
@@ -3336,6 +3669,9 @@ msgstr ""
 msgid "Website & Advisory Disclaimer"
 msgstr ""
 
+msgid "Weekly Automated Backups & Patching"
+msgstr ""
+
 msgid "Welcome to BizPro Agency %s"
 msgstr ""
 
@@ -3372,6 +3708,9 @@ msgstr ""
 msgid "White Label Settings"
 msgstr ""
 
+msgid "White-Label Agency Mode"
+msgstr ""
+
 msgid "Why Book With BizPro Travel?"
 msgstr ""
 
@@ -3403,6 +3742,9 @@ msgid "Winter & Summer"
 msgstr ""
 
 msgid "Winter Holiday Escapes"
+msgstr ""
+
+msgid "WooCommerce Flyout Cart Extension"
 msgstr ""
 
 msgid "WooCommerce is not active yet: install and activate it before importing."
@@ -3483,6 +3825,9 @@ msgstr ""
 msgid "Zero Hidden Costs:"
 msgstr ""
 
+msgid "Zero-Downtime Multi-Region Failover"
+msgstr ""
+
 msgid "Zero-Trust Data Protection"
 msgstr ""
 
@@ -3492,10 +3837,16 @@ msgstr ""
 msgid "eCommerce Core"
 msgstr ""
 
+msgid "fixed fee"
+msgstr ""
+
 msgid "https://policies.google.com/technologies/ads"
 msgstr ""
 
 msgid "john@company.com"
+msgstr ""
+
+msgid "one-time"
 msgstr ""
 
 msgid "→"
