@@ -100,14 +100,29 @@ function bizpro_agency_ocdi_import_files() {
 		if ( ! empty( $demo['requires'] ) && ! class_exists( 'WooCommerce' ) ) {
 			$notice .= ' ' . __( 'WooCommerce is not active yet: install and activate it before importing.', 'bizpro-agency' );
 		}
-		$files[] = array(
+		$local_xml = get_template_directory() . '/demo-data/' . $key . '/content.xml';
+		if ( ! file_exists( $local_xml ) && defined( 'BIZPRO_COMPANION_PATH' ) ) {
+			$comp_xml = BIZPRO_COMPANION_PATH . 'demo-data/' . $key . '/content.xml';
+			if ( file_exists( $comp_xml ) ) {
+				$local_xml = $comp_xml;
+			}
+		}
+
+		$file_data = array(
 			'import_file_name'         => $demo['name'],
 			'categories'               => $demo['cats'],
-			'local_import_file'        => get_template_directory() . '/demo-data/' . $key . '/content.xml',
 			'import_preview_image_url' => get_template_directory_uri() . '/assets/images/demos/' . $demo['image'],
 			'import_notice'            => $notice,
-			'preview_url'              => '',
+			'preview_url'              => 'https://plainplant.s2-tastewp.com/' . ( 'default' === $key ? '' : $key . '-agency/' ),
 		);
+
+		if ( file_exists( $local_xml ) ) {
+			$file_data['local_import_file'] = $local_xml;
+		} else {
+			$file_data['import_file_url'] = 'https://raw.githubusercontent.com/hunter277/bizpro-agency/main/demo-data/' . $key . '/content.xml';
+		}
+
+		$files[] = $file_data;
 	}
 	return $files;
 }

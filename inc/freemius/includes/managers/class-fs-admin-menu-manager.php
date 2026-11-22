@@ -699,6 +699,10 @@
 				$menu = $this->find_main_submenu();
 			}
 
+			if ( ! is_array( $menu ) || ! isset( $menu['menu'] ) || ! is_array( $menu['menu'] ) || ! isset( $menu['menu'][2] ) ) {
+				return admin_url( 'themes.php?page=bizpro-agency-welcome' );
+			}
+
 			$menu_slug   = $menu['menu'][2];
 			$parent_slug = isset( $menu['parent_slug'] ) ?
 				$menu['parent_slug'] :

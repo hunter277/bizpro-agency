@@ -80,6 +80,10 @@ if ( $bizpro_cta_url && 0 === strpos( $bizpro_cta_url, '#' ) ) {
 			<div class="site-branding">
 				<?php if ( has_custom_logo() ) : ?>
 					<?php the_custom_logo(); ?>
+				<?php elseif ( file_exists( get_template_directory() . '/assets/images/logo-wide.png' ) ) : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-brand-link" style="display: flex; align-items: center;">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-wide.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" style="max-height: 50px; width: auto; display: block;">
+					</a>
 				<?php else : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-brand-link">
 						<span class="site-brand-icon" aria-hidden="true">

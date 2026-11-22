@@ -23,7 +23,7 @@ function bizpro_agency_about_menu() {
 		'bizpro_agency_about_page_render'
 	);
 }
-add_action( 'admin_menu', 'bizpro_agency_about_menu' );
+add_action( 'admin_menu', 'bizpro_agency_about_menu', 5 );
 
 /**
  * Render the welcome page content.
@@ -112,6 +112,13 @@ function bizpro_agency_about_page_render() {
 				$img_uri     = trailingslashit( get_template_directory_uri() ) . 'assets/images/demos/';
 				$admin_demos = array(
 					array(
+						'title' => 'Main Agency (Multi-Purpose)',
+						'niche' => 'All-in-One',
+						'badge' => 'Featured',
+						'url'   => home_url( '/' ),
+						'img'   => $img_uri . 'demo-main.jpg',
+					),
+					array(
 						'title' => 'Digital Products & SaaS Store',
 						'niche' => 'eCommerce',
 						'badge' => 'eCom',
@@ -126,7 +133,7 @@ function bizpro_agency_about_page_render() {
 						'img'   => $img_uri . 'demo-visa.jpg',
 					),
 					array(
-						'title' => 'Travel & Tour Operator',
+						'title' => 'Travel & Tour Agency',
 						'niche' => 'Tourism',
 						'badge' => 'New',
 						'url'   => bizpro_agency_page_url( 'home', 'travel' ),
@@ -147,18 +154,11 @@ function bizpro_agency_about_page_render() {
 						'img'   => $img_uri . 'demo-consulting.jpg',
 					),
 					array(
-						'title' => 'Corporate Enterprise & Governance',
+						'title' => 'Corporate Enterprise',
 						'niche' => 'Enterprise',
 						'badge' => 'Elite',
 						'url'   => bizpro_agency_page_url( 'home', 'corporate' ),
 						'img'   => $img_uri . 'demo-corporate.jpg',
-					),
-					array(
-						'title' => 'Main Agency (Flagship Multi-Purpose)',
-						'niche' => 'All-in-One',
-						'badge' => 'Popular',
-						'url'   => home_url( '/' ),
-						'img'   => $img_uri . 'demo-main.jpg',
 					),
 				);
 				?>

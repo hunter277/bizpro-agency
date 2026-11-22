@@ -43,6 +43,9 @@ if ( ! function_exists( 'bizpro_agency_fs' ) ) {
 						'is_org_compliant' => true,
 						'menu'             => array(
 							'slug'    => 'bizpro-agency-welcome',
+							'parent'  => array(
+								'slug' => 'themes.php',
+							),
 							'account' => true,
 							'support' => false,
 						),
